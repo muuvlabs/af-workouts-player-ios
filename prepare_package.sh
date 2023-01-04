@@ -19,6 +19,9 @@ NEW_CHECKSUM=$(swift package compute-checksum WorkoutPlayerCore.xcframework.zip)
 echo "print out new shasum for convenience reasons"
 echo "New checksum is $NEW_CHECKSUM"
 
+# 2.1 Enter Package folder
+cd WorkoutPlayerCoreDistribution
+
 # 3. Replace all data from Package.swift manifest
 echo "replace name module information in package manifest"
 sed -E -i '' 's/let moduleName = ".+"/let moduleName = "'WorkoutPlayerCore\"/ Package.swift
@@ -36,6 +39,9 @@ echo "git commit all without framework and push"
 git add --all -- :!WorkoutPlayerCore.xcframework.zip
 git commit -m "New WorkoutPlayerCore version $NEW_VERSION"
 git push
+
+# 5.1 Back to root folder
+cd ..
 
 # 6. Pusblish a new release with the same version of the repository A, and attach XCFramework in the Release metadata
 echo "Releasing the new version"
