@@ -5,7 +5,7 @@ import PackageDescription
 
 let version = "0.0.1"
 let moduleName = "WorkoutPlayerCore"
-let checksum = "22e075d0dd0de776e926199479975e8a2b81be7591a49f282ce60987063e0699"
+let checksum = "8200ca391395868463c96da8acbab5a0cea8eb56f0521856dc79cc574d30a165"
 
 let package = Package(
     name: moduleName,
