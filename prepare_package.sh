@@ -10,6 +10,9 @@ fi
 NEW_VERSION=$1
 #FRAMEWORK_NAME=$2
 
+# 1.1 Set remote repository
+gh repo set-default
+
 # 2. Calculate checksum and store it
 echo "calculate new checksum"
 NEW_CHECKSUM=$(swift package compute-checksum WorkoutPlayerCore.xcframework.zip)
