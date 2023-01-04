@@ -4,24 +4,52 @@
 import PackageDescription
 
 let version = "0.0.3"
-let moduleName = "WorkoutPlayerCore"
 let checksum = "69b5d1802a00673243be9e88de5f3ed900e98d9cbada41ebb2ec476c8c48ca15"
 
 let package = Package(
-    name: moduleName,
+    name: "WorkoutPlayerCore",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v15),
+        .watchOS(.v5)
     ],
     products: [
         .library(
-            name: moduleName,
-            targets: [moduleName]
+            name: "WorkoutPlayerCore",
+            targets: ["Dependencies", "WorkoutPlayerCore"]
+        )
+    ],
+    dependencies: [
+        // Dependencies declare other packages that this package depends on.
+        // .package(url: /* package url */, from: "1.0.0"),
+        .package(
+            url: "https://github.com/anytimefitness/ios-endpoints.git",
+            from: "0.7.0"
+        ),
+        .package(
+            url: "https://github.com/anytimefitness/ios-utilities.git",
+            from: "0.5.0"
         )
     ],
     targets: [
+        .target(
+            name: "Dependencies",
+            dependencies: [
+                .product(
+                    name: "MuuvEndpoints",
+                    package: "ios-endpoints",
+                    condition: .when(platforms: [.iOS])
+                ),
+                .product(
+                    name: "MuuvUtilities",
+                    package: "ios-utilities",
+                    condition: .when(platforms: [.iOS])
+                )
+            ],
+            path: "Sources"
+        ),
         .binaryTarget(
-            name: moduleName,
-            url: "https://github.com/muuvlabs/workout-player-core-binaries-ios/releases/download/\(version)/\(moduleName).xcframework.zip",
+            name: "WorkoutPlayerCore",
+            url: "https://github.com/muuvlabs/workout-player-core-binaries-ios/releases/download/\(version)/WorkoutPlayerCore.xcframework.zip",
             checksum: checksum
         )
     ]
