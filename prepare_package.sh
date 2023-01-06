@@ -15,7 +15,7 @@ gh repo set-default
 
 # 2. Calculate checksum and store it
 echo "calculate new checksum"
-NEW_CHECKSUM=$(swift package compute-checksum WorkoutPlayerCore.xcframework.zip)
+NEW_CHECKSUM=$(swift package compute-checksum WorkoutPlayerCore_$NEW_VERSION.xcframework.zip)
 echo "print out new shasum for convenience reasons"
 echo "New checksum is $NEW_CHECKSUM"
 
@@ -33,14 +33,14 @@ cat Package.swift
 
 # 5. Commit all data without the XCfrmework
 echo "git commit all without framework and push"
-git add --all -- :!WorkoutPlayerCore.xcframework.zip
-git commit -m "New WorkoutPlayerCore version $NEW_VERSION"
+git add --all -- :!WorkoutPlayerCore_$NEW_VERSION.xcframework.zip
+git commit -m "New WorkoutPlayerCore_$NEW_VERSION version $NEW_VERSION"
 git push
 
 # 6. Pusblish a new release with the same version of the repository A, and attach XCFramework in the Release metadata
 echo "Releasing the new version"
-gh release create "$NEW_VERSION" --generate-notes "./WorkoutPlayerCore.xcframework.zip"
+gh release create "$NEW_VERSION" --generate-notes "./WorkoutPlayerCore_$NEW_VERSION.xcframework.zip"
 
 # 7. Remove zip of XCFramework
 echo "delete downloaded zip file"
-rm WorkoutPlayerCore.xcframework.zip
+rm WorkoutPlayerCore_$NEW_VERSION.xcframework.zip
