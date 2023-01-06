@@ -49,7 +49,7 @@ let package = Package(
         ),
         .binaryTarget(
             name: "WorkoutPlayerCore",
-            url: "https://github.com/muuvlabs/workout-player-core-binaries-ios/releases/download/\(version)/WorkoutPlayerCore.xcframework.zip",
+            url: "https://github.com/muuvlabs/workout-player-core-binaries-ios/releases/download/\(version)/WorkoutPlayerCore_\(version).xcframework.zip",
             checksum: checksum
         )
     ]
