@@ -3,8 +3,8 @@
 
 import PackageDescription
 
-let version = "0.0.9"
-let checksum = "e1aea21446217e821ff52466b54b27562526e76a39da98ccb43c7efd606bb03a"
+let version = "0.0.10"
+let checksum = "ffb283e691808992c869ccabf929e0b3b421b5247494f08e7e96528967aebb09"
 
 let package = Package(
     name: "WorkoutPlayerCore",
