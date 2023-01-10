@@ -4,18 +4,18 @@
 import PackageDescription
 
 let version = "0.0.12"
-let checksum = ""
+let checksum = "bdbe5ae421b9c05db76fb1eda41cef2db9c06497649796c6ca298085cf66a2a4"
 
 let package = Package(
-    name: "WorkoutPlayerCore",
+    name: "WorkoutsPlayer",
     platforms: [
         .iOS(.v15),
         .watchOS(.v5)
     ],
     products: [
         .library(
-            name: "WorkoutPlayerCore",
-            targets: ["Dependencies", "WorkoutPlayerCore"]
+            name: "WorkoutsPlayer",
+            targets: ["Dependencies", "WorkoutsPlayer"]
         )
     ],
     dependencies: [
@@ -48,8 +48,8 @@ let package = Package(
             path: "Sources"
         ),
         .binaryTarget(
-            name: "WorkoutPlayerCore",
-            url: "https://github.com/muuvlabs/workout-player-core-binaries-ios/releases/download/\(version)/WorkoutPlayerCore_\(version).xcframework.zip",
+            name: "WorkoutsPlayer",
+            url: "https://github.com/muuvlabs/af-workouts-player-ios/releases/download/\(version)/WorkoutsPlayer_\(version).xcframework.zip",
             checksum: checksum
         )
     ]
