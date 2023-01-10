@@ -17,15 +17,6 @@
         "revision" : "0191e64e73d1d31c2afbb36295895124df23dc41",
         "version" : "0.5.0"
       }
-    },
-    {
-      "identity" : "workouts-player-core-internal-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/muuvlabs/workouts-player-core-internal-ios",
-      "state" : {
-        "branch" : "main",
-        "revision" : "3b37c64a0943aec29c50b7c029a19ed907054f81"
-      }
     }
   ],
   "version" : 2

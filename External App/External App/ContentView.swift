@@ -7,26 +7,15 @@
 //
 
 import SwiftUI
-import WorkoutPlayerCore
+import WorkoutsPlayerCore
+import WorkoutsPlayerUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
-        
-        MySwiftUIView(text: "MySwiftUIView")
+        WorkoutsPlayerView()
             .onAppear() {
                 testFacade()
             }
-        
-        Image("Workouts screenshot", bundle: .init(for: Facade.self))
-            .resizable()
-            .frame(width: 150, height: 350)
     }
     
     func testFacade() {

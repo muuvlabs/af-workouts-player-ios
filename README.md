@@ -1,1 +1,1 @@
-# workout-player-core-binaries-ios
+# af-workouts-player-ios

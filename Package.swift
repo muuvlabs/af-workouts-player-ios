@@ -22,12 +22,8 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         .package(
-            url: "https://github.com/anytimefitness/ios-endpoints.git",
-            from: "0.7.0"
-        ),
-        .package(
-            url: "https://github.com/anytimefitness/ios-utilities.git",
-            from: "0.5.0"
+            url: "https://github.com/muuvlabs/workouts-player-core-internal-ios.git",
+            branch: "main"
         )
     ],
     targets: [
@@ -35,13 +31,8 @@ let package = Package(
             name: "Dependencies",
             dependencies: [
                 .product(
-                    name: "MuuvEndpoints",
-                    package: "ios-endpoints",
-                    condition: .when(platforms: [.iOS])
-                ),
-                .product(
-                    name: "MuuvUtilities",
-                    package: "ios-utilities",
+                    name: "WorkoutsPlayerCore",
+                    package: "workouts-player-core-internal-ios",
                     condition: .when(platforms: [.iOS])
                 )
             ],
