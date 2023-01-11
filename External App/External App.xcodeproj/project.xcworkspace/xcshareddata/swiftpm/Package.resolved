@@ -1,30 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "ios-endpoints",
+      "identity" : "af-workouts-player-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/anytimefitness/ios-endpoints.git",
+      "location" : "https://github.com/muuvlabs/af-workouts-player-ios",
       "state" : {
-        "revision" : "3237ab8a7e98d38ef5d47188eff3ae88d459686b",
-        "version" : "0.7.0"
-      }
-    },
-    {
-      "identity" : "ios-utilities",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/anytimefitness/ios-utilities.git",
-      "state" : {
-        "revision" : "0191e64e73d1d31c2afbb36295895124df23dc41",
-        "version" : "0.5.0"
-      }
-    },
-    {
-      "identity" : "workouts-player-core-internal-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/muuvlabs/workouts-player-core-internal-ios",
-      "state" : {
-        "branch" : "main",
-        "revision" : "3b37c64a0943aec29c50b7c029a19ed907054f81"
+        "revision" : "dcf4c7fc18421b54eee70fd7df6e519e47202a21",
+        "version" : "0.0.20"
       }
     }
   ],

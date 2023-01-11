@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0C4212296E0824000EA13A /* WorkoutsPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = BF0C4211296E0824000EA13A /* WorkoutsPlayer */; };
 		BF425ABF29688A39003CA25C /* ExternalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF425ABE29688A39003CA25C /* ExternalApp.swift */; };
 		BF425AC129688A39003CA25C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF425AC029688A39003CA25C /* ContentView.swift */; };
 		BF425AC329688A3B003CA25C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF425AC229688A3B003CA25C /* Assets.xcassets */; };
@@ -14,7 +15,6 @@
 		BF425AD029688A3B003CA25C /* External_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF425ACF29688A3B003CA25C /* External_AppTests.swift */; };
 		BF425ADA29688A3B003CA25C /* External_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF425AD929688A3B003CA25C /* External_AppUITests.swift */; };
 		BF425ADC29688A3B003CA25C /* External_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF425ADB29688A3B003CA25C /* External_AppUITestsLaunchTests.swift */; };
-		BF425AEA29688AAD003CA25C /* WorkoutPlayerCore in Frameworks */ = {isa = PBXBuildFile; productRef = BF425AE929688AAD003CA25C /* WorkoutPlayerCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF0C4207296E0354000EA13A /* WorkoutsPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WorkoutsPlayer.xcframework; path = "../../af-workouts-player-internal-ios/Scripts/WorkoutsPlayer.xcframework"; sourceTree = "<group>"; };
+		BF0C420B296E03C8000EA13A /* WorkoutsPlayerUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WorkoutsPlayerUI.framework; path = "../../af-workouts-player-internal-ios/Scripts/WorkoutsPlayer.xcframework/ios-arm64_x86_64-simulator/WorkoutsPlayerUI.framework"; sourceTree = "<group>"; };
 		BF425ABB29688A39003CA25C /* External App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "External App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF425ABE29688A39003CA25C /* ExternalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalApp.swift; sourceTree = "<group>"; };
 		BF425AC029688A39003CA25C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF425AEA29688AAD003CA25C /* WorkoutPlayerCore in Frameworks */,
+				BF0C4212296E0824000EA13A /* WorkoutsPlayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF0C4204296E0204000EA13A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF0C420B296E03C8000EA13A /* WorkoutsPlayerUI.framework */,
+				BF0C4207296E0354000EA13A /* WorkoutsPlayer.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF425AB229688A39003CA25C = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +91,7 @@
 				BF425ACE29688A3B003CA25C /* External AppTests */,
 				BF425AD829688A3B003CA25C /* External AppUITests */,
 				BF425ABC29688A39003CA25C /* Products */,
+				BF0C4204296E0204000EA13A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,7 +158,7 @@
 			);
 			name = "External App";
 			packageProductDependencies = (
-				BF425AE929688AAD003CA25C /* WorkoutPlayerCore */,
+				BF0C4211296E0824000EA13A /* WorkoutsPlayer */,
 			);
 			productName = "External App";
 			productReference = BF425ABB29688A39003CA25C /* External App.app */;
@@ -221,7 +233,7 @@
 			);
 			mainGroup = BF425AB229688A39003CA25C;
 			packageReferences = (
-				BF425AE829688AAD003CA25C /* XCRemoteSwiftPackageReference "workout-player-core-binaries-ios" */,
+				BF0C4210296E0824000EA13A /* XCRemoteSwiftPackageReference "af-workouts-player-ios" */,
 			);
 			productRefGroup = BF425ABC29688A39003CA25C /* Products */;
 			projectDirPath = "";
@@ -433,6 +445,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,6 +475,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,21 +607,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BF425AE829688AAD003CA25C /* XCRemoteSwiftPackageReference "workout-player-core-binaries-ios" */ = {
+		BF0C4210296E0824000EA13A /* XCRemoteSwiftPackageReference "af-workouts-player-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/muuvlabs/workout-player-core-binaries-ios";
+			repositoryURL = "https://github.com/muuvlabs/af-workouts-player-ios";
 			requirement = {
 				kind = exactVersion;
-				version = 0.0.11;
+				version = 0.0.20;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BF425AE929688AAD003CA25C /* WorkoutPlayerCore */ = {
+		BF0C4211296E0824000EA13A /* WorkoutsPlayer */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BF425AE829688AAD003CA25C /* XCRemoteSwiftPackageReference "workout-player-core-binaries-ios" */;
-			productName = WorkoutPlayerCore;
+			package = BF0C4210296E0824000EA13A /* XCRemoteSwiftPackageReference "af-workouts-player-ios" */;
+			productName = WorkoutsPlayer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

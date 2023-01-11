@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import WorkoutsPlayerCore
+//import WorkoutsPlayerCore // Core is hidden inside WorkoutsPlayerUI
 import WorkoutsPlayerUI
 
 struct ContentView: View {
@@ -19,11 +19,11 @@ struct ContentView: View {
     }
     
     func testFacade() {
-        let facade = Facade()
-        
-        facade.publicFunction()
-        facade.publicFunctionUsingEndpoints()
-        facade.publicFunctionUsingUtilities()
+//        let facade = Facade()
+//        
+//        facade.publicFunction()
+//        facade.publicFunctionUsingEndpoints()
+//        facade.publicFunctionUsingUtilities()
     }
 }
 
