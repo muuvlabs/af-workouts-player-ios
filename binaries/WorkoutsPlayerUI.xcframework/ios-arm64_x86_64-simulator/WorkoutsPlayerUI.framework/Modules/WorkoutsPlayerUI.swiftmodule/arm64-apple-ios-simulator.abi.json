@@ -1,0 +1,852 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "MuuvUtilities",
+        "printedName": "MuuvUtilities",
+        "declKind": "Import",
+        "moduleName": "WorkoutsPlayerUI",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "WorkoutsPlayerUI"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "WorkoutsPlayerUI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WorkoutsUI",
+        "printedName": "WorkoutsUI",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WorkoutsUI",
+                "printedName": "WorkoutsPlayerUI.WorkoutsUI",
+                "usr": "s:16WorkoutsPlayerUI0aC0C"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16WorkoutsPlayerUI0aC0C6sharedACvpZ",
+            "mangledName": "$s16WorkoutsPlayerUI0aC0C6sharedACvpZ",
+            "moduleName": "WorkoutsPlayerUI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WorkoutsUI",
+                    "printedName": "WorkoutsPlayerUI.WorkoutsUI",
+                    "usr": "s:16WorkoutsPlayerUI0aC0C"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16WorkoutsPlayerUI0aC0C6sharedACvgZ",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C6sharedACvgZ",
+                "moduleName": "WorkoutsPlayerUI",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WorkoutsUI",
+                    "printedName": "WorkoutsPlayerUI.WorkoutsUI",
+                    "usr": "s:16WorkoutsPlayerUI0aC0C"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16WorkoutsPlayerUI0aC0C6sharedACvsZ",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C6sharedACvsZ",
+                "moduleName": "WorkoutsPlayerUI",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16WorkoutsPlayerUI0aC0C6sharedACvMZ",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C6sharedACvMZ",
+                "moduleName": "WorkoutsPlayerUI",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userJWT",
+            "printedName": "userJWT",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16WorkoutsPlayerUI0aC0C7userJWTSSSgvp",
+            "mangledName": "$s16WorkoutsPlayerUI0aC0C7userJWTSSSgvp",
+            "moduleName": "WorkoutsPlayerUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16WorkoutsPlayerUI0aC0C7userJWTSSSgvg",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C7userJWTSSSgvg",
+                "moduleName": "WorkoutsPlayerUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16WorkoutsPlayerUI0aC0C7userJWTSSSgvs",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C7userJWTSSSgvs",
+                "moduleName": "WorkoutsPlayerUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16WorkoutsPlayerUI0aC0C7userJWTSSSgvM",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C7userJWTSSSgvM",
+                "moduleName": "WorkoutsPlayerUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sdkVersionString",
+            "printedName": "sdkVersionString",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16WorkoutsPlayerUI0aC0C16sdkVersionStringSSvp",
+            "mangledName": "$s16WorkoutsPlayerUI0aC0C16sdkVersionStringSSvp",
+            "moduleName": "WorkoutsPlayerUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16WorkoutsPlayerUI0aC0C16sdkVersionStringSSvg",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C16sdkVersionStringSSvg",
+                "moduleName": "WorkoutsPlayerUI",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "preferredLanguage",
+            "printedName": "preferredLanguage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16WorkoutsPlayerUI0aC0C17preferredLanguageSSSgvp",
+            "mangledName": "$s16WorkoutsPlayerUI0aC0C17preferredLanguageSSSgvp",
+            "moduleName": "WorkoutsPlayerUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16WorkoutsPlayerUI0aC0C17preferredLanguageSSSgvg",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C17preferredLanguageSSSgvg",
+                "moduleName": "WorkoutsPlayerUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16WorkoutsPlayerUI0aC0C17preferredLanguageSSSgvs",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C17preferredLanguageSSSgvs",
+                "moduleName": "WorkoutsPlayerUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16WorkoutsPlayerUI0aC0C17preferredLanguageSSSgvM",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C17preferredLanguageSSSgvM",
+                "moduleName": "WorkoutsPlayerUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "initialize",
+            "printedName": "initialize(with:environment:preferredLanguage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Environment",
+                "printedName": "WorkoutsPlayerUI.WorkoutsUI.Environment",
+                "hasDefaultArg": true,
+                "usr": "s:16WorkoutsPlayerUI0aC0C11EnvironmentO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16WorkoutsPlayerUI0aC0C10initialize4with11environment17preferredLanguageySS_AC11EnvironmentOSStF",
+            "mangledName": "$s16WorkoutsPlayerUI0aC0C10initialize4with11environment17preferredLanguageySS_AC11EnvironmentOSStF",
+            "moduleName": "WorkoutsPlayerUI",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "workoutListView",
+            "printedName": "workoutListView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16WorkoutsPlayerUI0aC0C15workoutListViewQrvp",
+            "mangledName": "$s16WorkoutsPlayerUI0aC0C15workoutListViewQrvp",
+            "moduleName": "WorkoutsPlayerUI",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16WorkoutsPlayerUI0aC0C15workoutListViewQrvg",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C15workoutListViewQrvg",
+                "moduleName": "WorkoutsPlayerUI",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Environment",
+            "printedName": "Environment",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "production",
+                "printedName": "production",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(WorkoutsPlayerUI.WorkoutsUI.Environment.Type) -> WorkoutsPlayerUI.WorkoutsUI.Environment",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Environment",
+                        "printedName": "WorkoutsPlayerUI.WorkoutsUI.Environment",
+                        "usr": "s:16WorkoutsPlayerUI0aC0C11EnvironmentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "WorkoutsPlayerUI.WorkoutsUI.Environment.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Environment",
+                            "printedName": "WorkoutsPlayerUI.WorkoutsUI.Environment",
+                            "usr": "s:16WorkoutsPlayerUI0aC0C11EnvironmentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16WorkoutsPlayerUI0aC0C11EnvironmentO10productionyA2EmF",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C11EnvironmentO10productionyA2EmF",
+                "moduleName": "WorkoutsPlayerUI"
+              },
+              {
+                "kind": "Var",
+                "name": "staging",
+                "printedName": "staging",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(WorkoutsPlayerUI.WorkoutsUI.Environment.Type) -> WorkoutsPlayerUI.WorkoutsUI.Environment",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Environment",
+                        "printedName": "WorkoutsPlayerUI.WorkoutsUI.Environment",
+                        "usr": "s:16WorkoutsPlayerUI0aC0C11EnvironmentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "WorkoutsPlayerUI.WorkoutsUI.Environment.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Environment",
+                            "printedName": "WorkoutsPlayerUI.WorkoutsUI.Environment",
+                            "usr": "s:16WorkoutsPlayerUI0aC0C11EnvironmentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16WorkoutsPlayerUI0aC0C11EnvironmentO7stagingyA2EmF",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C11EnvironmentO7stagingyA2EmF",
+                "moduleName": "WorkoutsPlayerUI"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Environment",
+                    "printedName": "WorkoutsPlayerUI.WorkoutsUI.Environment",
+                    "usr": "s:16WorkoutsPlayerUI0aC0C11EnvironmentO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Environment",
+                    "printedName": "WorkoutsPlayerUI.WorkoutsUI.Environment",
+                    "usr": "s:16WorkoutsPlayerUI0aC0C11EnvironmentO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16WorkoutsPlayerUI0aC0C11EnvironmentO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C11EnvironmentO2eeoiySbAE_AEtFZ",
+                "moduleName": "WorkoutsPlayerUI",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16WorkoutsPlayerUI0aC0C11EnvironmentO9hashValueSivp",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C11EnvironmentO9hashValueSivp",
+                "moduleName": "WorkoutsPlayerUI",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16WorkoutsPlayerUI0aC0C11EnvironmentO9hashValueSivg",
+                    "mangledName": "$s16WorkoutsPlayerUI0aC0C11EnvironmentO9hashValueSivg",
+                    "moduleName": "WorkoutsPlayerUI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16WorkoutsPlayerUI0aC0C11EnvironmentO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s16WorkoutsPlayerUI0aC0C11EnvironmentO4hash4intoys6HasherVz_tF",
+                "moduleName": "WorkoutsPlayerUI",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:16WorkoutsPlayerUI0aC0C11EnvironmentO",
+            "mangledName": "$s16WorkoutsPlayerUI0aC0C11EnvironmentO",
+            "moduleName": "WorkoutsPlayerUI",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16WorkoutsPlayerUI0aC0C",
+        "mangledName": "$s16WorkoutsPlayerUI0aC0C",
+        "moduleName": "WorkoutsPlayerUI",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "WorkoutsPlayerUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WorkoutsPlayerCoreInternal",
+        "printedName": "WorkoutsPlayerCoreInternal",
+        "declKind": "Import",
+        "moduleName": "WorkoutsPlayerUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WorkoutsPlayerView",
+        "printedName": "WorkoutsPlayerView",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WorkoutsPlayerView",
+                "printedName": "WorkoutsPlayerUI.WorkoutsPlayerView",
+                "usr": "s:16WorkoutsPlayerUI0aB4ViewV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16WorkoutsPlayerUI0aB4ViewVACycfc",
+            "mangledName": "$s16WorkoutsPlayerUI0aB4ViewVACycfc",
+            "moduleName": "WorkoutsPlayerUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16WorkoutsPlayerUI0aB4ViewV4bodyQrvp",
+            "mangledName": "$s16WorkoutsPlayerUI0aB4ViewV4bodyQrvp",
+            "moduleName": "WorkoutsPlayerUI",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16WorkoutsPlayerUI0aB4ViewV4bodyQrvg",
+                "mangledName": "$s16WorkoutsPlayerUI0aB4ViewV4bodyQrvg",
+                "moduleName": "WorkoutsPlayerUI",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16WorkoutsPlayerUI0aB4ViewV",
+        "mangledName": "$s16WorkoutsPlayerUI0aB4ViewV",
+        "moduleName": "WorkoutsPlayerUI",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

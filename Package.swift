@@ -15,7 +15,7 @@ let package = Package(
     products: [
         .library(
             name: "WorkoutsPlayer",
-            targets: ["WorkoutsPlayer"]
+            targets: ["WorkoutsPlayerUI"]
         )
     ],
     dependencies: [
@@ -23,10 +23,15 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),        
     ],
     targets: [
+//        .binaryTarget(
+//            name: "WorkoutsPlayer",
+//            url: "https://github.com/muuvlabs/af-workouts-player-ios/releases/download/\(version)/WorkoutsPlayer_\(version).xcframework.zip",
+//            checksum: checksum
+//        )
+
         .binaryTarget(
-            name: "WorkoutsPlayer",
-            url: "https://github.com/muuvlabs/af-workouts-player-ios/releases/download/\(version)/WorkoutsPlayer_\(version).xcframework.zip",
-            checksum: checksum
-        )
+                name: "WorkoutsPlayerUI",
+                path: "binaries/WorkoutsPlayerUI.xcframework"
+            )
     ]
 )

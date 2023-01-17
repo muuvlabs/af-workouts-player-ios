@@ -1,0 +1,11 @@
+framework module WorkoutsPlayerUI {
+  umbrella header "WorkoutsPlayerUI.h"
+
+  export *
+  module * { export * }
+}
+
+module WorkoutsPlayerUI.Swift {
+  header "WorkoutsPlayerUI-Swift.h"
+  requires objc
+}

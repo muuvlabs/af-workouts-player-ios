@@ -1,0 +1,46 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name WorkoutsPlayerUI
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Swift
+import SwiftUI
+import UIKit
+import WorkoutsPlayerCoreInternal
+@_exported import WorkoutsPlayerUI
+import _Concurrency
+import _StringProcessing
+@_hasMissingDesignatedInitializers public class WorkoutsUI {
+  public static var shared: WorkoutsPlayerUI.WorkoutsUI
+  public var userJWT: Swift.String?
+  public var sdkVersionString: Swift.String {
+    get
+  }
+  public var preferredLanguage: Swift.String?
+  @objc deinit
+}
+extension WorkoutsPlayerUI.WorkoutsUI {
+  public func initialize(with userJWT: Swift.String, environment: WorkoutsPlayerUI.WorkoutsUI.Environment = .production, preferredLanguage: Swift.String)
+  public var workoutListView: some SwiftUI.View {
+    get
+  }
+}
+extension WorkoutsPlayerUI.WorkoutsUI {
+  public enum Environment {
+    case production
+    case staging
+    public static func == (a: WorkoutsPlayerUI.WorkoutsUI.Environment, b: WorkoutsPlayerUI.WorkoutsUI.Environment) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public struct WorkoutsPlayerView : SwiftUI.View {
+  public init()
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s16WorkoutsPlayerUI0aB4ViewV4bodyQrvp", 0) __
+}
+extension WorkoutsPlayerUI.WorkoutsUI.Environment : Swift.Equatable {}
+extension WorkoutsPlayerUI.WorkoutsUI.Environment : Swift.Hashable {}
