@@ -25,7 +25,9 @@ let package = Package(
     targets: [
         .target(
             name: "WorkoutsPlayerWrapper",
-            dependencies: []),
+            dependencies: ["WorkoutsPlayer", "MuuvUtilities"],
+            path: "Sources"
+        ),
         .binaryTarget(
             name: "WorkoutsPlayer",
             url: "https://github.com/muuvlabs/af-workouts-player-ios/releases/download/\(version)/WorkoutsPlayer_\(version).xcframework.zip",
