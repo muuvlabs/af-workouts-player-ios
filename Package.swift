@@ -35,8 +35,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "MuuvUtilities",
-            url: "https://github.com/muuvlabs/muuv-utilities-ios/releases/download/0.0.3/MuuvUtilities_0.0.3.xcframework.zip",
-            checksum: "a55b99082bd3a6d522130d6fc8513c6bccfb5a6c5ffc5db2b71b49fa5306362e"
+            url: "https://github.com/muuvlabs/muuv-utilities-ios/releases/download/0.0.4/MuuvUtilities_0.0.4.xcframework.zip",
+            checksum: "e398f97d460cf9a6e120833028f6d7c3e0ad3d597c408ef7c0f0239fc25acbd0"
         )
     ]
 )
