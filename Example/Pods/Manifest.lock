@@ -1,0 +1,16 @@
+PODS:
+  - WorkoutsPlayer (0.1.0)
+
+DEPENDENCIES:
+  - WorkoutsPlayer (from `../`)
+
+EXTERNAL SOURCES:
+  WorkoutsPlayer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WorkoutsPlayer: 7dd7f6ce3fd1568c9c77f91e5b8f91ee3c9b6933
+
+PODFILE CHECKSUM: b0323b5b605c7bac1b5e7f77cf8f4f6726bc1ff0
+
+COCOAPODS: 1.11.3

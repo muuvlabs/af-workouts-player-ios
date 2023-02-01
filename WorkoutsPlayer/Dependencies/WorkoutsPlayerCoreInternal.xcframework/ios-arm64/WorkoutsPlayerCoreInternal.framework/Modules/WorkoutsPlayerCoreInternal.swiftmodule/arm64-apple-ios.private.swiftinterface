@@ -1,0 +1,2695 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name WorkoutsPlayerCoreInternal
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import CallKit
+import Foundation
+import HealthKit
+import MediaPlayer
+import Swift
+import UIKit
+@_exported import WorkoutsPlayerCoreInternal
+import _Concurrency
+import _StringProcessing
+extension Swift.Array {
+  public static func + (all: Swift.Array<Element>, element: Element) -> Swift.Array<Element>
+  public mutating func remove(where predicate: (Element) -> Swift.Bool)
+  public var countIsOdd: Swift.Bool {
+    get
+  }
+}
+extension Swift.Array {
+  public mutating func change(where predicate: (Element) -> Swift.Bool, transformation: (inout Element) -> Swift.Void)
+}
+@objc public protocol AudioCoachingEngine : WorkoutsPlayerCoreInternal.EngineAudioDownloading, WorkoutsPlayerCoreInternal.EngineWorkoutControlling, WorkoutsPlayerCoreInternal.EngineWorkoutInformation {
+  @objc init(workout: WorkoutsPlayerCoreInternal.Workout, delegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineDelegate?, downloadingDelegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineDownloadingDelegate?)
+  @objc var delegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineDelegate? { get set }
+  @objc var downloadingDelegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineDownloadingDelegate? { get set }
+  @objc var controlsDelegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineControlsDelegate { get }
+}
+@objc public protocol EngineAudioDownloading {
+  @objc var bytesToDownload: Swift.Int64 { get }
+  @objc var bytesDownloaded: Swift.Int64 { get }
+}
+@objc public protocol EngineWorkoutControlling {
+  @objc var canStartWorkout: Swift.Bool { get }
+  @objc var canPauseWorkout: Swift.Bool { get }
+  @objc var canResumeWorkout: Swift.Bool { get }
+  @objc var canFinishWorkout: Swift.Bool { get }
+  @objc var canDiscardWorkout: Swift.Bool { get }
+  @objc var canDecreaseIntensity: Swift.Bool { get }
+  @objc var canIncreaseIntensity: Swift.Bool { get }
+  @objc var canReplaceBlock: Swift.Bool { get }
+  @objc var canSkipBlock: Swift.Bool { get }
+  @objc var canMarkBlockAsDone: Swift.Bool { get }
+  @objc var isPlaying: Swift.Bool { get }
+  @objc func start()
+  @objc func finish()
+  @objc func discard()
+  @objc func pause()
+  @objc func resume()
+  @objc func decreaseIntensity()
+  @objc func increaseIntensity()
+  @objc func skipBlock()
+  @objc func markBlockDone()
+  @objc func replaceBlock()
+  @objc func stopPlayingCurrentBlock()
+  @objc func setCurrentBlock(_ block: WorkoutsPlayerCoreInternal.WorkoutBlock?, isAlreadySelected: Swift.Bool)
+  @objc func dismissBump()
+  @objc func cancelReactiveAudio(info: WorkoutsPlayerCoreInternal.CancelReactiveAudioInfo)
+  @objc func dismissReactiveAudio(info: WorkoutsPlayerCoreInternal.DismissReactiveAudioInfo)
+  @objc func playWhenIsPossible(reactiveAudioSnippet: WorkoutsPlayerCoreInternal.ReactiveAudioSnippet)
+}
+@objc public protocol EngineWorkoutInformation {
+  @objc var didReceiveInfoFromWatch: Swift.Bool { get set }
+  @objc var avgHeartRate: Swift.Int { get set }
+  @objc var heartRate: Swift.Int { get set }
+  @objc var calories: Swift.Int { get set }
+  @objc var userWeight: Swift.Int { get set }
+  @objc var coachVolume: Swift.Float { get set }
+  @objc var currentBlock: WorkoutsPlayerCoreInternal.WorkoutBlock? { get }
+  @objc var currentBlockElapsedTime: Foundation.TimeInterval { get }
+  @objc var currentBlockProgressFloat: Swift.Float { get }
+  @objc var elapsedTime: Foundation.TimeInterval { get }
+  @objc var isFormEnabled: Swift.Bool { get set }
+  @objc var isMotivationEnabled: Swift.Bool { get set }
+  @objc var isDirectionEnabled: Swift.Bool { get set }
+  @objc var isPacingEnabled: Swift.Bool { get set }
+  @objc var isBumpsEnabled: Swift.Bool { get set }
+  @objc var isPaused: Swift.Bool { get }
+  @objc var isStarted: Swift.Bool { get }
+  @objc var volume: Swift.Float { get set }
+  @objc var workout: WorkoutsPlayerCoreInternal.Workout { get }
+}
+@objc public protocol AudioCoachingEngineControlsDelegate {
+  @objc func controlsDidToggle(type: WorkoutsPlayerCoreInternal.AudioCoachingType, newValue: Swift.Bool)
+  @objc func controlsDidChangeValue(value: Swift.Float)
+  @objc func controlsDidReceiveTap()
+}
+@objc public enum AudioCoachingType : Swift.Int, Swift.Hashable, Swift.Equatable {
+  case direction
+  case form
+  case motivation
+  case pacing
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol AudioCoachingEngineDelegate : WorkoutsPlayerCoreInternal.AudioCoachingEngineBumpsDelegate, WorkoutsPlayerCoreInternal.AudioCoachingEngineWorkoutActionsDelegate, WorkoutsPlayerCoreInternal.AudioCoachingEngineWorkoutDelegate, WorkoutsPlayerCoreInternal.AudioCoachingEngineWorkoutPlaybackDelegate {
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, elapsedTime: Foundation.TimeInterval)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didReceiveInterruptionToPause: WorkoutsPlayerCoreInternal.InterruptionNotification)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didReceiveInterruptionToResume: WorkoutsPlayerCoreInternal.InterruptionNotification)
+  @objc func engineDidReceiveEventWorkoutUpdate(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStartPlayingReactiveAudioSnippet reactiveAudioSnippet: WorkoutsPlayerCoreInternal.ReactiveAudioSnippet)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStopPlayingReactiveAudioSnippet reactiveAudioSnippet: WorkoutsPlayerCoreInternal.ReactiveAudioSnippet)
+  @objc func engineShouldObtainAVGHeartRateFromExternalSource(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine) -> Swift.Bool
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, externalSourceAVGHeartRateSince since: Foundation.Date, toEndDate end: Foundation.Date, completionHandler: @escaping (Foundation.NSNumber?, Swift.Error?) -> Swift.Void)
+}
+@objc public protocol AudioCoachingEngineWorkoutPlaybackDelegate {
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStartPlaying eventURL: Foundation.URL)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStopPlaying eventURL: Foundation.URL)
+}
+@objc public protocol AudioCoachingEngineWorkoutDelegate {
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, willStart workout: WorkoutsPlayerCoreInternal.Workout)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStart workout: WorkoutsPlayerCoreInternal.Workout)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didDiscard workout: WorkoutsPlayerCoreInternal.Workout)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didFinish workout: WorkoutsPlayerCoreInternal.Workout, heartRate: Swift.Int, calories: Swift.Int)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStartBlock block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didFinishBlock block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didPause block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didResume block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didChange block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+}
+@objc public protocol AudioCoachingEngineWorkoutActionsDelegate {
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, willPerform action: WorkoutsPlayerCoreInternal.UpdateWorkoutActionObjc)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didPerform action: WorkoutsPlayerCoreInternal.UpdateWorkoutActionObjc)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didFail action: WorkoutsPlayerCoreInternal.UpdateWorkoutActionObjc, error: Swift.Error?)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, requests action: WorkoutsPlayerCoreInternal.UpdateWorkoutActionObjc, on workout: WorkoutsPlayerCoreInternal.Workout, retryCount: Swift.Int, onSuccess: @escaping (WorkoutsPlayerCoreInternal.Workout) -> Swift.Void, onError: @escaping (Swift.Error) -> Swift.Void)
+}
+@objc public protocol AudioCoachingEngineBumpsDelegate {
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, willStartPlayingBump bump: WorkoutsPlayerCoreInternal.Bump, timeSinceNow: Foundation.TimeInterval)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStartPlayingBump bump: WorkoutsPlayerCoreInternal.Bump)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStopPlayingBump bump: WorkoutsPlayerCoreInternal.Bump)
+}
+@objc public protocol AudioCoachingEngineDownloadingDelegate {
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, willStartDownloading workout: WorkoutsPlayerCoreInternal.Workout)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didFinishDownloading workout: WorkoutsPlayerCoreInternal.Workout)
+  @objc func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didProgressDownloading workout: WorkoutsPlayerCoreInternal.Workout)
+}
+public struct AudioCoachingPreference : Swift.Codable, WorkoutsPlayerCoreInternal.WorkoutUpdate {
+  public let id: Swift.Int
+  public let coachId: Swift.Int?
+  public let isAudioDirection: Swift.Bool?
+  public let isAudioMotivation: Swift.Bool?
+  public let isAudioForm: Swift.Bool?
+  public let isAudioPacing: Swift.Bool?
+  public init(id: Swift.Int, coachId: Swift.Int?, isAudioDirection: Swift.Bool?, isAudioMotivation: Swift.Bool?, isAudioForm: Swift.Bool?, isAudioPacing: Swift.Bool?)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class AudioCoachingPreferenceObjc : ObjectiveC.NSObject {
+  @objc final public let id: Swift.Int
+  @objc final public let coachId: Foundation.NSNumber?
+  @objc final public let isAudioDirection: Foundation.NSNumber?
+  @objc final public let isAudioMotivation: Foundation.NSNumber?
+  @objc final public let isAudioForm: Foundation.NSNumber?
+  @objc final public let isAudioPacing: Foundation.NSNumber?
+  @objc deinit
+}
+extension WorkoutsPlayerCoreInternal.AudioCoachingPreferenceObjc {
+  public var preference: WorkoutsPlayerCoreInternal.AudioCoachingPreference {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.AudioCoachingPreference {
+  public var objc: WorkoutsPlayerCoreInternal.AudioCoachingPreferenceObjc {
+    get
+  }
+  public static func from(objc: WorkoutsPlayerCoreInternal.AudioCoachingPreferenceObjc) -> WorkoutsPlayerCoreInternal.AudioCoachingPreference
+}
+public class AudioControlCenter {
+  weak public var delegate: WorkoutsPlayerCoreInternal.AudioControlCenterDelegate?
+  public init(delegate: WorkoutsPlayerCoreInternal.AudioControlCenterDelegate)
+  @objc deinit
+  public func updateNowPlaying()
+  public func setNowPlayingMetadata(_ metadata: WorkoutsPlayerCoreInternal.NowPlayableStaticMetadata)
+  public func setNowPlayingPlaybackInfo(_ metadata: WorkoutsPlayerCoreInternal.NowPlayableDynamicMetadata)
+  public func clearNowPlayingInfo()
+}
+public protocol AudioControlCenterDelegate : AnyObject {
+  var staticMetadata: WorkoutsPlayerCoreInternal.NowPlayableStaticMetadata? { get }
+  var dynamicMetadata: WorkoutsPlayerCoreInternal.NowPlayableDynamicMetadata { get }
+  func play(fromBegining: Swift.Bool)
+  func next()
+  func prev()
+  func pause()
+  func stop()
+}
+public protocol AudioPlayer : AnyObject {
+  var volume: Swift.Float { get set }
+  var delegate: WorkoutsPlayerCoreInternal.AudioPlayerDelegate? { get set }
+  func play(url: Foundation.URL)
+  func seek(time: Foundation.TimeInterval)
+  func stop()
+  func resume()
+  func pause()
+}
+@objc public class AudioPlayerImp : ObjectiveC.NSObject, WorkoutsPlayerCoreInternal.AudioPlayer {
+  weak public var delegate: WorkoutsPlayerCoreInternal.AudioPlayerDelegate?
+  public init(delegate: WorkoutsPlayerCoreInternal.AudioPlayerDelegate? = nil, volume: Swift.Float = 1.0)
+  public var isPlaying: Swift.Bool {
+    get
+  }
+  public var volume: Swift.Float {
+    get
+    set
+  }
+  public func pause()
+  public func play(url: Foundation.URL)
+  public func seek(time: Foundation.TimeInterval)
+  public func stop()
+  public func resume()
+  public var currentItemDuration: Foundation.TimeInterval? {
+    get
+  }
+  @objc deinit
+}
+public protocol AudioPlayerDelegate : AnyObject {
+  func player(_ player: WorkoutsPlayerCoreInternal.AudioPlayer, didUpdate url: Foundation.URL, currentTime: CoreMedia.CMTime, duration: CoreMedia.CMTime)
+  func player(_ player: WorkoutsPlayerCoreInternal.AudioPlayer, didPlayToEnd url: Foundation.URL)
+}
+public typealias AudioPlayerUpdated = (_ current: CoreMedia.CMTime, _ duration: CoreMedia.CMTime) -> Swift.Void
+public class AudioSessionManager {
+  public init(audioSession: AVFAudio.AVAudioSession = .sharedInstance())
+  public var isOtherAudioPlaying: Swift.Bool {
+    get
+  }
+  public func setupDuckOthers() throws
+  public func setupMixWithOthers() throws
+  public func setupAudioSession(category: AVFAudio.AVAudioSession.Category = .playback, mode _: AVFAudio.AVAudioSession.Mode = .default, options: AVFAudio.AVAudioSession.CategoryOptions = []) throws
+  public func deactivateAudioSession() throws
+  @objc deinit
+}
+public protocol AudioTimelinePlayerDelegate : AnyObject {
+  func audioTimelinePlayer(_ player: WorkoutsPlayerCoreInternal.AudioTimelinePlayer, didFire event: WorkoutsPlayerCoreInternal.TimelineEvent)
+  func audioTimelinePlayer(_ player: WorkoutsPlayerCoreInternal.AudioTimelinePlayer, willPlay event: WorkoutsPlayerCoreInternal.TimelineEvent, at startTime: Foundation.TimeInterval)
+  func audioTimelinePlayer(_ player: WorkoutsPlayerCoreInternal.AudioTimelinePlayer, didProgress progress: WorkoutsPlayerCoreInternal.AudioTimelinePlayer.Progress)
+  func audioTimelinePlayer(_ player: WorkoutsPlayerCoreInternal.AudioTimelinePlayer, didFinish event: WorkoutsPlayerCoreInternal.TimelineEvent)
+}
+public class AudioTimelinePlayer {
+  public struct Progress {
+    public var time: Foundation.TimeInterval
+    public var duration: Foundation.TimeInterval
+    public var event: WorkoutsPlayerCoreInternal.TimelineEvent
+    public var isLastEvent: Swift.Bool
+    public var isFinished: Swift.Bool {
+      get
+    }
+  }
+  weak public var delegate: WorkoutsPlayerCoreInternal.AudioTimelinePlayerDelegate?
+  public var isPlayingStarted: Swift.Bool {
+    get
+  }
+  public var timeline: WorkoutsPlayerCoreInternal.Timeline {
+    get
+    set
+  }
+  public init(timeline: WorkoutsPlayerCoreInternal.Timeline, player: WorkoutsPlayerCoreInternal.AudioPlayer, shouldFillWithSilence: Swift.Bool = true, delegate: WorkoutsPlayerCoreInternal.AudioTimelinePlayerDelegate? = nil)
+  @objc deinit
+  public func play(startTime: Foundation.TimeInterval, keepPlayingSilenceAfrerDone: Swift.Bool = true)
+  public func pause()
+  public func resume()
+  public func stop()
+  public var progress: Swift.Float {
+    get
+  }
+  public var timeRemaining: Swift.Float {
+    get
+  }
+  public func canPlayBump(for bumpDuration: Swift.Float) -> Swift.Bool
+  public func addToPlay(bumpTimelineEvent: WorkoutsPlayerCoreInternal.TimelineEvent, duration: Swift.Float)
+  public func addToPlay(timelineEvent: WorkoutsPlayerCoreInternal.TimelineEvent, duration: Swift.Float)
+  public var hasBumpsToPlay: Swift.Bool {
+    get
+  }
+  public var isTimelineEmpty: Swift.Bool {
+    get
+  }
+  public var hasPendingEventsToPlay: Swift.Bool {
+    get
+  }
+  public var hasReactiveAudioSnippetToPlay: Swift.Bool {
+    get
+  }
+  public func canPlayReactiveAudioSnippet(for duration: Swift.Float) -> Swift.Bool
+}
+extension WorkoutsPlayerCoreInternal.AudioTimelinePlayer : WorkoutsPlayerCoreInternal.TimelineDelegate {
+  public func timeline(_: WorkoutsPlayerCoreInternal.Timeline, didFire event: WorkoutsPlayerCoreInternal.TimelineEvent)
+  public func dismissCurrentTimeline()
+}
+extension WorkoutsPlayerCoreInternal.AudioTimelinePlayer : WorkoutsPlayerCoreInternal.AudioPlayerDelegate {
+  public func player(_: WorkoutsPlayerCoreInternal.AudioPlayer, didUpdate _: Foundation.URL, currentTime: CoreMedia.CMTime, duration: CoreMedia.CMTime)
+  public func player(_: WorkoutsPlayerCoreInternal.AudioPlayer, didPlayToEnd url: Foundation.URL)
+  public func removeBumpTimelineEvents()
+  public func removeReactiveAudioSnippetEvents()
+}
+extension Foundation.URL {
+  public static var silence: Foundation.URL {
+    get
+  }
+  public static var bumpIntro: Foundation.URL {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.TimelineEvent {
+  public static func silence(time: Foundation.TimeInterval = 0, duration: Foundation.TimeInterval = 10) -> WorkoutsPlayerCoreInternal.TimelineEvent
+  public var isSilence: Swift.Bool {
+    get
+  }
+  public static func bumpIntro() -> WorkoutsPlayerCoreInternal.TimelineEvent
+  public var isBumpIntro: Swift.Bool {
+    get
+  }
+}
+public struct AudioTrack : Swift.Encodable, Swift.Equatable {
+  public let startMs: Swift.Double
+  public let mp3: Swift.String
+  public let durationMs: Swift.Double
+  public static func == (a: WorkoutsPlayerCoreInternal.AudioTrack, b: WorkoutsPlayerCoreInternal.AudioTrack) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension WorkoutsPlayerCoreInternal.AudioTrack : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+extension AVFoundation.AVPlayer {
+  public var isPlaying: Swift.Bool {
+    get
+  }
+  public var isPaused: Swift.Bool {
+    get
+  }
+  public var isReady: Swift.Bool {
+    get
+  }
+}
+public protocol Backend {
+  var stubbingBehavior: WorkoutsPlayerCoreInternal.StubbingBehavior { get }
+  var baseUrl: Swift.String { get }
+  var stagingUrl: Swift.String { get }
+  var headers: [Swift.String : Swift.String] { get }
+}
+@objc public protocol BackendObjc {
+  @objc var stubBehavior: WorkoutsPlayerCoreInternal.StubBehavior { get }
+  @objc var baseUrl: Swift.String { get }
+  @objc var stagingUrl: Swift.String { get }
+  @objc var headers: [Swift.String : Swift.String] { get }
+}
+extension WorkoutsPlayerCoreInternal.BackendObjc {
+  public var backend: WorkoutsPlayerCoreInternal.Backend {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.Backend {
+  public func url<T>(endpointType _: T.Type, id: Swift.String) -> Foundation.URL where T : Swift.Decodable, T : Swift.Encodable, T : WorkoutsPlayerCoreInternal.EndpointModifiable
+  public func url<T>(endpointType _: T.Type, parameters: [Swift.String : Any]) -> Foundation.URL where T : Swift.Decodable, T : Swift.Encodable, T : WorkoutsPlayerCoreInternal.EndpointModifiable
+  public func url<T>(endpointType _: T.Type, id: Swift.String) -> Foundation.URL where T : Swift.Decodable, T : Swift.Encodable, T : WorkoutsPlayerCoreInternal.EndpointAccessible
+  public func url<T>(endpointType _: T.Type, parameters: [Swift.String : Any]) -> Foundation.URL where T : Swift.Decodable, T : Swift.Encodable, T : WorkoutsPlayerCoreInternal.EndpointAccessible
+  public func url<T>(endpointType _: T.Type) -> Foundation.URL where T : Swift.Decodable, T : Swift.Encodable, T : WorkoutsPlayerCoreInternal.EndpointAccessible
+}
+extension WorkoutsPlayerCoreInternal.EndpointAccessible where Self : Swift.Decodable, Self : Swift.Encodable {
+  public static func url(id: Swift.String?, backend: WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL
+  public static func url(parameters: [Swift.String : Any]?, backend: WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL
+  public static func url(backend: WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL
+}
+extension WorkoutsPlayerCoreInternal.EndpointModifiable where Self : Swift.Decodable, Self : Swift.Encodable {
+  public static func url(id: Swift.String, backend: WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL
+}
+public class BatchDownloader {
+  public var batchDownload: WorkoutsPlayerCoreInternal.BatchDownload
+  public init(batch: [Foundation.URL], downloader: WorkoutsPlayerCoreInternal.Downloader = .backgroundShared)
+  public func download(bundle _: Foundation.Bundle = .main, storageType _: WorkoutsPlayerCoreInternal.StorageType = .cache, onUpdate: @escaping WorkoutsPlayerCoreInternal.Handler<WorkoutsPlayerCoreInternal.BatchDownloadResult>)
+  @objc deinit
+}
+public class BatchDownload {
+  public var downloads: [WorkoutsPlayerCoreInternal.AssetDownload]
+  public init(downloads: [WorkoutsPlayerCoreInternal.AssetDownload])
+  public var isSuccessfullyFinished: Swift.Bool {
+    get
+  }
+  public func download(for url: Foundation.URL) -> WorkoutsPlayerCoreInternal.AssetDownload?
+  public var failedDownloads: [WorkoutsPlayerCoreInternal.AssetDownload] {
+    get
+  }
+  public var containsFailedDownloads: Swift.Bool {
+    get
+  }
+  public var flatProgress: Swift.Float {
+    get
+  }
+  public var progress: WorkoutsPlayerCoreInternal.BatchDownloadProgress {
+    get
+  }
+  public var bytesDownloaded: Swift.Int64 {
+    get
+  }
+  public var bytesExpectedToDownload: Swift.Int64 {
+    get
+  }
+  @objc deinit
+}
+public enum BatchDownloadResult {
+  case failure(Swift.Error)
+  case finished(WorkoutsPlayerCoreInternal.BatchDownload)
+  case progress(WorkoutsPlayerCoreInternal.BatchDownload)
+}
+public protocol BatchDownloadable {
+  var downloadList: [Foundation.URL] { get }
+}
+public class AssetDownload {
+  public var url: Foundation.URL
+  public var totalBytesWritten: Swift.Int64
+  public var totalBytesExpectedToWrite: Swift.Int64
+  public var downloadResult: WorkoutsPlayerCoreInternal.DownloadResult?
+  public init(url: Foundation.URL, totalBytesWritten: Swift.Int64 = 0, totalBytesExpectedToWrite: Swift.Int64 = 0, downloadResult: WorkoutsPlayerCoreInternal.DownloadResult? = nil)
+  public var progress: Swift.Float? {
+    get
+  }
+  public var downloadedURL: Foundation.URL? {
+    get
+  }
+  public var isInProgress: Swift.Bool {
+    get
+  }
+  public func completeBytesWritten()
+  public var isSuccessfullyFinished: Swift.Bool {
+    get
+  }
+  public var isFailed: Swift.Bool {
+    get
+  }
+  public var error: Swift.Error? {
+    get
+  }
+  @objc deinit
+}
+public typealias ElementFetch<Element> = (@escaping WorkoutsPlayerCoreInternal.Handler<Swift.Result<Element, Swift.Error>>) -> Swift.Void where Element : Swift.Decodable, Element : Swift.Encodable
+public enum BatchDownloadProgress {
+  case unknownForSomeParts
+  case known(Swift.Float)
+  public var value: Swift.Float? {
+    get
+  }
+}
+public struct BuildSmartWorkoutInfo : Swift.Codable {
+  public let streamId: Swift.Int?
+  public var durationSeconds: Swift.Int?
+  public var equipment: Swift.String?
+  public var intensityMod: Swift.String?
+  public var coachId: Swift.Int?
+  public var isAudioMotivation: Swift.Bool?
+  public var isAudioForm: Swift.Bool?
+  public var isAudioDirection: Swift.Bool?
+  public var isAudioPacing: Swift.Bool?
+  public init(streamId: Swift.Int?, durationSeconds: Swift.Int? = nil, equipment: Swift.String? = nil, intensityMod: Swift.String? = nil, coachId: Swift.Int? = nil, isAudioMotivation: Swift.Bool? = nil, isAudioForm: Swift.Bool? = nil, isAudioDirection: Swift.Bool? = nil, isAudioPacing: Swift.Bool? = nil)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@objc(Bump) public class Bump : ObjectiveC.NSObject, Swift.Codable {
+  public var id: Swift.Int?
+  public var _id: Swift.String?
+  public var createdInt: Swift.Double?
+  public var audioMp3: Swift.String?
+  public var durationMs: Swift.Double?
+  public var waveformPng: Swift.String?
+  public var creatorName: Swift.String?
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case _id
+    case createdInt
+    case audioMp3
+    case durationMs
+    case waveformPng
+    case creatorName
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  required public init(from decoder: Swift.Decoder) throws
+  public var duration: Foundation.TimeInterval {
+    get
+  }
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc(WebSocketBumpMessage) public class WebSocketBumpMessage : ObjectiveC.NSObject, Swift.Codable {
+  public var type: Swift.String?
+  public var message: WorkoutsPlayerCoreInternal.Bump?
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension WorkoutsPlayerCoreInternal.WebSocketBumpMessage : WorkoutsPlayerCoreInternal.EndpointAccessible {
+  public static var path: Swift.String {
+    get
+  }
+  public typealias Element = WorkoutsPlayerCoreInternal.Bump
+}
+extension WorkoutsPlayerCoreInternal.Bump : WorkoutsPlayerCoreInternal.EndpointAccessible {
+  public typealias Element = WorkoutsPlayerCoreInternal.Bump
+  public static var path: Swift.String {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.Bump : WorkoutsPlayerCoreInternal.EndpointModifiable {
+  public typealias Body = WorkoutsPlayerCoreInternal.IsPlayedBump
+}
+@objc(IsPlayedBump) public class IsPlayedBump : ObjectiveC.NSObject, Swift.Codable {
+  public var isPlayed: Swift.Bool
+  public init(isPlayed: Swift.Bool)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension Foundation.Bundle {
+  public var displayName: Swift.String? {
+    get
+  }
+  public var versionNumber: Swift.String? {
+    get
+  }
+  public var buildNumber: Swift.String? {
+    get
+  }
+  public var versionAndBuildNumbersWithUnderscores: Swift.String? {
+    get
+  }
+  @objc dynamic public var versionAndBuildNumbersWithoutUnderscores: Swift.String? {
+    @objc get
+  }
+  public var versionAndBuildNumbers: Swift.String? {
+    get
+  }
+}
+extension Foundation.Calendar {
+  public func haveSameYearMonthDay(_ lhs: Foundation.Date, _ rhs: Foundation.Date, in timezone: Foundation.TimeZone) -> Swift.Bool
+  public func dateWithSameComponents(as date: Foundation.Date, in timezone: Foundation.TimeZone) -> Foundation.Date?
+  public func inTimeZone(_ timeZone: Foundation.TimeZone) -> Foundation.Calendar
+  public func remainingDaysInMonth(of date: Foundation.Date, timeZone: Foundation.TimeZone? = nil) -> Swift.Int
+  public func remainingDaysInMonth(year: Swift.Int, month: Swift.Int, day: Swift.Int) -> Swift.Int
+  public func numberOfDaysIn(month: Swift.Int, year: Swift.Int) -> Swift.Int
+  public func numberOfDaysInMonth(of date: Foundation.Date) -> Swift.Int
+  public func numberOfDaysInNextMonth(of date: Foundation.Date, timeZone: Foundation.TimeZone? = nil) -> Swift.Int
+}
+public struct Coach : Swift.Codable {
+  public let className: Swift.String
+  public let id: Swift.Int
+  public let name: Swift.String
+  public let style: Swift.String?
+  public let description: Swift.String?
+  public let url: Swift.String?
+  public let posterId: Swift.Int?
+  public let streamId: Swift.Int?
+  public let stream: WorkoutsPlayerCoreInternal.Stream?
+  public let priority: Swift.Int?
+  public let gender: Swift.String?
+  public let totalPlays: Swift.Int?
+  public let startInt: Swift.Double?
+  public let isPublished: Swift.Bool?
+  public let isPopular: Swift.Bool?
+  public let isNew: Swift.Bool?
+  public let isYoga: Swift.Bool?
+  public let poster: Swift.String?
+  public let thumbnail: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension Swift.Collection {
+  public subscript(safe index: Self.Index) -> Self.Iterator.Element? {
+    get
+  }
+}
+public enum Constants {
+  public static let minimumBlockIntensity: Swift.Int
+  public enum WorkoutBlock {
+    public static var noRestBetweenSets: Swift.String
+    public static func restTimeText(fromSeconds seconds: Swift.Int?) -> Swift.String
+  }
+}
+extension Foundation.Data {
+  public var prettyPrintedJSONString: Swift.String? {
+    get
+  }
+  public var prettyPrintedJSONDictionary: [Swift.String : Any]? {
+    get
+  }
+}
+extension Foundation.Date {
+  public var millisecondsSince1970: Foundation.TimeInterval {
+    get
+  }
+  public init(milliseconds: Foundation.TimeInterval)
+  public func millisecondsForHoursAndMinutes(in timeZone: Foundation.TimeZone) -> Foundation.TimeInterval
+  public func month(in timeZone: Foundation.TimeZone, calendar: Foundation.Calendar = Calendar.current) -> Swift.Int
+  public func hour(in timeZone: Foundation.TimeZone, calendar: Foundation.Calendar = Calendar.current) -> Swift.Int
+  public func minute(in timeZone: Foundation.TimeZone, calendar: Foundation.Calendar = Calendar.current) -> Swift.Int
+  public func dayNumber(in timeZone: Foundation.TimeZone, calendar: Foundation.Calendar = Calendar.current) -> Swift.String
+  public static func dateFrom(YYYYMMDD dateString: Swift.String, timeZone: Foundation.TimeZone, calendar: Foundation.Calendar = Calendar.current) -> Foundation.Date?
+  public func isSameMonth(than otherDate: Foundation.Date, timeZone: Foundation.TimeZone, calendar: Foundation.Calendar = Calendar.current) -> Swift.Bool
+  public func adding(hours: Swift.Int, minutes: Swift.Int = 0, seconds: Swift.Int = 0, calendar: Foundation.Calendar = Calendar.current, timeZone: Foundation.TimeZone) -> Foundation.Date
+  public func adding(days: Swift.Int, hours: Swift.Int = 0, minutes: Swift.Int = 0, seconds: Swift.Int = 0, calendar: Foundation.Calendar = Calendar.current, timeZone: Foundation.TimeZone) -> Foundation.Date
+  public func atZeroHours(calendar: Foundation.Calendar = Calendar.current, in timeZone: Foundation.TimeZone) -> Foundation.Date
+  public func dateWithHourMinute(from another: Foundation.Date, calendar: Foundation.Calendar = Calendar.current, in timeZone: Foundation.TimeZone) -> Foundation.Date?
+  public func asString(in timezone: Foundation.TimeZone) -> Swift.String
+  public func hourAndMinutesAsString(in timezone: Foundation.TimeZone) -> Swift.String
+  public func seconds(calendar: Foundation.Calendar = Calendar.current) -> Swift.Int
+  public static var nextYear: Foundation.Date {
+    get
+  }
+  public static var pastYear: Foundation.Date {
+    get
+  }
+}
+extension Foundation.DateFormatter {
+  convenience public init(format: Swift.String, timeZone: Foundation.TimeZone, calendar: Foundation.Calendar = Calendar.current)
+}
+extension Foundation.Date {
+  public func formattedForClassList(timeZone: Foundation.TimeZone) -> Swift.String
+  public func ordinalDayNumber(for dayNumber: Swift.String) -> Swift.String
+}
+extension Swift.Encodable {
+  public subscript(key: Swift.String) -> Any? {
+    get
+  }
+  public var dictionary: [Swift.String : Any] {
+    get
+  }
+}
+extension Swift.Decodable {
+  public init(dictionary: [Swift.String : Any]) throws
+}
+extension Swift.Decodable {
+  public static var stubJsonFilename: Swift.String {
+    get
+  }
+  public static func fromStubJson(fileName: Swift.String? = nil, bundle: Foundation.Bundle = CurrentEndpointsEnvironment.stubsBundle()) throws -> Self
+}
+extension Dispatch.DispatchQueue {
+  public func asyncAfter(seconds: Foundation.TimeInterval, execute action: @escaping WorkoutsPlayerCoreInternal.Action)
+}
+extension Dispatch.DispatchQueue {
+  public static func mainSync(block: () -> Swift.Void)
+}
+public protocol Disposable {
+  func dispose()
+  func disposed(by disposeBag: WorkoutsPlayerCoreInternal.DisposeBag)
+}
+extension WorkoutsPlayerCoreInternal.Disposable {
+  public func disposed(by disposeBag: WorkoutsPlayerCoreInternal.DisposeBag)
+}
+public class DisposeBag {
+  public init(elements: [WorkoutsPlayerCoreInternal.Disposable] = [])
+  @objc deinit
+}
+public struct ClosureDisposable : WorkoutsPlayerCoreInternal.Disposable {
+  public func dispose()
+}
+public struct DisposeNothing : WorkoutsPlayerCoreInternal.Disposable {
+  public func dispose()
+}
+@_hasMissingDesignatedInitializers public class CompositeDisposable : WorkoutsPlayerCoreInternal.Disposable {
+  public func merge(_ disposable: WorkoutsPlayerCoreInternal.Disposable)
+  public func dispose()
+  @objc deinit
+}
+public enum Dispose {
+  public static var nothing: WorkoutsPlayerCoreInternal.DisposeNothing {
+    get
+  }
+  public static var composite: WorkoutsPlayerCoreInternal.CompositeDisposable {
+    get
+  }
+}
+@objc public class Downloader : ObjectiveC.NSObject {
+  public static var backgroundShared: WorkoutsPlayerCoreInternal.Downloader
+  public var backgroundCompletionHandler: WorkoutsPlayerCoreInternal.Action?
+  public init(sessionConfiguration: Foundation.URLSessionConfiguration = .default, backgroundCompletionHandler: WorkoutsPlayerCoreInternal.Action? = nil)
+  @discardableResult
+  public func download(url: Foundation.URL, usePreviousDownload: Swift.Bool = true, bundle: Foundation.Bundle, countOfBytesClientExpectsToSend: Swift.Int64 = 200, countOfBytesExpectedToReceive: Swift.Int64 = 200, storageType: WorkoutsPlayerCoreInternal.StorageType = .cache, progress: @escaping (Swift.Int64, Swift.Int64) -> Swift.Void, completion: @escaping (WorkoutsPlayerCoreInternal.DownloadResult) -> Swift.Void) -> Foundation.URLSessionDownloadTask?
+  public func cancel(downloadTask: Foundation.URLSessionDownloadTask)
+  public func pause()
+  public func resume()
+  @objc deinit
+}
+extension WorkoutsPlayerCoreInternal.Downloader : Foundation.URLSessionDelegate, Foundation.URLSessionDownloadDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData bytesWritten: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)
+  @objc dynamic public func urlSessionDidFinishEvents(forBackgroundURLSession _: Foundation.URLSession)
+}
+public enum DownloaderError : Swift.Error {
+  case unableToCreateDestinationPath
+  case unableToObtainHTTPResponse
+  case unableToCreateTask
+  case unableToResumeTaskNotFound
+  case unableToResumeNoResumeData
+  case invalidHTTPResponseStatusCode(Swift.Int)
+}
+public enum DownloadResult : Swift.CustomStringConvertible {
+  case downloadFinished(Foundation.URL)
+  case alreadyDownloadedAtPath(Foundation.URL)
+  case error(Swift.Error)
+  case cancelled
+  public var description: Swift.String {
+    get
+  }
+  public var isCancelled: Swift.Bool {
+    get
+  }
+  public var isError: Swift.Bool {
+    get
+  }
+  public var isFinishedSuccessfully: Swift.Bool {
+    get
+  }
+  public var url: Foundation.URL? {
+    get
+  }
+}
+extension Foundation.URLSessionConfiguration {
+  public static func backgroundWithPrefixIdentifier(_ prefix: Swift.String = "com.muuv.networking.", sharedContainerIdentifier _: Swift.String = "group.muuv.apps", bundle: Foundation.Bundle = .main) -> Foundation.URLSessionConfiguration
+}
+public func downsample(imageData: Foundation.Data, to frameSize: CoreFoundation.CGSize, scale: CoreFoundation.CGFloat) throws -> UIKit.UIImage
+public func downsample(imageAt imageURL: Foundation.URL, to size: CoreFoundation.CGSize, scale: CoreFoundation.CGFloat) throws -> UIKit.UIImage
+public enum AppError : Swift.Error {
+  case downsamplingImage
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public static func == (a: WorkoutsPlayerCoreInternal.AppError, b: WorkoutsPlayerCoreInternal.AppError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Swift.Encodable {
+  public func toJSON(keyEncodingStrategy: Foundation.JSONEncoder.KeyEncodingStrategy = .convertToSnakeCase) throws -> Foundation.Data
+  public func toDictionary(keyEncodingStrategy: Foundation.JSONEncoder.KeyEncodingStrategy = .convertToSnakeCase) -> [Swift.String : Any]?
+  public func toJSONString() -> Swift.String?
+}
+extension Swift.Decodable {
+  public static func fromJsonWithSameTypeName(bundle: Foundation.Bundle) throws -> Self
+  public static func fromJson(named name: Swift.String, bundle: Foundation.Bundle) throws -> Self
+  public static func fromJSON(jsonData: Foundation.Data) throws -> Self
+}
+extension Swift.Encodable {
+  @discardableResult
+  public func saveToJsonFile(_ filename: Swift.String, bundle: Foundation.Bundle = .main, storageType: WorkoutsPlayerCoreInternal.StorageType = .cache) throws -> Foundation.URL
+}
+extension Foundation.Data {
+  @discardableResult
+  public func saveToFile(_ filename: Swift.String, bundle: Foundation.Bundle = .main, storageType: WorkoutsPlayerCoreInternal.StorageType = .cache) throws -> Foundation.URL
+}
+public struct FileMissing : Swift.Error, Swift.CustomStringConvertible {
+  public let path: Foundation.URL
+  public var description: Swift.String {
+    get
+  }
+}
+extension Swift.Decodable {
+  public static func fromJsonFile(_ filename: Swift.String, bundle: Foundation.Bundle = .main, storageType: WorkoutsPlayerCoreInternal.StorageType = .cache) throws -> Self
+}
+public enum ContentType : Swift.String {
+  case json
+  case xml
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public func expected200to300(_ code: Swift.Int) -> Swift.Bool
+public struct Endpoint<A> {
+  public enum Method : Swift.String {
+    case get
+    case post
+    case put
+    case patch
+    case delete
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var request: Foundation.URLRequest
+  public var expectedStatusCode: (Swift.Int) -> Swift.Bool
+  public func map<B>(_ transform: @escaping (A) -> B) -> WorkoutsPlayerCoreInternal.Endpoint<B>
+  public func compactMap<B>(_ transform: @escaping (A) -> Swift.Result<B, Swift.Error>) -> WorkoutsPlayerCoreInternal.Endpoint<B>
+  public init(_ method: WorkoutsPlayerCoreInternal.Endpoint<A>.Method, url: Foundation.URL, accept: WorkoutsPlayerCoreInternal.ContentType? = nil, contentType: WorkoutsPlayerCoreInternal.ContentType? = nil, body: Foundation.Data? = nil, headers: [Swift.String : Swift.String] = [:], expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, timeOutInterval: Foundation.TimeInterval = 30, query: [Swift.String : Swift.String] = [:], parse: @escaping (Foundation.Data?, Foundation.URLResponse?) -> Swift.Result<A, Swift.Error>)
+  public init(request: Foundation.URLRequest, expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, parse: @escaping (Foundation.Data?, Foundation.URLResponse?) -> Swift.Result<A, Swift.Error>)
+}
+extension WorkoutsPlayerCoreInternal.Endpoint : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.Endpoint where A == () {
+  public init(_ method: WorkoutsPlayerCoreInternal.Endpoint<A>.Method, url: Foundation.URL, accept: WorkoutsPlayerCoreInternal.ContentType? = nil, contentType: WorkoutsPlayerCoreInternal.ContentType? = nil, body: Foundation.Data? = nil, headers: [Swift.String : Swift.String] = [:], expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, timeOutInterval: Foundation.TimeInterval = 10, query: [Swift.String : Swift.String] = [:])
+  public init(json method: WorkoutsPlayerCoreInternal.Endpoint<A>.Method, url: Foundation.URL, accept: WorkoutsPlayerCoreInternal.ContentType? = .json, body: some Encodable, headers: [Swift.String : Swift.String] = [:], expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, timeOutInterval: Foundation.TimeInterval = 10, query: [Swift.String : Swift.String] = [:], encoder: Foundation.JSONEncoder = JSONEncoder())
+}
+extension WorkoutsPlayerCoreInternal.Endpoint where A : Swift.Decodable {
+  public init(json method: WorkoutsPlayerCoreInternal.Endpoint<A>.Method, url: Foundation.URL, accept: WorkoutsPlayerCoreInternal.ContentType = .json, headers: [Swift.String : Swift.String] = [:], expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, timeOutInterval: Foundation.TimeInterval = 10, query: [Swift.String : Swift.String] = [:], decoder: Foundation.JSONDecoder = JSONDecoder())
+  public init(json method: WorkoutsPlayerCoreInternal.Endpoint<A>.Method, url: Foundation.URL, accept: WorkoutsPlayerCoreInternal.ContentType = .json, body: (some Encodable)? = nil, headers: [Swift.String : Swift.String] = [:], expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, timeOutInterval: Foundation.TimeInterval = 10, query: [Swift.String : Swift.String] = [:], decoder: Foundation.JSONDecoder = JSONDecoder(), encoder: Foundation.JSONEncoder = JSONEncoder())
+  public init(json method: WorkoutsPlayerCoreInternal.Endpoint<A>.Method, url: Foundation.URL, accept: WorkoutsPlayerCoreInternal.ContentType = .json, body: [Swift.String : Any], headers: [Swift.String : Swift.String] = [:], expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, timeOutInterval: Foundation.TimeInterval = 10, query: [Swift.String : Swift.String] = [:], decoder: Foundation.JSONDecoder = JSONDecoder(), encoder _: Foundation.JSONEncoder = JSONEncoder())
+}
+public struct NoDataError : Swift.Error {
+  public init()
+}
+public struct UnknownError : Swift.Error {
+  public init()
+}
+public struct WrongStatusCodeError : Swift.Error {
+  public let statusCode: Swift.Int
+  public let response: Foundation.HTTPURLResponse?
+  public let responseBody: Foundation.Data?
+  public init(statusCode: Swift.Int, response: Foundation.HTTPURLResponse?, responseBody: Foundation.Data?)
+}
+extension Foundation.URLSession {
+  @discardableResult
+  public func load<A>(_ endpoint: WorkoutsPlayerCoreInternal.Endpoint<A>, dispatchQueue: Dispatch.DispatchQueue = .main, dataWrapper: WorkoutsPlayerCoreInternal.Handler<Foundation.Data?>? = nil, onComplete: @escaping (Swift.Result<A, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask
+}
+extension WorkoutsPlayerCoreInternal.Endpoint where A == UIKit.UIImage {
+  public init(imageURL: Foundation.URL)
+  @discardableResult
+  public func call(session: Foundation.URLSession = .shared, dispatchQueue: Dispatch.DispatchQueue = .main, onComplete: @escaping (Swift.Result<A, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask?
+}
+public protocol EndpointAccessible {
+  associatedtype Element : Swift.Decodable, Swift.Encodable
+  static var path: Swift.String { get }
+  static var decodingStrategy: Foundation.JSONDecoder.KeyDecodingStrategy { get }
+}
+extension WorkoutsPlayerCoreInternal.EndpointAccessible {
+  public static var decodingStrategy: Foundation.JSONDecoder.KeyDecodingStrategy {
+    get
+  }
+  public static var baseUrl: Swift.String {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.Endpoint where A : Swift.Decodable, A : Swift.Encodable, A : WorkoutsPlayerCoreInternal.EndpointAccessible {
+  public static func getAll(backend: WorkoutsPlayerCoreInternal.Backend, url: (WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL = A.url(backend:)) -> WorkoutsPlayerCoreInternal.Endpoint<[A]>
+  public static func getPaged(backend: WorkoutsPlayerCoreInternal.Backend, url: (WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL = A.url(backend:), page: Swift.Int, perPage: Swift.Int, query: [Swift.String : Swift.String] = [:], decoder: Foundation.JSONDecoder = .with(strategy: A.decodingStrategy)) -> WorkoutsPlayerCoreInternal.Endpoint<WorkoutsPlayerCoreInternal.PagedResult<A>>
+  public static func get(backend: WorkoutsPlayerCoreInternal.Backend, url: (Swift.String?, WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL = A.url(id:backend:), id: Swift.String? = nil, accept: WorkoutsPlayerCoreInternal.ContentType = .json, headers: (WorkoutsPlayerCoreInternal.Backend) -> [Swift.String : Swift.String] = { _ in [:] }, expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, timeOutInterval: Foundation.TimeInterval = 10, query: [Swift.String : Swift.String] = [:], decoder: Foundation.JSONDecoder = .with(strategy: A.decodingStrategy)) -> WorkoutsPlayerCoreInternal.Endpoint<A>
+  public static func get(backend: WorkoutsPlayerCoreInternal.Backend, url: ([Swift.String : Any]?, WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL = A.url(parameters:backend:), parameters: [Swift.String : Any]? = nil, accept: WorkoutsPlayerCoreInternal.ContentType = .json, headers: (WorkoutsPlayerCoreInternal.Backend) -> [Swift.String : Swift.String] = { _ in [:] }, expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, timeOutInterval: Foundation.TimeInterval = 10, query: [Swift.String : Swift.String] = [:], decoder: Foundation.JSONDecoder = .with(strategy: A.decodingStrategy)) -> WorkoutsPlayerCoreInternal.Endpoint<A>
+}
+public protocol EndpointModifiable : WorkoutsPlayerCoreInternal.EndpointAccessible {
+  associatedtype Body : Swift.Encodable
+  static var encodingStrategy: Foundation.JSONEncoder.KeyEncodingStrategy { get }
+}
+extension WorkoutsPlayerCoreInternal.EndpointModifiable {
+  public static var encodingStrategy: Foundation.JSONEncoder.KeyEncodingStrategy {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.Endpoint where A : Swift.Decodable, A : WorkoutsPlayerCoreInternal.EndpointModifiable {
+  public init(backend: WorkoutsPlayerCoreInternal.Backend = CurrentEndpointsEnvironment.backend, method: WorkoutsPlayerCoreInternal.Endpoint<A>.Method, body: A.Body, decoder: Foundation.JSONDecoder = .with(strategy: A.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: A.encodingStrategy))
+  public init(backend: WorkoutsPlayerCoreInternal.Backend = CurrentEndpointsEnvironment.backend, method: WorkoutsPlayerCoreInternal.Endpoint<A>.Method, body: some Codable, decoder: Foundation.JSONDecoder = .with(strategy: A.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: A.encodingStrategy))
+}
+extension WorkoutsPlayerCoreInternal.EndpointModifiable {
+  public static func endpoint(url: Foundation.URL, body: Self.Body, headers: [Swift.String : Swift.String], decoder: Foundation.JSONDecoder = .with(strategy: Self.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Self.encodingStrategy), method: WorkoutsPlayerCoreInternal.Endpoint<Self.Element>.Method) -> WorkoutsPlayerCoreInternal.Endpoint<Self.Element>
+}
+extension WorkoutsPlayerCoreInternal.Endpoint where A : Swift.Decodable, A : Swift.Encodable, A : WorkoutsPlayerCoreInternal.EndpointModifiable {
+  public static func delete(backend: WorkoutsPlayerCoreInternal.Backend = CurrentEndpointsEnvironment.backend, id: Swift.String, url: (Swift.String, WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL = A.url(id:backend:)) -> WorkoutsPlayerCoreInternal.Endpoint<Swift.Void>
+}
+extension WorkoutsPlayerCoreInternal.EndpointModifiable where Self : Swift.Decodable, Self : Swift.Encodable {
+  public static func post(backend: WorkoutsPlayerCoreInternal.Backend, body: Self.Body, decoder: Foundation.JSONDecoder = .with(strategy: Self.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Self.encodingStrategy)) -> WorkoutsPlayerCoreInternal.Endpoint<Self.Element>
+  @discardableResult
+  public static func post(backend: WorkoutsPlayerCoreInternal.Backend = CurrentEndpointsEnvironment.backend, behavior: WorkoutsPlayerCoreInternal.StubbingBehavior = .never, body: Self.Body, decoder: Foundation.JSONDecoder = .with(strategy: Self.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Self.encodingStrategy), session: Foundation.URLSession = .shared, onComplete: @escaping (Swift.Result<Self.Element, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask
+}
+extension WorkoutsPlayerCoreInternal.Endpoint where A : Swift.Decodable, A : Swift.Encodable, A : WorkoutsPlayerCoreInternal.EndpointModifiable {
+  public static func post(backend: WorkoutsPlayerCoreInternal.Backend = CurrentEndpointsEnvironment.backend, url: (Swift.String, WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL = A.url(id:backend:), id: Swift.String, body: A.Body, decoder: Foundation.JSONDecoder = .with(strategy: A.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: A.encodingStrategy)) -> WorkoutsPlayerCoreInternal.Endpoint<A>
+  public static func post(backend: WorkoutsPlayerCoreInternal.Backend = CurrentEndpointsEnvironment.backend, url: (WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL = A.url(backend:), body: A.Body, decoder: Foundation.JSONDecoder = .with(strategy: A.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: A.encodingStrategy)) -> WorkoutsPlayerCoreInternal.Endpoint<A>
+  @discardableResult
+  public static func post(backend: WorkoutsPlayerCoreInternal.Backend = CurrentEndpointsEnvironment.backend, url: (Swift.String, WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL = A.url(id:backend:), behavior: WorkoutsPlayerCoreInternal.StubbingBehavior = .never, id: Swift.String, body: A.Body, decoder: Foundation.JSONDecoder = .with(strategy: A.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: A.encodingStrategy), onComplete: @escaping (Swift.Result<A, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask?
+}
+extension WorkoutsPlayerCoreInternal.EndpointModifiable where Self : Swift.Decodable, Self : Swift.Encodable {
+  public static func put(backend: WorkoutsPlayerCoreInternal.Backend = CurrentEndpointsEnvironment.backend, body: Self.Body, decoder: Foundation.JSONDecoder = .with(strategy: Self.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Self.encodingStrategy)) -> WorkoutsPlayerCoreInternal.Endpoint<Self.Element>
+  @discardableResult
+  public static func put(backend: WorkoutsPlayerCoreInternal.Backend = CurrentEndpointsEnvironment.backend, behavior: WorkoutsPlayerCoreInternal.StubbingBehavior = .never, body: Self.Body, decoder: Foundation.JSONDecoder = .with(strategy: Self.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Self.encodingStrategy), session: Foundation.URLSession = .shared, onComplete: @escaping (Swift.Result<Self.Element, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask
+}
+extension WorkoutsPlayerCoreInternal.Endpoint where A : Swift.Decodable, A : Swift.Encodable, A : WorkoutsPlayerCoreInternal.EndpointModifiable {
+  public static func put(backend: WorkoutsPlayerCoreInternal.Backend = CurrentEndpointsEnvironment.backend, url: (Swift.String, WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL = A.url(id:backend:), body: A.Body, id: Swift.String, decoder: Foundation.JSONDecoder = .with(strategy: A.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: A.encodingStrategy)) -> WorkoutsPlayerCoreInternal.Endpoint<A>
+  public static func put(backend: WorkoutsPlayerCoreInternal.Backend = CurrentEndpointsEnvironment.backend, url: (Swift.String, WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL = A.url(id:backend:), body: some Encodable, id: Swift.String, decoder: Foundation.JSONDecoder = .with(strategy: A.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: A.encodingStrategy)) -> WorkoutsPlayerCoreInternal.Endpoint<A>
+  public static func put(backend: WorkoutsPlayerCoreInternal.Backend = CurrentEndpointsEnvironment.backend, url: (Swift.String, WorkoutsPlayerCoreInternal.Backend) -> Foundation.URL = A.url(id:backend:), body: [Swift.String : Any], id: Swift.String, decoder: Foundation.JSONDecoder = .with(strategy: A.decodingStrategy)) -> WorkoutsPlayerCoreInternal.Endpoint<A>
+  @discardableResult
+  public static func put(behavior: WorkoutsPlayerCoreInternal.StubbingBehavior, body: A.Body, id: Swift.String, decoder: Foundation.JSONDecoder = .with(strategy: A.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: A.encodingStrategy), onComplete: @escaping (Swift.Result<A, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask?
+}
+public var CurrentEndpointsEnvironment: WorkoutsPlayerCoreInternal.EndpointsEnvironment
+public class EndpointsEnvironment {
+  public var backend: WorkoutsPlayerCoreInternal.Backend
+  public var stubsBundle: () -> Foundation.Bundle
+  public init(backend: WorkoutsPlayerCoreInternal.Backend = StubbedBackend(), stubsBundle: @escaping () -> Foundation.Bundle = { .main })
+  public static func setup(environment: WorkoutsPlayerCoreInternal.EndpointsEnvironment)
+  @objc deinit
+}
+@objc public class StubBehavior : ObjectiveC.NSObject {
+  public var kind: WorkoutsPlayerCoreInternal.ObjcStubbingBehavior
+  public var time: Foundation.NSNumber?
+  public var error: Foundation.NSError?
+  @objc public init(kind: WorkoutsPlayerCoreInternal.ObjcStubbingBehavior, time: Foundation.NSNumber? = nil, error: Foundation.NSError? = nil)
+  @objc public class func never() -> WorkoutsPlayerCoreInternal.StubBehavior
+  @objc public class func now() -> WorkoutsPlayerCoreInternal.StubBehavior
+  public func call<Element>(endpoint: WorkoutsPlayerCoreInternal.Endpoint<Element>, dispatchQueue: Dispatch.DispatchQueue = .main, urlSession: Foundation.URLSession = .shared, stub: @escaping () throws -> Element = { try Element.fromStubJson() }, onComplete: @escaping (Swift.Result<Element, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask? where Element : Swift.Decodable
+  public var stubbingBehavior: WorkoutsPlayerCoreInternal.StubbingBehavior {
+    get
+  }
+  public init(stubbingBehavior: WorkoutsPlayerCoreInternal.StubbingBehavior)
+  @objc deinit
+}
+@objc public enum ObjcStubbingBehavior : Swift.Int {
+  case never
+  case now
+  case after
+  case error
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class EngineController : ObjectiveC.NSObject {
+  public var engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine
+  public var user: WorkoutsPlayerCoreInternal.User?
+  @objc weak public var delegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineDelegate?
+  @objc public init(engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, user: WorkoutsPlayerCoreInternal.User? = nil, backend: WorkoutsPlayerCoreInternal.BackendObjc, delegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineDelegate? = nil)
+  @objc deinit
+}
+extension WorkoutsPlayerCoreInternal.EngineController : WorkoutsPlayerCoreInternal.AudioCoachingEngineDelegate {
+  @objc dynamic public func engineShouldObtainAVGHeartRateFromExternalSource(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine) -> Swift.Bool
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, externalSourceAVGHeartRateSince since: Foundation.Date, toEndDate end: Foundation.Date, completionHandler: @escaping (Foundation.NSNumber?, Swift.Error?) -> Swift.Void)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStartPlaying eventURL: Foundation.URL)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStopPlaying eventURL: Foundation.URL)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, willStartPlayingBump bump: WorkoutsPlayerCoreInternal.Bump, timeSinceNow: Foundation.TimeInterval)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStartPlayingBump bump: WorkoutsPlayerCoreInternal.Bump)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStopPlayingReactiveAudioSnippet reactiveAudioSnippet: WorkoutsPlayerCoreInternal.ReactiveAudioSnippet)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStartPlayingReactiveAudioSnippet reactiveAudioSnippet: WorkoutsPlayerCoreInternal.ReactiveAudioSnippet)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStopPlayingBump bump: WorkoutsPlayerCoreInternal.Bump)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didReceiveInterruptionToPause interruption: WorkoutsPlayerCoreInternal.InterruptionNotification)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didReceiveInterruptionToResume interruption: WorkoutsPlayerCoreInternal.InterruptionNotification)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, elapsedTime: Foundation.TimeInterval)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, willPerform action: WorkoutsPlayerCoreInternal.UpdateWorkoutActionObjc)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didPerform action: WorkoutsPlayerCoreInternal.UpdateWorkoutActionObjc)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didFail action: WorkoutsPlayerCoreInternal.UpdateWorkoutActionObjc, error: Swift.Error?)
+  @objc dynamic public func engineDidReceiveEventWorkoutUpdate(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, requests action: WorkoutsPlayerCoreInternal.UpdateWorkoutActionObjc, on workout: WorkoutsPlayerCoreInternal.Workout, retryCount: Swift.Int, onSuccess: @escaping (WorkoutsPlayerCoreInternal.Workout) -> Swift.Void, onError: @escaping (Swift.Error) -> Swift.Void)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStartBlock block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didFinishBlock block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didPause block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didResume block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didChange block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, willStart workout: WorkoutsPlayerCoreInternal.Workout)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStart workout: WorkoutsPlayerCoreInternal.Workout)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didDiscard workout: WorkoutsPlayerCoreInternal.Workout)
+  @objc dynamic public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didFinish workout: WorkoutsPlayerCoreInternal.Workout, heartRate: Swift.Int, calories: Swift.Int)
+}
+extension WorkoutsPlayerCoreInternal.EngineController {
+  public var avgHeartRate: Swift.Int {
+    get
+    set
+  }
+  public var heartRate: Swift.Int {
+    get
+    set
+  }
+  public var calories: Swift.Int {
+    get
+    set
+  }
+  public var userWeight: Swift.Int {
+    get
+    set
+  }
+}
+public struct FollowAlongPlayerStateController : WorkoutsPlayerCoreInternal.PlayerStateController {
+  public var currentState: WorkoutsPlayerCoreInternal.WorkoutPlayerState?
+  public var state: WorkoutsPlayerCoreInternal.WorkoutPlayerState {
+    get
+  }
+  public mutating func updateStateWith(player: WorkoutsPlayerCoreInternal.WorkoutPlayer, action: WorkoutsPlayerCoreInternal.WorkoutPlayerAction)
+  public mutating func updateStateWith(workout: WorkoutsPlayerCoreInternal.PlayableWorkout)
+}
+public class FrameworkDummy {
+  public init()
+  @objc deinit
+}
+public struct Future<FutureElement, Failure> where Failure : Swift.Error {
+  public typealias Callback = (Swift.Result<FutureElement, Failure>) -> Swift.Void
+  public let future: (@escaping WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Callback) -> WorkoutsPlayerCoreInternal.Disposable
+  public init(future: @escaping (@escaping WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Callback) -> WorkoutsPlayerCoreInternal.Disposable)
+}
+extension WorkoutsPlayerCoreInternal.Future {
+  public func mapResult<Output>(_ transform: @escaping (Swift.Result<WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element, Failure>) -> Swift.Result<Output, Failure>) -> WorkoutsPlayerCoreInternal.Future<Output, Failure>
+  public func map<Output>(_ transform: @escaping (WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element) -> Output) -> WorkoutsPlayerCoreInternal.Future<Output, Failure>
+  public func flatMap<Output>(_ transform: @escaping (WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element) -> WorkoutsPlayerCoreInternal.Future<Output, Failure>) -> WorkoutsPlayerCoreInternal.Future<Output, Failure>
+}
+extension WorkoutsPlayerCoreInternal.Future {
+  public func `do`(_ sideEffect: @escaping (WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element) -> Swift.Void) -> WorkoutsPlayerCoreInternal.Future<WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element, Failure>
+  public func `do`(onSuccess: WorkoutsPlayerCoreInternal.Handler<WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element>? = nil, onError: WorkoutsPlayerCoreInternal.Handler<Failure>? = nil) -> WorkoutsPlayerCoreInternal.Future<WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element, Failure>
+  public func doResult(_ sideEffect: @escaping (Swift.Result<WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element, Failure>) -> Swift.Void) -> WorkoutsPlayerCoreInternal.Future<WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element, Failure>
+  public func debug(_ string: Swift.String) -> WorkoutsPlayerCoreInternal.Future<WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element, Failure>
+  public func debug(_ generator: @escaping (WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element) -> Swift.String, file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line) -> WorkoutsPlayerCoreInternal.Future<WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element, Failure>
+}
+extension WorkoutsPlayerCoreInternal.Future {
+  public static var never: WorkoutsPlayerCoreInternal.Future<FutureElement, Failure> {
+    get
+  }
+}
+public protocol ImageCache {
+  func add(image: UIKit.UIImage, withIdentifier identifier: Swift.String)
+  func cachedImage(withIdentifier identifier: Swift.String) -> UIKit.UIImage?
+  func removeAllImages()
+}
+public struct NoImageCache : WorkoutsPlayerCoreInternal.ImageCache {
+  public init()
+  public func add(image _: UIKit.UIImage, withIdentifier _: Swift.String)
+  public func cachedImage(withIdentifier _: Swift.String) -> UIKit.UIImage?
+  public func removeAllImages()
+}
+public typealias ImageDownloaderResultHandler = (Swift.Result<UIKit.UIImage, WorkoutsPlayerCoreInternal.ImageDownloaderError>) -> Swift.Void
+public class ImageDownloader {
+  public init()
+  public func downloadImage(from url: Foundation.URL, imageCache: WorkoutsPlayerCoreInternal.ImageCache, handler: @escaping WorkoutsPlayerCoreInternal.ImageDownloaderResultHandler)
+  public func downloadImage(from url: Foundation.URL, imageCache: WorkoutsPlayerCoreInternal.ImageCache, downsamplingTo downsamplingSize: CoreFoundation.CGSize, scale: CoreFoundation.CGFloat, handler: @escaping WorkoutsPlayerCoreInternal.ImageDownloaderResultHandler)
+  public func cancelDownloading()
+  @objc deinit
+}
+public enum ImageDownloaderError : Foundation.LocalizedError, Foundation.CustomNSError {
+  case invalidResponse
+  case invalidMimeType
+  case noData
+  case error(Swift.Error)
+  case errorWithInfo(Swift.Error, Swift.String)
+  public var localizedDescription: Swift.String? {
+    get
+  }
+  public var errorUserInfo: [Swift.String : Any] {
+    get
+  }
+}
+extension Foundation.JSONEncoder {
+  public static func with(strategy: Foundation.JSONEncoder.KeyEncodingStrategy = .useDefaultKeys) -> Foundation.JSONEncoder
+}
+extension Foundation.JSONDecoder {
+  public static func with(strategy: Foundation.JSONDecoder.KeyDecodingStrategy = .useDefaultKeys) -> Foundation.JSONDecoder
+}
+public typealias LocalizedMessages = WorkoutsPlayerCoreInternal.Localizations.Messages
+public typealias LocalizedErrors = WorkoutsPlayerCoreInternal.Localizations.Errors
+public typealias StringGenerator<T> = (T) -> Swift.String
+public enum Localizations {
+  public enum Errors {
+    public static var login: (Swift.Error) -> Swift.String
+    public static var signingAndFetchingWorkout: (Swift.Error) -> Swift.String
+  }
+  public enum Messages {
+    public static var signedInUser: (Swift.String) -> Swift.String
+    public static var workoutFetched: (Swift.String) -> Swift.String
+  }
+}
+public struct LocalWorkoutHistory {
+}
+public struct LoginUser : Swift.Codable, WorkoutsPlayerCoreInternal.EndpointModifiable {
+  public typealias Element = WorkoutsPlayerCoreInternal.User
+  public static let path: Swift.String
+  public static var encodingStrategy: Foundation.JSONEncoder.KeyEncodingStrategy {
+    get
+  }
+  public static var decodingStrategy: Foundation.JSONDecoder.KeyDecodingStrategy {
+    get
+  }
+  public struct Body : Swift.Codable {
+    public var login: Swift.String
+    public var password: Swift.String
+    public init(login: Swift.String, password: Swift.String)
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension MediaPlayer.MPVolumeView {
+  @_Concurrency.MainActor(unsafe) public static var volume: Swift.Float? {
+    get
+    set
+  }
+}
+@objc public class MuuvBackendObjc : ObjectiveC.NSObject, WorkoutsPlayerCoreInternal.Backend, WorkoutsPlayerCoreInternal.BackendObjc {
+  public init(backend: WorkoutsPlayerCoreInternal.MuuvBackend)
+  public var stubbingBehavior: WorkoutsPlayerCoreInternal.StubbingBehavior {
+    get
+  }
+  @objc public var baseUrl: Swift.String {
+    @objc get
+  }
+  @objc public var stagingUrl: Swift.String {
+    @objc get
+  }
+  @objc public var headers: [Swift.String : Swift.String] {
+    @objc get
+  }
+  public static var production: WorkoutsPlayerCoreInternal.MuuvBackendObjc {
+    get
+  }
+  @objc public var stubBehavior: WorkoutsPlayerCoreInternal.StubBehavior {
+    @objc get
+  }
+  @objc deinit
+}
+public struct MuuvBackend : WorkoutsPlayerCoreInternal.Backend {
+  public static var stagingUrl: Swift.String
+  public static var devUrl: Swift.String
+  public static var prodUrl: Swift.String
+  public enum Headers {
+    public static let clientOs: Swift.String
+    public static let clientVersion: Swift.String
+  }
+  public static var headers: [Swift.String : Swift.String] {
+    get
+  }
+  public var stubbingBehavior: WorkoutsPlayerCoreInternal.StubbingBehavior
+  public var baseUrl: Swift.String
+  public var stagingUrl: Swift.String
+  public init(stubbingBehavior: WorkoutsPlayerCoreInternal.StubbingBehavior, devUrl _: Swift.String = MuuvBackend.devUrl, baseUrl: Swift.String = MuuvBackend.prodUrl, stagingUrl: Swift.String = MuuvBackend.stagingUrl)
+  public var headers: [Swift.String : Swift.String] {
+    get
+  }
+  public static func production(stubbingBehavior: WorkoutsPlayerCoreInternal.StubbingBehavior = .never) -> WorkoutsPlayerCoreInternal.MuuvBackend
+  public static func staging(stubbingBehavior: WorkoutsPlayerCoreInternal.StubbingBehavior = .never) -> WorkoutsPlayerCoreInternal.MuuvBackend
+}
+@objc public class MuuvBlock : ObjectiveC.NSObject, Swift.Codable {
+  public var blockId: Swift.Int?
+  @objc public var canBeReplaced: Swift.Bool
+  public var className: Swift.String?
+  public var completedInt: Swift.Int64?
+  public var demoDash: Swift.String?
+  public var demoHls: Swift.String?
+  public var demoMp4: Swift.String?
+  public var durationSeconds: Swift.Int?
+  public var id: Swift.String?
+  public var isDownAvailable: Swift.Bool?
+  public var isEmom: Swift.Bool?
+  public var isSkipped: Swift.Bool?
+  public var isUpAvailable: Swift.Bool?
+  public var level: Swift.Int?
+  public var load: Swift.String?
+  public var movement: Swift.String?
+  public var name: Swift.String?
+  public var position: Swift.Int?
+  public var poster: Swift.String?
+  public var reps: Swift.Int?
+  public var rest: Swift.Int?
+  @objc public var setName: Swift.String?
+  public var sets: Swift.Int?
+  public var skippedAt: Swift.Int?
+  public var speed: Swift.String?
+  public var technical: Swift.String?
+  public var thumbnail: Swift.String?
+  public var video1Mp4: Swift.String?
+  public var video1Hls: Swift.String?
+  public var video2Mp4: Swift.String?
+  public var video2Hls: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class MuuvSDK : ObjectiveC.NSObject {
+  @objc public func tearDown()
+  @objc public var currentEngine: WorkoutsPlayerCoreInternal.AudioCoachingEngine? {
+    @objc get
+  }
+  @discardableResult
+  @objc public func createAudioCoachingEngine(workout: WorkoutsPlayerCoreInternal.Workout, delegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineDelegate? = nil, downloadingDelegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineDownloadingDelegate? = nil) -> WorkoutsPlayerCoreInternal.AudioCoachingEngine
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Foundation.Bundle {
+  public static var muuvSDK: Foundation.Bundle {
+    get
+  }
+}
+@objc public class MuuvSDKEngineIntegrationBuilder : ObjectiveC.NSObject {
+  @objc public var toolbox: WorkoutsPlayerCoreInternal.MuuvSDKTools? {
+    get
+  }
+  @objc public var engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine {
+    get
+  }
+  @objc public var engineController: WorkoutsPlayerCoreInternal.EngineController {
+    get
+  }
+  @objc public init(toolbox: WorkoutsPlayerCoreInternal.MuuvSDKTools?, workout: WorkoutsPlayerCoreInternal.Workout, engineDelegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineDelegate?, downloadingDelegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineDownloadingDelegate?, backend: WorkoutsPlayerCoreInternal.BackendObjc = MuuvBackendObjc.production)
+  public func tearDown()
+  @objc deinit
+}
+@objc public class MuuvSDKTools : ObjectiveC.NSObject {
+  @objc public var backend: WorkoutsPlayerCoreInternal.BackendObjc
+  @objc public init(backend: WorkoutsPlayerCoreInternal.BackendObjc)
+  @objc deinit
+}
+public struct MuuvStream : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension WorkoutsPlayerCoreInternal.MuuvStream : WorkoutsPlayerCoreInternal.EndpointAccessible {
+  public typealias Element = WorkoutsPlayerCoreInternal.MuuvStream
+  public static var path: Swift.String {
+    get
+  }
+}
+public struct MuuvEquipment : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct MuuvTag : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers public class MuuvWorkout : ObjectiveC.NSObject, Swift.Codable {
+  public var averageHeartRate: Swift.Int?
+  public var appliedIntensity: Swift.Int?
+  public var appliedMets: Swift.Int?
+  public var caloriesBurned: Swift.Int?
+  public var className: Swift.String?
+  public var coachId: Swift.String?
+  public var completedInt: Swift.Int?
+  public var completedSeconds: Swift.Int?
+  public var createdInt: Swift.Int?
+  public var durationSeconds: Swift.Int?
+  public var equipment: Swift.String?
+  public var id: Swift.Int?
+  public var intensity: Swift.Int?
+  public var intensityMod: Swift.String?
+  public var isCompleted: Swift.Bool?
+  public var isLiked: Swift.Bool?
+  public var isStarted: Swift.Bool?
+  public var sections: [WorkoutsPlayerCoreInternal.MuuvWorkoutSection]?
+  public var reason: Swift.String?
+  public var startedInt: Swift.Int?
+  public var stream: WorkoutsPlayerCoreInternal.MuuvStream?
+  public var streamId: Swift.String?
+  public var streamIdent: Swift.String?
+  public var totalReps: Swift.Int?
+  public var totalSets: Swift.Int?
+  public var userId: Swift.String?
+  public var url: Swift.String?
+  public var uuid: Foundation.UUID?
+  public var workoutFeedback: Swift.String?
+  public var workoutType: Swift.String?
+  public func caloriesCounter(userWeight: Swift.Double, duration: Foundation.TimeInterval) -> Swift.Double?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension WorkoutsPlayerCoreInternal.MuuvWorkout : WorkoutsPlayerCoreInternal.EndpointAccessible {
+  public typealias Element = WorkoutsPlayerCoreInternal.Workout
+  public static var path: Swift.String {
+    get
+  }
+  public static var baseUrl: Swift.String {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.MuuvWorkout : WorkoutsPlayerCoreInternal.EndpointModifiable {
+  public typealias Body = WorkoutsPlayerCoreInternal.UpdateWorkoutInfo
+  public static var encodingStrategy: Foundation.JSONEncoder.KeyEncodingStrategy {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.MuuvWorkout : WorkoutsPlayerCoreInternal.PlayableWorkout {
+  @objc dynamic public var identifier: Swift.Int {
+    @objc get
+  }
+  @objc dynamic public var title: Swift.String {
+    @objc get
+  }
+  @objc dynamic public var workoutSections: [WorkoutsPlayerCoreInternal.PlayableWorkoutSection] {
+    @objc get
+  }
+  @objc dynamic public var type: Swift.String? {
+    @objc get
+  }
+  @objc dynamic public var durationInSeconds: Foundation.TimeInterval {
+    @objc get
+  }
+  public func isBlockAvailableAt(sectionIndex: Swift.Int, blockIndex: Swift.Int) -> Swift.Bool
+}
+extension WorkoutsPlayerCoreInternal.MuuvWorkoutSection : WorkoutsPlayerCoreInternal.PlayableWorkoutSection {
+  @objc dynamic public var blocks: [WorkoutsPlayerCoreInternal.PlayableWorkoutBlock] {
+    @objc get
+  }
+  @objc dynamic public var numberOfBlocks: Swift.Int {
+    @objc get
+  }
+  @objc dynamic public func block(atIndex: Swift.Int, intensity: Swift.Int) -> WorkoutsPlayerCoreInternal.PlayableBlock?
+  @objc dynamic public var title: Swift.String {
+    @objc get
+  }
+}
+extension WorkoutsPlayerCoreInternal.MuuvWorkoutBlock : WorkoutsPlayerCoreInternal.PlayableWorkoutBlock {
+  @objc dynamic public var intensityBlocks: [WorkoutsPlayerCoreInternal.PlayableBlock] {
+    @objc get
+  }
+  @objc dynamic public func block(intensity: Swift.Int) -> WorkoutsPlayerCoreInternal.PlayableBlock?
+}
+extension WorkoutsPlayerCoreInternal.MuuvBlock : WorkoutsPlayerCoreInternal.PlayableBlock {
+  @objc dynamic public var identifier: Swift.String {
+    @objc get
+  }
+  public var replacementBlock: WorkoutsPlayerCoreInternal.PlayableBlock? {
+    get
+  }
+  @objc dynamic public var intensity: Swift.Int {
+    @objc get
+  }
+  @objc dynamic public var isEveryMinuteOnTheMinute: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var numberOfSets: Swift.Int {
+    @objc get
+  }
+  @objc dynamic public var repetitions: Swift.Int {
+    @objc get
+  }
+  @objc dynamic public var restTimeInSeconds: Foundation.TimeInterval {
+    @objc get
+  }
+  @objc dynamic public var durationToShow: Swift.String? {
+    @objc get
+  }
+  @objc dynamic public var title: Swift.String {
+    @objc get
+  }
+  @objc dynamic public var videoURL: Foundation.URL? {
+    @objc get
+  }
+  @objc dynamic public var downloadableURL: Foundation.URL? {
+    @objc get
+  }
+}
+@objc public class MuuvWorkoutBlock : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var level: Swift.Int
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class MuuvWorkoutSection : ObjectiveC.NSObject, Swift.Codable {
+  public var id: Swift.String?
+  public var bucketId: Swift.String?
+  public var workoutBlocks: [WorkoutsPlayerCoreInternal.MuuvWorkoutBlock]
+  public var completedInt: Swift.Int?
+  public var familyId: Swift.String?
+  public var isReplaceable: Swift.Bool?
+  public var level: Swift.Int?
+  public var position: Swift.Int?
+  public var setName: Swift.String?
+  public var setId: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public protocol NoParamNotificable {
+  var id: Swift.String { get }
+  func post()
+  func addListener(handler: @escaping WorkoutsPlayerCoreInternal.Action) -> WorkoutsPlayerCoreInternal.Disposable
+}
+extension Foundation.NSNotification.Name : WorkoutsPlayerCoreInternal.NoParamNotificable {
+  public func post()
+  public func addListener(handler: @escaping (Foundation.Notification) -> Swift.Void) -> WorkoutsPlayerCoreInternal.Disposable
+  public func addListener(handler: @escaping WorkoutsPlayerCoreInternal.Action) -> WorkoutsPlayerCoreInternal.Disposable
+}
+extension WorkoutsPlayerCoreInternal.NoParamNotificable {
+  public var name: Foundation.Notification.Name {
+    get
+  }
+  public func post()
+  public func addListener<A>(weak obj: A, handler: @escaping (A) -> () -> Swift.Void) -> WorkoutsPlayerCoreInternal.Disposable where A : AnyObject
+  public func addListener(handler: @escaping (Foundation.Notification, Self) -> Swift.Void) -> WorkoutsPlayerCoreInternal.Disposable
+  public func addListener(handler: @escaping (Foundation.Notification) -> Swift.Void) -> WorkoutsPlayerCoreInternal.Disposable
+  public func addListener(handler: @escaping WorkoutsPlayerCoreInternal.Action) -> WorkoutsPlayerCoreInternal.Disposable
+}
+public protocol Notificable {
+  associatedtype ParameterType
+  var id: Swift.String { get }
+  func post(_ parameter: Self.ParameterType)
+  func addListener(handler: @escaping WorkoutsPlayerCoreInternal.Handler<Self.ParameterType>) -> WorkoutsPlayerCoreInternal.Disposable
+}
+extension WorkoutsPlayerCoreInternal.Notificable {
+  public var name: Foundation.Notification.Name {
+    get
+  }
+  public func post(_ parameter: Self.ParameterType)
+  public func addListener(handler: @escaping WorkoutsPlayerCoreInternal.Handler<Self.ParameterType>) -> WorkoutsPlayerCoreInternal.Disposable
+  public func addListener(handler: @escaping (Foundation.Notification, Self.ParameterType) -> Swift.Void) -> WorkoutsPlayerCoreInternal.Disposable
+  public func addNoParamsListener<T>(weak object: T, _ handler: @escaping (T) -> () -> Swift.Void) -> WorkoutsPlayerCoreInternal.Disposable where T : AnyObject
+  public func addListener<T>(weak object: T, handler: @escaping (T) -> (Self.ParameterType) -> Swift.Void) -> WorkoutsPlayerCoreInternal.Disposable where T : AnyObject
+  public func addListener<T>(weak object: T, handler: @escaping (T, Self.ParameterType) -> Swift.Void) -> WorkoutsPlayerCoreInternal.Disposable where T : AnyObject
+}
+public struct GenNotification<T> : WorkoutsPlayerCoreInternal.Notificable {
+  public typealias ParameterType = T
+  public var id: Swift.String {
+    get
+  }
+  public init(id: Swift.String)
+}
+extension WorkoutsPlayerCoreInternal.NoParamNotificable where Self : Swift.RawRepresentable, Self.RawValue == Swift.String {
+  public var id: Swift.String {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.Notificable where Self : Swift.RawRepresentable, Self.RawValue == Swift.String {
+  public var id: Swift.String {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.NoParamNotificable where Self : Swift.RawRepresentable, Self.RawValue == Swift.Int {
+  public var id: Swift.String {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.Notificable where Self : Swift.RawRepresentable, Self.RawValue == Swift.Int {
+  public var id: Swift.String {
+    get
+  }
+}
+public struct NowPlayableStaticMetadata : Swift.Equatable {
+  public init(assetURL: Foundation.URL?, mediaType: MediaPlayer.MPNowPlayingInfoMediaType, isLiveStream: Swift.Bool, title: Swift.String?, artist: Swift.String?, image: UIKit.UIImage?, albumArtist: Swift.String?, albumTitle: Swift.String?)
+  public static func == (a: WorkoutsPlayerCoreInternal.NowPlayableStaticMetadata, b: WorkoutsPlayerCoreInternal.NowPlayableStaticMetadata) -> Swift.Bool
+}
+public struct NowPlayableDynamicMetadata : Swift.Equatable {
+  public init(rate: Swift.Float, position: Swift.Float, duration: Swift.Float, currentLanguageOptions: [MediaPlayer.MPNowPlayingInfoLanguageOption], availableLanguageOptionGroups: [MediaPlayer.MPNowPlayingInfoLanguageOptionGroup], isNextSupported: Swift.Bool, isPrevSupported: Swift.Bool, isPlaying: Swift.Bool, queueIndex: Swift.Int, queueCount: Swift.Int)
+  public static func == (a: WorkoutsPlayerCoreInternal.NowPlayableDynamicMetadata, b: WorkoutsPlayerCoreInternal.NowPlayableDynamicMetadata) -> Swift.Bool
+}
+public struct PagedResult<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
+  public let page: Swift.UInt
+  public let perPage: Swift.UInt
+  public let total: Swift.UInt
+  public let totalPages: Swift.UInt
+  public let results: [T]
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@objc(PlayableWorkout) public protocol PlayableWorkout {
+  @objc var identifier: Swift.Int { get }
+  @objc var title: Swift.String { get }
+  @objc var workoutSections: [WorkoutsPlayerCoreInternal.PlayableWorkoutSection] { get }
+  @objc var durationInSeconds: Foundation.TimeInterval { get }
+  @objc var type: Swift.String? { get }
+}
+@objc(PlayableWorkoutSection) public protocol PlayableWorkoutSection {
+  @objc var title: Swift.String { get }
+  @objc var blocks: [WorkoutsPlayerCoreInternal.PlayableWorkoutBlock] { get }
+  @objc var numberOfBlocks: Swift.Int { get }
+  @objc func block(atIndex: Swift.Int, intensity: Swift.Int) -> WorkoutsPlayerCoreInternal.PlayableBlock?
+}
+@objc(PlayableWorkoutBlock) public protocol PlayableWorkoutBlock {
+  @objc var intensityBlocks: [WorkoutsPlayerCoreInternal.PlayableBlock] { get }
+  @objc var level: Swift.Int { get }
+  @objc func block(intensity: Swift.Int) -> WorkoutsPlayerCoreInternal.PlayableBlock?
+}
+@objc(PlayableBlock) public protocol PlayableBlock {
+  @objc var identifier: Swift.String { get }
+  @objc var downloadableURL: Foundation.URL? { get }
+  @objc var intensity: Swift.Int { get }
+  @objc var isEveryMinuteOnTheMinute: Swift.Bool { get }
+  @objc var canBeReplaced: Swift.Bool { get }
+  @objc var numberOfSets: Swift.Int { get }
+  @objc var repetitions: Swift.Int { get }
+  @objc var restTimeInSeconds: Foundation.TimeInterval { get }
+  @objc var title: Swift.String { get }
+  @objc var durationToShow: Swift.String? { get }
+  @objc var setName: Swift.String? { get }
+  @objc var videoURL: Foundation.URL? { get }
+}
+extension WorkoutsPlayerCoreInternal.PlayableWorkout {
+  public func firstBlockIn(section: Swift.Int, offset: Swift.Int) -> WorkoutsPlayerCoreInternal.PlayableWorkoutBlock?
+  public func lastBlockIn(section: Swift.Int, offset: Swift.Int) -> WorkoutsPlayerCoreInternal.PlayableWorkoutBlock?
+}
+@objc public enum InterruptionNotification : Swift.Int, WorkoutsPlayerCoreInternal.NoParamNotificable {
+  case audioSessionInterruptionDidBegin
+  case audioSessionInterruptionDidEndAndPlaybackShouldResume
+  case audioSessionInterruptionDidEndAndPlaybackShouldNotResume
+  case phoneCallDidDisconnect
+  case phoneCallDidStartDialing
+  case phoneCallDidReceiveIncoming
+  case phoneCallDidConnect
+  case testPause
+  case testResume
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol PlayerStateController {
+  mutating func updateStateWith(player: WorkoutsPlayerCoreInternal.WorkoutPlayer, action: WorkoutsPlayerCoreInternal.WorkoutPlayerAction)
+  mutating func updateStateWith(workout: WorkoutsPlayerCoreInternal.PlayableWorkout)
+  var state: WorkoutsPlayerCoreInternal.WorkoutPlayerState { get }
+  var currentState: WorkoutsPlayerCoreInternal.WorkoutPlayerState? { get set }
+}
+extension WorkoutsPlayerCoreInternal.PlayerStateController {
+  public func availableActions(_: WorkoutsPlayerCoreInternal.PlayableWorkout, sectionIndex _: Swift.Int, blockIndex _: Swift.Int, intensity _: Swift.Int) -> [WorkoutsPlayerCoreInternal.WorkoutPlayerAction]
+  public func enabledActions(_ workout: WorkoutsPlayerCoreInternal.PlayableWorkout, sectionIndex: Swift.Int, blockIndex: Swift.Int, intensity: Swift.Int) -> [WorkoutsPlayerCoreInternal.WorkoutPlayerAction]
+  public var elapsedSeconds: Swift.Int {
+    get
+  }
+  public var currentSectionIndex: Swift.Int {
+    get
+  }
+  public var currentBlockIndex: Swift.Int {
+    get
+  }
+  public var currentIntensity: Swift.Int {
+    get
+  }
+  public mutating func decreaseIntensity(of _: WorkoutsPlayerCoreInternal.WorkoutPlayer)
+  public mutating func increaseIntensity(of _: WorkoutsPlayerCoreInternal.WorkoutPlayer)
+  public mutating func playPrevBlock(_ player: WorkoutsPlayerCoreInternal.WorkoutPlayer)
+  public mutating func playNextBlock(_ player: WorkoutsPlayerCoreInternal.WorkoutPlayer)
+  public func currentBlock(_ workout: WorkoutsPlayerCoreInternal.PlayableWorkout, intensity: Swift.Int) -> WorkoutsPlayerCoreInternal.PlayableBlock
+}
+public protocol Promise {
+  associatedtype Element
+  associatedtype Failure : Swift.Error
+  typealias Callback = (Swift.Result<Self.Element, Self.Failure>) -> Swift.Void
+  func subscribe(_ observer: WorkoutsPlayerCoreInternal.Observer<Self.Element, Self.Failure>) -> WorkoutsPlayerCoreInternal.Disposable
+}
+extension WorkoutsPlayerCoreInternal.Future : WorkoutsPlayerCoreInternal.Promise {
+  public typealias Element = FutureElement
+  public typealias SomeFailure = Failure
+  public func subscribe(_ observer: WorkoutsPlayerCoreInternal.Observer<WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element, WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.SomeFailure>) -> WorkoutsPlayerCoreInternal.Disposable
+  public func subscribe() -> WorkoutsPlayerCoreInternal.Disposable
+  public func subscribe(_ callback: @escaping (Swift.Result<WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element, WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.SomeFailure>) -> Swift.Void) -> WorkoutsPlayerCoreInternal.Disposable
+  public func subscribe(onSuccess: WorkoutsPlayerCoreInternal.Handler<WorkoutsPlayerCoreInternal.Future<FutureElement, Failure>.Element>? = nil, onError: WorkoutsPlayerCoreInternal.Handler<Swift.Error>? = nil) -> WorkoutsPlayerCoreInternal.Disposable
+}
+public struct Observer<Element, Failure> where Failure : Swift.Error {
+  public func on(result: Swift.Result<Element, Failure>)
+}
+@objc(ReactiveAudioSnippet) public class ReactiveAudioSnippet : ObjectiveC.NSObject, Swift.Codable {
+  public var queue: Swift.String
+  public var mp3: Swift.String
+  public var durationMs: Swift.Double
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case queue
+    case mp3
+    case durationMs
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  required public init(from decoder: Swift.Decoder) throws
+  public var duration: Foundation.TimeInterval {
+    get
+  }
+  public init(queue: Swift.String, mp3: Swift.String, durationMs: Swift.Double)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc(CancelReactiveAudioInfo) public class CancelReactiveAudioInfo : ObjectiveC.NSObject, Swift.Codable {
+  public var cancel: Swift.String
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc(DismissReactiveAudioInfo) public class DismissReactiveAudioInfo : ObjectiveC.NSObject, Swift.Codable {
+  public var dismiss: Swift.String
+  public init(dismiss: Swift.String)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension Swift.Result {
+  public var error: Swift.Error? {
+    get
+  }
+  public var isSuccess: Swift.Bool {
+    get
+  }
+  public var isFailure: Swift.Bool {
+    get
+  }
+}
+extension Swift.Sequence {
+  public func sorted(by keyPath: Swift.KeyPath<Self.Element, some Comparable>) -> [Self.Element]
+}
+public enum WorkoutBlockDownloadStatus {
+  case notStarted
+  case progress(WorkoutsPlayerCoreInternal.BatchDownload)
+  case finished(WorkoutsPlayerCoreInternal.Timeline)
+  case nothingToDownload
+  case failed(Swift.Error)
+  public var isFinished: Swift.Bool {
+    get
+  }
+  public var isFailed: Swift.Bool {
+    get
+  }
+  public var bytesToDownload: Swift.Int64? {
+    get
+  }
+  public var bytesDownloaded: Swift.Int64? {
+    get
+  }
+}
+public enum SharedResource {
+  public static let buttonThumbUpImage: UIKit.UIImage?
+}
+public struct SmartWorkoutsConfig : Swift.Codable, Swift.Equatable {
+  public let types: [WorkoutsPlayerCoreInternal.SmartWorkoutType]
+  public static func == (a: WorkoutsPlayerCoreInternal.SmartWorkoutsConfig, b: WorkoutsPlayerCoreInternal.SmartWorkoutsConfig) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SmartWorkoutType : Swift.Codable, Swift.Equatable {
+  public let description: Swift.String
+  public let icon: Swift.String
+  public let name: Swift.String
+  public let tiles: [WorkoutsPlayerCoreInternal.SmartWorkoutTile]
+  public let isNew: Swift.Bool?
+  public let ident: Swift.String
+  public static func == (a: WorkoutsPlayerCoreInternal.SmartWorkoutType, b: WorkoutsPlayerCoreInternal.SmartWorkoutType) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SmartWorkoutTile : Swift.Codable, Swift.Equatable {
+  public let coaches: [WorkoutsPlayerCoreInternal.SmartWorkoutCoach]
+  public let durationSeconds: Foundation.TimeInterval?
+  public let equipment: [WorkoutsPlayerCoreInternal.SmartWorkoutEquipment]
+  public let icon: Swift.String
+  public let name: Swift.String
+  public let streamId: Swift.Int?
+  public let isRemovingVariousCoaches: Swift.Bool?
+  public static func == (a: WorkoutsPlayerCoreInternal.SmartWorkoutTile, b: WorkoutsPlayerCoreInternal.SmartWorkoutTile) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SmartWorkoutEquipment : Swift.Codable, Swift.Equatable, Swift.Hashable {
+  public let id: Swift.Int
+  public let name: Swift.String
+  public static func == (a: WorkoutsPlayerCoreInternal.SmartWorkoutEquipment, b: WorkoutsPlayerCoreInternal.SmartWorkoutEquipment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public func encode(to encoder: Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SmartWorkoutCoach : Swift.Codable, Swift.Equatable {
+  public let id: Swift.Int
+  public let name: Swift.String
+  public let style: Swift.String
+  public let poster: Swift.String?
+  public let thumbnail: Swift.String?
+  public static var various: WorkoutsPlayerCoreInternal.SmartWorkoutCoach {
+    get
+  }
+  public static func == (a: WorkoutsPlayerCoreInternal.SmartWorkoutCoach, b: WorkoutsPlayerCoreInternal.SmartWorkoutCoach) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension WorkoutsPlayerCoreInternal.SmartWorkoutsConfig {
+  public var firstTile: WorkoutsPlayerCoreInternal.SmartWorkoutTile? {
+    get
+  }
+}
+public enum SmartWorkoutIntensity : Swift.String, Swift.Codable, Swift.CaseIterable, Swift.Equatable {
+  case easier
+  case same
+  case harder
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [WorkoutsPlayerCoreInternal.SmartWorkoutIntensity]
+  public typealias RawValue = Swift.String
+  public static var allCases: [WorkoutsPlayerCoreInternal.SmartWorkoutIntensity] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class StandaloneAudioCoachingEngine : WorkoutsPlayerCoreInternal.AudioCoachingEngine {
+  @objc weak public var delegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineDelegate?
+  @objc weak public var downloadingDelegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineDownloadingDelegate?
+  weak public var timerDelegate: WorkoutsPlayerCoreInternal.WorkoutPlayerTimerDelegate?
+  @objc public var isPlaying: Swift.Bool
+  @objc public var isStarted: Swift.Bool
+  @objc public var avgHeartRate: Swift.Int
+  @objc public var heartRate: Swift.Int
+  @objc public var calories: Swift.Int
+  @objc public var userWeight: Swift.Int
+  @objc public var didReceiveInfoFromWatch: Swift.Bool
+  public var isWorkoutFinished: Swift.Bool {
+    get
+  }
+  @objc public var workout: WorkoutsPlayerCoreInternal.Workout {
+    @objc get
+  }
+  @objc required public init(workout: WorkoutsPlayerCoreInternal.Workout, delegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineDelegate?, downloadingDelegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineDownloadingDelegate?)
+  @objc public var controlsDelegate: WorkoutsPlayerCoreInternal.AudioCoachingEngineControlsDelegate {
+    @objc get
+  }
+  @objc public var volume: Swift.Float {
+    @objc get
+    @objc set
+  }
+  @objc public var coachVolume: Swift.Float {
+    @objc get
+    @objc set
+  }
+  @objc public var isFormEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isMotivationEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isPacingEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isDirectionEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isBumpsEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isPaused: Swift.Bool {
+    @objc get
+  }
+  @objc public var elapsedTime: Foundation.TimeInterval {
+    @objc get
+  }
+  @objc public var currentBlock: WorkoutsPlayerCoreInternal.WorkoutBlock? {
+    @objc get
+  }
+  @objc public var currentBlockElapsedTime: Foundation.TimeInterval {
+    @objc get
+  }
+  @objc public var bytesToDownload: Swift.Int64 {
+    @objc get
+  }
+  @objc public var bytesDownloaded: Swift.Int64 {
+    @objc get
+  }
+  @objc public var currentBlockProgressFloat: Swift.Float {
+    @objc get
+  }
+  public var currentBlockProgress: Swift.Float? {
+    get
+  }
+  @objc deinit
+}
+extension WorkoutsPlayerCoreInternal.StandaloneAudioCoachingEngine {
+  public func downloadStatusOf(block: WorkoutsPlayerCoreInternal.WorkoutBlock) -> WorkoutsPlayerCoreInternal.WorkoutBlockDownloadStatus?
+  @objc dynamic public func canDecreaseIntensityOf(block: WorkoutsPlayerCoreInternal.WorkoutBlock?) -> Swift.Bool
+  @objc dynamic public func canIncreaseIntensityOf(block: WorkoutsPlayerCoreInternal.WorkoutBlock?) -> Swift.Bool
+  @objc dynamic public func canReplace(block: WorkoutsPlayerCoreInternal.WorkoutBlock?) -> Swift.Bool
+  @objc dynamic public func canSkip(block: WorkoutsPlayerCoreInternal.WorkoutBlock?) -> Swift.Bool
+  @objc dynamic public func canMarkDone(block: WorkoutsPlayerCoreInternal.WorkoutBlock?) -> Swift.Bool
+  @objc dynamic public var canStartWorkout: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var canPauseWorkout: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var canResumeWorkout: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var canFinishWorkout: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var canDiscardWorkout: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var canDecreaseIntensity: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var canIncreaseIntensity: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var canReplaceBlock: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var canSkipBlock: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var canMarkBlockAsDone: Swift.Bool {
+    @objc get
+  }
+}
+extension WorkoutsPlayerCoreInternal.StandaloneAudioCoachingEngine {
+  @objc dynamic public func setCurrentBlock(_ block: WorkoutsPlayerCoreInternal.WorkoutBlock?, isAlreadySelected: Swift.Bool = false)
+  @objc dynamic public func start()
+  @objc dynamic public func pause()
+  @objc dynamic public func resume()
+  @objc dynamic public func increaseIntensity()
+  @objc dynamic public func decreaseIntensity()
+  @objc dynamic public func skipBlock()
+  @objc dynamic public func markBlockDone()
+  @objc dynamic public func replaceBlock()
+  @objc dynamic public func finish()
+  @objc dynamic public func dismissBump()
+  @objc dynamic public func discard()
+  @objc dynamic public func stopPlayingCurrentBlock()
+  @objc dynamic public func cancelReactiveAudio(info: WorkoutsPlayerCoreInternal.CancelReactiveAudioInfo)
+  @objc dynamic public func dismissReactiveAudio(info: WorkoutsPlayerCoreInternal.DismissReactiveAudioInfo)
+  @objc dynamic public func playWhenIsPossible(reactiveAudioSnippet: WorkoutsPlayerCoreInternal.ReactiveAudioSnippet)
+}
+extension WorkoutsPlayerCoreInternal.StandaloneAudioCoachingEngine : WorkoutsPlayerCoreInternal.WorkoutPlayerTimerDelegate {
+  public func timer(listPlayerTimer: WorkoutsPlayerCoreInternal.WorkoutPlayerTimer, didUpdate elapsedTime: Foundation.TimeInterval)
+}
+public enum StorageType {
+  case cache
+  case documents
+  public static func == (a: WorkoutsPlayerCoreInternal.StorageType, b: WorkoutsPlayerCoreInternal.StorageType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct Stream : Swift.Codable {
+  public let id: Swift.Int
+  public let name: Swift.String
+  public let poster: Swift.String?
+  public let thumbnail: Swift.String?
+  public let isManual: Swift.Bool?
+  public let description: Swift.String?
+  public let className: Swift.String?
+  public let durationSeconds: Swift.Int?
+  public let isPublished: Swift.Bool?
+  public let publishedInt: Swift.Int64?
+  public let publisher: Swift.String?
+  public let isClub: Swift.Bool?
+  public let isFixedDuration: Swift.Bool?
+  public let isVideo: Swift.Bool?
+  public let isList: Swift.Bool?
+  public let tags: [WorkoutsPlayerCoreInternal.Tag]?
+  public let clubFullAddress: Swift.String?
+  public let equipmentRequired: [Swift.String]?
+  public let appliedIntensity: Swift.Int?
+  public var isDailyChallenge: Swift.Bool?
+  public let bodySegmentUrl: Swift.String?
+  public let permissions: [Swift.String]?
+  public let isRecommender: Swift.Bool?
+  public let isRecommenderDefault: Swift.Bool?
+  public let modelName: Swift.String?
+  public let hkWorkoutActivity: Swift.String?
+  public var isPremium: Swift.Bool {
+    get
+  }
+  public var isStatic: Swift.Bool {
+    get
+  }
+  public var isEquipmentRequired: Swift.Bool {
+    get
+  }
+  public init(id: Swift.Int, name: Swift.String)
+  public init(from decoder: Swift.Decoder) throws
+  public init(id: Swift.Int, name: Swift.String, poster: Swift.String?, thumbnail: Swift.String?, isManual: Swift.Bool?, description: Swift.String?, className: Swift.String?, durationSeconds: Swift.Int?, isPublished: Swift.Bool?, publishedInt: Swift.Int64?, publisher: Swift.String?, isClub: Swift.Bool?, isFixedDuration: Swift.Bool?, isVideo: Swift.Bool?, isList: Swift.Bool?, tags: [WorkoutsPlayerCoreInternal.Tag]?, clubFullAddress: Swift.String?, equipmentRequired: [Swift.String]?, appliedIntensity: Swift.Int?, isDailyChallenge: Swift.Bool?, bodySegmentUrl: Swift.String?, permissions: [Swift.String]?, internalIsPremium: Swift.Bool?, internalIsStatic: Swift.Bool?, isRecommender: Swift.Bool?, isRecommenderDefault: Swift.Bool?, modelName: Swift.String?, hkWorkoutActivity: Swift.String?)
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct Tag : Swift.Codable, Swift.Equatable {
+  public let id: Swift.Int
+  public let tagGroupId: Swift.Int?
+  public let name: Swift.String?
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case name
+    case tagGroupId
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public var isBodyPart: Swift.Bool {
+    get
+  }
+  public init(from decoder: Swift.Decoder) throws
+  public static func == (a: WorkoutsPlayerCoreInternal.Tag, b: WorkoutsPlayerCoreInternal.Tag) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension WorkoutsPlayerCoreInternal.Stream {
+  public func minutes() -> Swift.Float
+  public func minutesText() -> Swift.String
+}
+extension Swift.String {
+  public func convertToDictionary() -> [Swift.String : Any]?
+  public func replacingOccurrences(of strings: [Swift.String], with newValue: Swift.String) -> Swift.String
+  public var isValidEmail: Swift.Bool {
+    get
+  }
+  public static func minutesAndSeconds(from seconds: Swift.Int) -> Swift.String?
+  public func convertToPhoneNumber() -> Swift.String?
+}
+public protocol StringFailableDecodable : Swift.Decodable {
+  static func decodeUsing<K>(container: Swift.KeyedDecodingContainer<K>, key: K) throws -> Self? where K : Swift.CodingKey
+  init?(_ string: Swift.String)
+}
+extension WorkoutsPlayerCoreInternal.StringFailableDecodable {
+  public static func decodeUsing<K>(container: Swift.KeyedDecodingContainer<K>, key: K) throws -> Self? where K : Swift.CodingKey
+}
+extension Swift.Int : WorkoutsPlayerCoreInternal.StringFailableDecodable {
+}
+extension Swift.Int64 : WorkoutsPlayerCoreInternal.StringFailableDecodable {
+}
+extension Swift.Double : WorkoutsPlayerCoreInternal.StringFailableDecodable {
+}
+extension Swift.Float : WorkoutsPlayerCoreInternal.StringFailableDecodable {
+}
+extension Swift.UInt : WorkoutsPlayerCoreInternal.StringFailableDecodable {
+}
+extension Swift.KeyedDecodingContainer {
+  public func decodeFailingToString<T>(_: T.Type, forKey key: Swift.KeyedDecodingContainer<K>.Key) throws -> T where T : WorkoutsPlayerCoreInternal.StringFailableDecodable
+  public func decodeFailingToStringIfPresent<T>(_ type: T.Type, forKey key: Swift.KeyedDecodingContainer<K>.Key) -> T? where T : WorkoutsPlayerCoreInternal.StringFailableDecodable
+}
+public struct StubbedBackend : WorkoutsPlayerCoreInternal.Backend {
+  public init()
+  public var stubbingBehavior: WorkoutsPlayerCoreInternal.StubbingBehavior {
+    get
+  }
+  public var baseUrl: Swift.String {
+    get
+  }
+  public var stagingUrl: Swift.String {
+    get
+  }
+  public var headers: [Swift.String : Swift.String] {
+    get
+  }
+}
+public struct GenericBackend : WorkoutsPlayerCoreInternal.Backend {
+  public var stubbingBehavior: WorkoutsPlayerCoreInternal.StubbingBehavior
+  public var baseUrl: Swift.String
+  public var stagingUrl: Swift.String
+  public var headers: [Swift.String : Swift.String]
+  public init(stubbingBehavior: WorkoutsPlayerCoreInternal.StubbingBehavior, baseUrl: Swift.String, stagingUrl: Swift.String, headers: [Swift.String : Swift.String])
+  public func url<T>(endpointType _: T.Type, id: Swift.String) -> Foundation.URL where T : Swift.Decodable, T : Swift.Encodable, T : WorkoutsPlayerCoreInternal.EndpointModifiable
+  public func url<T>(endpointType _: T.Type) -> Foundation.URL where T : Swift.Decodable, T : Swift.Encodable, T : WorkoutsPlayerCoreInternal.EndpointAccessible
+  public func url<T>(endpointType _: T.Type, parameters: [Swift.String : Any]) -> Foundation.URL where T : Swift.Decodable, T : Swift.Encodable, T : WorkoutsPlayerCoreInternal.EndpointModifiable
+}
+@objc public class GenericBackendObjc : ObjectiveC.NSObject, WorkoutsPlayerCoreInternal.BackendObjc {
+  @objc public var stubBehavior: WorkoutsPlayerCoreInternal.StubBehavior
+  @objc public var baseUrl: Swift.String
+  @objc public var stagingUrl: Swift.String
+  @objc public var headers: [Swift.String : Swift.String]
+  @objc public init(stubBehavior: WorkoutsPlayerCoreInternal.StubBehavior, baseUrl: Swift.String, stagingUrl: Swift.String, headers: [Swift.String : Swift.String])
+  public func url<T>(endpointType _: T.Type, id: Swift.String) -> Foundation.URL where T : Swift.Decodable, T : Swift.Encodable, T : WorkoutsPlayerCoreInternal.EndpointModifiable
+  public func url<T>(endpointType _: T.Type) -> Foundation.URL where T : Swift.Decodable, T : Swift.Encodable, T : WorkoutsPlayerCoreInternal.EndpointAccessible
+  @objc deinit
+}
+extension WorkoutsPlayerCoreInternal.Backend {
+  public var objc: WorkoutsPlayerCoreInternal.GenericBackendObjc {
+    get
+  }
+}
+public enum StubbingBehavior {
+  case never
+  case now
+  case after(time: Dispatch.DispatchTimeInterval)
+  case error(Swift.Error)
+}
+extension WorkoutsPlayerCoreInternal.StubbingBehavior {
+  @discardableResult
+  public func call<Element>(endpoint: WorkoutsPlayerCoreInternal.Endpoint<Element>, dispatchQueue: Dispatch.DispatchQueue = .main, urlSession: Foundation.URLSession = .shared, dataWrapper: WorkoutsPlayerCoreInternal.Handler<Foundation.Data?>? = nil, stub: @escaping () throws -> Element = { try Element.fromStubJson() }, onComplete: @escaping (Swift.Result<Element, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask? where Element : Swift.Decodable
+  public func stubbedElementFromJson<Element>(endpoint _: WorkoutsPlayerCoreInternal.Endpoint<Element>, stub: @escaping () throws -> Element = { try Element.fromStubJson() }, callback: (Swift.Result<Element, Swift.Error>) -> Swift.Void) where Element : Swift.Decodable
+}
+extension WorkoutsPlayerCoreInternal.Endpoint where A : Swift.Decodable {
+  @discardableResult
+  public func call(stubbing: WorkoutsPlayerCoreInternal.StubbingBehavior = .never, session: Foundation.URLSession = .shared, dispatchQueue: Dispatch.DispatchQueue = .main, dataWrapper: WorkoutsPlayerCoreInternal.Handler<Foundation.Data?>? = nil, onComplete: @escaping (Swift.Result<A, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask?
+}
+extension WorkoutsPlayerCoreInternal.Endpoint where A == () {
+  @discardableResult
+  public func call(session: Foundation.URLSession = .shared, dispatchQueue: Dispatch.DispatchQueue = .main, onComplete: @escaping (Swift.Result<A, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask?
+}
+@_hasMissingDesignatedInitializers public class Ticker {
+  convenience public init(tickInterval: Dispatch.DispatchTimeInterval, callback: @escaping WorkoutsPlayerCoreInternal.Action)
+  @objc deinit
+  public func startTicking()
+  public func stopTicking()
+}
+extension WorkoutsPlayerCoreInternal.Ticker : WorkoutsPlayerCoreInternal.Disposable {
+  public func dispose()
+}
+extension Foundation.Timer : WorkoutsPlayerCoreInternal.Disposable {
+  public func dispose()
+}
+public class Timeline {
+  public var events: [WorkoutsPlayerCoreInternal.TimelineEvent] {
+    get
+  }
+  public init(events: [WorkoutsPlayerCoreInternal.TimelineEvent])
+  public func indexOf(event: WorkoutsPlayerCoreInternal.TimelineEvent) -> Swift.Int?
+  public var isStarted: Swift.Bool {
+    get
+  }
+  public func isLast(_ event: WorkoutsPlayerCoreInternal.TimelineEvent) -> Swift.Bool
+  public func append(event: WorkoutsPlayerCoreInternal.TimelineEvent)
+  public func canPlayNewTimeline(for duration: Swift.Float) -> Swift.Bool?
+  public var isTimelineEmpty: Swift.Bool {
+    get
+  }
+  public func canPlayNow(duration: Swift.Float) -> Swift.Bool?
+  public func addToPlay(bumpTimelineEvent: WorkoutsPlayerCoreInternal.TimelineEvent, duration: Swift.Float)
+  public func addToPlay(timelineEvent: WorkoutsPlayerCoreInternal.TimelineEvent, duration: Swift.Float)
+  public var hasBumpsToPlay: Swift.Bool {
+    get
+  }
+  public var hasReactiveAudioSnippetToPlay: Swift.Bool {
+    get
+  }
+  public var hasPendingEventsToPlay: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+public struct TimelineEvent : Swift.Equatable {
+  public var time: Foundation.TimeInterval
+  public var duration: Foundation.TimeInterval
+  public var url: Foundation.URL
+  public var localUrl: Foundation.URL?
+  public var image: UIKit.UIImage?
+  public var title: Swift.String?
+  public var isBumpEvent: Swift.Bool
+  public var isReactiveAudio: Swift.Bool
+  public init(time: Foundation.TimeInterval, duration: Foundation.TimeInterval, url: Foundation.URL, downloadedURL: Foundation.URL? = nil, image: UIKit.UIImage? = nil, title: Swift.String? = nil, isBumpEvent: Swift.Bool = false, isReactiveAudio: Swift.Bool = false)
+  public mutating func change(time: Foundation.TimeInterval, isBumpEvent: Swift.Bool, isReactiveAudio: Swift.Bool)
+  public var endTime: Foundation.TimeInterval {
+    get
+  }
+  public static func == (a: WorkoutsPlayerCoreInternal.TimelineEvent, b: WorkoutsPlayerCoreInternal.TimelineEvent) -> Swift.Bool
+}
+extension WorkoutsPlayerCoreInternal.TimelineEvent : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public protocol TimelineDelegate : AnyObject {
+  func timeline(_ timeline: WorkoutsPlayerCoreInternal.Timeline, didFire event: WorkoutsPlayerCoreInternal.TimelineEvent)
+  func dismissCurrentTimeline()
+}
+extension WorkoutsPlayerCoreInternal.Timeline : Swift.Equatable {
+  public static func == (lhs: WorkoutsPlayerCoreInternal.Timeline, rhs: WorkoutsPlayerCoreInternal.Timeline) -> Swift.Bool
+}
+public class TimelineDownloader {
+  public typealias Progress = [Foundation.URL : Swift.Float?]
+  public init(timeline: WorkoutsPlayerCoreInternal.Timeline, downloader: WorkoutsPlayerCoreInternal.Downloader = .backgroundShared)
+  public func download(retryCount: Swift.Int = 3, onUpdate: WorkoutsPlayerCoreInternal.Handler<WorkoutsPlayerCoreInternal.TimelineDownloader.Progress>? = nil, onBatchDownloadUpdate: WorkoutsPlayerCoreInternal.Handler<WorkoutsPlayerCoreInternal.BatchDownload>? = nil, onComplete: WorkoutsPlayerCoreInternal.Handler<Swift.Result<WorkoutsPlayerCoreInternal.Timeline, Swift.Error>>? = nil)
+  public func stop()
+  @objc deinit
+}
+public typealias Action = () -> Swift.Void
+public typealias ErrorHandler = WorkoutsPlayerCoreInternal.Handler<Swift.Error>
+public typealias Generator<T> = () -> T
+public typealias Handler<T> = (T) -> Swift.Void
+public typealias ViewController = UIKit.UIViewController
+public typealias StoryboardType = UIKit.UIStoryboard
+public typealias ImageView = UIKit.UIImageView
+public typealias Image = UIKit.UIImage
+public enum UpdateWorkoutAction {
+  case metrics(heartRate: Swift.Int, calories: Swift.Int)
+  case finish(completedSeconds: Swift.Int)
+  case autoAdvance(at: Swift.Int)
+  case done(at: Swift.Int)
+  case up(at: Swift.Int)
+  case down(at: Swift.Int)
+  case replace(at: Swift.Int)
+  case like(at: Swift.Int)
+  case dislike(at: Swift.Int)
+  case skip(at: Swift.Int)
+  case changeAudioCoachingPreference(WorkoutsPlayerCoreInternal.AudioCoachingPreference)
+  case start
+  case discardWorkout
+  public var name: Swift.String {
+    get
+  }
+  public var position: Swift.Int? {
+    get
+  }
+  public var isFinish: Swift.Bool {
+    get
+  }
+  public var isStart: Swift.Bool {
+    get
+  }
+  public var isAutoAdvance: Swift.Bool {
+    get
+  }
+  public var isDone: Swift.Bool {
+    get
+  }
+  public var isSkip: Swift.Bool {
+    get
+  }
+  public var isChangeAudioCoachingPreference: Swift.Bool {
+    get
+  }
+  public func workoutUpdate(workoutId: Swift.Int) -> WorkoutsPlayerCoreInternal.WorkoutUpdate
+}
+public protocol WorkoutUpdate : Swift.Encodable {
+  var id: Swift.Int { get }
+  func toDictionary(keyEncodingStrategy: Foundation.JSONEncoder.KeyEncodingStrategy) -> [Swift.String : Any]?
+}
+@objc public enum UpdateWorkoutActionKind : Swift.Int {
+  case metrics
+  case finishWorkout
+  case discardWorkout
+  case autoAdvance
+  case done
+  case up
+  case down
+  case replace
+  case like
+  case dislike
+  case skip
+  case changeAudioCoachingPreference
+  case startWorkout
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class UpdateWorkoutActionObjc : ObjectiveC.NSObject {
+  final public let kind: WorkoutsPlayerCoreInternal.UpdateWorkoutActionKind
+  public init(kind: WorkoutsPlayerCoreInternal.UpdateWorkoutActionKind)
+  @objc public static func finish(_ completedSeconds: Swift.Int) -> WorkoutsPlayerCoreInternal.IntUpdateWorkoutActionType
+  @objc public var name: Swift.String {
+    @objc get
+  }
+  @objc public static func autoAdvance(_ position: Swift.Int) -> WorkoutsPlayerCoreInternal.IntUpdateWorkoutActionType
+  @objc public static func done(_ position: Swift.Int) -> WorkoutsPlayerCoreInternal.IntUpdateWorkoutActionType
+  @objc public static func up(_ position: Swift.Int) -> WorkoutsPlayerCoreInternal.IntUpdateWorkoutActionType
+  @objc public static func down(_ position: Swift.Int) -> WorkoutsPlayerCoreInternal.IntUpdateWorkoutActionType
+  @objc public static func replace(_ position: Swift.Int) -> WorkoutsPlayerCoreInternal.IntUpdateWorkoutActionType
+  @objc public static func like(_ position: Swift.Int) -> WorkoutsPlayerCoreInternal.IntUpdateWorkoutActionType
+  @objc public static func dislike(_ position: Swift.Int) -> WorkoutsPlayerCoreInternal.IntUpdateWorkoutActionType
+  @objc public static func skip(_ position: Swift.Int) -> WorkoutsPlayerCoreInternal.IntUpdateWorkoutActionType
+  @objc public static func metrics(heartRate: Swift.Int, calories: Swift.Int) -> WorkoutsPlayerCoreInternal.MetricUpdateWorkoutActionType
+  @objc public static func changeAudioCoachingPreference(preference: WorkoutsPlayerCoreInternal.AudioCoachingPreferenceObjc) -> WorkoutsPlayerCoreInternal.AudioCoachingPreferenceUpdateWorkoutActionType
+  @objc public static func discard() -> WorkoutsPlayerCoreInternal.UpdateWorkoutActionObjc
+  @objc public static func start() -> WorkoutsPlayerCoreInternal.UpdateWorkoutActionObjc
+  public var action: WorkoutsPlayerCoreInternal.UpdateWorkoutAction {
+    get
+  }
+  @objc deinit
+}
+@objc public class IntUpdateWorkoutActionType : WorkoutsPlayerCoreInternal.UpdateWorkoutActionObjc {
+  @objc public init(kind: WorkoutsPlayerCoreInternal.UpdateWorkoutActionKind, value: Swift.Int = 0)
+  override public var action: WorkoutsPlayerCoreInternal.UpdateWorkoutAction {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class MetricUpdateWorkoutActionType : WorkoutsPlayerCoreInternal.UpdateWorkoutActionObjc {
+  override public var action: WorkoutsPlayerCoreInternal.UpdateWorkoutAction {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class AudioCoachingPreferenceUpdateWorkoutActionType : WorkoutsPlayerCoreInternal.UpdateWorkoutActionObjc {
+  override public var action: WorkoutsPlayerCoreInternal.UpdateWorkoutAction {
+    get
+  }
+  @objc deinit
+}
+public struct UpdateWorkoutInfo : Swift.Codable {
+  public let id: Swift.Int
+  public var action: Swift.String
+  public var position: Swift.String?
+  public var completedSeconds: Swift.Int?
+  public var caloriesBurned: Swift.Int?
+  public var averageHeartRate: Swift.Int?
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case action
+    case position
+    case completedSeconds
+    case caloriesBurned
+    case averageHeartRate
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(id: Swift.Int, action: WorkoutsPlayerCoreInternal.UpdateWorkoutAction)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension WorkoutsPlayerCoreInternal.UpdateWorkoutInfo : WorkoutsPlayerCoreInternal.WorkoutUpdate {
+}
+@objc public class User : ObjectiveC.NSObject, Swift.Codable {
+  final public let id: Swift.String
+  final public let weight: Swift.Int?
+  final public let isSyncingHealthkit: Swift.Bool?
+  final public let age: Swift.Int?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class WebSocketMessage : ObjectiveC.NSObject, Swift.Codable {
+  public var isEventViewerAliveMessage: Swift.Bool {
+    get
+  }
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc(Workout) public class Workout : ObjectiveC.NSObject, Swift.Codable {
+  public var className: Swift.String?
+  public var id: Swift.Int?
+  public var format: WorkoutsPlayerCoreInternal.WorkoutFormat?
+  public var equipment: Swift.String?
+  public var durationSeconds: Swift.Int?
+  public var isCompleted: Swift.Bool?
+  public var completedAt: Swift.Int64?
+  public var completedSeconds: Swift.Int?
+  public var averageHeartRate: Swift.Int?
+  public var caloriesBurned: Swift.Int?
+  public var totalReps: Swift.Int?
+  public var totalSets: Swift.Int?
+  public var url: Swift.String?
+  public var userId: Swift.Int?
+  public var streamId: Swift.Int?
+  final public let stream: WorkoutsPlayerCoreInternal.Stream?
+  public var playlist: [WorkoutsPlayerCoreInternal.WorkoutBlock]?
+  public var appliedIntensity: Swift.Int?
+  public var appliedMets: Swift.Int?
+  final public let coach: WorkoutsPlayerCoreInternal.Coach?
+  final public let isAudioDirection: Swift.Bool?
+  final public let isAudioForm: Swift.Bool?
+  final public let isAudioMotivation: Swift.Bool?
+  final public let isAudioPacing: Swift.Bool?
+  final public let isAutoAdvance: Swift.Bool?
+  public var workoutType: Swift.String?
+  public var uuid: Swift.String?
+  required public init(from decoder: Swift.Decoder) throws
+  public func caloriesCounter(userWeight: Swift.Double, duration: Foundation.TimeInterval) -> Swift.Double?
+  public func calculateTotalReps() -> Swift.Int?
+  public func calculateTotalSets() -> Swift.Int?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension WorkoutsPlayerCoreInternal.Workout {
+  public var containsAudioCoachingBlocks: Swift.Bool {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.Workout : WorkoutsPlayerCoreInternal.EndpointAccessible {
+  public typealias Element = WorkoutsPlayerCoreInternal.Workout
+  public static var path: Swift.String {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.Workout : WorkoutsPlayerCoreInternal.EndpointModifiable {
+  public typealias Body = WorkoutsPlayerCoreInternal.UpdateWorkoutInfo
+}
+extension WorkoutsPlayerCoreInternal.Workout : WorkoutsPlayerCoreInternal.PlayableWorkout {
+  @objc dynamic public var type: Swift.String? {
+    @objc get
+  }
+  @objc dynamic public var identifier: Swift.Int {
+    @objc get
+  }
+  @objc dynamic public var durationInSeconds: Foundation.TimeInterval {
+    @objc get
+  }
+  @objc dynamic public var workoutSections: [WorkoutsPlayerCoreInternal.PlayableWorkoutSection] {
+    @objc get
+  }
+  @objc dynamic public var title: Swift.String {
+    @objc get
+  }
+  public func isBlockAvailableAt(sectionIndex _: Swift.Int, blockIndex _: Swift.Int) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class WorkoutBlock24Go : WorkoutsPlayerCoreInternal.PlayableWorkoutBlock {
+  @objc public var level: Swift.Int
+  @objc public var intensityBlocks: [WorkoutsPlayerCoreInternal.PlayableBlock]
+  @objc public func block(intensity: Swift.Int) -> WorkoutsPlayerCoreInternal.PlayableBlock?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class WorkoutSection : WorkoutsPlayerCoreInternal.PlayableWorkoutSection {
+  public var identifier: Swift.String
+  @objc public var title: Swift.String
+  @objc public var blocks: [WorkoutsPlayerCoreInternal.PlayableWorkoutBlock]
+  @objc public func block(atIndex: Swift.Int, intensity: Swift.Int) -> WorkoutsPlayerCoreInternal.PlayableBlock?
+  @objc public var numberOfBlocks: Swift.Int {
+    @objc get
+  }
+  @objc deinit
+}
+extension WorkoutsPlayerCoreInternal.WorkoutBlock : WorkoutsPlayerCoreInternal.PlayableBlock {
+  @objc dynamic public var canBeReplaced: Swift.Bool {
+    @objc get
+  }
+  public var replacementBlock: WorkoutsPlayerCoreInternal.PlayableBlock? {
+    get
+  }
+  @objc dynamic public var intensity: Swift.Int {
+    @objc get
+  }
+  @objc dynamic public var identifier: Swift.String {
+    @objc get
+  }
+  @objc dynamic public var isEveryMinuteOnTheMinute: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var numberOfSets: Swift.Int {
+    @objc get
+  }
+  @objc dynamic public var repetitions: Swift.Int {
+    @objc get
+  }
+  @objc dynamic public var restTimeInSeconds: Foundation.TimeInterval {
+    @objc get
+  }
+  @objc dynamic public var durationToShow: Swift.String? {
+    @objc get
+  }
+  @objc dynamic public var title: Swift.String {
+    @objc get
+  }
+  @objc dynamic public var videoURL: Foundation.URL? {
+    @objc get
+  }
+  @objc dynamic public var downloadableURL: Foundation.URL? {
+    @objc get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class WorkoutBlock : ObjectiveC.NSObject, Swift.Codable {
+  public var audioTimeline: [WorkoutsPlayerCoreInternal.AudioTrack]?
+  public var bikePosition: Swift.String?
+  public var blockId: Swift.Int?
+  public var blockSeconds: Swift.Int?
+  public var className: Swift.String?
+  public var completedInt: Swift.Int64?
+  public var demoHls: Swift.String?
+  public var durationSeconds: Swift.Int?
+  public var id: Swift.String?
+  public var incline: Swift.String?
+  public var intensityBlocksList: [WorkoutsPlayerCoreInternal.WorkoutBlock]
+  public var isAutoAdvance: Swift.Bool?
+  public var isEmom: Swift.Bool?
+  public var isDownAvailable: Swift.Bool?
+  public var isReplaceable: Swift.Bool?
+  public var isSkipped: Swift.Bool?
+  public var isUpAvailable: Swift.Bool?
+  public var level: Swift.Int
+  public var load: Swift.String?
+  public var mph: Swift.String?
+  public var name: Swift.String?
+  public var poster: Swift.String?
+  public var position: Swift.Int?
+  public var reps: Swift.Int?
+  public var repsType: Swift.String?
+  public var rest: Swift.Int?
+  public var resistance: Swift.String?
+  public var rpm: Swift.String?
+  public var subtitle: Swift.String?
+  @objc public var setName: Swift.String?
+  public var sets: Swift.Int?
+  public var skippedInt: Swift.Int?
+  public var speed: Swift.String?
+  public var technical: Swift.String?
+  public var video1Mp4: Swift.String?
+  public var video1Hls: Swift.String?
+  public var video2Mp4: Swift.String?
+  public var video2Hls: Swift.String?
+  public var stepsPerMinute: Swift.String?
+  public var stridesPerMinute: Swift.String?
+  public var strokesPerMinute: Swift.String?
+  public var blockTitle: Swift.String?
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func block(intensity: Swift.Int) -> WorkoutsPlayerCoreInternal.PlayableBlock?
+  public var intensityBlocks: [WorkoutsPlayerCoreInternal.PlayableBlock] {
+    get
+  }
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension WorkoutsPlayerCoreInternal.WorkoutBlock {
+  public var isAudioCoaching: Swift.Bool {
+    get
+  }
+  public var hasToRestartBlockWhenCoachingCuesChange: Swift.Bool {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.WorkoutBlock {
+  public var videoUrl: Foundation.URL? {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.WorkoutBlock {
+  public var posterImageUrl: Swift.String? {
+    get
+  }
+}
+public enum WorkoutDownloaderResult {
+  case failure(Swift.Error)
+  case finished(WorkoutsPlayerCoreInternal.DownloadedWorkout)
+  case progress(WorkoutsPlayerCoreInternal.DownloadedWorkout)
+}
+public class DownloadedBlock {
+  final public let blockId: Swift.String
+  public var videoURL: Foundation.URL
+  public var totalBytesWritten: Swift.Int64
+  public var totalBytesExpectedToWrite: Swift.Int64
+  public var downloadResult: WorkoutsPlayerCoreInternal.DownloadResult?
+  public init(blockId: Swift.String, videoURL: Foundation.URL, totalBytesWritten: Swift.Int64 = 0, totalBytesExpectedToWrite: Swift.Int64 = 0, downloadResult: WorkoutsPlayerCoreInternal.DownloadResult? = nil)
+  public var progress: Swift.Float {
+    get
+  }
+  @objc deinit
+}
+public typealias Fetch<Workout> = (@escaping WorkoutsPlayerCoreInternal.Handler<Swift.Result<Workout, Swift.Error>>) -> Swift.Void where Workout : Swift.Decodable, Workout : Swift.Encodable, Workout : WorkoutsPlayerCoreInternal.PlayableWorkout
+public class WorkoutDownloader {
+  public var downloadedWorkout: WorkoutsPlayerCoreInternal.DownloadedWorkout?
+  public init()
+  public func downloadWorkout<Workout>(endpoint: (@escaping WorkoutsPlayerCoreInternal.Handler<Swift.Result<Workout, Swift.Error>>) -> Swift.Void, bundle: Foundation.Bundle, onUpdate update: @escaping WorkoutsPlayerCoreInternal.Handler<WorkoutsPlayerCoreInternal.WorkoutDownloaderResult>) where Workout : Swift.Decodable, Workout : Swift.Encodable, Workout : WorkoutsPlayerCoreInternal.PlayableWorkout
+  @objc deinit
+}
+public class DownloadedWorkout {
+  final public let workout: WorkoutsPlayerCoreInternal.PlayableWorkout
+  public var downloadedBlocks: [WorkoutsPlayerCoreInternal.DownloadedBlock]
+  public init(workout: WorkoutsPlayerCoreInternal.PlayableWorkout, downloadedBlocks: [WorkoutsPlayerCoreInternal.DownloadedBlock])
+  public var isFinished: Swift.Bool {
+    get
+  }
+  public var progressText: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public enum WorkoutFormat : Swift.String, Swift.Codable {
+  case video
+  case list
+  public var isList: Swift.Bool {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct BuildWorkoutInfo : Swift.Codable {
+  public let streamId: Swift.Int
+  public let name: Swift.String
+  public var format: Swift.String
+  public let poster: Swift.String?
+  public var canChangeEquipment: Swift.Bool
+  public var canChangeDuration: Swift.Bool
+  public var canChangeFormat: Swift.Bool
+  public var durationSeconds: Swift.Int?
+  public var equipment: Swift.String?
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case streamId
+    case name
+    case format
+    case poster
+    case canChangeEquipment
+    case canChangeDuration
+    case canChangeFormat
+    case durationSeconds
+    case equipment
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(streamId: Swift.Int, name: Swift.String, format: Swift.String, poster: Swift.String? = nil, durationSeconds: Swift.Int? = nil, equipment: Swift.String? = nil, canChangeEquipment: Swift.Bool = true, canChangeFormat: Swift.Bool = true, canChangeDuration: Swift.Bool = true)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension WorkoutsPlayerCoreInternal.Stream {
+  public func asBuildWorkoutInfo() -> WorkoutsPlayerCoreInternal.BuildWorkoutInfo
+}
+public enum WorkoutPlayerAction : Swift.Int, Swift.Codable, Swift.CaseIterable, Swift.Equatable, Swift.Hashable {
+  case airplayTap
+  case decreaseIntensity
+  case discardWorkout
+  case dislike
+  case finishWorkout
+  case increaseIntensity
+  case like
+  case markBlockDone
+  case pause
+  case playNextBlock
+  case playPreviousBlock
+  case resume
+  case replaceBlock
+  case startWorkout
+  case volumeTap
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [WorkoutsPlayerCoreInternal.WorkoutPlayerAction]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [WorkoutsPlayerCoreInternal.WorkoutPlayerAction] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public class WorkoutPlayerController<Workout, StateController> : WorkoutsPlayerCoreInternal.WorkoutPlayerDelegate where Workout : Swift.Decodable, Workout : Swift.Encodable, Workout : WorkoutsPlayerCoreInternal.EndpointModifiable, Workout : WorkoutsPlayerCoreInternal.PlayableWorkout, StateController : WorkoutsPlayerCoreInternal.PlayerStateController {
+  public init(stateController: StateController, eventsTracker: WorkoutsPlayerCoreInternal.WorkoutPlayerDelegate? = nil)
+  public func workoutPlayer(_ player: WorkoutsPlayerCoreInternal.WorkoutPlayer, didPerform action: WorkoutsPlayerCoreInternal.WorkoutPlayerAction, onCompletion: WorkoutsPlayerCoreInternal.WorkoutActionHandler? = nil)
+  @objc deinit
+}
+extension WorkoutsPlayerCoreInternal.WorkoutPlayerController : WorkoutsPlayerCoreInternal.WorkoutPlayerDataSource {
+  public func stateOf(_: WorkoutsPlayerCoreInternal.WorkoutPlayer) -> WorkoutsPlayerCoreInternal.WorkoutPlayerState
+}
+public protocol WorkoutPlayerDataSource : AnyObject {
+  func stateOf(_ player: WorkoutsPlayerCoreInternal.WorkoutPlayer) -> WorkoutsPlayerCoreInternal.WorkoutPlayerState
+}
+public protocol WorkoutPlayerDelegate : AnyObject {
+  func workoutPlayer(_ player: WorkoutsPlayerCoreInternal.WorkoutPlayer, didPerform action: WorkoutsPlayerCoreInternal.WorkoutPlayerAction, onCompletion: WorkoutsPlayerCoreInternal.WorkoutActionHandler?)
+}
+extension WorkoutsPlayerCoreInternal.WorkoutPlayerDelegate {
+  public func workoutPlayer(_ player: WorkoutsPlayerCoreInternal.WorkoutPlayer, didPerform action: WorkoutsPlayerCoreInternal.WorkoutPlayerAction)
+}
+@objc public protocol WorkoutPlayer {
+  @objc var workout: WorkoutsPlayerCoreInternal.PlayableWorkout { get }
+}
+public enum WorkoutActionResult {
+  case success(action: WorkoutsPlayerCoreInternal.WorkoutPlayerAction, workout: WorkoutsPlayerCoreInternal.PlayableWorkout, newState: WorkoutsPlayerCoreInternal.WorkoutPlayerState)
+  case failure(action: WorkoutsPlayerCoreInternal.WorkoutPlayerAction, workout: WorkoutsPlayerCoreInternal.PlayableWorkout, error: Swift.Error)
+  public var newState: WorkoutsPlayerCoreInternal.WorkoutPlayerState? {
+    get
+  }
+}
+public typealias WorkoutActionHandler = WorkoutsPlayerCoreInternal.Handler<WorkoutsPlayerCoreInternal.WorkoutActionResult>
+public struct WorkoutPlayerState {
+  public init(currentBlockIndex: Swift.Int, currentSectionIndex: Swift.Int, currentIntensity: Swift.Int, isPaused: Swift.Bool = false, followAlongState: WorkoutsPlayerCoreInternal.FollowAlongState? = nil, listPlayerState: WorkoutsPlayerCoreInternal.ListPlayerState? = nil)
+  public var currentBlockIndex: Swift.Int
+  public var currentSectionIndex: Swift.Int
+  public var currentIntensity: Swift.Int
+  public var isPaused: Swift.Bool
+  public var followAlongState: WorkoutsPlayerCoreInternal.FollowAlongState?
+  public var listPlayerState: WorkoutsPlayerCoreInternal.ListPlayerState?
+}
+public struct FollowAlongState {
+  public var availableActions: [WorkoutsPlayerCoreInternal.WorkoutPlayerAction]
+  public var currentBlock: WorkoutsPlayerCoreInternal.PlayableBlock
+  public var enabledActions: [WorkoutsPlayerCoreInternal.WorkoutPlayerAction]
+  public var nextBlock: WorkoutsPlayerCoreInternal.PlayableBlock?
+  public var previousBlock: WorkoutsPlayerCoreInternal.PlayableBlock?
+}
+public struct ListPlayerState {
+  public init(listPlayerSections: [WorkoutsPlayerCoreInternal.ListPlayerSectionState])
+  public var listPlayerSections: [WorkoutsPlayerCoreInternal.ListPlayerSectionState]
+}
+public struct ListPlayerSectionState {
+  public init(title: Swift.String, blockStates: [WorkoutsPlayerCoreInternal.ListPlayerBlockState])
+  public var title: Swift.String
+  public var blockStates: [WorkoutsPlayerCoreInternal.ListPlayerBlockState]
+}
+public struct ListPlayerBlockState {
+  public init(block: WorkoutsPlayerCoreInternal.PlayableBlock, isDone: Swift.Bool, intensity: Swift.Int, availableActions: [WorkoutsPlayerCoreInternal.WorkoutPlayerAction], enabledActions: [WorkoutsPlayerCoreInternal.WorkoutPlayerAction])
+  public var block: WorkoutsPlayerCoreInternal.PlayableBlock
+  public var isDone: Swift.Bool
+  public var intensity: Swift.Int
+  public var availableActions: [WorkoutsPlayerCoreInternal.WorkoutPlayerAction]
+  public var enabledActions: [WorkoutsPlayerCoreInternal.WorkoutPlayerAction]
+}
+@_hasMissingDesignatedInitializers public class WorkoutPlayerTimer {
+  @objc deinit
+}
+extension Swift.Double {
+  public var formattedInMinutesAndSeconds: Swift.String {
+    get
+  }
+}
+public protocol WorkoutPlayerTimerDelegate : AnyObject {
+  func timer(listPlayerTimer: WorkoutsPlayerCoreInternal.WorkoutPlayerTimer, didUpdate elapsedTime: Foundation.TimeInterval)
+}
+public struct WorkoutsPlayerCoreInternalSDK {
+  public init()
+  public func publicMethod()
+}
+extension WorkoutsPlayerCoreInternal.WorkoutsPlayerCoreInternalSDK : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public var CurrentWorkoutsPlayerEnvironment: WorkoutsPlayerCoreInternal.WorkoutsPlayerEnvironment
+public struct WorkoutsPlayerEnvironment {
+  public var appGroupIdentifier: Swift.String
+  public var audioSessionManager: () -> WorkoutsPlayerCoreInternal.AudioSessionManager
+  public var audioPlayer: () -> WorkoutsPlayerCoreInternal.AudioPlayer
+  public var calendar: () -> Foundation.Calendar
+  public var bundle: () -> Foundation.Bundle
+  public var date: () -> Foundation.Date
+  public var downloader: () -> WorkoutsPlayerCoreInternal.Downloader
+  public var screen: () -> UIKit.UIScreen
+  public var imageCache: () -> WorkoutsPlayerCoreInternal.ImageCache
+  public static var `default`: WorkoutsPlayerCoreInternal.WorkoutsPlayerEnvironment {
+    get
+  }
+  public static func setup(environment: WorkoutsPlayerCoreInternal.WorkoutsPlayerEnvironment)
+  public typealias DownloadImage = (Swift.String, @escaping WorkoutsPlayerCoreInternal.Handler<UIKit.UIImage?>) -> Swift.Void
+  public func defaultDownloadImageImplementation() -> WorkoutsPlayerCoreInternal.WorkoutsPlayerEnvironment.DownloadImage
+}
+extension WorkoutsPlayerCoreInternal.AudioCoachingType : Swift.RawRepresentable {}
+extension WorkoutsPlayerCoreInternal.Bump.CodingKeys : Swift.Equatable {}
+extension WorkoutsPlayerCoreInternal.Bump.CodingKeys : Swift.Hashable {}
+extension WorkoutsPlayerCoreInternal.Bump.CodingKeys : Swift.RawRepresentable {}
+extension WorkoutsPlayerCoreInternal.AppError : Swift.Equatable {}
+extension WorkoutsPlayerCoreInternal.AppError : Swift.Hashable {}
+extension WorkoutsPlayerCoreInternal.ContentType : Swift.Equatable {}
+extension WorkoutsPlayerCoreInternal.ContentType : Swift.Hashable {}
+extension WorkoutsPlayerCoreInternal.ContentType : Swift.RawRepresentable {}
+extension WorkoutsPlayerCoreInternal.Endpoint.Method : Swift.Equatable {}
+extension WorkoutsPlayerCoreInternal.Endpoint.Method : Swift.Hashable {}
+extension WorkoutsPlayerCoreInternal.Endpoint.Method : Swift.RawRepresentable {}
+extension WorkoutsPlayerCoreInternal.ObjcStubbingBehavior : Swift.Equatable {}
+extension WorkoutsPlayerCoreInternal.ObjcStubbingBehavior : Swift.Hashable {}
+extension WorkoutsPlayerCoreInternal.ObjcStubbingBehavior : Swift.RawRepresentable {}
+extension WorkoutsPlayerCoreInternal.InterruptionNotification : Swift.Equatable {}
+extension WorkoutsPlayerCoreInternal.InterruptionNotification : Swift.Hashable {}
+extension WorkoutsPlayerCoreInternal.InterruptionNotification : Swift.RawRepresentable {}
+extension WorkoutsPlayerCoreInternal.ReactiveAudioSnippet.CodingKeys : Swift.Equatable {}
+extension WorkoutsPlayerCoreInternal.ReactiveAudioSnippet.CodingKeys : Swift.Hashable {}
+extension WorkoutsPlayerCoreInternal.ReactiveAudioSnippet.CodingKeys : Swift.RawRepresentable {}
+extension WorkoutsPlayerCoreInternal.SmartWorkoutIntensity : Swift.Hashable {}
+extension WorkoutsPlayerCoreInternal.SmartWorkoutIntensity : Swift.RawRepresentable {}
+extension WorkoutsPlayerCoreInternal.StorageType : Swift.Equatable {}
+extension WorkoutsPlayerCoreInternal.StorageType : Swift.Hashable {}
+extension WorkoutsPlayerCoreInternal.Tag.CodingKeys : Swift.Equatable {}
+extension WorkoutsPlayerCoreInternal.Tag.CodingKeys : Swift.Hashable {}
+extension WorkoutsPlayerCoreInternal.Tag.CodingKeys : Swift.RawRepresentable {}
+extension WorkoutsPlayerCoreInternal.UpdateWorkoutActionKind : Swift.Equatable {}
+extension WorkoutsPlayerCoreInternal.UpdateWorkoutActionKind : Swift.Hashable {}
+extension WorkoutsPlayerCoreInternal.UpdateWorkoutActionKind : Swift.RawRepresentable {}
+extension WorkoutsPlayerCoreInternal.UpdateWorkoutInfo.CodingKeys : Swift.Equatable {}
+extension WorkoutsPlayerCoreInternal.UpdateWorkoutInfo.CodingKeys : Swift.Hashable {}
+extension WorkoutsPlayerCoreInternal.UpdateWorkoutInfo.CodingKeys : Swift.RawRepresentable {}
+extension WorkoutsPlayerCoreInternal.WorkoutFormat : Swift.Equatable {}
+extension WorkoutsPlayerCoreInternal.WorkoutFormat : Swift.Hashable {}
+extension WorkoutsPlayerCoreInternal.WorkoutFormat : Swift.RawRepresentable {}
+extension WorkoutsPlayerCoreInternal.BuildWorkoutInfo.CodingKeys : Swift.Equatable {}
+extension WorkoutsPlayerCoreInternal.BuildWorkoutInfo.CodingKeys : Swift.Hashable {}
+extension WorkoutsPlayerCoreInternal.BuildWorkoutInfo.CodingKeys : Swift.RawRepresentable {}
+extension WorkoutsPlayerCoreInternal.WorkoutPlayerAction : Swift.RawRepresentable {}

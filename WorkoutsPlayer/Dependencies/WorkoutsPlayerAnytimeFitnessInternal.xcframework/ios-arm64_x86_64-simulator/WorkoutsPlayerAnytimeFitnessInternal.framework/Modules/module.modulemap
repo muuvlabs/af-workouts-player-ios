@@ -1,0 +1,11 @@
+framework module WorkoutsPlayerAnytimeFitnessInternal {
+  umbrella header "WorkoutsPlayerAnytimeFitnessInternal-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module WorkoutsPlayerAnytimeFitnessInternal.Swift {
+  header "WorkoutsPlayerAnytimeFitnessInternal-Swift.h"
+  requires objc
+}
