@@ -1,6 +1,0 @@
-framework module WorkoutsPlayer {
-  umbrella header "WorkoutsPlayer-umbrella.h"
-
-  export *
-  module * { export * }
-}
