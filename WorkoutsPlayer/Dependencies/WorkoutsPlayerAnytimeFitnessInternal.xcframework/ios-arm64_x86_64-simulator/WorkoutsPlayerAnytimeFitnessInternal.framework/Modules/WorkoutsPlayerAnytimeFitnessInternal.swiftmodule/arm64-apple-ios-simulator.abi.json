@@ -190,20 +190,20 @@
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/WorkoutsUI\/SharedResource.swift",
       "kind": "StringLiteral",
       "offset": 669,
-      "length": 38,
-      "value": "\"WorkoutsPlayerAnytimeFitnessInternal\""
+      "length": 44,
+      "value": "\"WorkoutsPlayerAnytimeFitnessInternalBundle\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/WorkoutsUI\/SharedResource.swift",
       "kind": "StringLiteral",
-      "offset": 1298,
+      "offset": 1304,
       "length": 9,
       "value": "\".bundle\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/WorkoutsUI\/SharedResource.swift",
       "kind": "StringLiteral",
-      "offset": 1498,
+      "offset": 1504,
       "length": 14,
       "value": "\"Sample image\""
     },

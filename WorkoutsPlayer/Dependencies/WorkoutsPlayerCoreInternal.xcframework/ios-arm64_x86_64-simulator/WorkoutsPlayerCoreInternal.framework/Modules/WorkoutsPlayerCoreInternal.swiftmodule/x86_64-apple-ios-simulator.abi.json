@@ -96175,21 +96175,21 @@
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/SharedResource.swift",
       "kind": "StringLiteral",
-      "offset": 663,
-      "length": 28,
-      "value": "\"WorkoutsPlayerCoreInternal\""
+      "offset": 742,
+      "length": 34,
+      "value": "\"WorkoutsPlayerCoreInternalBundle\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/SharedResource.swift",
       "kind": "StringLiteral",
-      "offset": 1282,
+      "offset": 1367,
       "length": 9,
       "value": "\".bundle\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/SharedResource.swift",
       "kind": "StringLiteral",
-      "offset": 1482,
+      "offset": 1567,
       "length": 14,
       "value": "\"Sample image\""
     },
