@@ -1,0 +1,11 @@
+framework module MuuvEndpoints {
+  umbrella header "MuuvEndpoints-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MuuvEndpoints.Swift {
+  header "MuuvEndpoints-Swift.h"
+  requires objc
+}

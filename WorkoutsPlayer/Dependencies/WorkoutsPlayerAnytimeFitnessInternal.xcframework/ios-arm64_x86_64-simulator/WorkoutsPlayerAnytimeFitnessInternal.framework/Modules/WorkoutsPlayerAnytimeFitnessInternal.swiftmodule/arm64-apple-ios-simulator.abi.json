@@ -189,21 +189,21 @@
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/WorkoutsUI\/SharedResource.swift",
       "kind": "StringLiteral",
-      "offset": 669,
+      "offset": 748,
       "length": 44,
       "value": "\"WorkoutsPlayerAnytimeFitnessInternalBundle\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/WorkoutsUI\/SharedResource.swift",
       "kind": "StringLiteral",
-      "offset": 1304,
+      "offset": 1383,
       "length": 9,
       "value": "\".bundle\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/WorkoutsUI\/SharedResource.swift",
       "kind": "StringLiteral",
-      "offset": 1504,
+      "offset": 1583,
       "length": 14,
       "value": "\"Sample image\""
     },

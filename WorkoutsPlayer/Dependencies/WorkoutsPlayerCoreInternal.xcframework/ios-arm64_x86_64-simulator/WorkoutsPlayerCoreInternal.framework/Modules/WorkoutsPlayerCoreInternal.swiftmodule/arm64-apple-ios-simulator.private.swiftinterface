@@ -7,7 +7,10 @@ import CallKit
 import Foundation
 import HealthKit
 import MediaPlayer
+import MuuvEndpoints
+import MuuvUtilities
 import Swift
+import SwiftUI
 import UIKit
 @_exported import WorkoutsPlayerCoreInternal
 import _Concurrency
@@ -727,9 +730,6 @@ public enum DownloadResult : Swift.CustomStringConvertible {
   public var url: Foundation.URL? {
     get
   }
-}
-extension Foundation.URLSessionConfiguration {
-  public static func backgroundWithPrefixIdentifier(_ prefix: Swift.String = "com.muuv.networking.", sharedContainerIdentifier _: Swift.String = "group.muuv.apps", bundle: Foundation.Bundle = .main) -> Foundation.URLSessionConfiguration
 }
 public func downsample(imageData: Foundation.Data, to frameSize: CoreFoundation.CGSize, scale: CoreFoundation.CGFloat) throws -> UIKit.UIImage
 public func downsample(imageAt imageURL: Foundation.URL, to size: CoreFoundation.CGSize, scale: CoreFoundation.CGFloat) throws -> UIKit.UIImage
@@ -2633,6 +2633,13 @@ extension WorkoutsPlayerCoreInternal.WorkoutsPlayerCoreInternalSDK : Swift.Custo
   public var description: Swift.String {
     get
   }
+}
+public struct WorkoutsCoreView : SwiftUI.View {
+  public init()
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s26WorkoutsPlayerCoreInternal0aC4ViewV4bodyQrvp", 0) __
 }
 public var CurrentWorkoutsPlayerEnvironment: WorkoutsPlayerCoreInternal.WorkoutsPlayerEnvironment
 public struct WorkoutsPlayerEnvironment {
