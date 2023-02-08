@@ -17244,13 +17244,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "MuuvUtilities",
-        "printedName": "MuuvUtilities",
-        "declKind": "Import",
-        "moduleName": "WorkoutsPlayerCoreInternal"
-      },
-      {
         "kind": "TypeDecl",
         "name": "Downloader",
         "printedName": "Downloader",
@@ -84879,17 +84872,13 @@
       },
       {
         "kind": "Import",
-        "name": "MuuvUtilities",
-        "printedName": "MuuvUtilities",
-        "declKind": "Import",
-        "moduleName": "WorkoutsPlayerCoreInternal"
-      },
-      {
-        "kind": "Import",
         "name": "MuuvEndpointsRenamed",
         "printedName": "MuuvEndpointsRenamed",
         "declKind": "Import",
-        "moduleName": "WorkoutsPlayerCoreInternal"
+        "moduleName": "WorkoutsPlayerCoreInternal",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -91227,6 +91216,135 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "URLSessionConfiguration",
+        "printedName": "URLSessionConfiguration",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "backgroundWithPrefixIdentifier",
+            "printedName": "backgroundWithPrefixIdentifier(_:sharedContainerIdentifier:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLSessionConfiguration",
+                "printedName": "Foundation.URLSessionConfiguration",
+                "usr": "c:objc(cs)NSURLSessionConfiguration"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So25NSURLSessionConfigurationC26WorkoutsPlayerCoreInternalE30backgroundWithPrefixIdentifier_015sharedContainerJ06bundleABSS_SSSo8NSBundleCtFZ",
+            "mangledName": "$sSo25NSURLSessionConfigurationC26WorkoutsPlayerCoreInternalE30backgroundWithPrefixIdentifier_015sharedContainerJ06bundleABSS_SSSo8NSBundleCtFZ",
+            "moduleName": "WorkoutsPlayerCoreInternal",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSURLSessionConfiguration",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "intro_iOS": "7.0",
+        "objc_name": "NSURLSessionConfiguration",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "URLSession",
         "printedName": "URLSession",
         "children": [
@@ -91773,13 +91891,6 @@
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
             "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "XibCompatible",
-            "printedName": "XibCompatible",
-            "usr": "s:13MuuvUtilities13XibCompatibleP",
-            "mangledName": "$s13MuuvUtilities13XibCompatibleP"
           }
         ]
       },
@@ -95643,65 +95754,79 @@
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1164,
+      "offset": 1166,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1212,
+      "offset": 1214,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1261,
+      "offset": 1263,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "Dictionary",
-      "offset": 1966,
+      "offset": 1968,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "StringLiteral",
-      "offset": 2224,
+      "offset": 2226,
       "length": 19,
       "value": "\"Downloaders queue\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "BooleanLiteral",
-      "offset": 4609,
+      "offset": 4611,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "IntegerLiteral",
-      "offset": 4688,
+      "offset": 4690,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "IntegerLiteral",
-      "offset": 4740,
+      "offset": 4742,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "StringLiteral",
-      "offset": 714,
+      "offset": 716,
       "length": 10,
       "value": "\"WorkoutsPlayerCoreInternal.Downloader\""
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "kind": "StringLiteral",
+      "offset": 10739,
+      "length": 22,
+      "value": "\"com.muuv.networking.\""
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "kind": "StringLiteral",
+      "offset": 10809,
+      "length": 17,
+      "value": "\"group.muuv.apps\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
