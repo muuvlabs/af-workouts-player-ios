@@ -84886,8 +84886,8 @@
       },
       {
         "kind": "Import",
-        "name": "MuuvEndpointsTest",
-        "printedName": "MuuvEndpointsTest",
+        "name": "MuuvEndpointsRenamed",
+        "printedName": "MuuvEndpointsRenamed",
         "declKind": "Import",
         "moduleName": "WorkoutsPlayerCoreInternal"
       },
@@ -87193,8 +87193,8 @@
                 ]
               }
             ],
-            "usr": "s:17MuuvEndpointsTest18EndpointAccessibleP",
-            "mangledName": "$s17MuuvEndpointsTest18EndpointAccessibleP"
+            "usr": "s:20MuuvEndpointsRenamed18EndpointAccessibleP",
+            "mangledName": "$s20MuuvEndpointsRenamed18EndpointAccessibleP"
           }
         ]
       },
