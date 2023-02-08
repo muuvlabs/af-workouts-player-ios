@@ -7,7 +7,7 @@ import CallKit
 import Foundation
 import HealthKit
 import MediaPlayer
-import MuuvEndpointsRenamed
+import MuuvEndpoints
 import Swift
 import SwiftUI
 import UIKit
