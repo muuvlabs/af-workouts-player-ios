@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "ios-endpoints",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/anytimefitness/ios-endpoints.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "de1541e04b4c316a5bff71a13aafd7025547042e"
+      }
+    }
+  ],
+  "version" : 2
+}

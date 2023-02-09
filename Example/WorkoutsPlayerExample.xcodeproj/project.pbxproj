@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0B56232995354F000D29A9 /* MuuvEndpoints in Frameworks */ = {isa = PBXBuildFile; productRef = BF0B56222995354F000D29A9 /* MuuvEndpoints */; };
 		BFF773C1298AF6DB00CC625A /* WorkoutsPlayerExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF773C0298AF6DB00CC625A /* WorkoutsPlayerExampleApp.swift */; };
 		BFF773C3298AF6DB00CC625A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF773C2298AF6DB00CC625A /* ContentView.swift */; };
 		BFF773C5298AF6DD00CC625A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF773C4298AF6DD00CC625A /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF0B56232995354F000D29A9 /* MuuvEndpoints in Frameworks */,
 				BFF773EE298AF72E00CC625A /* WorkoutsPlayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +167,7 @@
 			name = WorkoutsPlayerExample;
 			packageProductDependencies = (
 				BFF773ED298AF72E00CC625A /* WorkoutsPlayer */,
+				BF0B56222995354F000D29A9 /* MuuvEndpoints */,
 			);
 			productName = WorkoutsPlayerExample;
 			productReference = BFF773BD298AF6DB00CC625A /* WorkoutsPlayerExample.app */;
@@ -238,6 +241,9 @@
 				Base,
 			);
 			mainGroup = BFF773B4298AF6DB00CC625A;
+			packageReferences = (
+				BF0B56212995354F000D29A9 /* XCRemoteSwiftPackageReference "ios-endpoints" */,
+			);
 			productRefGroup = BFF773BE298AF6DB00CC625A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -609,7 +615,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		BF0B56212995354F000D29A9 /* XCRemoteSwiftPackageReference "ios-endpoints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/anytimefitness/ios-endpoints.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		BF0B56222995354F000D29A9 /* MuuvEndpoints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF0B56212995354F000D29A9 /* XCRemoteSwiftPackageReference "ios-endpoints" */;
+			productName = MuuvEndpoints;
+		};
 		BFF773ED298AF72E00CC625A /* WorkoutsPlayer */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WorkoutsPlayer;
