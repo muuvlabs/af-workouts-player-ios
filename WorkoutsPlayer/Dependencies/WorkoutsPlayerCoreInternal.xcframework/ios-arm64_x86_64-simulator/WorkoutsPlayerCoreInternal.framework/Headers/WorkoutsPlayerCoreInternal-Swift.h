@@ -905,7 +905,6 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12StubBehavior")
 
 
 
-
 typedef SWIFT_ENUM(NSInteger, UpdateWorkoutActionKind, open) {
   UpdateWorkoutActionKindMetrics = 0,
   UpdateWorkoutActionKindFinishWorkout = 1,
@@ -1910,7 +1909,6 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12StubBehavior")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 
 

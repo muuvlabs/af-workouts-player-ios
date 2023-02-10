@@ -17244,6 +17244,13 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "MuuvUtilitiesRenamedForCore",
+        "printedName": "MuuvUtilitiesRenamedForCore",
+        "declKind": "Import",
+        "moduleName": "WorkoutsPlayerCoreInternal"
+      },
+      {
         "kind": "TypeDecl",
         "name": "Downloader",
         "printedName": "Downloader",
@@ -84872,13 +84879,17 @@
       },
       {
         "kind": "Import",
-        "name": "MuuvEndpointsRenamed",
-        "printedName": "MuuvEndpointsRenamed",
+        "name": "MuuvUtilitiesRenamedForCore",
+        "printedName": "MuuvUtilitiesRenamedForCore",
         "declKind": "Import",
-        "moduleName": "WorkoutsPlayerCoreInternal",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "WorkoutsPlayerCoreInternal"
+      },
+      {
+        "kind": "Import",
+        "name": "MuuvEndpointsRenamedForCore",
+        "printedName": "MuuvEndpointsRenamedForCore",
+        "declKind": "Import",
+        "moduleName": "WorkoutsPlayerCoreInternal"
       },
       {
         "kind": "TypeDecl",
@@ -87182,8 +87193,8 @@
                 ]
               }
             ],
-            "usr": "s:20MuuvEndpointsRenamed18EndpointAccessibleP",
-            "mangledName": "$s20MuuvEndpointsRenamed18EndpointAccessibleP"
+            "usr": "s:27MuuvEndpointsRenamedForCore18EndpointAccessibleP",
+            "mangledName": "$s27MuuvEndpointsRenamedForCore18EndpointAccessibleP"
           }
         ]
       },
@@ -91216,135 +91227,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "URLSessionConfiguration",
-        "printedName": "URLSessionConfiguration",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "backgroundWithPrefixIdentifier",
-            "printedName": "backgroundWithPrefixIdentifier(_:sharedContainerIdentifier:bundle:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "URLSessionConfiguration",
-                "printedName": "Foundation.URLSessionConfiguration",
-                "usr": "c:objc(cs)NSURLSessionConfiguration"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bundle",
-                "printedName": "Foundation.Bundle",
-                "hasDefaultArg": true,
-                "usr": "c:objc(cs)NSBundle"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:So25NSURLSessionConfigurationC26WorkoutsPlayerCoreInternalE30backgroundWithPrefixIdentifier_015sharedContainerJ06bundleABSS_SSSo8NSBundleCtFZ",
-            "mangledName": "$sSo25NSURLSessionConfigurationC26WorkoutsPlayerCoreInternalE30backgroundWithPrefixIdentifier_015sharedContainerJ06bundleABSS_SSSo8NSBundleCtFZ",
-            "moduleName": "WorkoutsPlayerCoreInternal",
-            "static": true,
-            "declAttributes": [
-              "Final"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:objc(cs)NSURLSessionConfiguration",
-        "moduleName": "Foundation",
-        "isOpen": true,
-        "intro_iOS": "7.0",
-        "objc_name": "NSURLSessionConfiguration",
-        "declAttributes": [
-          "Available",
-          "ObjC",
-          "SynthesizedProtocol",
-          "NonSendable",
-          "Sendable",
-          "Dynamic"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "isExternal": true,
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "URLSession",
         "printedName": "URLSession",
         "children": [
@@ -91891,6 +91773,13 @@
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
             "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "XibCompatible",
+            "printedName": "XibCompatible",
+            "usr": "s:27MuuvUtilitiesRenamedForCore13XibCompatibleP",
+            "mangledName": "$s27MuuvUtilitiesRenamedForCore13XibCompatibleP"
           }
         ]
       },
@@ -95311,2198 +95200,2184 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
       "kind": "Dictionary",
       "offset": 1092,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
       "kind": "Dictionary",
       "offset": 1168,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
       "kind": "Array",
       "offset": 1214,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
       "kind": "Dictionary",
       "offset": 1304,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
       "kind": "Array",
       "offset": 1381,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
       "kind": "Array",
       "offset": 1422,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
       "kind": "BooleanLiteral",
       "offset": 1564,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
       "kind": "Dictionary",
       "offset": 1802,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
       "kind": "StringLiteral",
       "offset": 639,
       "length": 23,
       "value": "\"WorkoutsPlayerCoreInternal.AudioCoachingController\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/AudioCoachingController.swift",
       "kind": "BooleanLiteral",
       "offset": 20140,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 504,
       "length": 4,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 518,
       "length": 10,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 538,
       "length": 6,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 504,
       "length": 4,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 518,
       "length": 10,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 538,
       "length": 6,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/AudioCoachingPreference+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/AudioCoachingPreference+objc.swift",
       "kind": "StringLiteral",
       "offset": 202,
       "length": 27,
       "value": "\"WorkoutsPlayerCoreInternal.AudioCoachingPreferenceObjc\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
       "kind": "FloatLiteral",
       "offset": 1420,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
       "kind": "FloatLiteral",
       "offset": 1464,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
       "kind": "FloatLiteral",
       "offset": 1504,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
       "kind": "FloatLiteral",
       "offset": 1579,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
       "kind": "StringLiteral",
       "offset": 1037,
       "length": 14,
       "value": "\"WorkoutsPlayerCoreInternal.AudioPlayerImp\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Audio Player\/AudioSessionManager.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Audio Player\/AudioSessionManager.swift",
       "kind": "Array",
       "offset": 1412,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
       "kind": "Array",
       "offset": 1158,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 1334,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 1386,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 1765,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 2545,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 8648,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 8676,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
       "kind": "Array",
       "offset": 439,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 6955,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 7007,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 7127,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 7173,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/BuildSmartWorkoutInfo.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/BuildSmartWorkoutInfo.swift",
       "kind": "StringLiteral",
       "offset": 358,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 645,
       "length": 13,
       "value": "\"created_int\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 683,
       "length": 11,
       "value": "\"audio_mp3\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 721,
       "length": 13,
       "value": "\"duration_ms\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 762,
       "length": 14,
       "value": "\"waveform_png\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 804,
       "length": 14,
       "value": "\"creator_name\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 645,
       "length": 13,
       "value": "\"created_int\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 683,
       "length": 11,
       "value": "\"audio_mp3\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 721,
       "length": 13,
       "value": "\"duration_ms\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 762,
       "length": 14,
       "value": "\"waveform_png\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 804,
       "length": 14,
       "value": "\"creator_name\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 198,
       "length": 4,
       "value": "\"WorkoutsPlayerCoreInternal.Bump\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 1598,
       "length": 20,
       "value": "\"WorkoutsPlayerCoreInternal.WebSocketBumpMessage\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump+Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Bump+Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 435,
       "length": 12,
       "value": "\"WorkoutsPlayerCoreInternal.IsPlayedBump\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/BumpsAudioDowloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/BumpsAudioDowloader.swift",
       "kind": "Dictionary",
       "offset": 1040,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/BumpsAudioDowloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/BumpsAudioDowloader.swift",
       "kind": "StringLiteral",
       "offset": 1175,
       "length": 23,
       "value": "\"download status queue\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/BumpsAudioDowloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/BumpsAudioDowloader.swift",
       "kind": "BooleanLiteral",
       "offset": 1232,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/Timer & Chronometer\/Chronometer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/Timer & Chronometer\/Chronometer.swift",
       "kind": "IntegerLiteral",
       "offset": 538,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Constants.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Constants.swift",
       "kind": "IntegerLiteral",
       "offset": 262,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Constants.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 342,
       "length": 22,
       "value": "\"No rest between sets\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Extensions\/Date+Extensions.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Extensions\/Date+Extensions.swift",
       "kind": "IntegerLiteral",
       "offset": 1917,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Extensions\/Date+Extensions.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Extensions\/Date+Extensions.swift",
       "kind": "IntegerLiteral",
       "offset": 1943,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Extensions\/Date+Extensions.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Extensions\/Date+Extensions.swift",
       "kind": "IntegerLiteral",
       "offset": 2410,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Extensions\/Date+Extensions.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Extensions\/Date+Extensions.swift",
       "kind": "IntegerLiteral",
       "offset": 2436,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Extensions\/Date+Extensions.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Extensions\/Date+Extensions.swift",
       "kind": "IntegerLiteral",
       "offset": 2462,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Futures\/Disposable.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Futures\/Disposable.swift",
       "kind": "Array",
       "offset": 435,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Futures\/Disposable.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Futures\/Disposable.swift",
       "kind": "Array",
       "offset": 480,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Futures\/Disposable.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Futures\/Disposable.swift",
       "kind": "Array",
       "offset": 1292,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1166,
+      "offset": 1178,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1214,
+      "offset": 1226,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1263,
+      "offset": 1275,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "Dictionary",
-      "offset": 1968,
+      "offset": 1980,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "StringLiteral",
-      "offset": 2226,
+      "offset": 2238,
       "length": 19,
       "value": "\"Downloaders queue\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "BooleanLiteral",
-      "offset": 4611,
+      "offset": 4623,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "IntegerLiteral",
-      "offset": 4690,
+      "offset": 4702,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "IntegerLiteral",
-      "offset": 4742,
+      "offset": 4754,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "StringLiteral",
-      "offset": 716,
+      "offset": 728,
       "length": 10,
       "value": "\"WorkoutsPlayerCoreInternal.Downloader\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
-      "kind": "StringLiteral",
-      "offset": 10739,
-      "length": 22,
-      "value": "\"com.muuv.networking.\""
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/Downloader.swift",
-      "kind": "StringLiteral",
-      "offset": 10809,
-      "length": 17,
-      "value": "\"group.muuv.apps\""
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 217,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 251,
       "length": 17,
       "value": "\"application\/xml\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 217,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 251,
       "length": 17,
       "value": "\"application\/xml\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 635,
       "length": 5,
       "value": "\"GET\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 661,
       "length": 6,
       "value": "\"POST\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 687,
       "length": 5,
       "value": "\"PUT\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 714,
       "length": 7,
       "value": "\"PATCH\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 744,
       "length": 8,
       "value": "\"DELETE\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 635,
       "length": 5,
       "value": "\"GET\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 661,
       "length": 6,
       "value": "\"POST\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 687,
       "length": 5,
       "value": "\"PUT\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 714,
       "length": 7,
       "value": "\"PATCH\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 744,
       "length": 8,
       "value": "\"DELETE\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "Dictionary",
       "offset": 2577,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "IntegerLiteral",
       "offset": 2694,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "Dictionary",
       "offset": 2732,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "Dictionary",
       "offset": 5763,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "IntegerLiteral",
       "offset": 5880,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "Dictionary",
       "offset": 5918,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "Dictionary",
       "offset": 7190,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "IntegerLiteral",
       "offset": 7307,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "Dictionary",
       "offset": 7345,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "Dictionary",
       "offset": 8667,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "IntegerLiteral",
       "offset": 8784,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "Dictionary",
       "offset": 8822,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "Dictionary",
       "offset": 10237,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "IntegerLiteral",
       "offset": 10354,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "Dictionary",
       "offset": 10392,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "Dictionary",
       "offset": 11348,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "IntegerLiteral",
       "offset": 11465,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Endpoint.swift",
       "kind": "Dictionary",
       "offset": 11503,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Get and Post Convenience\/Methods\/EndpointAccessible+GET.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Get and Post Convenience\/Methods\/EndpointAccessible+GET.swift",
       "kind": "Dictionary",
       "offset": 601,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Get and Post Convenience\/Methods\/EndpointAccessible+GET.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Get and Post Convenience\/Methods\/EndpointAccessible+GET.swift",
       "kind": "Dictionary",
       "offset": 1244,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Get and Post Convenience\/Methods\/EndpointAccessible+GET.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Get and Post Convenience\/Methods\/EndpointAccessible+GET.swift",
       "kind": "IntegerLiteral",
       "offset": 1363,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Get and Post Convenience\/Methods\/EndpointAccessible+GET.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Get and Post Convenience\/Methods\/EndpointAccessible+GET.swift",
       "kind": "Dictionary",
       "offset": 1401,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Get and Post Convenience\/Methods\/EndpointAccessible+GET.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Get and Post Convenience\/Methods\/EndpointAccessible+GET.swift",
       "kind": "Dictionary",
       "offset": 2240,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Get and Post Convenience\/Methods\/EndpointAccessible+GET.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Get and Post Convenience\/Methods\/EndpointAccessible+GET.swift",
       "kind": "IntegerLiteral",
       "offset": 2359,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Get and Post Convenience\/Methods\/EndpointAccessible+GET.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/Get and Post Convenience\/Methods\/EndpointAccessible+GET.swift",
       "kind": "Dictionary",
       "offset": 2397,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/EndpointsEnvironment+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/EndpointsEnvironment+objc.swift",
       "kind": "StringLiteral",
       "offset": 199,
       "length": 12,
       "value": "\"WorkoutsPlayerCoreInternal.StubBehavior\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/EndpointsEnvironment+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/EndpointsEnvironment+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 2098,
       "length": 3,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/EndpointsEnvironment+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/EndpointsEnvironment+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 2111,
       "length": 5,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/EndpointsEnvironment+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/EndpointsEnvironment+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 2126,
       "length": 5,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/EndpointsEnvironment+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/EndpointsEnvironment+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 2098,
       "length": 3,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/EndpointsEnvironment+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/EndpointsEnvironment+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 2111,
       "length": 5,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/EndpointsEnvironment+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/EndpointsEnvironment+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 2126,
       "length": 5,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/EngineController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/EngineController.swift",
       "kind": "StringLiteral",
       "offset": 332,
       "length": 16,
       "value": "\"WorkoutsPlayerCoreInternal.EngineController\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
       "kind": "BooleanLiteral",
       "offset": 660,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 739,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 791,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
       "kind": "StringLiteral",
       "offset": 297,
       "length": 28,
       "value": "\"WorkoutsPlayerCoreInternal.InternalSingleFileDownloader\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/InterruptionsManager.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/InterruptionsManager.swift",
       "kind": "BooleanLiteral",
       "offset": 356,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 531,
       "length": 19,
       "value": "\"Error in login %@\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 652,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 690,
       "length": 7,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 696,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 886,
       "length": 44,
       "value": "\"Error signing user and fetching workout %@\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1032,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1070,
       "length": 7,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1076,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1287,
       "length": 19,
       "value": "\"User signed in %@\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1408,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1446,
       "length": 7,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1452,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1632,
       "length": 21,
       "value": "\"Workout fetched %@)\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1755,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1793,
       "length": 7,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1799,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Controller\/LocalWorkoutHistory.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Controller\/LocalWorkoutHistory.swift",
       "kind": "StringLiteral",
       "offset": 1938,
       "length": 23,
       "value": "\"all.workout.histories\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/LoginUser.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/LoginUser.swift",
       "kind": "StringLiteral",
       "offset": 291,
       "length": 14,
       "value": "\"\/users\/login\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Muuv Bridge\/MuuvBackend.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Muuv Bridge\/MuuvBackend.swift",
       "kind": "StringLiteral",
       "offset": 187,
       "length": 15,
       "value": "\"WorkoutsPlayerCoreInternal.MuuvBackendObjc\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Muuv Bridge\/MuuvBackend.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Muuv Bridge\/MuuvBackend.swift",
       "kind": "StringLiteral",
       "offset": 974,
       "length": 22,
       "value": "\"https:\/\/muuv.fit\/api\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Muuv Bridge\/MuuvBackend.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Muuv Bridge\/MuuvBackend.swift",
       "kind": "StringLiteral",
       "offset": 1028,
       "length": 22,
       "value": "\"https:\/\/muuv.fit\/api\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Muuv Bridge\/MuuvBackend.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Muuv Bridge\/MuuvBackend.swift",
       "kind": "StringLiteral",
       "offset": 1083,
       "length": 22,
       "value": "\"https:\/\/muuv.fit\/api\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Muuv Bridge\/MuuvBackend.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Muuv Bridge\/MuuvBackend.swift",
       "kind": "StringLiteral",
       "offset": 1170,
       "length": 18,
       "value": "\"x-24go-client-os\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Muuv Bridge\/MuuvBackend.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Muuv Bridge\/MuuvBackend.swift",
       "kind": "StringLiteral",
       "offset": 1231,
       "length": 23,
       "value": "\"x-24go-client-version\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/SDK\/MuuvSDKEngineIntegrationBuilder.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/SDK\/MuuvSDKEngineIntegrationBuilder.swift",
       "kind": "StringLiteral",
       "offset": 692,
       "length": 31,
       "value": "\"WorkoutsPlayerCoreInternal.MuuvSDKEngineIntegrationBuilder\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/SDK\/MuuvSDKTools.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/SDK\/MuuvSDKTools.swift",
       "kind": "StringLiteral",
       "offset": 524,
       "length": 12,
       "value": "\"WorkoutsPlayerCoreInternal.MuuvSDKTools\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 310,
       "length": 53,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 373,
       "length": 56,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 439,
       "length": 22,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 471,
       "length": 24,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 505,
       "length": 27,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 542,
       "length": 19,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 571,
       "length": 9,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 590,
       "length": 10,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 310,
       "length": 53,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 373,
       "length": 56,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 439,
       "length": 22,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 471,
       "length": 24,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 505,
       "length": 27,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 542,
       "length": 19,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 571,
       "length": 9,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 590,
       "length": 10,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/ReactiveAudioDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/ReactiveAudioDownloader.swift",
       "kind": "Dictionary",
       "offset": 1405,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/ReactiveAudioDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/ReactiveAudioDownloader.swift",
       "kind": "StringLiteral",
       "offset": 1540,
       "length": 44,
       "value": "\"download status queue ReactiveAudioSnippet\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/ReactiveAudioDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/ReactiveAudioDownloader.swift",
       "kind": "BooleanLiteral",
       "offset": 1618,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/ReactiveAudioSnippet.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/ReactiveAudioSnippet.swift",
       "kind": "StringLiteral",
       "offset": 473,
       "length": 13,
       "value": "\"duration_ms\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/ReactiveAudioSnippet.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/ReactiveAudioSnippet.swift",
       "kind": "StringLiteral",
       "offset": 473,
       "length": 13,
       "value": "\"duration_ms\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/ReactiveAudioSnippet.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/ReactiveAudioSnippet.swift",
       "kind": "StringLiteral",
       "offset": 230,
       "length": 20,
       "value": "\"WorkoutsPlayerCoreInternal.ReactiveAudioSnippet\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/ReactiveAudioSnippet.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/ReactiveAudioSnippet.swift",
       "kind": "StringLiteral",
       "offset": 1240,
       "length": 24,
       "value": "\"WorkoutsPlayerCoreInternal.DismissReactiveAudioInfo\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/SerialWorkoutAudioDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/SerialWorkoutAudioDownloader.swift",
       "kind": "Dictionary",
       "offset": 4279,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/SerialWorkoutAudioDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/SerialWorkoutAudioDownloader.swift",
       "kind": "StringLiteral",
       "offset": 4414,
       "length": 23,
       "value": "\"download status queue\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/SerialWorkoutAudioDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/SerialWorkoutAudioDownloader.swift",
       "kind": "BooleanLiteral",
       "offset": 4471,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/SharedResource.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/SharedResource.swift",
       "kind": "StringLiteral",
       "offset": 252,
       "length": 17,
       "value": "\"button.thumb.up\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/SharedResource.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/SharedResource.swift",
       "kind": "StringLiteral",
       "offset": 742,
       "length": 34,
       "value": "\"WorkoutsPlayerCoreInternalBundle\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/SharedResource.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/SharedResource.swift",
       "kind": "StringLiteral",
       "offset": 1367,
       "length": 9,
       "value": "\".bundle\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/SharedResource.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/SharedResource.swift",
       "kind": "StringLiteral",
       "offset": 1567,
       "length": 14,
       "value": "\"Sample image\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "BooleanLiteral",
       "offset": 704,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "BooleanLiteral",
       "offset": 743,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "IntegerLiteral",
       "offset": 1206,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "IntegerLiteral",
       "offset": 1240,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "IntegerLiteral",
       "offset": 1273,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "IntegerLiteral",
       "offset": 1308,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "BooleanLiteral",
       "offset": 1357,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "IntegerLiteral",
       "offset": 1402,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "BooleanLiteral",
       "offset": 1458,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine+Actions.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Engine Standalone\/StandaloneAudioCoachingEngine+Actions.swift",
       "kind": "BooleanLiteral",
       "offset": 1800,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Stream.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Stream.swift",
       "kind": "StringLiteral",
       "offset": 7115,
       "length": 14,
       "value": "\"tag_group_id\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Stream.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Stream.swift",
       "kind": "StringLiteral",
       "offset": 7115,
       "length": 14,
       "value": "\"tag_group_id\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/StubbedBackend.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Endpoints\/StubbedBackend.swift",
       "kind": "StringLiteral",
       "offset": 1800,
       "length": 18,
       "value": "\"WorkoutsPlayerCoreInternal.GenericBackendObjc\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/Timeline.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/Timeline.swift",
       "kind": "IntegerLiteral",
       "offset": 334,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/Timeline.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/Timeline.swift",
       "kind": "IntegerLiteral",
       "offset": 424,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/Timeline.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/Timeline.swift",
       "kind": "IntegerLiteral",
       "offset": 1206,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/Timeline.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/Timeline.swift",
       "kind": "BooleanLiteral",
       "offset": 11381,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/Timeline.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/Timeline.swift",
       "kind": "BooleanLiteral",
       "offset": 11420,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/TimelineDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/TimelineDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 329,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/TimelineDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/TimelineDownloader.swift",
       "kind": "Dictionary",
       "offset": 408,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/TimelineDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Timeline\/TimelineDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 1615,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 254,
       "length": 13,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 277,
       "length": 14,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 301,
       "length": 11,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 322,
       "length": 4,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 336,
       "length": 2,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 348,
       "length": 4,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 362,
       "length": 7,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 379,
       "length": 4,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 393,
       "length": 7,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 410,
       "length": 4,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 424,
       "length": 29,
       "value": "11"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 463,
       "length": 12,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 254,
       "length": 13,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 277,
       "length": 14,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 301,
       "length": 11,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 322,
       "length": 4,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 336,
       "length": 2,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 348,
       "length": 4,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 362,
       "length": 7,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 379,
       "length": 4,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 393,
       "length": 7,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 410,
       "length": 4,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 424,
       "length": 29,
       "value": "11"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 463,
       "length": 12,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "StringLiteral",
       "offset": 498,
       "length": 23,
       "value": "\"WorkoutsPlayerCoreInternal.UpdateWorkoutActionObjc\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 5379,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 5448,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "StringLiteral",
       "offset": 5298,
       "length": 26,
       "value": "\"WorkoutsPlayerCoreInternal.IntUpdateWorkoutActionType\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 6506,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 6538,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 6573,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "IntegerLiteral",
       "offset": 6592,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "StringLiteral",
       "offset": 6418,
       "length": 29,
       "value": "\"WorkoutsPlayerCoreInternal.MetricUpdateWorkoutActionType\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Objc bridge\/UpdateWorkoutAction+objc.swift",
       "kind": "StringLiteral",
       "offset": 6848,
       "length": 46,
       "value": "\"WorkoutsPlayerCoreInternal.AudioCoachingPreferenceUpdateWorkoutActionType\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/UpdateWorkoutInfo.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/UpdateWorkoutInfo.swift",
       "kind": "StringLiteral",
       "offset": 550,
       "length": 19,
       "value": "\"completed_seconds\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/UpdateWorkoutInfo.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/UpdateWorkoutInfo.swift",
       "kind": "StringLiteral",
       "offset": 600,
       "length": 17,
       "value": "\"calories_burned\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/UpdateWorkoutInfo.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/UpdateWorkoutInfo.swift",
       "kind": "StringLiteral",
       "offset": 650,
       "length": 20,
       "value": "\"average_heart_rate\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/UpdateWorkoutInfo.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/UpdateWorkoutInfo.swift",
       "kind": "StringLiteral",
       "offset": 550,
       "length": 19,
       "value": "\"completed_seconds\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/UpdateWorkoutInfo.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/UpdateWorkoutInfo.swift",
       "kind": "StringLiteral",
       "offset": 600,
       "length": 17,
       "value": "\"calories_burned\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/UpdateWorkoutInfo.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/UpdateWorkoutInfo.swift",
       "kind": "StringLiteral",
       "offset": 650,
       "length": 20,
       "value": "\"average_heart_rate\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Workout.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/Workout.swift",
       "kind": "StringLiteral",
       "offset": 182,
       "length": 7,
       "value": "\"WorkoutsPlayerCoreInternal.Workout\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutBlock.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutBlock.swift",
       "kind": "Array",
       "offset": 620,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutBlock.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutBlock.swift",
       "kind": "IntegerLiteral",
       "offset": 858,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 442,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 494,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 644,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 690,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "BooleanLiteral",
       "offset": 575,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "BooleanLiteral",
       "offset": 622,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "BooleanLiteral",
       "offset": 667,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 746,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 822,
       "length": 11,
       "value": "\"stream_id\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 926,
       "length": 22,
       "value": "\"can_change_equipment\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 982,
       "length": 21,
       "value": "\"can_change_duration\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 1035,
       "length": 19,
       "value": "\"can_change_format\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 1086,
       "length": 18,
       "value": "\"duration_seconds\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 822,
       "length": 11,
       "value": "\"stream_id\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 926,
       "length": 22,
       "value": "\"can_change_equipment\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 982,
       "length": 21,
       "value": "\"can_change_duration\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 1035,
       "length": 19,
       "value": "\"can_change_format\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 1086,
       "length": 18,
       "value": "\"duration_seconds\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "BooleanLiteral",
       "offset": 1358,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "BooleanLiteral",
       "offset": 1396,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Entities\/WorkoutFormat.swift",
       "kind": "BooleanLiteral",
       "offset": 1436,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 284,
       "length": 17,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 311,
       "length": 14,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 335,
       "length": 7,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 352,
       "length": 13,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 375,
       "length": 17,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 402,
       "length": 4,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 416,
       "length": 13,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 439,
       "length": 5,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 454,
       "length": 13,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 477,
       "length": 17,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 504,
       "length": 6,
       "value": "11"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 520,
       "length": 12,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 542,
       "length": 12,
       "value": "13"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 564,
       "length": 9,
       "value": "14"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 284,
       "length": 17,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 311,
       "length": 14,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 335,
       "length": 7,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 352,
       "length": 13,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 375,
       "length": 17,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 402,
       "length": 4,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 416,
       "length": 13,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 439,
       "length": 5,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 454,
       "length": 13,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 477,
       "length": 17,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 504,
       "length": 6,
       "value": "11"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 520,
       "length": 12,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 542,
       "length": 12,
       "value": "13"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 564,
       "length": 9,
       "value": "14"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 284,
       "length": 17,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 311,
       "length": 14,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 335,
       "length": 7,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 352,
       "length": 13,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 375,
       "length": 17,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 402,
       "length": 4,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 416,
       "length": 13,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 439,
       "length": 5,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 454,
       "length": 13,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 477,
       "length": 17,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 504,
       "length": 6,
       "value": "11"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 520,
       "length": 12,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 542,
       "length": 12,
       "value": "13"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerAction.swift",
       "kind": "IntegerLiteral",
       "offset": 564,
       "length": 9,
       "value": "14"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Controller\/WorkoutPlayerController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Controller\/WorkoutPlayerController.swift",
       "kind": "Array",
       "offset": 505,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerState.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerState.swift",
       "kind": "BooleanLiteral",
       "offset": 345,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerState.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/New SDK Objects\/Protocols & Entities\/WorkoutPlayerState.swift",
       "kind": "BooleanLiteral",
       "offset": 891,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/Timer & Chronometer\/WorkoutPlayerTimer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/AudioCoachingEngine\/Helpers\/Timer & Chronometer\/WorkoutPlayerTimer.swift",
       "kind": "IntegerLiteral",
       "offset": 1190,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/Muuv Github\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Environment\/WorkoutsPlayerEnvironment.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/WorkoutsPlayer\/Environment\/WorkoutsPlayerEnvironment.swift",
       "kind": "StringLiteral",
       "offset": 524,
       "length": 20,

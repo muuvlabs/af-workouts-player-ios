@@ -1,0 +1,1158 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MuuvUtilitiesRenamedForCore
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import AVKit
+import Combine
+import CoreData
+import Foundation
+@_exported import MuuvUtilitiesRenamedForCore
+import ObjectiveC
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import os.log
+import os
+extension SwiftUI.View {
+  public func accessibilityActions(_ actions: [MuuvUtilitiesRenamedForCore.AccessibilityAction]) -> some SwiftUI.View
+  
+}
+public struct AccessibilityAction : Swift.Identifiable {
+  public var id: Swift.String
+  public var name: SwiftUI.LocalizedStringKey
+  public var handler: () -> Swift.Void
+  public init(id: Swift.String, name: SwiftUI.LocalizedStringKey, handler: @escaping () -> Swift.Void)
+  public typealias ID = Swift.String
+}
+extension Foundation.Bundle {
+  public var appName: Swift.String {
+    get
+  }
+  public var displayName: Swift.String {
+    get
+  }
+  public var language: Swift.String {
+    get
+  }
+  public var identifier: Swift.String {
+    get
+  }
+  public var copyright: Swift.String {
+    get
+  }
+  public var appBuild: Swift.String {
+    get
+  }
+  public var appVersion: Swift.String {
+    get
+  }
+}
+extension Foundation.Bundle {
+  public func printResources()
+}
+#if compiler(>=5.3) && $Actors
+final public actor Cache<Key, Value> where Key : Swift.Hashable {
+  public enum AutoSaveToDisk {
+    case fileName(Swift.String)
+    case no
+  }
+  public init(dateProvider: @escaping () -> Foundation.Date = Date.init, entryLifetime: Foundation.TimeInterval = 12 * 60 * 60, maximumEntryCount: Swift.Int = 50)
+  final public func insert(_ value: Value?, forKey key: Key)
+  final public func value(forKey key: Key) -> Value?
+  final public func removeValue(forKey key: Key)
+  @objc deinit
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  @_semantics("defaultActor") nonisolated final public var unownedExecutor: _Concurrency.UnownedSerialExecutor {
+    get
+  }
+}
+#endif
+#if compiler(>=5.3) && $Actors
+extension MuuvUtilitiesRenamedForCore.Cache {
+  final public subscript(key: Key) -> Value? {
+    get
+    set
+  }
+}
+#endif
+#if compiler(>=5.3) && $Actors
+extension MuuvUtilitiesRenamedForCore.Cache where Key : Swift.Decodable, Key : Swift.Encodable, Value : Swift.Decodable, Value : Swift.Encodable {
+  public struct FileNotFound : Swift.Error {
+  }
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func insert(_ value: Value?, forKey key: Key, autosave: MuuvUtilitiesRenamedForCore.Cache<Key, Value>.AutoSaveToDisk) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func removeValue(forKey key: Key, autosave: MuuvUtilitiesRenamedForCore.Cache<Key, Value>.AutoSaveToDisk) async throws
+  #endif
+  final public func saveToDisk(withName name: Swift.String) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func loadFromFile(withName name: Swift.String) async throws -> MuuvUtilitiesRenamedForCore.Cache<Key, Value>
+  #endif
+}
+#endif
+#if compiler(>=5.3) && $Actors
+public actor CachedDownloader {
+  public enum CachedOrDownloadedURL {
+    case cached(Foundation.URL)
+    case downloaded(Foundation.URL)
+  }
+  public init(downloader: MuuvUtilitiesRenamedForCore.Downloader)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func cachedURLOrDownload(from url: Foundation.URL, monitorProgress: MuuvUtilitiesRenamedForCore.MonitorProgress? = nil) async throws -> MuuvUtilitiesRenamedForCore.CachedDownloader.CachedOrDownloadedURL
+  #endif
+  public func stopDownloading(url: Foundation.URL)
+  public func downloadAndCache(url: Foundation.URL)
+  nonisolated public func cachedDataOrDownload(from url: Foundation.URL) -> Combine.AnyPublisher<MuuvUtilitiesRenamedForCore.DownloadState<Foundation.Data>, Swift.Error>
+  #if compiler(>=5.3) && $AsyncAwait
+  @discardableResult
+  public func cachedResourceLocationOrDownload(from url: Foundation.URL, onDownloadFinished: MuuvUtilitiesRenamedForCore.Handler<MuuvUtilitiesRenamedForCore.DownloadResult>? = nil) async -> MuuvUtilitiesRenamedForCore.CachedDownloader.ResourceLocation
+  #endif
+  @objc deinit
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  @_semantics("defaultActor") nonisolated final public var unownedExecutor: _Concurrency.UnownedSerialExecutor {
+    get
+  }
+}
+#endif
+#if compiler(>=5.3) && $Actors
+extension MuuvUtilitiesRenamedForCore.CachedDownloader {
+  public enum ResourceLocation {
+    case localURL(Foundation.URL)
+    case remoteURL(Foundation.URL, downloadTask: Foundation.URLSessionDownloadTask?)
+    case failed(Swift.Error)
+  }
+}
+#endif
+public typealias MonitorProgress = (Swift.Int64, Swift.Int64) -> Swift.Void
+public protocol ContentCompatible {
+  associatedtype Content
+  var content: Self.Content! { get set }
+}
+extension MuuvUtilitiesRenamedForCore.ContentCompatible where Self : UIKit.UIView {
+  public init(bundle: Foundation.Bundle?, content: Self.Content)
+}
+extension MuuvUtilitiesRenamedForCore.ContentCompatible where Self : UIKit.UIViewController {
+  public init(bundle: Foundation.Bundle?, content: Self.Content)
+}
+public protocol DelegateCompatible {
+  associatedtype Delegate : AnyObject
+  var delegate: Self.Delegate? { get set }
+}
+public protocol StyleCompatible {
+  associatedtype Style
+  var style: Self.Style! { get set }
+}
+extension MuuvUtilitiesRenamedForCore.StyleCompatible where Self : UIKit.UIView {
+  public init(bundle: Foundation.Bundle?, style: Self.Style)
+}
+extension MuuvUtilitiesRenamedForCore.StyleCompatible where Self : UIKit.UIViewController {
+  public init(bundle: Foundation.Bundle?, style: Self.Style)
+}
+public protocol Configurable : MuuvUtilitiesRenamedForCore.ContentCompatible, MuuvUtilitiesRenamedForCore.StyleCompatible {
+}
+extension MuuvUtilitiesRenamedForCore.Configurable {
+  public typealias Configuration = (content: Self.Content, style: Self.Style)
+}
+public protocol FullyConfigurable : MuuvUtilitiesRenamedForCore.Configurable, MuuvUtilitiesRenamedForCore.DelegateCompatible {
+}
+extension MuuvUtilitiesRenamedForCore.FullyConfigurable where Self : UIKit.UIView {
+  public init(bundle: Foundation.Bundle?, content: Self.Content, style: Self.Style, delegate: Self.Delegate?)
+}
+extension MuuvUtilitiesRenamedForCore.FullyConfigurable where Self : UIKit.UIViewController {
+  public init(bundle: Foundation.Bundle?, content: Self.Content, style: Self.Style, delegate: Self.Delegate?)
+}
+public class ConfigurationColorController {
+  public var hostAppModel: MuuvUtilitiesRenamedForCore.ConfigurationModel?
+  public var backendModel: MuuvUtilitiesRenamedForCore.ConfigurationModel?
+  public var fallbackModel: MuuvUtilitiesRenamedForCore.ConfigurationModel
+  public init(hostAppModel: MuuvUtilitiesRenamedForCore.ConfigurationModel?, backendModel: MuuvUtilitiesRenamedForCore.ConfigurationModel?, fallbackModel: MuuvUtilitiesRenamedForCore.ConfigurationModel)
+  public func colorWith(backendKey: Swift.String) -> UIKit.UIColor
+  @objc deinit
+}
+extension MuuvUtilitiesRenamedForCore.ConfigurationColorController {
+  public func lightColor(for name: Swift.String) -> UIKit.UIColor
+  public func darkColor(for name: Swift.String) -> UIKit.UIColor
+}
+@_hasMissingDesignatedInitializers final public class ConfigurationFeatureFlagController {
+  @objc deinit
+}
+extension MuuvUtilitiesRenamedForCore.ConfigurationFeatureFlagController {
+  public enum Keys {
+  }
+  public enum FeatureFlagType {
+    case logActivity
+    case custom(Swift.String)
+  }
+}
+public class ConfigurationManager {
+  #if compiler(>=5.3) && $AsyncAwait
+  public init(bundle: Foundation.Bundle, fallbackModel: MuuvUtilitiesRenamedForCore.ConfigurationModel, fetchConfigurationCallback: @escaping () async throws -> MuuvUtilitiesRenamedForCore.ConfigurationModel, verbose: Swift.Bool = true)
+  #endif
+  public var hostAppModel: MuuvUtilitiesRenamedForCore.ConfigurationModel? {
+    get
+    set
+  }
+  public func colorWith(backendKey: Swift.String) -> UIKit.UIColor
+  public func isReadyToProvideColors(keys: [Swift.String]) -> Swift.Bool
+  public func string(for type: MuuvUtilitiesRenamedForCore.ConfigurationStringController.StringType) -> Swift.String
+  public func string(for key: Swift.String) -> Swift.String
+  public func isFeatureEnabled(for type: MuuvUtilitiesRenamedForCore.ConfigurationFeatureFlagController.FeatureFlagType) -> Swift.Bool
+  public func isFeatureEnabled(for name: Swift.String, defaultValue: Swift.Bool = false) -> Swift.Bool
+  @objc deinit
+}
+public struct ConfigurationModel {
+  public struct ConfigurationFeatureFlag {
+    public let featureName: Swift.String
+    public let isEnabled: Swift.Bool
+  }
+  public struct ConfigurationString {
+    public let key: Swift.String
+    public let value: Swift.String
+    public init(key: Swift.String, value: Swift.String)
+  }
+  public struct ConfigurationColor {
+    public let name: Swift.String
+    public let colorHex: Swift.String
+    public var color: UIKit.UIColor {
+      get
+    }
+    public init(name: Swift.String, colorHex: Swift.String)
+  }
+  public struct FormatError : Swift.Error, Swift.CustomStringConvertible {
+    public var description: Swift.String {
+      get
+    }
+  }
+  public init?(bundle: Foundation.Bundle, filename: Swift.String) throws
+  public static func initialModel(bundle: Foundation.Bundle, fileName: Swift.String) -> MuuvUtilitiesRenamedForCore.ConfigurationModel
+  public let lightModeColors: [MuuvUtilitiesRenamedForCore.ConfigurationModel.ConfigurationColor]
+  public let darkModeColors: [MuuvUtilitiesRenamedForCore.ConfigurationModel.ConfigurationColor]
+  public let strings: [MuuvUtilitiesRenamedForCore.ConfigurationModel.ConfigurationString]
+  public let featureFlags: [MuuvUtilitiesRenamedForCore.ConfigurationModel.ConfigurationFeatureFlag]
+  public init(lightModeColors: [MuuvUtilitiesRenamedForCore.ConfigurationModel.ConfigurationColor], darkModeColors: [MuuvUtilitiesRenamedForCore.ConfigurationModel.ConfigurationColor], strings: [MuuvUtilitiesRenamedForCore.ConfigurationModel.ConfigurationString], featureFlags: [MuuvUtilitiesRenamedForCore.ConfigurationModel.ConfigurationFeatureFlag])
+}
+public struct ConfigurationRawModel : Swift.Codable {
+  public init(colors: MuuvUtilitiesRenamedForCore.ConfigurationRawModel.ConfigurationRawColors, features: [Swift.String : Swift.Bool], translations: [Swift.String : Swift.String])
+  public struct ConfigurationRawColors : Swift.Codable {
+    public init(lightModeColors: [Swift.String : Swift.String], darkModeColors: [Swift.String : Swift.String])
+    public let lightModeColors: [Swift.String : Swift.String]
+    public let darkModeColors: [Swift.String : Swift.String]
+    public var lightModeConfigurationColors: [MuuvUtilitiesRenamedForCore.ConfigurationModel.ConfigurationColor] {
+      get
+    }
+    public var darkModeConfigurationColors: [MuuvUtilitiesRenamedForCore.ConfigurationModel.ConfigurationColor] {
+      get
+    }
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public let colors: MuuvUtilitiesRenamedForCore.ConfigurationRawModel.ConfigurationRawColors
+  public let features: [Swift.String : Swift.Bool]
+  public let translations: [Swift.String : Swift.String]
+  public var configurationStrings: [MuuvUtilitiesRenamedForCore.ConfigurationModel.ConfigurationString] {
+    get
+  }
+  public var configurationFeatures: [MuuvUtilitiesRenamedForCore.ConfigurationModel.ConfigurationFeatureFlag] {
+    get
+  }
+  public var configurationModel: MuuvUtilitiesRenamedForCore.ConfigurationModel {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension MuuvUtilitiesRenamedForCore.ConfigurationModel {
+  public static func model(named name: Swift.String, bundle: Foundation.Bundle) -> MuuvUtilitiesRenamedForCore.ConfigurationModel
+}
+public class ConfigurationStringController {
+  public var backendModel: MuuvUtilitiesRenamedForCore.ConfigurationModel?
+  public var fallbackModel: MuuvUtilitiesRenamedForCore.ConfigurationModel
+  public init(backendModel: MuuvUtilitiesRenamedForCore.ConfigurationModel?, fallbackModel: MuuvUtilitiesRenamedForCore.ConfigurationModel)
+  public func string(for key: Swift.String) -> Swift.String
+  @objc deinit
+}
+extension MuuvUtilitiesRenamedForCore.ConfigurationStringController {
+  public enum Keys {
+  }
+  public enum StringType {
+    case today
+    case loading
+    case custom(Swift.String)
+  }
+}
+extension Foundation.Date {
+  public func formattedTimeAgoFromNow() -> Swift.String
+}
+@objc public class Downloader : ObjectiveC.NSObject {
+  public static var backgroundShared: MuuvUtilitiesRenamedForCore.Downloader
+  public var backgroundCompletionHandler: MuuvUtilitiesRenamedForCore.Action?
+  public init(name: Swift.String = "", sessionConfiguration: Foundation.URLSessionConfiguration = .default, backgroundCompletionHandler: MuuvUtilitiesRenamedForCore.Action? = nil)
+  @discardableResult
+  public func download(url: Foundation.URL, usePreviousDownload: Swift.Bool = true, bundle: Foundation.Bundle, countOfBytesClientExpectsToSend: Swift.Int64 = 200, countOfBytesExpectedToReceive: Swift.Int64 = 200, storageType: MuuvUtilitiesRenamedForCore.StorageType = .cache, progress: @escaping (Swift.Int64, Swift.Int64) -> Swift.Void, completion: @escaping (MuuvUtilitiesRenamedForCore.DownloadResult) -> Swift.Void) throws -> Foundation.URLSessionDownloadTask?
+  public func cancel(downloadTask: Foundation.URLSessionDownloadTask)
+  public func pause()
+  public func resume()
+  @objc deinit
+}
+extension MuuvUtilitiesRenamedForCore.Downloader : Foundation.URLSessionDelegate, Foundation.URLSessionDownloadDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData bytesWritten: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)
+  @objc dynamic public func urlSessionDidFinishEvents(forBackgroundURLSession _: Foundation.URLSession)
+}
+public enum DownloaderError : Swift.Error {
+  case unableToCreateDestinationPath
+  case unableToObtainHTTPResponse
+  case unableToCreateTask
+  case unableToResumeTaskNotFound
+  case unableToResumeNoResumeData
+  case invalidHTTPResponseStatusCode(Swift.Int)
+}
+public enum DownloadResult : Swift.CustomStringConvertible {
+  case downloadFinished(Foundation.URL)
+  case alreadyDownloadedAtPath(Foundation.URL)
+  case failure(Swift.Error)
+  case cancelled
+  public var description: Swift.String {
+    get
+  }
+  public var isCancelled: Swift.Bool {
+    get
+  }
+  public var isError: Swift.Bool {
+    get
+  }
+  public var isFinishedSuccessfully: Swift.Bool {
+    get
+  }
+  public var url: Foundation.URL? {
+    get
+  }
+}
+extension Foundation.URLSessionConfiguration {
+  public static func backgroundWithPrefixIdentifier(_ prefix: Swift.String = "com.muuv.networking.", sharedContainerIdentifier: Swift.String? = nil, bundle: Foundation.Bundle = .main) -> Foundation.URLSessionConfiguration
+}
+public protocol EventTracker : AnyObject {
+  func track(event: MuuvUtilitiesRenamedForCore.AnalyticsEvent)
+  func track(screen: MuuvUtilitiesRenamedForCore.AnalyticsScreen)
+}
+public struct AnalyticsEvent {
+  public let name: Swift.String
+  public let properties: [Swift.String : Any]
+  public init(name: Swift.String, properties: [Swift.String : Any])
+}
+public struct AnalyticsScreen {
+  public let screenName: Swift.String
+  public let properties: [Swift.String : Any]
+  public init(screenName: Swift.String, properties: [Swift.String : Any])
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class GradientView : UIKit.UIView {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var startColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var endColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var startLocation: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var endLocation: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var horizontalMode: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var diagonalMode: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public class var layerClass: Swift.AnyClass {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public typealias Handler<T> = (T) -> Swift.Void
+public typealias Action = () -> Swift.Void
+public struct HLSVideo {
+  public let url: Foundation.URL
+  public let subtitleUrl: Foundation.URL?
+  public init(url: Foundation.URL, subtitleUrl: Foundation.URL?)
+}
+extension MuuvUtilitiesRenamedForCore.HLSVideo : Swift.Equatable, Swift.Hashable {
+  public static func == (lhs: MuuvUtilitiesRenamedForCore.HLSVideo, rhs: MuuvUtilitiesRenamedForCore.HLSVideo) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public class HLSVideoPlayer : ObjectiveC.NSObject {
+  weak public var delegate: MuuvUtilitiesRenamedForCore.HLSVideoPlayerDelegate?
+  @objc deinit
+  #if compiler(>=5.3) && $Actors
+  public init(downloader: MuuvUtilitiesRenamedForCore.HLSVideoPlayerDownloader, subtitleDownloader: MuuvUtilitiesRenamedForCore.SubtitleDownloader, delegate: MuuvUtilitiesRenamedForCore.HLSVideoPlayerDelegate?, loop: Swift.Bool)
+  #endif
+  public var hasCurrentItem: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $AsyncAwait
+  public func hasCachedVideo(_ hlsVideo: MuuvUtilitiesRenamedForCore.HLSVideo) async -> Swift.Bool
+  #endif
+  public var isMuted: Swift.Bool {
+    get
+    set
+  }
+  public func addPeriodicTimeObserver(_ handler: @escaping MuuvUtilitiesRenamedForCore.Handler<CoreMedia.CMTime>) -> Any
+  public func removePeriodicTimeObserver(_ token: Any)
+  public func pause()
+  public func play()
+  public func toggleSubtitles()
+  public func play(on container: UIKit.UIView, isMuted: Swift.Bool, autoplay: Swift.Bool)
+  public func cancelAllAndClean()
+  public func isPlayingAtAnyBitrate(video: MuuvUtilitiesRenamedForCore.HLSVideo) -> Swift.Bool
+  public func isPlaying(url: Foundation.URL) -> Swift.Bool
+  public func play(video: MuuvUtilitiesRenamedForCore.HLSVideo, playMode: MuuvUtilitiesRenamedForCore.HLSVideoPlayer.PlayMode)
+  public enum PlayMode : Swift.Equatable {
+    case playOnlyOnceDownloaded(bitRate: Swift.Int)
+    case directlyWithoutCache
+    case directlyUsingCache
+    public static func == (a: MuuvUtilitiesRenamedForCore.HLSVideoPlayer.PlayMode, b: MuuvUtilitiesRenamedForCore.HLSVideoPlayer.PlayMode) -> Swift.Bool
+  }
+  public struct Configuration {
+    public init(autoPlay: Swift.Bool, isMuted: Swift.Bool, container: UIKit.UIView, loop: Swift.Bool)
+    public let autoPlay: Swift.Bool
+    public let isMuted: Swift.Bool
+    public let container: UIKit.UIView
+    public let loop: Swift.Bool
+  }
+}
+extension AVFoundation.AVPlayer {
+  public func play(on container: UIKit.UIView, frame: CoreFoundation.CGRect? = nil, autoPlay: Swift.Bool, isMuted: Swift.Bool, playerGravity: AVFoundation.AVLayerVideoGravity = .resizeAspectFill)
+}
+extension MuuvUtilitiesRenamedForCore.HLSVideoPlayer {
+  public enum BitRate : Swift.Int {
+    case h264_416_x_234
+    case h264_640_x_360
+    case h264_768_x_432L
+    case h264_768_x_432H
+    case h264_960_x_540
+    case h264_1280_x_720L
+    case h264_1280_x_720H
+    case h264_1920_x_1080L
+    case h264_1920_x_1080H
+    public static var lowest: Swift.Int {
+      get
+    }
+    public static var highest: Swift.Int {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+}
+#if compiler(>=5.3) && $Actors
+@objc @_inheritsConvenienceInitializers public actor HLSVideoPlayerDownloader : ObjectiveC.NSObject {
+  @objc override public init()
+  #if compiler(>=5.3) && $AsyncAwait
+  public func downloadIfNotCached(url: Foundation.URL, bitRate: Swift.Int) async
+  #endif
+  @objc deinit
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  @_semantics("defaultActor") nonisolated final public var unownedExecutor: _Concurrency.UnownedSerialExecutor {
+    get
+  }
+}
+#endif
+#if compiler(>=5.3) && $Actors
+extension MuuvUtilitiesRenamedForCore.HLSVideoPlayerDownloader : AVFoundation.AVAssetDownloadDelegate {
+  @objc nonisolated public func urlSession(_: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  @objc nonisolated public func urlSession(_: Foundation.URLSession, aggregateAssetDownloadTask: AVFoundation.AVAggregateAssetDownloadTask, willDownloadTo location: Foundation.URL)
+  @objc nonisolated public func urlSession(_: Foundation.URLSession, aggregateAssetDownloadTask: AVFoundation.AVAggregateAssetDownloadTask, didCompleteFor mediaSelection: AVFoundation.AVMediaSelection)
+  @objc nonisolated public func urlSession(_: Foundation.URLSession, aggregateAssetDownloadTask: AVFoundation.AVAggregateAssetDownloadTask, didLoad timeRange: CoreMedia.CMTimeRange, totalTimeRangesLoaded loadedTimeRanges: [Foundation.NSValue], timeRangeExpectedToLoad: CoreMedia.CMTimeRange, for mediaSelection: AVFoundation.AVMediaSelection)
+}
+#endif
+public func expected200to300(_ code: Swift.Int) -> Swift.Bool
+public protocol LoadableDelegate : AnyObject {
+  func sdkDidChangeLoadingState(isLoading: Swift.Bool)
+}
+public enum LoadingState<Value> {
+  case idle
+  case loading
+  case loadingMore(previous: Value?)
+  case canceled
+  case failed(Swift.Error)
+  case loaded(Value)
+  public func map<Result>(_ transform: (Value) -> Result) -> MuuvUtilitiesRenamedForCore.LoadingState<Result>
+  public var value: Value? {
+    get
+  }
+  public var previousValue: Value? {
+    get
+  }
+  public var isLoaded: Swift.Bool {
+    get
+  }
+  public var isFailed: Swift.Bool {
+    get
+  }
+}
+extension MuuvUtilitiesRenamedForCore.LoadingState : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public enum Logger {
+  public static var verbosity: MuuvUtilitiesRenamedForCore.LogVerbosity?
+  public static func log(_ level: MuuvUtilitiesRenamedForCore.LogLevel, _ string: Swift.String, funcName: Swift.StaticString = #function)
+}
+public enum LogLevel : Swift.String {
+  case err
+  case warn
+  case info
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum LogVerbosity : Swift.String, Swift.CaseIterable {
+  case error
+  case warning
+  case info
+  case verbose
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [MuuvUtilitiesRenamedForCore.LogVerbosity]
+  public typealias RawValue = Swift.String
+  public static var allCases: [MuuvUtilitiesRenamedForCore.LogVerbosity] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol NotificationCompatible {
+  var notificationName: Foundation.Notification.Name { get }
+}
+public protocol Notifiable : MuuvUtilitiesRenamedForCore.NotificationCompatible {
+  func post(notificationCenter: Foundation.NotificationCenter, object: Swift.AnyObject?)
+  func addObserver(notificationCenter: Foundation.NotificationCenter, _ handler: @escaping MuuvUtilitiesRenamedForCore.Handler<Foundation.Notification>) -> Combine.AnyCancellable
+}
+public protocol NotifiableWithParameter : MuuvUtilitiesRenamedForCore.NotificationCompatible {
+  associatedtype Parameter
+  func post(notificationCenter: Foundation.NotificationCenter, object: Swift.AnyObject?, parameter: Self.Parameter)
+  func addObserver(notificationCenter: Foundation.NotificationCenter, _ handler: @escaping MuuvUtilitiesRenamedForCore.Handler<Self.Parameter>) -> Combine.AnyCancellable
+  func publisher(notificationCenter: Foundation.NotificationCenter) -> Combine.AnyPublisher<Self.Parameter, Swift.Never>
+}
+extension MuuvUtilitiesRenamedForCore.Notifiable {
+  public func post(notificationCenter: Foundation.NotificationCenter = .default, object: Swift.AnyObject? = nil)
+  public func addObserver(notificationCenter: Foundation.NotificationCenter = .default, _ handler: @escaping MuuvUtilitiesRenamedForCore.Handler<Foundation.Notification>) -> Combine.AnyCancellable
+}
+extension MuuvUtilitiesRenamedForCore.NotifiableWithParameter {
+  public func post(notificationCenter: Foundation.NotificationCenter = .default, object: Swift.AnyObject? = nil, parameter: Self.Parameter)
+  public func addObserver(notificationCenter: Foundation.NotificationCenter = .default, _ handler: @escaping MuuvUtilitiesRenamedForCore.Handler<Self.Parameter>) -> Combine.AnyCancellable
+  public func publisher(notificationCenter: Foundation.NotificationCenter = .default) -> Combine.AnyPublisher<Self.Parameter, Swift.Never>
+}
+public struct NotificationWithParameter<Parameter> : MuuvUtilitiesRenamedForCore.NotifiableWithParameter {
+  public typealias ParameterType = Parameter
+  public var id: Swift.String {
+    get
+  }
+  public init(id: MuuvUtilitiesRenamedForCore.NotificationIdentifier)
+  public init(id: Swift.String)
+  public var notificationName: Foundation.Notification.Name {
+    get
+  }
+}
+public protocol NotificationIdentifier {
+}
+extension MuuvUtilitiesRenamedForCore.Notifiable where Self : Swift.RawRepresentable, Self.RawValue == Swift.String {
+  public var notificationName: Foundation.Notification.Name {
+    get
+  }
+}
+extension Foundation.NSNotification.Name {
+  public func post(notificationCenter: Foundation.NotificationCenter, object: Swift.AnyObject?)
+  public func post<Parameter>(notificationCenter: Foundation.NotificationCenter, object: Swift.AnyObject?, parameter: Parameter, key: Swift.String = Notification.parameterKey)
+  public func addObserver(notificationCenter: Foundation.NotificationCenter = .default, _ handler: @escaping MuuvUtilitiesRenamedForCore.Handler<Foundation.Notification>) -> Combine.AnyCancellable
+  public func addObserver<Parameter>(notificationCenter: Foundation.NotificationCenter = .default, _ handler: @escaping MuuvUtilitiesRenamedForCore.Handler<Parameter>) -> Combine.AnyCancellable
+}
+extension Foundation.Notification {
+  public static var parameterKey: Swift.String {
+    get
+  }
+}
+@propertyWrapper public class PagedData<Item, Page> where Page : Swift.Equatable {
+  public typealias PageCompletion = ([Item], _ nextPage: Page, _ isLastPage: Swift.Bool, _ error: Swift.Error?) -> Swift.Void
+  final public let initialState: MuuvUtilitiesRenamedForCore.PagedData<Item, Page>.PagedDataState<Item, Page>
+  public var loadPageAction: ((_ page: Page, _ completion: @escaping MuuvUtilitiesRenamedForCore.PagedData<Item, Page>.PageCompletion) -> Swift.Void)?
+  public var wrappedValue: [Item] {
+    get
+  }
+  public var projectedValue: MuuvUtilitiesRenamedForCore.PagedData<Item, Page> {
+    get
+  }
+  public var stateSubject: Combine.AnyPublisher<MuuvUtilitiesRenamedForCore.PagedData<Item, Page>.PagedDataState<Item, Page>, Swift.Never> {
+    get
+  }
+  public init(state: MuuvUtilitiesRenamedForCore.PagedData<Item, Page>.PagedDataState<Item, Page>)
+  public func reload(forceInitial: Swift.Bool = false)
+  public func loadNext()
+  @objc deinit
+}
+extension MuuvUtilitiesRenamedForCore.PagedData {
+  public enum PagedDataState<Item, Page> {
+    case initial(currentItems: [Item], page: Page)
+    case loading(currentItems: [Item], page: Page)
+    case loaded(currentItems: [Item], newIndeses: Swift.Range<Swift.Int>, nextPage: Page, isAllLoaded: Swift.Bool, error: Swift.Error?)
+  }
+}
+extension Combine.Publisher {
+  public func assign<Receiver>(valueTo valueKeyPath: Swift.WritableKeyPath<Receiver, Self.Output>, errorTo errorKeyPath: Swift.WritableKeyPath<Receiver, Swift.Error>, of receiver: Receiver) -> Combine.AnyCancellable where Receiver : AnyObject
+  public func assign<Receiver, E>(valueTo valueKeyPath: Swift.WritableKeyPath<Receiver, Self.Output>, mappingError: @escaping (Swift.Error) -> E, on errorKeyPath: Swift.WritableKeyPath<Receiver, E>, of receiver: Receiver) -> Combine.AnyCancellable where Receiver : AnyObject
+}
+extension Combine.Publisher where Self.Failure == Swift.Never {
+  public func weakAssign<T>(to keyPath: Swift.ReferenceWritableKeyPath<T, Self.Output>, of object: T) -> Combine.AnyCancellable where T : AnyObject
+}
+extension Combine.Publisher where Self.Failure == Swift.Never {
+  public func weakSink<T>(_ handler: @escaping (T) -> (Self.Output) -> Swift.Void, on object: T) -> Combine.AnyCancellable where T : AnyObject
+}
+#if compiler(>=5.3) && $Actors
+public actor ResourceDownloader<Resource> {
+  public init(decoder: @escaping (Foundation.Data) throws -> Resource, cachedDownloader: MuuvUtilitiesRenamedForCore.CachedDownloader)
+  public func cachedResourceOrDownload(from url: Foundation.URL) -> Combine.AnyPublisher<MuuvUtilitiesRenamedForCore.DownloadState<Resource>, Swift.Error>
+  #if compiler(>=5.3) && $AsyncAwait
+  public func cachedResourceOrDownload(from url: Foundation.URL, monitorProgress: MuuvUtilitiesRenamedForCore.MonitorProgress? = nil) async throws -> Resource
+  #endif
+  @objc deinit
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  @_semantics("defaultActor") nonisolated final public var unownedExecutor: _Concurrency.UnownedSerialExecutor {
+    get
+  }
+}
+#endif
+public enum DownloadState<Resource> {
+  case notStarted
+  case started
+  case downloading(bytes: Swift.Int, total: Swift.Int)
+  case finished(Resource)
+}
+public struct UnableToCreateImageFromData : Swift.Error {
+}
+#if compiler(>=5.3) && $Actors
+extension MuuvUtilitiesRenamedForCore.ResourceDownloader {
+  public static func imageDownloader(cachedDownloader: MuuvUtilitiesRenamedForCore.CachedDownloader) -> MuuvUtilitiesRenamedForCore.ResourceDownloader<UIKit.UIImage>
+}
+#endif
+extension Combine.AnyPublisher {
+  public static func create<Output, Failure>(_ subscribe: @escaping (Combine.AnySubscriber<Output, Failure>) -> Combine.AnyCancellable) -> Combine.AnyPublisher<Output, Failure> where Failure : Swift.Error
+}
+public enum StorageType {
+  case cache
+  case documents
+  public static func == (a: MuuvUtilitiesRenamedForCore.StorageType, b: MuuvUtilitiesRenamedForCore.StorageType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Swift.String {
+  public var formattedAsNameInitials: Swift.String? {
+    get
+  }
+}
+#if compiler(>=5.3) && $Actors
+@objc @_inheritsConvenienceInitializers public actor SubtitleDownloader : ObjectiveC.NSObject {
+  @objc override public init()
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getSubtitles(from url: Foundation.URL, completion: @escaping (Foundation.Data?) -> Swift.Void) async
+  #endif
+  @objc deinit
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  @_semantics("defaultActor") nonisolated final public var unownedExecutor: _Concurrency.UnownedSerialExecutor {
+    get
+  }
+}
+#endif
+public class Subtitles {
+  public init(file filePath: Foundation.URL, encoding: Swift.String.Encoding = .utf8) throws
+  public init(subtitles string: Swift.String) throws
+  public func searchSubtitles(at time: Foundation.TimeInterval) -> Swift.String?
+  @objc deinit
+}
+extension _Concurrency.Task where Success == Swift.Never, Failure == Swift.Never {
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func sleep(seconds: Swift.Double) async throws
+  #endif
+}
+extension UIKit.UIApplication {
+  @_Concurrency.MainActor(unsafe) public static var keyWindow: UIKit.UIWindow? {
+    get
+  }
+}
+extension UIKit.UIColor {
+  convenience public init(red: Swift.Int, green: Swift.Int, blue: Swift.Int)
+  convenience public init(rgb: Swift.Int)
+}
+public typealias HexadecimalString = Swift.String
+extension UIKit.UIColor {
+  convenience public init?(hex: MuuvUtilitiesRenamedForCore.HexadecimalString)
+  public var hexString: MuuvUtilitiesRenamedForCore.HexadecimalString? {
+    get
+  }
+  public func hexString(alpha: Swift.Bool = false) -> MuuvUtilitiesRenamedForCore.HexadecimalString?
+}
+public typealias ColorLookup = (MuuvUtilitiesRenamedForCore.DeveloperColor) -> UIKit.UIColor?
+public protocol DesignerColor {
+  var hexString: Swift.String { get }
+}
+public protocol DeveloperColor {
+  var backendKey: Swift.String { get }
+  func designerColor(traitCollection: UIKit.UITraitCollection) -> MuuvUtilitiesRenamedForCore.DesignerColor
+}
+extension MuuvUtilitiesRenamedForCore.DesignerColor {
+  public var color: UIKit.UIColor {
+    get
+  }
+}
+extension UIKit.UIColor {
+  public static var defaultColorLookup: MuuvUtilitiesRenamedForCore.ColorLookup {
+    get
+  }
+  public static func color(_ lookupFunction: (MuuvUtilitiesRenamedForCore.DeveloperColor) -> UIKit.UIColor? = UIColor.defaultColorLookup, developerColor: MuuvUtilitiesRenamedForCore.DeveloperColor) -> UIKit.UIColor?
+}
+extension MuuvUtilitiesRenamedForCore.DeveloperColor {
+  public func color(lookupFunction: (MuuvUtilitiesRenamedForCore.DeveloperColor) -> UIKit.UIColor? = UIColor.defaultColorLookup) -> UIKit.UIColor?
+}
+extension MuuvUtilitiesRenamedForCore.DeveloperColor where Self : Swift.RawRepresentable, Self.RawValue == Swift.String {
+  public var backendKey: Swift.String {
+    get
+  }
+}
+extension MuuvUtilitiesRenamedForCore.DesignerColor where Self : Swift.RawRepresentable, Self.RawValue == Swift.String {
+  public var hexString: Swift.String {
+    get
+  }
+  public var backendKey: Swift.String {
+    get
+  }
+}
+extension UIKit.UIColor {
+  public enum ExampleDesignerColors : Swift.String, MuuvUtilitiesRenamedForCore.DesignerColor {
+    case SomeColor
+    case AnotherColor
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ExampleDeveloperColors : Swift.String, MuuvUtilitiesRenamedForCore.DeveloperColor {
+    case generalBackgroundColor
+    public func designerColor(traitCollection: UIKit.UITraitCollection) -> MuuvUtilitiesRenamedForCore.DesignerColor
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension UIKit.UIColor {
+  public var inverted: UIKit.UIColor {
+    get
+  }
+}
+extension UIKit.UIColor {
+  public static func random(randomAlpha: Swift.Bool = false) -> UIKit.UIColor
+}
+extension UIKit.UIFont {
+  public static func registerFonts(bundle: Foundation.Bundle)
+  public static func registerFont(bundle: Foundation.Bundle, fontName: Swift.String, fontExtension: Swift.String) -> Swift.Bool
+}
+extension UIKit.UIFont {
+  public func scaled(style: UIKit.UIFont.TextStyle = .title1) -> UIKit.UIFont
+  public static func montserrat(weight: MuuvUtilitiesRenamedForCore.FontWeight, size: CoreFoundation.CGFloat, style: UIKit.UIFont.TextStyle = .title1) -> UIKit.UIFont
+}
+public enum FontWeight {
+  case regular
+  case bold
+  public var isBoldTextEnabled: Swift.Bool {
+    get
+  }
+  public var fontName: Swift.String {
+    get
+  }
+  public static func == (a: MuuvUtilitiesRenamedForCore.FontWeight, b: MuuvUtilitiesRenamedForCore.FontWeight) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) public func stopDownloading()
+  @_Concurrency.MainActor(unsafe) public func stopDownloading(url: Foundation.URL)
+  #if compiler(>=5.3) && $Actors
+  @_Concurrency.MainActor(unsafe) public func download(from url: Foundation.URL, showLoadingIndicator: Swift.Bool = true, downloader: MuuvUtilitiesRenamedForCore.ResourceDownloader<UIKit.UIImage>)
+  #endif
+}
+extension UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) public func supportDynamicType(weight: UIKit.UIFont.Weight = .regular, size: CoreFoundation.CGFloat, numberOfLines: Swift.Int = 0, style: UIKit.UIFont.TextStyle = .title1)
+  @_Concurrency.MainActor(unsafe) public func supportDynamicType(font: UIKit.UIFont, size: CoreFoundation.CGFloat, numberOfLines: Swift.Int = 0, style: UIKit.UIFont.TextStyle = .title1)
+}
+extension UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) public func setDynamicFontSize(font: UIKit.UIFont, minimumScaleFactor: CoreFoundation.CGFloat = 0.2, lineBreakMode: UIKit.NSLineBreakMode = .byClipping)
+}
+extension UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) public func automaticallyResizeTextFontIfWordsAreCutWhen(_ notificationName: Foundation.Notification.Name, font: UIKit.UIFont) -> Combine.AnyCancellable
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func resizeFontSizeIfTextWordsAreCut(font: UIKit.UIFont)
+}
+extension UIKit.UIStackView {
+  @_Concurrency.MainActor(unsafe) public func rearrangeSpacer(_ spacer: UIKit.UIView)
+}
+extension UIKit.UITableViewCell {
+  @_Concurrency.MainActor(unsafe) public static var identifier: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public static func registerNib(on tableView: UIKit.UITableView, bundle: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) public static func register(on tableView: UIKit.UITableView)
+}
+extension UIKit.UITableViewHeaderFooterView {
+  @_Concurrency.MainActor(unsafe) public static var identifier: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public static func registerNib(on tableView: UIKit.UITableView, bundle: Foundation.Bundle?)
+}
+public protocol RegistrableInCollectionView {
+  static func register(on collectionView: UIKit.UICollectionView, bundle: Foundation.Bundle?)
+}
+extension UIKit.UICollectionViewCell {
+  @_Concurrency.MainActor(unsafe) public static var identifier: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public static func registerNib(on collectionView: UIKit.UICollectionView, bundle: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) public static func register(on collectionView: UIKit.UICollectionView)
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor(unsafe) public func dequeueReusableCell<T>(for indexPath: Foundation.IndexPath) -> T where T : UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) public func dequeueReusableHeaderFooterCell<T>() -> T where T : UIKit.UITableViewHeaderFooterView
+}
+extension UIKit.UICollectionView {
+  @_Concurrency.MainActor(unsafe) public func dequeueReusableCell<T>(for indexPath: Foundation.IndexPath) -> T where T : UIKit.UICollectionViewCell
+}
+extension UIKit.UITextView {
+  @_Concurrency.MainActor(unsafe) public func supportDynamicType(size: CoreFoundation.CGFloat, weight: UIKit.UIFont.Weight = .regular, style: UIKit.UIFont.TextStyle = .title1)
+  @_Concurrency.MainActor(unsafe) public func supportDynamicType(font: UIKit.UIFont, size: CoreFoundation.CGFloat, style: UIKit.UIFont.TextStyle = .title1)
+}
+extension UIKit.UITextView {
+  @_Concurrency.MainActor(unsafe) public var placeholderLabel: UIKit.UILabel {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func setPaleceholderInset(inset: UIKit.UIEdgeInsets)
+  @_Concurrency.MainActor(unsafe) public func addPlaceholderObserver() -> Combine.AnyCancellable
+}
+extension UIKit.UITraitCollection {
+  public var isDarkMode: Swift.Bool {
+    get
+  }
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func blur(style: UIKit.UIBlurEffect.Style = .systemUltraThinMaterial)
+}
+extension UIKit.UILayoutPriority {
+  public static let almostRequired: UIKit.UILayoutPriority
+  public static let almostNone: UIKit.UILayoutPriority
+}
+extension UIKit.UIView {
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func pin(_ attr1: UIKit.NSLayoutConstraint.Attribute, to attr2: UIKit.NSLayoutConstraint.Attribute = .notAnAttribute, of targetView: Any? = nil, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, multiplier: CoreFoundation.CGFloat = 1, constant const: CoreFoundation.CGFloat = 0, priority: UIKit.UILayoutPriority = .required, isActive: Swift.Bool = true, identifier: Swift.String? = nil) -> UIKit.NSLayoutConstraint
+  @_Concurrency.MainActor(unsafe) public func disableAutoConstraints()
+}
+public struct Center : Swift.OptionSet {
+  public var rawValue: Swift.UInt
+  public init(rawValue: Swift.UInt)
+  public static var centerX: MuuvUtilitiesRenamedForCore.Center {
+    get
+  }
+  public static var centerY: MuuvUtilitiesRenamedForCore.Center {
+    get
+  }
+  public static var center: MuuvUtilitiesRenamedForCore.Center {
+    get
+  }
+  public typealias ArrayLiteralElement = MuuvUtilitiesRenamedForCore.Center
+  public typealias Element = MuuvUtilitiesRenamedForCore.Center
+  public typealias RawValue = Swift.UInt
+}
+extension UIKit.UIView {
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func pinCenter(_ center: MuuvUtilitiesRenamedForCore.Center = .center, to targetView: Any? = nil, withOffset offset: UIKit.UIOffset = .zero, priority: UIKit.UILayoutPriority = .required, isActive: Swift.Bool = true) -> (centerX: UIKit.NSLayoutConstraint?, centerY: UIKit.NSLayoutConstraint?)
+}
+public struct Edges : Swift.OptionSet {
+  public var rawValue: Swift.UInt
+  public init(rawValue: Swift.UInt)
+  public static var top: MuuvUtilitiesRenamedForCore.Edges {
+    get
+  }
+  public static var leading: MuuvUtilitiesRenamedForCore.Edges {
+    get
+  }
+  public static var bottom: MuuvUtilitiesRenamedForCore.Edges {
+    get
+  }
+  public static var trailing: MuuvUtilitiesRenamedForCore.Edges {
+    get
+  }
+  public static var all: MuuvUtilitiesRenamedForCore.Edges {
+    get
+  }
+  public static var horizontal: MuuvUtilitiesRenamedForCore.Edges {
+    get
+  }
+  public static var vertical: MuuvUtilitiesRenamedForCore.Edges {
+    get
+  }
+  public static var notTop: MuuvUtilitiesRenamedForCore.Edges {
+    get
+  }
+  public static var notLeading: MuuvUtilitiesRenamedForCore.Edges {
+    get
+  }
+  public static var notBottom: MuuvUtilitiesRenamedForCore.Edges {
+    get
+  }
+  public static var notTrailing: MuuvUtilitiesRenamedForCore.Edges {
+    get
+  }
+  public typealias ArrayLiteralElement = MuuvUtilitiesRenamedForCore.Edges
+  public typealias Element = MuuvUtilitiesRenamedForCore.Edges
+  public typealias RawValue = Swift.UInt
+}
+extension UIKit.UIView {
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func pinEdges(_ edges: MuuvUtilitiesRenamedForCore.Edges = .all, to targetView: Any? = nil, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, withInsets insets: UIKit.UIEdgeInsets = .zero, priority: UIKit.UILayoutPriority = .required, isActive: Swift.Bool = true, identifierPrefix: Swift.String? = nil) -> [UIKit.NSLayoutConstraint]
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func pinEdgesToMargins(_ edges: MuuvUtilitiesRenamedForCore.Edges = .all, to targetView: Any? = nil, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, withInsets insets: UIKit.UIEdgeInsets = .zero, priority: UIKit.UILayoutPriority = .required, isActive: Swift.Bool = true) -> [UIKit.NSLayoutConstraint]
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func pinMargins(_ edges: MuuvUtilitiesRenamedForCore.Edges = .all, to targetView: Any? = nil, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, withInsets insets: UIKit.UIEdgeInsets = .zero, priority: UIKit.UILayoutPriority = .required, isActive: Swift.Bool = true) -> [UIKit.NSLayoutConstraint]
+}
+extension UIKit.UIView {
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func pinSize(_ dimension: CoreFoundation.CGFloat, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, priority: UIKit.UILayoutPriority = .required) -> (width: UIKit.NSLayoutConstraint, height: UIKit.NSLayoutConstraint)
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func pinSize(_ size: CoreFoundation.CGSize, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, priority: UIKit.UILayoutPriority = .required) -> (width: UIKit.NSLayoutConstraint, height: UIKit.NSLayoutConstraint)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func addPlaceholderTag()
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func randomizeColors()
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func round()
+  @_Concurrency.MainActor(unsafe) public func roundCorners(radius: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func round(corners: [MuuvUtilitiesRenamedForCore.SingularCorner], radius: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func addBorderGradient(startColor: UIKit.UIColor, endColor: UIKit.UIColor, lineWidth: CoreFoundation.CGFloat, startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint) -> QuartzCore.CALayer
+}
+public enum SingularCorner {
+  case topLeft
+  case topRight
+  case bottomLeft
+  case bottomRight
+  public func toCornerMask() -> QuartzCore.CACornerMask
+  public static func == (a: MuuvUtilitiesRenamedForCore.SingularCorner, b: MuuvUtilitiesRenamedForCore.SingularCorner) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension CoreFoundation.CGPoint {
+  public static let topLeft: CoreFoundation.CGPoint
+  public static let topCenter: CoreFoundation.CGPoint
+  public static let topRight: CoreFoundation.CGPoint
+  public static let centerLeft: CoreFoundation.CGPoint
+  public static let center: CoreFoundation.CGPoint
+  public static let centerRight: CoreFoundation.CGPoint
+  public static let bottomLeft: CoreFoundation.CGPoint
+  public static let bottomCenter: CoreFoundation.CGPoint
+  public static let bottomRight: CoreFoundation.CGPoint
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func addShadow(radius: CoreFoundation.CGFloat = 1, offset: CoreFoundation.CGSize = CGSize(width: 0, height: 1), color: UIKit.UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15), opacity: Swift.Float = 1)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func hideAnimated(in stackView: UIKit.UIStackView)
+  @_Concurrency.MainActor(unsafe) public func showAnimated(in stackView: UIKit.UIStackView)
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public func showAlert(title: Swift.String, message: Swift.String, okTitle: Swift.String = "ok", okHandler: MuuvUtilitiesRenamedForCore.Handler<UIKit.UIAlertAction>? = nil)
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public func add(child: UIKit.UIViewController, using addLogic: MuuvUtilitiesRenamedForCore.Action? = nil)
+  @_Concurrency.MainActor(unsafe) public func safelyRemoveFromParent()
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public func addChildUIView<Content>(_ swiftUIView: Content, using addLogic: MuuvUtilitiesRenamedForCore.Handler<UIKit.UIView>? = nil) where Content : SwiftUI.View
+  @_Concurrency.MainActor(unsafe) public func addChildUIView<Content>(_ swiftUIView: Content, to view: UIKit.UIView) where Content : SwiftUI.View
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public func hideKeyboardWhenTappedAround()
+  @_Concurrency.MainActor(unsafe) public func hideKeyboard()
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func hideKeyboardWhenTappedAround()
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func hideKeyboard()
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public func startLoading()
+  @_Concurrency.MainActor(unsafe) public func stopLoading()
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public func setUpScrollableVStack(scrollView: UIKit.UIScrollView, vStack: UIKit.UIStackView, insets: UIKit.UIEdgeInsets = .init(top: 16, left: 0, bottom: 16, right: 0))
+  @_Concurrency.MainActor(unsafe) public func setUpScrollView(_ scrollView: UIKit.UIScrollView, withVStack vStack: UIKit.UIStackView, insets: UIKit.UIEdgeInsets)
+  @_Concurrency.MainActor(unsafe) public func setUpVStack(_ vStack: UIKit.UIStackView, in contentView: UIKit.UIView, insets: UIKit.UIEdgeInsets)
+  @_Concurrency.MainActor(unsafe) public func setUpScrollableVStack(_ scrollView: UIKit.UIScrollView, vStack: UIKit.UIStackView, insets: UIKit.UIEdgeInsets = .init(top: 16, left: 0, bottom: 16, right: 0), in containerView: UIKit.UIView)
+}
+extension UIKit.UIViewController {
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func addSwiftUIView<Content>(_ swiftUIView: Content, to view: UIKit.UIView) -> SwiftUI.UIHostingController<Content> where Content : SwiftUI.View
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func addSwiftUIView<Content>(_ swiftUIView: Content) -> SwiftUI.UIHostingController<Content> where Content : SwiftUI.View
+}
+public protocol HLSPlaybackDelegate : AnyObject {
+  func hlsVideoWillBeginPlaying() -> MuuvUtilitiesRenamedForCore.HLSVideoPlayer.Configuration
+  func hlsDidBeginPlaying()
+  func hlsSubtitlesReady()
+}
+public protocol HLSVideoPlayerDelegate : AnyObject {
+  func videoPlayer(_ videoPlayer: MuuvUtilitiesRenamedForCore.HLSVideoPlayer, readyToPlay url: Foundation.URL)
+  func videoPlayer(_ videoPlayer: MuuvUtilitiesRenamedForCore.HLSVideoPlayer, readyToShowSubtitles showSubtitles: Swift.Bool)
+  func videoPlayer(_ videoPlayer: MuuvUtilitiesRenamedForCore.HLSVideoPlayer, playerCurrentItemDidChange player: AVFoundation.AVPlayer)
+}
+public class UnifiedVideoPlayer {
+  public var subtitlesEnabled: Swift.Bool
+  public init()
+  #if compiler(>=5.3) && $Actors
+  public func playRegular(url: Foundation.URL, cache: MuuvUtilitiesRenamedForCore.CachedDownloader, container: UIKit.UIView, frame: CoreFoundation.CGRect, loop: Swift.Bool, autoplay: Swift.Bool, isMuted: Swift.Bool, playerGravity: AVFoundation.AVLayerVideoGravity = .resizeAspectFill, onSuccess: MuuvUtilitiesRenamedForCore.Action? = nil, onCancelled: MuuvUtilitiesRenamedForCore.Action? = nil, onError: MuuvUtilitiesRenamedForCore.Handler<Swift.Error>? = nil)
+  #endif
+  #if compiler(>=5.3) && $Actors
+  public func playHLS(video: MuuvUtilitiesRenamedForCore.HLSVideo, playMode: MuuvUtilitiesRenamedForCore.HLSVideoPlayer.PlayMode, downloader: MuuvUtilitiesRenamedForCore.HLSVideoPlayerDownloader, subtitleDownloader: MuuvUtilitiesRenamedForCore.SubtitleDownloader, delegate: MuuvUtilitiesRenamedForCore.HLSPlaybackDelegate, delayReadyToPlay: Swift.Double? = Double.random(in: 0.6...1))
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func hasCachedHLSVideo(_ hlsVideo: MuuvUtilitiesRenamedForCore.HLSVideo) async -> Swift.Bool
+  #endif
+  public var hasCurrentItem: Swift.Bool {
+    get
+  }
+  public func play()
+  public func pause()
+  public var isMuted: Swift.Bool {
+    get
+    set
+  }
+  public func toggleSubtitles()
+  public func clean()
+  @objc deinit
+}
+extension MuuvUtilitiesRenamedForCore.UnifiedVideoPlayer : MuuvUtilitiesRenamedForCore.HLSVideoPlayerDelegate {
+  public func videoPlayer(_ videoPlayer: MuuvUtilitiesRenamedForCore.HLSVideoPlayer, readyToPlay url: Foundation.URL)
+  public func videoPlayer(_: MuuvUtilitiesRenamedForCore.HLSVideoPlayer, playerCurrentItemDidChange _: AVFoundation.AVPlayer)
+  public func videoPlayer(_ videoPlayer: MuuvUtilitiesRenamedForCore.HLSVideoPlayer, readyToShowSubtitles _: Swift.Bool)
+}
+public protocol DefaultsStoring : AnyObject {
+  subscript(_: MuuvUtilitiesRenamedForCore.DefaultsKey) -> Any? { get set }
+  subscript(bool _: MuuvUtilitiesRenamedForCore.DefaultsKey) -> Swift.Bool { get set }
+  subscript(double _: MuuvUtilitiesRenamedForCore.DefaultsKey) -> Swift.Double { get set }
+}
+public enum DefaultsKey : Swift.String, Swift.Hashable, Swift.CustomStringConvertible {
+  case isFeatureEnabledKey
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension Foundation.UserDefaults : MuuvUtilitiesRenamedForCore.DefaultsStoring {
+  public subscript(key: MuuvUtilitiesRenamedForCore.DefaultsKey) -> Any? {
+    get
+    set
+  }
+  public subscript(bool key: MuuvUtilitiesRenamedForCore.DefaultsKey) -> Swift.Bool {
+    get
+    set
+  }
+  public subscript(double key: MuuvUtilitiesRenamedForCore.DefaultsKey) -> Swift.Double {
+    get
+    set
+  }
+}
+@objc public class VideoPlayer : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $Actors
+  public init(cache: MuuvUtilitiesRenamedForCore.CachedDownloader?)
+  #endif
+  public var player: AVFoundation.AVPlayer? {
+    get
+  }
+  public func play(url: Foundation.URL, on container: UIKit.UIView, frame _: CoreFoundation.CGRect? = nil, loop: Swift.Bool = true, autoPlay: Swift.Bool = true, isMuted: Swift.Bool = true, playerGravity: AVFoundation.AVLayerVideoGravity = .resizeAspectFill, automaticallyWaitsToMinimizeStalling: Swift.Bool = true)
+  public func play()
+  public func pause()
+  public var hasCurrentItem: Swift.Bool {
+    get
+  }
+  public var isMuted: Swift.Bool {
+    get
+    set
+  }
+  public func removeFromContainer()
+  @objc deinit
+}
+public protocol XibCompatible {
+}
+extension MuuvUtilitiesRenamedForCore.XibCompatible where Self : UIKit.UIView {
+  public init(fromNibIn bundle: Foundation.Bundle)
+}
+extension UIKit.UIView : MuuvUtilitiesRenamedForCore.XibCompatible {
+}
+extension MuuvUtilitiesRenamedForCore.XibCompatible where Self : UIKit.UIViewController {
+  public init(fromNibIn bundle: Foundation.Bundle?)
+}
+extension UIKit.UIViewController : MuuvUtilitiesRenamedForCore.XibCompatible {
+}
+extension MuuvUtilitiesRenamedForCore.HLSVideoPlayer.BitRate : Swift.Equatable {}
+extension MuuvUtilitiesRenamedForCore.HLSVideoPlayer.BitRate : Swift.Hashable {}
+extension MuuvUtilitiesRenamedForCore.HLSVideoPlayer.BitRate : Swift.RawRepresentable {}
+extension MuuvUtilitiesRenamedForCore.LogLevel : Swift.Equatable {}
+extension MuuvUtilitiesRenamedForCore.LogLevel : Swift.Hashable {}
+extension MuuvUtilitiesRenamedForCore.LogLevel : Swift.RawRepresentable {}
+extension MuuvUtilitiesRenamedForCore.LogVerbosity : Swift.Equatable {}
+extension MuuvUtilitiesRenamedForCore.LogVerbosity : Swift.Hashable {}
+extension MuuvUtilitiesRenamedForCore.LogVerbosity : Swift.RawRepresentable {}
+extension MuuvUtilitiesRenamedForCore.StorageType : Swift.Equatable {}
+extension MuuvUtilitiesRenamedForCore.StorageType : Swift.Hashable {}
+extension UIKit.UIColor.ExampleDesignerColors : Swift.Equatable {}
+extension UIKit.UIColor.ExampleDesignerColors : Swift.Hashable {}
+extension UIKit.UIColor.ExampleDesignerColors : Swift.RawRepresentable {}
+extension UIKit.UIColor.ExampleDeveloperColors : Swift.Equatable {}
+extension UIKit.UIColor.ExampleDeveloperColors : Swift.Hashable {}
+extension UIKit.UIColor.ExampleDeveloperColors : Swift.RawRepresentable {}
+extension MuuvUtilitiesRenamedForCore.FontWeight : Swift.Equatable {}
+extension MuuvUtilitiesRenamedForCore.FontWeight : Swift.Hashable {}
+extension MuuvUtilitiesRenamedForCore.SingularCorner : Swift.Equatable {}
+extension MuuvUtilitiesRenamedForCore.SingularCorner : Swift.Hashable {}
+extension MuuvUtilitiesRenamedForCore.DefaultsKey : Swift.RawRepresentable {}

@@ -10,7 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "WorkoutsPlayer",
-            targets: ["WorkoutsPlayer", "WorkoutsPlayerAnytimeFitnessInternal", "WorkoutsPlayerCoreInternal", "MuuvEndpointsRenamed"]),
+            targets: ["WorkoutsPlayer", "WorkoutsPlayerAnytimeFitnessInternal", "WorkoutsPlayerCoreInternal", "MuuvEndpointsRenamedForCore", "MuuvEndpointsRenamedForAFWP", "MuuvUtilitiesRenamedForAFWP", "MuuvUtilitiesRenamedForCore"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -32,13 +32,20 @@ let package = Package(
             path: "WorkoutsPlayer/Dependencies/WorkoutsPlayerCoreInternal.xcframework"
         ),
         .binaryTarget(
-            name: "MuuvEndpointsRenamed",
-            path: "WorkoutsPlayer/Dependencies/MuuvEndpointsRenamed.xcframework"
+            name: "MuuvEndpointsRenamedForAFWP",
+            path: "WorkoutsPlayer/Dependencies/MuuvEndpointsRenamedForAFWP.xcframework"
+        ),
+        .binaryTarget(
+            name: "MuuvEndpointsRenamedForCore",
+            path: "WorkoutsPlayer/Dependencies/MuuvEndpointsRenamedForCore.xcframework"
+        ),
+        .binaryTarget(
+            name: "MuuvUtilitiesRenamedForAFWP",
+            path: "WorkoutsPlayer/Dependencies/MuuvUtilitiesRenamedForAFWP.xcframework"
+        ),
+        .binaryTarget(
+            name: "MuuvUtilitiesRenamedForCore",
+            path: "WorkoutsPlayer/Dependencies/MuuvUtilitiesRenamedForCore.xcframework"
         )
-//        ,
-//        .binaryTarget(
-//            name: "MuuvUtilities",
-//            path: "WorkoutsPlayer/Dependencies/MuuvUtilities.xcframework"
-//        )
     ]
 )

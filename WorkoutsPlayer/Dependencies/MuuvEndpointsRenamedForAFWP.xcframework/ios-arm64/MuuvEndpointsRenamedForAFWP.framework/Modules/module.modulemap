@@ -1,0 +1,11 @@
+framework module MuuvEndpointsRenamedForAFWP {
+  umbrella header "MuuvEndpointsRenamedForAFWP-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MuuvEndpointsRenamedForAFWP.Swift {
+  header "MuuvEndpointsRenamedForAFWP-Swift.h"
+  requires objc
+}

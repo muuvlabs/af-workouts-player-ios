@@ -1,0 +1,377 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MuuvEndpointsRenamedForCore
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Combine
+import Foundation
+@_exported import MuuvEndpointsRenamedForCore
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+public struct Backend {
+  public var environment: MuuvEndpointsRenamedForCore.Backend.Environment
+  public init(environment: MuuvEndpointsRenamedForCore.Backend.Environment)
+  public var baseUrl: Foundation.URL {
+    get
+  }
+}
+extension MuuvEndpointsRenamedForCore.Backend {
+  public enum Environment {
+    case production(Foundation.URL)
+    case staging(Foundation.URL)
+    case development(Foundation.URL)
+  }
+}
+extension MuuvEndpointsRenamedForCore.Backend {
+  public func url<T>(endpointType _: T.Type, id: Swift.String) -> Foundation.URL where T : MuuvEndpointsRenamedForCore.EndpointModifiable, T : Swift.Decodable, T : Swift.Encodable
+  public func url<T>(endpointType _: T.Type) -> Foundation.URL where T : MuuvEndpointsRenamedForCore.EndpointAccessible, T : Swift.Decodable, T : Swift.Encodable
+  public func url<T>(endpointType _: T.Type, id: Swift.String) -> Foundation.URL where T : MuuvEndpointsRenamedForCore.EndpointAccessible, T : Swift.Decodable, T : Swift.Encodable
+  public func url<T>(endpointType _: T.Type, parameters: [Swift.String : Any]) -> Foundation.URL where T : MuuvEndpointsRenamedForCore.EndpointAccessible, T : Swift.Decodable, T : Swift.Encodable
+}
+extension MuuvEndpointsRenamedForCore.EndpointAccessible where Self : Swift.Decodable, Self : Swift.Encodable {
+  public static func url(id: Swift.String?, backend: MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL
+  public static func url(backend: MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL
+}
+extension MuuvEndpointsRenamedForCore.EndpointModifiable where Self : Swift.Decodable, Self : Swift.Encodable {
+  public static func url(id: Swift.String, backend: MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL
+}
+extension Swift.Decodable {
+  public static var stubJsonFilename: Swift.String {
+    get
+  }
+  public static func fromStubJson(fileName: Swift.String? = nil, bundle: Foundation.Bundle, verbose: Swift.Bool) throws -> Self
+}
+public enum HTTPMethod : Swift.String {
+  case get
+  case post
+  case put
+  case patch
+  case delete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum EndpointConstants {
+  public static var timeoutInterval: Swift.Double
+}
+public struct Endpoint<Value> {
+  public var request: Foundation.URLRequest
+  public var parse: (Foundation.Data?, Foundation.URLResponse?) -> Swift.Result<Value, Swift.Error> {
+    get
+  }
+  public var expectedStatusCode: (Swift.Int) -> Swift.Bool
+  public init(method: MuuvEndpointsRenamedForCore.HTTPMethod, url: Foundation.URL, accept: MuuvEndpointsRenamedForCore.ContentType? = nil, contentType: MuuvEndpointsRenamedForCore.ContentType? = nil, body: Foundation.Data? = nil, headers: [Swift.String : Swift.String] = [:], expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, cachePolicy: Foundation.URLRequest.CachePolicy = .useProtocolCachePolicy, timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, query: [Swift.String : Swift.String] = [:], parse: @escaping (Foundation.Data?, Foundation.URLResponse?) -> Swift.Result<Value, Swift.Error>)
+  public init(request: Foundation.URLRequest, expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, parse: @escaping (Foundation.Data?, Foundation.URLResponse?) -> Swift.Result<Value, Swift.Error>)
+}
+extension MuuvEndpointsRenamedForCore.Endpoint where Value == () {
+  public init(method: MuuvEndpointsRenamedForCore.HTTPMethod, url: Foundation.URL, accept: MuuvEndpointsRenamedForCore.ContentType? = nil, contentType: MuuvEndpointsRenamedForCore.ContentType? = nil, body: Foundation.Data? = nil, headers: [Swift.String : Swift.String] = [:], expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, cachePolicy: Foundation.URLRequest.CachePolicy = .useProtocolCachePolicy, timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, query: [Swift.String : Swift.String] = [:])
+  public init<B>(method: MuuvEndpointsRenamedForCore.HTTPMethod, url: Foundation.URL, accept: MuuvEndpointsRenamedForCore.ContentType? = .json, body: B, headers: [Swift.String : Swift.String] = [:], expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, cachePolicy: Foundation.URLRequest.CachePolicy = .useProtocolCachePolicy, timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, query: [Swift.String : Swift.String] = [:], encoder: Foundation.JSONEncoder = JSONEncoder()) where B : Swift.Encodable
+}
+extension MuuvEndpointsRenamedForCore.Endpoint where Value : Swift.Decodable {
+  public init(method: MuuvEndpointsRenamedForCore.HTTPMethod, url: Foundation.URL, accept: MuuvEndpointsRenamedForCore.ContentType = .json, headers: [Swift.String : Swift.String] = [:], expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, cachePolicy: Foundation.URLRequest.CachePolicy = .useProtocolCachePolicy, timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, query: [Swift.String : Swift.String] = [:], decoder: Foundation.JSONDecoder = JSONDecoder())
+  public init<B>(method: MuuvEndpointsRenamedForCore.HTTPMethod, url: Foundation.URL, accept: MuuvEndpointsRenamedForCore.ContentType = .json, body: B? = nil, headers: [Swift.String : Swift.String] = [:], expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, cachePolicy: Foundation.URLRequest.CachePolicy = .useProtocolCachePolicy, timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, query: [Swift.String : Swift.String] = [:], decoder: Foundation.JSONDecoder = JSONDecoder(), encoder: Foundation.JSONEncoder = JSONEncoder()) where B : Swift.Encodable
+  public init(method: MuuvEndpointsRenamedForCore.HTTPMethod, urlComponents: Foundation.URLComponents, accept: MuuvEndpointsRenamedForCore.ContentType? = nil, body: Foundation.Data? = nil, headers: [Swift.String : Swift.String] = [:], expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, cachePolicy: Foundation.URLRequest.CachePolicy = .useProtocolCachePolicy, timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, decoder: Foundation.JSONDecoder = JSONDecoder(), encoder _: Foundation.JSONEncoder = JSONEncoder())
+  public init(json method: MuuvEndpointsRenamedForCore.HTTPMethod, url: Foundation.URL, accept: MuuvEndpointsRenamedForCore.ContentType = .json, body: [Swift.String : Any], headers: [Swift.String : Swift.String] = [:], expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, cachePolicy: Foundation.URLRequest.CachePolicy = .useProtocolCachePolicy, timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, query: [Swift.String : Swift.String] = [:], decoder: Foundation.JSONDecoder = JSONDecoder(), encoder _: Foundation.JSONEncoder = JSONEncoder())
+}
+extension MuuvEndpointsRenamedForCore.Endpoint {
+  public func map<B>(_ f: @escaping (Value) -> B) -> MuuvEndpointsRenamedForCore.Endpoint<B>
+  public func compactMap<B>(_ transform: @escaping (Value) -> Swift.Result<B, Swift.Error>) -> MuuvEndpointsRenamedForCore.Endpoint<B>
+}
+public enum ContentType : Swift.String {
+  case json
+  case xml
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public func expected200to300(_ code: Swift.Int) -> Swift.Bool
+extension MuuvEndpointsRenamedForCore.Endpoint where Value : Swift.Decodable {
+  @discardableResult
+  public func call(stubbing: MuuvEndpointsRenamedForCore.StubbingBehavior<Value> = .never, session: Foundation.URLSession = .shared, responseProcessor: MuuvEndpointsRenamedForCore.ResponseProcessor? = nil, dispatchQueue: Dispatch.DispatchQueue = .main, dataWrapper: MuuvEndpointsRenamedForCore.Handler<Foundation.Data?>? = nil, onComplete: @escaping (Swift.Result<Value, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask?
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 15, macOS 13, *)
+  public func call(stubbing: MuuvEndpointsRenamedForCore.StubbingBehavior<Value> = .never, urlSession: Foundation.URLSession = .shared, responseProcessor: MuuvEndpointsRenamedForCore.ResponseProcessor? = nil, dataWrapper: MuuvEndpointsRenamedForCore.Handler<Foundation.Data?>? = nil, requestProgress: MuuvEndpointsRenamedForCore.RequestProgress? = nil) async throws -> Value
+  #endif
+}
+extension MuuvEndpointsRenamedForCore.Endpoint where Value == () {
+  @discardableResult
+  public func call(session: Foundation.URLSession = .shared, responseProcessor: MuuvEndpointsRenamedForCore.ResponseProcessor? = nil, dispatchQueue: Dispatch.DispatchQueue = .main, onComplete: @escaping (Swift.Result<Value, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask?
+}
+extension Combine.Future where Failure == Swift.Error {
+  #if compiler(>=5.3) && $AsyncAwait
+  convenience public init(operation: @escaping () async throws -> Output)
+  #endif
+}
+extension MuuvEndpointsRenamedForCore.Endpoint where Value : Swift.Decodable, Value : Swift.Encodable {
+  @available(iOS 15, macOS 13, *)
+  public func future(stubbing: MuuvEndpointsRenamedForCore.StubbingBehavior<Value> = .never, urlSession: Foundation.URLSession = .shared, responseProcessor: MuuvEndpointsRenamedForCore.ResponseProcessor? = nil, dataWrapper: MuuvEndpointsRenamedForCore.Handler<Foundation.Data?>? = nil) -> Combine.Future<Value, Swift.Error>
+}
+extension Foundation.URLSession {
+  @available(iOS 15, macOS 13, *)
+  public func call<Value>(_ endpoint: MuuvEndpointsRenamedForCore.Endpoint<Value>, responseProcessor: MuuvEndpointsRenamedForCore.ResponseProcessor? = nil, dataWrapper: MuuvEndpointsRenamedForCore.Handler<Foundation.Data?>? = nil) -> Combine.Future<Value, Swift.Error>
+}
+extension MuuvEndpointsRenamedForCore.Endpoint : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public enum EndpointError : Swift.Error {
+  case noData
+  case unknown
+  case wrongStatusCode(MuuvEndpointsRenamedForCore.EndpointError.WrongStatusCode)
+  case cannotConstructURL
+  public struct WrongStatusCode : Swift.Error {
+    public let statusCode: Swift.Int
+    public let response: Foundation.HTTPURLResponse?
+    public let responseBody: Foundation.Data?
+    public init(statusCode: Swift.Int, response: Foundation.HTTPURLResponse?, responseBody: Foundation.Data?)
+  }
+}
+extension MuuvEndpointsRenamedForCore.Endpoint where Value == UIKit.UIImage {
+  public init(imageURL: Foundation.URL)
+  @discardableResult
+  public func call(session: Foundation.URLSession = .shared, dispatchQueue: Dispatch.DispatchQueue = .main, onComplete: @escaping (Swift.Result<Value, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask?
+}
+public protocol EndpointAccessible {
+  associatedtype Element : Swift.Decodable, Swift.Encodable
+  static var path: Swift.String { get }
+  static var decodingStrategy: Foundation.JSONDecoder.KeyDecodingStrategy { get }
+}
+extension MuuvEndpointsRenamedForCore.EndpointAccessible {
+  public static var decodingStrategy: Foundation.JSONDecoder.KeyDecodingStrategy {
+    get
+  }
+}
+extension Swift.Array : MuuvEndpointsRenamedForCore.EndpointAccessible where Element : MuuvEndpointsRenamedForCore.EndpointAccessible, Element : Swift.Decodable, Element : Swift.Encodable {
+  public static var path: Swift.String {
+    get
+  }
+}
+public typealias URLBuilder = (MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL
+extension MuuvEndpointsRenamedForCore.Endpoint where Value : MuuvEndpointsRenamedForCore.EndpointAccessible, Value : Swift.Decodable, Value : Swift.Encodable {
+  public static func getAll(backend: MuuvEndpointsRenamedForCore.Backend, query: [Swift.String : Swift.String] = [:], timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, urlBuilder: (MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL = Value.url(backend:)) -> MuuvEndpointsRenamedForCore.Endpoint<[Value]>
+  public static func getPaged(backend: MuuvEndpointsRenamedForCore.Backend, urlBuilder: (MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL = Value.url(backend:), page: Swift.Int, perPage: Swift.Int, cachePolicy: Foundation.URLRequest.CachePolicy = .useProtocolCachePolicy, timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, query: [Swift.String : Swift.String] = [:], decoder: Foundation.JSONDecoder = .with(strategy: Value.decodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<MuuvEndpointsRenamedForCore.PagedResult<Value>>
+  public static func get(backend: MuuvEndpointsRenamedForCore.Backend, url: (MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL = Value.url(backend:), accept: MuuvEndpointsRenamedForCore.ContentType = .json, headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String] = { _ in [:] }, expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, cachePolicy: Foundation.URLRequest.CachePolicy = .useProtocolCachePolicy, timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, query: [Swift.String : Swift.String] = [:], decoder: Foundation.JSONDecoder = .with(strategy: Value.decodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<Value>
+  public static func get(backend: MuuvEndpointsRenamedForCore.Backend, url: (MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL = Value.url(backend:), accept: MuuvEndpointsRenamedForCore.ContentType = .json, headers: [Swift.String : Swift.String] = [:], expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, cachePolicy: Foundation.URLRequest.CachePolicy = .useProtocolCachePolicy, timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, query: [Swift.String : Swift.String] = [:], decoder: Foundation.JSONDecoder = .with(strategy: Value.decodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<Value>
+}
+extension MuuvEndpointsRenamedForCore.Endpoint where Value : Swift.Decodable {
+  public static func get(backend: MuuvEndpointsRenamedForCore.Backend, url: (MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL, accept: MuuvEndpointsRenamedForCore.ContentType = .json, headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String] = { _ in [:] }, expectedStatusCode: @escaping (Swift.Int) -> Swift.Bool = expected200to300, cachePolicy: Foundation.URLRequest.CachePolicy = .useProtocolCachePolicy, timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, query: [Swift.String : Swift.String] = [:], decoder: Foundation.JSONDecoder) -> MuuvEndpointsRenamedForCore.Endpoint<Value>
+}
+public protocol EndpointModifiable : MuuvEndpointsRenamedForCore.EndpointAccessible {
+  associatedtype Body : Swift.Encodable
+  static var encodingStrategy: Foundation.JSONEncoder.KeyEncodingStrategy { get }
+}
+extension MuuvEndpointsRenamedForCore.EndpointModifiable {
+  public static var encodingStrategy: Foundation.JSONEncoder.KeyEncodingStrategy {
+    get
+  }
+}
+extension MuuvEndpointsRenamedForCore.Endpoint where Value : MuuvEndpointsRenamedForCore.EndpointModifiable, Value : Swift.Decodable {
+  public init(backend: MuuvEndpointsRenamedForCore.Backend, method: MuuvEndpointsRenamedForCore.HTTPMethod, body: Value.Body, headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String], decoder: Foundation.JSONDecoder = .with(strategy: Value.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Value.encodingStrategy))
+  public init<B>(backend: MuuvEndpointsRenamedForCore.Backend, method: MuuvEndpointsRenamedForCore.HTTPMethod, body: B, headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String], decoder: Foundation.JSONDecoder = .with(strategy: Value.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Value.encodingStrategy)) where B : Swift.Decodable, B : Swift.Encodable
+}
+extension MuuvEndpointsRenamedForCore.Endpoint where Value : MuuvEndpointsRenamedForCore.EndpointModifiable, Value : Swift.Decodable, Value : Swift.Encodable {
+  public static func delete(backend: MuuvEndpointsRenamedForCore.Backend, id: Swift.String, url: (Swift.String, MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL = Value.url(id:backend:), timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, query: [Swift.String : Swift.String] = [:], headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String] = { _ in [:] }, decoder: Foundation.JSONDecoder = .with(strategy: Value.decodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<Value>
+  public static func delete(backend: MuuvEndpointsRenamedForCore.Backend, id: Swift.String, url: (Swift.String, MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL = Value.url(id:backend:), query: [Swift.String : Swift.String] = [:], headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String]) -> MuuvEndpointsRenamedForCore.Endpoint<Swift.Void>
+}
+extension MuuvEndpointsRenamedForCore.EndpointModifiable where Self : Swift.Decodable, Self : Swift.Encodable {
+  public static func post(backend: MuuvEndpointsRenamedForCore.Backend, body: Self.Body, timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, query: [Swift.String : Swift.String] = [:], headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String] = { _ in [:] }, decoder: Foundation.JSONDecoder = .with(strategy: Self.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Self.encodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<Self.Element>
+}
+extension MuuvEndpointsRenamedForCore.Endpoint where Value : MuuvEndpointsRenamedForCore.EndpointModifiable, Value : Swift.Decodable, Value : Swift.Encodable {
+  public static func post(backend: MuuvEndpointsRenamedForCore.Backend, url: (Swift.String, MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL = Value.url(id:backend:), id: Swift.String, body: Value.Body, timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, query: [Swift.String : Swift.String] = [:], headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String] = { _ in [:] }, decoder: Foundation.JSONDecoder = .with(strategy: Value.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Value.encodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<Value>
+  public static func post(backend: MuuvEndpointsRenamedForCore.Backend, url: (MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL = Value.url(backend:), body: Value.Body, timeOutInterval: Foundation.TimeInterval = EndpointConstants.timeoutInterval, query: [Swift.String : Swift.String] = [:], headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String] = { _ in [:] }, cachePolicy: Foundation.URLRequest.CachePolicy = .useProtocolCachePolicy, decoder: Foundation.JSONDecoder = .with(strategy: Value.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Value.encodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<Value>
+}
+extension MuuvEndpointsRenamedForCore.EndpointModifiable where Self : Swift.Decodable, Self : Swift.Encodable {
+  public static func put(backend: MuuvEndpointsRenamedForCore.Backend, body: Self.Body, query: [Swift.String : Swift.String] = [:], headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String], decoder: Foundation.JSONDecoder = .with(strategy: Self.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Self.encodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<Self.Element>
+  public static func put(backend: MuuvEndpointsRenamedForCore.Backend, url _: (MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL, body: Self.Body, query: [Swift.String : Swift.String] = [:], headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String], decoder: Foundation.JSONDecoder = .with(strategy: Self.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Self.encodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<Self.Element>
+  public static func put(backend: MuuvEndpointsRenamedForCore.Backend, url: Foundation.URL, body: Self.Body, query: [Swift.String : Swift.String] = [:], headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String], decoder: Foundation.JSONDecoder = .with(strategy: Self.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Self.encodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<Self.Element>
+}
+extension MuuvEndpointsRenamedForCore.Endpoint where Value : MuuvEndpointsRenamedForCore.EndpointModifiable, Value : Swift.Decodable, Value : Swift.Encodable {
+  public static func put(backend: MuuvEndpointsRenamedForCore.Backend, url: (Swift.String, MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL = Value.url(id:backend:), body: Value.Body, query _: [Swift.String : Swift.String] = [:], id: Swift.String, decoder: Foundation.JSONDecoder = .with(strategy: Value.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Value.encodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<Value>
+  public static func put<E>(backend: MuuvEndpointsRenamedForCore.Backend, url: (Swift.String, MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL = Value.url(id:backend:), body: E, query: [Swift.String : Swift.String] = [:], id: Swift.String, headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String] = { _ in [:] }, decoder: Foundation.JSONDecoder = .with(strategy: Value.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Value.encodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<Value> where E : Swift.Encodable
+  public static func put<E>(backend: MuuvEndpointsRenamedForCore.Backend, url: Foundation.URL, body: E, query: [Swift.String : Swift.String] = [:], headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String], decoder: Foundation.JSONDecoder = .with(strategy: Value.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Value.encodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<Value> where E : Swift.Encodable
+  public static func put<E>(backend: MuuvEndpointsRenamedForCore.Backend, url: (MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL, body: E, query: [Swift.String : Swift.String] = [:], headers: (MuuvEndpointsRenamedForCore.Backend) -> [Swift.String : Swift.String], decoder: Foundation.JSONDecoder = .with(strategy: Value.decodingStrategy), encoder: Foundation.JSONEncoder = .with(strategy: Value.encodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<Value> where E : Swift.Encodable
+  public static func put(backend: MuuvEndpointsRenamedForCore.Backend, url: (Swift.String, MuuvEndpointsRenamedForCore.Backend) -> Foundation.URL = Value.url(id:backend:), body: [Swift.String : Any], query: [Swift.String : Swift.String] = [:], id: Swift.String, decoder: Foundation.JSONDecoder = .with(strategy: Value.decodingStrategy)) -> MuuvEndpointsRenamedForCore.Endpoint<Value>
+}
+@objc public class BackendObjc : ObjectiveC.NSObject {
+  @objc public var developmentBaseUrl: Swift.String
+  @objc public var productionBaseUrl: Swift.String
+  @objc public var stagingBaseUrl: Swift.String
+  @objc public var environment: MuuvEndpointsRenamedForCore.BackendObjc.EnvironmentObjc
+  @objc public var headers: [Swift.String : Swift.String]
+  @objc public enum Environment : Swift.Int {
+    case development
+    case production
+    case staging
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public init(developmentBaseUrl: Swift.String, productionBaseUrl: Swift.String, stagingBaseUrl: Swift.String, environment: MuuvEndpointsRenamedForCore.BackendObjc.EnvironmentObjc, headers: [Swift.String : Swift.String])
+  @objc public var baseURL: Foundation.URL {
+    @objc get
+  }
+  public func url<T>(endpointType _: T.Type, id: Swift.String) -> Foundation.URL where T : MuuvEndpointsRenamedForCore.EndpointModifiable, T : Swift.Decodable, T : Swift.Encodable
+  public func url<T>(endpointType _: T.Type) -> Foundation.URL where T : MuuvEndpointsRenamedForCore.EndpointAccessible, T : Swift.Decodable, T : Swift.Encodable
+  @objc public enum EnvironmentObjc : Swift.Int {
+    case development
+    case production
+    case staging
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc deinit
+}
+extension Foundation.JSONEncoder {
+  public static func with(strategy: Foundation.JSONEncoder.KeyEncodingStrategy = .useDefaultKeys) -> Foundation.JSONEncoder
+}
+extension Foundation.JSONDecoder {
+  public static func with(strategy: Foundation.JSONDecoder.KeyDecodingStrategy = .useDefaultKeys) -> Foundation.JSONDecoder
+}
+public struct PagedResult<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
+  public let page: Swift.UInt
+  public let perPage: Swift.UInt
+  public let total: Swift.UInt
+  public let totalPages: Swift.UInt
+  public let results: [T]
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case page
+    case total
+    case results
+    case perPage
+    case totalPages
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(page: Swift.UInt, perPage: Swift.UInt, total: Swift.UInt, totalPages: Swift.UInt, results: [T])
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension MuuvEndpointsRenamedForCore.PagedResult : Swift.Equatable where T : Swift.Equatable {
+  public static func == (lhs: MuuvEndpointsRenamedForCore.PagedResult<T>, rhs: MuuvEndpointsRenamedForCore.PagedResult<T>) -> Swift.Bool
+}
+public typealias ViewController = UIKit.UIViewController
+public typealias StoryboardType = UIKit.UIStoryboard
+public typealias ImageView = UIKit.UIImageView
+public typealias Image = UIKit.UIImage
+@objc public class RequestProgress : ObjectiveC.NSObject {
+  public init(updateProgress: @escaping (Swift.Int) -> Swift.Void)
+  @objc deinit
+}
+extension MuuvEndpointsRenamedForCore.RequestProgress : Foundation.URLSessionTaskDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
+}
+public typealias ResponseProcessFunction = (Foundation.URLRequest?, Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void
+public protocol ResponseProcessor {
+  var process: MuuvEndpointsRenamedForCore.ResponseProcessFunction { get }
+}
+public enum ResponseLogger {
+  public static var verbose: MuuvEndpointsRenamedForCore.ResponseProcessor {
+    get
+  }
+  public static var error: MuuvEndpointsRenamedForCore.ResponseProcessor {
+    get
+  }
+  public static var onlyRequest: MuuvEndpointsRenamedForCore.ResponseProcessor {
+    get
+  }
+  public struct Error : MuuvEndpointsRenamedForCore.ResponseProcessor {
+    public init()
+    public let process: (_ request: Foundation.URLRequest?, Foundation.Data?, _ response: Foundation.URLResponse?, _ error: Swift.Error?) -> Swift.Void
+  }
+  public struct OnlyRequest : MuuvEndpointsRenamedForCore.ResponseProcessor {
+    public init()
+    public let process: (_ request: Foundation.URLRequest?, _ data: Foundation.Data?, _ response: Foundation.URLResponse?, _ error: Swift.Error?) -> Swift.Void
+  }
+  public struct Verbose : MuuvEndpointsRenamedForCore.ResponseProcessor {
+    public init()
+    public let process: (_ request: Foundation.URLRequest?, _ data: Foundation.Data?, _ response: Foundation.URLResponse?, _ error: Swift.Error?) -> Swift.Void
+  }
+}
+public struct CompositeResponseProcessor : MuuvEndpointsRenamedForCore.ResponseProcessor {
+  public var process: MuuvEndpointsRenamedForCore.ResponseProcessFunction
+  public let wrapped: MuuvEndpointsRenamedForCore.ResponseProcessor?
+  public let processor: MuuvEndpointsRenamedForCore.ResponseProcessFunction
+  public init(wrapped: MuuvEndpointsRenamedForCore.ResponseProcessor?, processor: @escaping MuuvEndpointsRenamedForCore.ResponseProcessFunction)
+}
+public enum StubbingBehavior<Element> where Element : Swift.Decodable {
+  case never
+  case now(bundle: Foundation.Bundle, customStub: (Foundation.Bundle, Swift.Bool) throws -> Element = { bundle, verbose in
+            try Element.fromStubJson(fileName: nil, bundle: bundle, verbose: verbose)
+        })
+  case after(time: Dispatch.DispatchTimeInterval, bundle: Foundation.Bundle, customStub: (Foundation.Bundle, Swift.Bool) throws -> Element = { bundle, verbose in
+            try Element.fromStubJson(fileName: nil, bundle: bundle, verbose: verbose)
+        })
+  case nowWithValue(value: Element)
+  case afterWithValue(time: Dispatch.DispatchTimeInterval, value: Element)
+  case error(Swift.Error)
+}
+extension MuuvEndpointsRenamedForCore.StubbingBehavior {
+  @discardableResult
+  public func call(endpoint: MuuvEndpointsRenamedForCore.Endpoint<Element>, responseProcessor: MuuvEndpointsRenamedForCore.ResponseProcessor? = nil, dispatchQueue: Dispatch.DispatchQueue = .main, urlSession: Foundation.URLSession = .shared, dataWrapper: MuuvEndpointsRenamedForCore.Handler<Foundation.Data?>? = nil, onComplete: @escaping (Swift.Result<Element, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask?
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 15, macOS 13, *)
+  public func call(endpoint: MuuvEndpointsRenamedForCore.Endpoint<Element>, urlSession: Foundation.URLSession = .shared, responseProcessor: MuuvEndpointsRenamedForCore.ResponseProcessor? = nil, dataWrapper: MuuvEndpointsRenamedForCore.Handler<Foundation.Data?>? = nil, requestProgress: MuuvEndpointsRenamedForCore.RequestProgress? = nil) async throws -> Element
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 15, macOS 13, *)
+  public func stubElement(verbose: Swift.Bool) async throws -> Element
+  #endif
+}
+@available(iOS 15, macOS 13, *)
+extension _Concurrency.Task where Success == Swift.Never, Failure == Swift.Never {
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func sleep(timeInterval: Foundation.TimeInterval) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func sleep(dispatchTime: Dispatch.DispatchTimeInterval) async throws
+  #endif
+}
+public typealias Action = () -> Swift.Void
+public typealias ErrorHandler = MuuvEndpointsRenamedForCore.Handler<Swift.Error>
+public typealias Generator<T> = () -> T
+public typealias Handler<T> = (T) -> Swift.Void
+extension Foundation.URLSession {
+  @discardableResult
+  public func createAndResumeTask<Value>(_ endpoint: MuuvEndpointsRenamedForCore.Endpoint<Value>, responseProcessor: MuuvEndpointsRenamedForCore.ResponseProcessor? = nil, dispatchQueue: Dispatch.DispatchQueue = .main, dataWrapper: MuuvEndpointsRenamedForCore.Handler<Foundation.Data?>? = nil, onComplete: @escaping (Swift.Result<Value, Swift.Error>) -> Swift.Void) -> Foundation.URLSessionDataTask
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 15, macOS 13, *)
+  public func call<Value>(_ endpoint: MuuvEndpointsRenamedForCore.Endpoint<Value>, responseProcessor: MuuvEndpointsRenamedForCore.ResponseProcessor? = nil, dataWrapper: MuuvEndpointsRenamedForCore.Handler<Foundation.Data?>? = nil, requestProgress: MuuvEndpointsRenamedForCore.RequestProgress? = nil) async throws -> Value
+  #endif
+}
+extension MuuvEndpointsRenamedForCore.HTTPMethod : Swift.Equatable {}
+extension MuuvEndpointsRenamedForCore.HTTPMethod : Swift.Hashable {}
+extension MuuvEndpointsRenamedForCore.HTTPMethod : Swift.RawRepresentable {}
+extension MuuvEndpointsRenamedForCore.ContentType : Swift.Equatable {}
+extension MuuvEndpointsRenamedForCore.ContentType : Swift.Hashable {}
+extension MuuvEndpointsRenamedForCore.ContentType : Swift.RawRepresentable {}
+extension MuuvEndpointsRenamedForCore.BackendObjc.Environment : Swift.Equatable {}
+extension MuuvEndpointsRenamedForCore.BackendObjc.Environment : Swift.Hashable {}
+extension MuuvEndpointsRenamedForCore.BackendObjc.Environment : Swift.RawRepresentable {}
+extension MuuvEndpointsRenamedForCore.BackendObjc.EnvironmentObjc : Swift.Equatable {}
+extension MuuvEndpointsRenamedForCore.BackendObjc.EnvironmentObjc : Swift.Hashable {}
+extension MuuvEndpointsRenamedForCore.BackendObjc.EnvironmentObjc : Swift.RawRepresentable {}
+extension MuuvEndpointsRenamedForCore.PagedResult.CodingKeys : Swift.Equatable {}
+extension MuuvEndpointsRenamedForCore.PagedResult.CodingKeys : Swift.Hashable {}
+extension MuuvEndpointsRenamedForCore.PagedResult.CodingKeys : Swift.RawRepresentable {}

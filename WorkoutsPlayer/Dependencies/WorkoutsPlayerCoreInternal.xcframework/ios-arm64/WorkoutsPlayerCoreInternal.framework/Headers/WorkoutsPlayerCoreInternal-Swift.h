@@ -905,7 +905,6 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12StubBehavior")
 
 
 
-
 typedef SWIFT_ENUM(NSInteger, UpdateWorkoutActionKind, open) {
   UpdateWorkoutActionKindMetrics = 0,
   UpdateWorkoutActionKindFinishWorkout = 1,

@@ -2,6 +2,8 @@
 // swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name WorkoutsPlayerAnytimeFitnessInternal
 // swift-module-flags-ignorable: -enable-bare-slash-regex
+import MuuvEndpointsRenamedForAFWP
+import MuuvUtilitiesRenamedForAFWP
 import Swift
 import SwiftUI
 import UIKit
@@ -15,4 +17,11 @@ public struct WorkoutsPlayerView : SwiftUI.View {
     get
   }
   public typealias Body = @_opaqueReturnTypeOf("$s36WorkoutsPlayerAnytimeFitnessInternal0aB4ViewV4bodyQrvp", 0) __
+}
+public struct WorkoutsAFWPView : SwiftUI.View {
+  public init()
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s36WorkoutsPlayerAnytimeFitnessInternal0A8AFWPViewV4bodyQrvp", 0) __
 }
