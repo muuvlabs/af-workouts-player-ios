@@ -28924,1183 +28924,1183 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/Asset.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/Asset.swift",
       "kind": "StringLiteral",
       "offset": 2114,
       "length": 14,
       "value": "\"AssetNameKey\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/Asset.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/Asset.swift",
       "kind": "StringLiteral",
       "offset": 2309,
       "length": 27,
       "value": "\"AssetPercentDownloadedKey\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/Asset.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/Asset.swift",
       "kind": "StringLiteral",
       "offset": 2512,
       "length": 23,
       "value": "\"AssetDownloadStateKey\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/Asset.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/Asset.swift",
       "kind": "StringLiteral",
       "offset": 2750,
       "length": 38,
       "value": "\"AssetDownloadSelectionDisplayNameKey\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIBundle\/Bundle+module.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIBundle\/Bundle+module.swift",
       "kind": "StringLiteral",
       "offset": 468,
       "length": 14,
       "value": "\"CommunitySDK\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIBundle\/Bundle+module.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIBundle\/Bundle+module.swift",
       "kind": "StringLiteral",
       "offset": 1074,
       "length": 9,
       "value": "\".bundle\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIBundle\/Bundle+module.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIBundle\/Bundle+module.swift",
       "kind": "StringLiteral",
       "offset": 1207,
       "length": 18,
       "value": "\"do_not_delete_me\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Cache.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Cache.swift",
       "kind": "IntegerLiteral",
       "offset": 1590,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Cache.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Cache.swift",
       "kind": "IntegerLiteral",
       "offset": 1595,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Cache.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Cache.swift",
       "kind": "IntegerLiteral",
       "offset": 1600,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Cache.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Cache.swift",
       "kind": "IntegerLiteral",
       "offset": 1637,
       "length": 2,
       "value": "50"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Cache.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Cache.swift",
       "kind": "StringLiteral",
       "offset": 3464,
       "length": 10,
       "value": "\"MuuvUtilitiesRenamedForAFWP.WrappedKey\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/CachedDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/CachedDownloader.swift",
       "kind": "Array",
       "offset": 413,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/CachedDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/CachedDownloader.swift",
       "kind": "Dictionary",
       "offset": 849,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/CachedDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/CachedDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 1355,
       "length": 2,
       "value": "50"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Configuration\/ConfigurationFeatureFlag.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Configuration\/ConfigurationFeatureFlag.swift",
       "kind": "BooleanLiteral",
       "offset": 376,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Configuration\/ConfigurationFeatureFlag.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Configuration\/ConfigurationFeatureFlag.swift",
       "kind": "StringLiteral",
       "offset": 809,
       "length": 25,
       "value": "\"is_log_activity_enabled\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/ConfigurationManager.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/ConfigurationManager.swift",
       "kind": "BooleanLiteral",
       "offset": 1059,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/ConfigurationManager.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/ConfigurationManager.swift",
       "kind": "BooleanLiteral",
       "offset": 1342,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/ConfigurationManager.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/ConfigurationManager.swift",
       "kind": "BooleanLiteral",
       "offset": 3006,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Configuration\/ConfigurationString.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Configuration\/ConfigurationString.swift",
       "kind": "StringLiteral",
       "offset": 942,
       "length": 7,
       "value": "\"today\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Configuration\/ConfigurationString.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Configuration\/ConfigurationString.swift",
       "kind": "StringLiteral",
       "offset": 987,
       "length": 9,
       "value": "\"loading\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "StringLiteral",
       "offset": 783,
       "length": 21,
       "value": "\"com.muuv.downloader\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "StringLiteral",
       "offset": 854,
       "length": 8,
       "value": "\"shared\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "BooleanLiteral",
       "offset": 1416,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "BooleanLiteral",
       "offset": 1464,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "IntegerLiteral",
       "offset": 1513,
       "length": 3,
       "value": "240"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "IntegerLiteral",
       "offset": 1573,
       "length": 3,
       "value": "120"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "StringLiteral",
       "offset": 1622,
       "length": 18,
       "value": "\"backgroundShared\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "Dictionary",
       "offset": 2340,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "StringLiteral",
       "offset": 2590,
       "length": 27,
       "value": "\"Downloaders queue \""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "StringLiteral",
       "offset": 2616,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "StringLiteral",
       "offset": 3126,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "BooleanLiteral",
       "offset": 5068,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "IntegerLiteral",
       "offset": 5147,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "IntegerLiteral",
       "offset": 5199,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "StringLiteral",
       "offset": 688,
       "length": 10,
       "value": "\"MuuvUtilitiesRenamedForAFWP.Downloader\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "StringLiteral",
       "offset": 11784,
       "length": 22,
       "value": "\"com.muuv.networking.\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Presentation\/Views\/GradientView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Presentation\/Views\/GradientView.swift",
       "kind": "FloatLiteral",
       "offset": 520,
       "length": 4,
       "value": "0.05"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Presentation\/Views\/GradientView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Presentation\/Views\/GradientView.swift",
       "kind": "FloatLiteral",
       "offset": 609,
       "length": 4,
       "value": "0.95"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Presentation\/Views\/GradientView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Presentation\/Views\/GradientView.swift",
       "kind": "BooleanLiteral",
       "offset": 699,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Presentation\/Views\/GradientView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Presentation\/Views\/GradientView.swift",
       "kind": "BooleanLiteral",
       "offset": 785,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 1195,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 1889,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "StringLiteral",
       "offset": 452,
       "length": 14,
       "value": "\"MuuvUtilitiesRenamedForAFWP.HLSVideoPlayer\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16183,
       "length": 3,
       "value": "145"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16217,
       "length": 3,
       "value": "365"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16252,
       "length": 3,
       "value": "730"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16287,
       "length": 4,
       "value": "1100"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16322,
       "length": 4,
       "value": "2000"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16359,
       "length": 4,
       "value": "3000"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16396,
       "length": 4,
       "value": "4500"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16434,
       "length": 4,
       "value": "6000"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16472,
       "length": 4,
       "value": "7800"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16183,
       "length": 3,
       "value": "145"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16217,
       "length": 3,
       "value": "365"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16252,
       "length": 3,
       "value": "730"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16287,
       "length": 4,
       "value": "1100"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16322,
       "length": 4,
       "value": "2000"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16359,
       "length": 4,
       "value": "3000"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16396,
       "length": 4,
       "value": "4500"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16434,
       "length": 4,
       "value": "6000"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16472,
       "length": 4,
       "value": "7800"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16183,
       "length": 3,
       "value": "145"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16217,
       "length": 3,
       "value": "365"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16252,
       "length": 3,
       "value": "730"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16287,
       "length": 4,
       "value": "1100"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16322,
       "length": 4,
       "value": "2000"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16359,
       "length": 4,
       "value": "3000"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16396,
       "length": 4,
       "value": "4500"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16434,
       "length": 4,
       "value": "6000"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 16472,
       "length": 4,
       "value": "7800"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayerDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayerDownloader.swift",
       "kind": "StringLiteral",
       "offset": 228,
       "length": 11,
       "value": "\"hls-cache\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayerDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayerDownloader.swift",
       "kind": "Array",
       "offset": 415,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayerDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayerDownloader.swift",
       "kind": "BooleanLiteral",
       "offset": 588,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayerDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayerDownloader.swift",
       "kind": "StringLiteral",
       "offset": 1315,
       "length": 31,
       "value": "\"muuv.background.video.session\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayerDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayerDownloader.swift",
       "kind": "StringLiteral",
       "offset": 23239,
       "length": 25,
       "value": "\"didMakeDownloadProgress\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayerDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/HLSVideoPlayerDownloader.swift",
       "kind": "StringLiteral",
       "offset": 23374,
       "length": 25,
       "value": "\"didChangerDownloadState\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
       "kind": "BooleanLiteral",
       "offset": 660,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 739,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 791,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
       "kind": "StringLiteral",
       "offset": 297,
       "length": 28,
       "value": "\"MuuvUtilitiesRenamedForAFWP.InternalSingleFileDownloader\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Presentation\/Loading\/LoadingView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Presentation\/Loading\/LoadingView.swift",
       "kind": "StringLiteral",
       "offset": 251,
       "length": 13,
       "value": "\"LoadingView\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Presentation\/Loading\/LoadingView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Presentation\/Loading\/LoadingView.swift",
       "kind": "StringLiteral",
       "offset": 321,
       "length": 22,
       "value": "\"LoadingContainerView\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Presentation\/Loading\/LoadingView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Presentation\/Loading\/LoadingView.swift",
       "kind": "StringLiteral",
       "offset": 96,
       "length": 11,
       "value": "\"MuuvUtilitiesRenamedForAFWP.LoadingView\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Logger\/Logger.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Logger\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 1150,
       "length": 10,
       "value": "\"[‼️]\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Logger\/Logger.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Logger\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 1186,
       "length": 10,
       "value": "\"[⚠️]\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Logger\/Logger.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Logger\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 1224,
       "length": 10,
       "value": "\"[ℹ️]\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Logger\/Logger.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Logger\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 1150,
       "length": 10,
       "value": "\"[‼️]\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Logger\/Logger.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Logger\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 1186,
       "length": 10,
       "value": "\"[⚠️]\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Logger\/Logger.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Logger\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 1224,
       "length": 10,
       "value": "\"[ℹ️]\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Presentation\/PagedData\/PagedDataController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Presentation\/PagedData\/PagedDataController.swift",
       "kind": "BooleanLiteral",
       "offset": 989,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/PerfMeasurements.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/PerfMeasurements.swift",
       "kind": "FloatLiteral",
       "offset": 368,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/PerfMeasurements.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/PerfMeasurements.swift",
       "kind": "FloatLiteral",
       "offset": 471,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/PerfMeasurements.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/PerfMeasurements.swift",
       "kind": "FloatLiteral",
       "offset": 558,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/PerfMeasurements.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/PerfMeasurements.swift",
       "kind": "FloatLiteral",
       "offset": 675,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/PerfMeasurements.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/HLS\/Model\/PerfMeasurements.swift",
       "kind": "StringLiteral",
       "offset": 250,
       "length": 16,
       "value": "\"MuuvUtilitiesRenamedForAFWP.PerfMeasurements\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/Subtitles\/SubtitleDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/Subtitles\/SubtitleDownloader.swift",
       "kind": "StringLiteral",
       "offset": 228,
       "length": 16,
       "value": "\"subtitle-cache\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIColor\/UIColor+Hex.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIColor\/UIColor+Hex.swift",
       "kind": "BooleanLiteral",
       "offset": 2117,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIColor\/UIColor+Palette.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIColor\/UIColor+Palette.swift",
       "kind": "StringLiteral",
       "offset": 1579,
       "length": 9,
       "value": "\"#FF0000\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIColor\/UIColor+Palette.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIColor\/UIColor+Palette.swift",
       "kind": "StringLiteral",
       "offset": 1617,
       "length": 9,
       "value": "\"#00FF00\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIColor\/UIColor+Palette.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIColor\/UIColor+Palette.swift",
       "kind": "StringLiteral",
       "offset": 1579,
       "length": 9,
       "value": "\"#FF0000\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIColor\/UIColor+Palette.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIColor\/UIColor+Palette.swift",
       "kind": "StringLiteral",
       "offset": 1617,
       "length": 9,
       "value": "\"#00FF00\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIColor\/UIColor+Random.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIColor\/UIColor+Random.swift",
       "kind": "BooleanLiteral",
       "offset": 174,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIImageView\/UIImageView+LoadFromURL.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIImageView\/UIImageView+LoadFromURL.swift",
       "kind": "BooleanLiteral",
       "offset": 730,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIImageView\/UIImageView+LoadFromURL.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIImageView\/UIImageView+LoadFromURL.swift",
       "kind": "IntegerLiteral",
       "offset": 3204,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIImageView\/UIImageView+LoadFromURL.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIImageView\/UIImageView+LoadFromURL.swift",
       "kind": "IntegerLiteral",
       "offset": 3254,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UILabel\/UILabel+DynamicType.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UILabel\/UILabel+DynamicType.swift",
       "kind": "IntegerLiteral",
       "offset": 257,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UILabel\/UILabel+DynamicType.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UILabel\/UILabel+DynamicType.swift",
       "kind": "IntegerLiteral",
       "offset": 590,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UILabel\/UILabel+DynamicType.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UILabel\/UILabel+DynamicType.swift",
       "kind": "FloatLiteral",
       "offset": 1608,
       "length": 3,
       "value": "0.2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UITextView\/UITextView+Placeholder.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UITextView\/UITextView+Placeholder.swift",
       "kind": "IntegerLiteral",
       "offset": 189,
       "length": 11,
       "value": "999999999"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Pin.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Pin.swift",
       "kind": "IntegerLiteral",
       "offset": 430,
       "length": 3,
       "value": "999"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Pin.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Pin.swift",
       "kind": "IntegerLiteral",
       "offset": 551,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Pin.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Pin.swift",
       "kind": "IntegerLiteral",
       "offset": 1300,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Pin.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Pin.swift",
       "kind": "IntegerLiteral",
       "offset": 1337,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Pin.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Pin.swift",
       "kind": "BooleanLiteral",
       "offset": 1413,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+PinCenter.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+PinCenter.swift",
       "kind": "BooleanLiteral",
       "offset": 1147,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+PinEdges.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+PinEdges.swift",
       "kind": "BooleanLiteral",
       "offset": 2026,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+PinEdges.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+PinEdges.swift",
       "kind": "BooleanLiteral",
       "offset": 5119,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+PinEdges.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+PinEdges.swift",
       "kind": "BooleanLiteral",
       "offset": 7884,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "IntegerLiteral",
       "offset": 2191,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "IntegerLiteral",
       "offset": 2197,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "FloatLiteral",
       "offset": 2238,
       "length": 3,
       "value": "0.5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "IntegerLiteral",
       "offset": 2246,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "IntegerLiteral",
       "offset": 2286,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "IntegerLiteral",
       "offset": 2292,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "IntegerLiteral",
       "offset": 2334,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "FloatLiteral",
       "offset": 2340,
       "length": 3,
       "value": "0.5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "FloatLiteral",
       "offset": 2380,
       "length": 3,
       "value": "0.5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "FloatLiteral",
       "offset": 2388,
       "length": 3,
       "value": "0.5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "IntegerLiteral",
       "offset": 2433,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "FloatLiteral",
       "offset": 2439,
       "length": 3,
       "value": "0.5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "IntegerLiteral",
       "offset": 2483,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "FloatLiteral",
       "offset": 2489,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "FloatLiteral",
       "offset": 2535,
       "length": 3,
       "value": "0.5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "FloatLiteral",
       "offset": 2543,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "IntegerLiteral",
       "offset": 2588,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Round.swift",
       "kind": "IntegerLiteral",
       "offset": 2594,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
       "kind": "IntegerLiteral",
       "offset": 176,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
       "kind": "IntegerLiteral",
       "offset": 218,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
       "kind": "IntegerLiteral",
       "offset": 229,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
       "kind": "IntegerLiteral",
       "offset": 271,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
       "kind": "IntegerLiteral",
       "offset": 281,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
       "kind": "IntegerLiteral",
       "offset": 290,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
       "kind": "FloatLiteral",
       "offset": 300,
       "length": 4,
       "value": "0.15"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIView\/UIView+Shadow.swift",
       "kind": "IntegerLiteral",
       "offset": 332,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+Alerts.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+Alerts.swift",
       "kind": "StringLiteral",
       "offset": 268,
       "length": 4,
       "value": "\"ok\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
       "kind": "IntegerLiteral",
       "offset": 279,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
       "kind": "IntegerLiteral",
       "offset": 289,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
       "kind": "IntegerLiteral",
       "offset": 300,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
       "kind": "IntegerLiteral",
       "offset": 311,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
       "kind": "IntegerLiteral",
       "offset": 1618,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
       "kind": "IntegerLiteral",
       "offset": 1628,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
       "kind": "IntegerLiteral",
       "offset": 1639,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UIViewController\/UIViewController+ScrollableVStack.swift",
       "kind": "IntegerLiteral",
       "offset": 1650,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/UnifiedVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/UnifiedVideoPlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 1623,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/UnifiedVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/UnifiedVideoPlayer.swift",
       "kind": "FloatLiteral",
       "offset": 4533,
       "length": 3,
       "value": "0.6"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/UnifiedVideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/UnifiedVideoPlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 4539,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UserDefaults\/UserDefaults+Storage.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UserDefaults\/UserDefaults+Storage.swift",
       "kind": "StringLiteral",
       "offset": 961,
       "length": 22,
       "value": "\"sampleFeatureEnabled\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Extensions\/UserDefaults\/UserDefaults+Storage.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Extensions\/UserDefaults\/UserDefaults+Storage.swift",
       "kind": "StringLiteral",
       "offset": 961,
       "length": 22,
       "value": "\"sampleFeatureEnabled\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 1408,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 1452,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 1495,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 1644,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 3398,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 3443,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 3487,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 3638,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/AnytimeFitness\/ios-utilities\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesRenamedForAFWP\/Sources\/MuuvUtilities\/Tools\/Video Player\/VideoPlayer.swift",
       "kind": "StringLiteral",
       "offset": 312,
       "length": 11,
