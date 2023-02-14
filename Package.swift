@@ -10,7 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "WorkoutsPlayer",
-            targets: ["WorkoutsPlayer", "WorkoutsPlayerAnytimeFitnessInternal", "WorkoutsPlayerCoreInternal", "MuuvEndpointsRenamedForCore", "MuuvEndpointsRenamedForAFWP", "MuuvUtilitiesRenamedForAFWP", "MuuvUtilitiesRenamedForCore"]),
+            targets: ["WorkoutsPlayer", "WorkoutsPlayerAnytimeFitnessInternal", "WorkoutsPlayerCoreInternal", "MuuvEndpointsRenamedForCore", "MuuvEndpointsRenamedForAFWP", "MuuvUtilitiesRenamedForAFWP", "MuuvUtilitiesRenamedForCore", "LottieForAFWP"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -46,6 +46,10 @@ let package = Package(
         .binaryTarget(
             name: "MuuvUtilitiesRenamedForCore",
             path: "WorkoutsPlayer/Dependencies/MuuvUtilitiesRenamedForCore.xcframework"
-        )
+        ),
+        .binaryTarget(
+            name: "LottieForAFWP",
+            path: "WorkoutsPlayer/Dependencies/LottieForAFWP.xcframework"
+        ),
     ]
 )

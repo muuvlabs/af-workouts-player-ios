@@ -62,6 +62,13 @@
         "moduleName": "WorkoutsPlayerAnytimeFitnessInternal"
       },
       {
+        "kind": "Import",
+        "name": "LottieForAFWP",
+        "printedName": "LottieForAFWP",
+        "declKind": "Import",
+        "moduleName": "WorkoutsPlayerAnytimeFitnessInternal"
+      },
+      {
         "kind": "TypeDecl",
         "name": "WorkoutsPlayerView",
         "printedName": "WorkoutsPlayerView",

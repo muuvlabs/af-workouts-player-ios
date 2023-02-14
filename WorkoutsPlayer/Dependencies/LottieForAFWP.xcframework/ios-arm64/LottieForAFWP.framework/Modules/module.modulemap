@@ -1,0 +1,11 @@
+framework module LottieForAFWP {
+  umbrella header "LottieForAFWP-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module LottieForAFWP.Swift {
+  header "LottieForAFWP-Swift.h"
+  requires objc
+}
