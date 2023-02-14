@@ -1,0 +1,11 @@
+framework module MuuvEndpointsRenamedForCore {
+  umbrella header "MuuvEndpointsRenamedForCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MuuvEndpointsRenamedForCore.Swift {
+  header "MuuvEndpointsRenamedForCore-Swift.h"
+  requires objc
+}

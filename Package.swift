@@ -3,40 +3,53 @@
 
 import PackageDescription
 
-let version = "0.0.20"
-let checksum = "f7dc24f635f4862802939bbeff19342adbe3c5336c87438b5e9cd3cfbe770e6b"
-
 let package = Package(
-    name: "WorkoutsPlayerWrapper",
-    platforms: [
-        .iOS(.v15),
-        .watchOS(.v5)
-    ],
+    name: "WorkoutsPlayer",
+    defaultLocalization: "en",
     products: [
+        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "WorkoutsPlayerWrapper",
-            targets: ["WorkoutsPlayer", "MuuvUtilities"]
-        )
+            name: "WorkoutsPlayer",
+            targets: ["WorkoutsPlayer", "WorkoutsPlayerAnytimeFitnessInternal", "WorkoutsPlayerCoreInternal", "MuuvEndpointsRenamedForCore", "MuuvEndpointsRenamedForAFWP", "MuuvUtilitiesRenamedForAFWP", "MuuvUtilitiesRenamedForCore", "LottieForAFWP"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),        
+        // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
+        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
+        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "WorkoutsPlayerWrapper",
-            dependencies: ["WorkoutsPlayer", "MuuvUtilities"],
-            path: "Sources"
-        ),
-        .binaryTarget(
             name: "WorkoutsPlayer",
-            url: "https://github.com/muuvlabs/af-workouts-player-ios/releases/download/\(version)/WorkoutsPlayer_\(version).xcframework.zip",
-            checksum: checksum
+            dependencies: [],
+            path: "WorkoutsPlayer"),
+        .binaryTarget(
+            name: "WorkoutsPlayerAnytimeFitnessInternal",
+            path: "WorkoutsPlayer/Dependencies/WorkoutsPlayerAnytimeFitnessInternal.xcframework"
         ),
         .binaryTarget(
-            name: "MuuvUtilities",
-            url: "https://github.com/muuvlabs/muuv-utilities-ios/releases/download/0.0.4/MuuvUtilities_0.0.4.xcframework.zip",
-            checksum: "e398f97d460cf9a6e120833028f6d7c3e0ad3d597c408ef7c0f0239fc25acbd0"
-        )
+            name: "WorkoutsPlayerCoreInternal",
+            path: "WorkoutsPlayer/Dependencies/WorkoutsPlayerCoreInternal.xcframework"
+        ),
+        .binaryTarget(
+            name: "MuuvEndpointsRenamedForAFWP",
+            path: "WorkoutsPlayer/Dependencies/MuuvEndpointsRenamedForAFWP.xcframework"
+        ),
+        .binaryTarget(
+            name: "MuuvEndpointsRenamedForCore",
+            path: "WorkoutsPlayer/Dependencies/MuuvEndpointsRenamedForCore.xcframework"
+        ),
+        .binaryTarget(
+            name: "MuuvUtilitiesRenamedForAFWP",
+            path: "WorkoutsPlayer/Dependencies/MuuvUtilitiesRenamedForAFWP.xcframework"
+        ),
+        .binaryTarget(
+            name: "MuuvUtilitiesRenamedForCore",
+            path: "WorkoutsPlayer/Dependencies/MuuvUtilitiesRenamedForCore.xcframework"
+        ),
+        .binaryTarget(
+            name: "LottieForAFWP",
+            path: "WorkoutsPlayer/Dependencies/LottieForAFWP.xcframework"
+        ),
     ]
 )

@@ -1,0 +1,11 @@
+framework module MuuvUtilitiesRenamedForAFWP {
+  umbrella header "MuuvUtilitiesRenamedForAFWP-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MuuvUtilitiesRenamedForAFWP.Swift {
+  header "MuuvUtilitiesRenamedForAFWP-Swift.h"
+  requires objc
+}
