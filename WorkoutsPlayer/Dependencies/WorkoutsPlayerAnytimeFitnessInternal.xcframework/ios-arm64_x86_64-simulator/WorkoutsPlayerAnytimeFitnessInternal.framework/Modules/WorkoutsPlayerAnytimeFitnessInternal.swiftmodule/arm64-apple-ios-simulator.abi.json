@@ -382,266 +382,266 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/AddSetView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/AddSetView.swift",
       "kind": "IntegerLiteral",
       "offset": 157,
       "length": 2,
       "value": "77"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/AddSetView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/AddSetView.swift",
       "kind": "IntegerLiteral",
       "offset": 196,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/Extensions\/Color.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/Extensions\/Color.swift",
       "kind": "StringLiteral",
       "offset": 226,
       "length": 9,
       "value": "\"#6244BB\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/Extensions\/Color.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/Extensions\/Color.swift",
       "kind": "StringLiteral",
       "offset": 288,
       "length": 9,
       "value": "\"#440099\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/Extensions\/Color.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/Extensions\/Color.swift",
       "kind": "StringLiteral",
       "offset": 344,
       "length": 9,
       "value": "\"#00C7B1\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/Extensions\/Color.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/Extensions\/Color.swift",
       "kind": "StringLiteral",
       "offset": 392,
       "length": 9,
       "value": "\"#EFF0F0\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/Extensions\/Color.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/Extensions\/Color.swift",
       "kind": "StringLiteral",
       "offset": 440,
       "length": 9,
       "value": "\"#D8D9D9\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/Extensions\/Color.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/Extensions\/Color.swift",
       "kind": "StringLiteral",
       "offset": 488,
       "length": 9,
       "value": "\"#898888\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/Extensions\/Color.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/Extensions\/Color.swift",
       "kind": "StringLiteral",
       "offset": 550,
       "length": 9,
       "value": "\"#00A390\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/SetView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/SetView.swift",
       "kind": "IntegerLiteral",
       "offset": 358,
       "length": 2,
       "value": "77"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/SetView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/SetView.swift",
       "kind": "IntegerLiteral",
       "offset": 397,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/SetView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/SetView.swift",
       "kind": "StringLiteral",
       "offset": 2252,
       "length": 4,
       "value": "\"10\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/SetView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/SetView.swift",
       "kind": "StringLiteral",
       "offset": 2282,
       "length": 9,
       "value": "\"125 lbs\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/SetView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/SetView.swift",
       "kind": "BooleanLiteral",
       "offset": 2326,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/SetView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/SetView.swift",
       "kind": "StringLiteral",
       "offset": 2435,
       "length": 4,
       "value": "\"10\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/SetView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/SetView.swift",
       "kind": "StringLiteral",
       "offset": 2465,
       "length": 9,
       "value": "\"125 lbs\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/SetView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/SetView.swift",
       "kind": "BooleanLiteral",
       "offset": 2509,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/SetView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/SetView.swift",
       "kind": "StringLiteral",
       "offset": 2619,
       "length": 4,
       "value": "\"10\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/SetView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/SetView.swift",
       "kind": "StringLiteral",
       "offset": 2649,
       "length": 9,
       "value": "\"125 lbs\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/SetView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/SetView.swift",
       "kind": "BooleanLiteral",
       "offset": 2693,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/Extensions\/SharedResource.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/Extensions\/SharedResource.swift",
       "kind": "StringLiteral",
       "offset": 748,
       "length": 44,
       "value": "\"WorkoutsPlayerAnytimeFitnessInternalBundle\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/Extensions\/SharedResource.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/Extensions\/SharedResource.swift",
       "kind": "StringLiteral",
       "offset": 1383,
       "length": 9,
       "value": "\".bundle\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/Extensions\/SharedResource.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/Extensions\/SharedResource.swift",
       "kind": "StringLiteral",
       "offset": 1583,
       "length": 14,
       "value": "\"Sample image\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/TitleSetsView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/TitleSetsView.swift",
       "kind": "StringLiteral",
       "offset": 1266,
       "length": 7,
       "value": "\"Title\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutsMedia\/TitleSetsView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutsMedia\/TitleSetsView.swift",
       "kind": "BooleanLiteral",
       "offset": 1569,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
       "kind": "IntegerLiteral",
       "offset": 233,
       "length": 2,
       "value": "25"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
       "kind": "StringLiteral",
       "offset": 3748,
       "length": 7,
       "value": "\"11:35\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
       "kind": "StringLiteral",
       "offset": 3801,
       "length": 14,
       "value": "\"calorie_icon\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
       "kind": "StringLiteral",
       "offset": 3877,
       "length": 6,
       "value": "\"1332\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
       "kind": "BooleanLiteral",
       "offset": 3916,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
       "kind": "StringLiteral",
       "offset": 3967,
       "length": 16,
       "value": "\"heartrate_icon\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
       "kind": "StringLiteral",
       "offset": 4046,
       "length": 5,
       "value": "\"133\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutHeader\/WorkoutHeader.swift",
       "kind": "BooleanLiteral",
       "offset": 4085,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutList\/WorkoutSectionHeaderView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutList\/WorkoutSectionHeaderView.swift",
       "kind": "StringLiteral",
       "offset": 1061,
       "length": 9,
       "value": "\"Warm Up\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutList\/WorkoutSectionHeaderView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutList\/WorkoutSectionHeaderView.swift",
       "kind": "FloatLiteral",
       "offset": 1307,
       "length": 4,
       "value": "0.13"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutList\/WorkoutSectionHeaderView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutList\/WorkoutSectionHeaderView.swift",
       "kind": "FloatLiteral",
       "offset": 1320,
       "length": 4,
       "value": "0.08"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutList\/WorkoutSectionHeaderView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutList\/WorkoutSectionHeaderView.swift",
       "kind": "FloatLiteral",
       "offset": 1332,
       "length": 4,
       "value": "0.32"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Source\/UIComponents\/WorkoutList\/WorkoutSectionHeaderView.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/UIComponents\/WorkoutList\/WorkoutSectionHeaderView.swift",
       "kind": "FloatLiteral",
       "offset": 1345,
       "length": 4,
