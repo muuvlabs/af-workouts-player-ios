@@ -12,6 +12,7 @@ import WorkoutsPlayerAnytimeFitnessInternal
 struct ContentView: View {
     var body: some View {
         WorkoutsPlayerView()
+            .padding(.top)
     }
 }
 
