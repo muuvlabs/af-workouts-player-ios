@@ -59,6 +59,16 @@ public class EngineController : Foundation.ObservableObject {
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
+  @Combine.Published @_projectedValueProperty($workoutBlocks) public var workoutBlocks: [WorkoutsPlayerCoreInternal.WorkoutBlock] {
+    get
+    set
+    _modify
+  }
+  public var $workoutBlocks: Combine.Published<[WorkoutsPlayerCoreInternal.WorkoutBlock]>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
   public init(workout: WorkoutsPlayerCoreInternal.Workout, api: WorkoutsPlayerAnytimeFitnessInternal.MuuvAPI? = nil)
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
@@ -186,9 +196,9 @@ public struct WorkoutsAFWPView : SwiftUI.View {
 }
 extension WorkoutsPlayerAnytimeFitnessInternal.WorkoutsPlayerSDK {
   #if compiler(>=5.3) && $AsyncAwait
-  @_Concurrency.MainActor public func createEngineController(user: WorkoutsPlayerAnytimeFitnessInternal.MuuvAPI.LoginUser, workoutInfo: WorkoutsPlayerCoreInternal.BuildSmartWorkoutInfo) async -> WorkoutsPlayerAnytimeFitnessInternal.EngineController?
+  public func createEngineController(user: WorkoutsPlayerAnytimeFitnessInternal.MuuvAPI.LoginUser, workoutInfo: WorkoutsPlayerCoreInternal.BuildSmartWorkoutInfo) async -> WorkoutsPlayerAnytimeFitnessInternal.EngineController?
   #endif
-  @_Concurrency.MainActor public func workoutsPlayerListModePlayerView(engineController: WorkoutsPlayerAnytimeFitnessInternal.EngineController) -> WorkoutsPlayerAnytimeFitnessInternal.ListModePlayerView
+  public func workoutsPlayerListModePlayerView(engineController: WorkoutsPlayerAnytimeFitnessInternal.EngineController) -> WorkoutsPlayerAnytimeFitnessInternal.ListModePlayerView
 }
 public protocol WorkoutsPlayerNetworkingDelegate : AnyObject {
   func trackResponse(request: Foundation.URLRequest?, data: Foundation.Data?, response: Foundation.URLResponse?, error: Swift.Error?)
