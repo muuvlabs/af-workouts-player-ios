@@ -1,0 +1,139 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MuuvUtilitiesSwiftUI
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+@_exported import MuuvUtilitiesSwiftUI
+import Swift
+import SwiftUI
+import _Concurrency
+import _StringProcessing
+extension SwiftUI.View {
+  public func asAnyView() -> SwiftUI.AnyView
+}
+public struct ErrorView : SwiftUI.View {
+  public init(type: MuuvUtilitiesSwiftUI.ErrorViewType)
+  public init(retryAction: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s20MuuvUtilitiesSwiftUI9ErrorViewV4bodyQrvp", 0) __
+}
+public enum ErrorViewType {
+  case emptyView
+  case vertical(style: MuuvUtilitiesSwiftUI.ErrorViewStyle, alignment: SwiftUI.HorizontalAlignment)
+  case horizontal(style: MuuvUtilitiesSwiftUI.ErrorViewStyle, alignment: SwiftUI.VerticalAlignment)
+  case custom(_: SwiftUI.AnyView)
+}
+public struct ErrorViewStyle {
+  public struct ImageOptions {
+    public init(systemName: Swift.String = "xmark.circle.fill", foregroundColor: SwiftUI.Color = .red, frame: CoreFoundation.CGSize = .init(width: 50, height: 50))
+  }
+  public struct TitleOptions {
+    public init(text: Swift.String = "Something went wrong", foregroundColor: SwiftUI.Color = .primary, font: SwiftUI.Font = .callout)
+  }
+  public struct ButtonOptions {
+    public init(text: Swift.String = "Retry", foregroundColor: SwiftUI.Color = .white, tintColor: SwiftUI.Color = .accentColor, font: SwiftUI.Font = .callout, action: @escaping () -> Swift.Void)
+  }
+  public init(imageOptions: MuuvUtilitiesSwiftUI.ErrorViewStyle.ImageOptions? = .init(), titleOptions: MuuvUtilitiesSwiftUI.ErrorViewStyle.TitleOptions? = .init(), buttonOptions: MuuvUtilitiesSwiftUI.ErrorViewStyle.ButtonOptions?, frameAlignment: SwiftUI.Alignment = .center)
+}
+public struct LoadingViewModifier<IndicatorView> : SwiftUI.ViewModifier where IndicatorView : SwiftUI.View {
+  public init(type: MuuvUtilitiesSwiftUI.LoadingModifierType, indicatorView: IndicatorView)
+  @_Concurrency.MainActor(unsafe) public func body(content: MuuvUtilitiesSwiftUI.LoadingViewModifier<IndicatorView>.Content) -> some SwiftUI.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s20MuuvUtilitiesSwiftUI19LoadingViewModifierV4body7contentQr0cD001_fG8_ContentVyACyxGG_tF", 0) __<IndicatorView>
+}
+public enum LoadingModifierType {
+  case none
+  case material(padding: CoreFoundation.CGFloat = 0, displayIndicator: Swift.Bool = true, indicatorPadding: CoreFoundation.CGFloat = 8, cornerRadius: CoreFoundation.CGFloat = 8, alignment: SwiftUI.Alignment = .center)
+  case overCurrentContent(padding: CoreFoundation.CGFloat = 0, displayIndicator: Swift.Bool = true, indicatorPadding: CoreFoundation.CGFloat = 8, contentOpacity: CoreFoundation.CGFloat = 1, disableInteraction: Swift.Bool = true, alignment: SwiftUI.Alignment = .trailing)
+  case horizontal(option: MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption = .trailing, contentOpacity: CoreFoundation.CGFloat = 1, disableInteraction: Swift.Bool = true, alignment: SwiftUI.VerticalAlignment = .center, spacing: CoreFoundation.CGFloat = 8)
+  case vertical(option: MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption = .bottom, contentOpacity: CoreFoundation.CGFloat = 1, disableInteraction: Swift.Bool = true, alignment: SwiftUI.HorizontalAlignment = .leading, spacing: CoreFoundation.CGFloat = 8)
+  case toolbar(contentOpacity: CoreFoundation.CGFloat = 1, disableInteraction: Swift.Bool = true)
+  case custom(_: SwiftUI.AnyView)
+  public enum HorizontalOption : Swift.String, Swift.CaseIterable {
+    case leading
+    case trailing
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption]
+    public typealias RawValue = Swift.String
+    public static var allCases: [MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum VerticalOption : Swift.String, Swift.CaseIterable {
+    case bottom
+    case top
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption]
+    public typealias RawValue = Swift.String
+    public static var allCases: [MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension SwiftUI.View {
+  public func materialOverlay(cornerRadius: CoreFoundation.CGFloat = 8) -> some SwiftUI.View
+  
+}
+public enum ViewState<Info> {
+  case initial
+  case loading
+  case error(Swift.Error)
+  case loaded(_: Info)
+  public var isLoading: Swift.Bool {
+    get
+  }
+  public var info: Info? {
+    get
+  }
+  public var error: Swift.Error? {
+    get
+  }
+}
+extension MuuvUtilitiesSwiftUI.ViewState : Swift.Equatable {
+  public static func == (lhs: MuuvUtilitiesSwiftUI.ViewState<Info>, rhs: MuuvUtilitiesSwiftUI.ViewState<Info>) -> Swift.Bool
+}
+public struct ViewStateController<Info> {
+  public init()
+  public var isInitialLoading: Swift.Bool {
+    get
+  }
+  public var isLoading: Swift.Bool {
+    get
+  }
+  public var latestValidInfo: Info? {
+    get
+  }
+  public var latestInfo: Info? {
+    get
+  }
+  public var latestValidError: Swift.Error? {
+    get
+  }
+  public var latestError: Swift.Error? {
+    get
+  }
+  public var latestNonLoading: Swift.Result<Info, Swift.Error>? {
+    get
+  }
+  public var modifyingIds: [Swift.String]?
+  public mutating func setState(_ state: MuuvUtilitiesSwiftUI.ViewState<Info>)
+  public mutating func reset()
+}
+extension SwiftUI.View {
+  public func withViewStateModifier<Info, IndicatorView, LoadedView>(controller: MuuvUtilitiesSwiftUI.ViewStateController<Info>, indicatorView: IndicatorView = ProgressView(), initialLoadingType: MuuvUtilitiesSwiftUI.LoadingModifierType = .material(), loadedView: @escaping (Info) -> LoadedView, loadingAfterInfoType: MuuvUtilitiesSwiftUI.LoadingModifierType = .horizontal(), errorView: @escaping (Swift.Error) -> MuuvUtilitiesSwiftUI.ErrorView, loadingAfterErrorType: MuuvUtilitiesSwiftUI.LoadingModifierType = .overCurrentContent(alignment: .trailing)) -> some SwiftUI.View where IndicatorView : SwiftUI.View, LoadedView : SwiftUI.View
+  
+}
+extension MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption : Swift.Equatable {}
+extension MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption : Swift.Hashable {}
+extension MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption : Swift.RawRepresentable {}
+extension MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption : Swift.Equatable {}
+extension MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption : Swift.Hashable {}
+extension MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption : Swift.RawRepresentable {}

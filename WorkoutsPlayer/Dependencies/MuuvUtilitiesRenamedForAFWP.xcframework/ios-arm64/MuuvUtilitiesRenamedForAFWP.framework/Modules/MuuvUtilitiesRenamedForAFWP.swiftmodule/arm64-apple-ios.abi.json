@@ -21855,8 +21855,8 @@
           },
           {
             "kind": "Function",
-            "name": "weakAssign",
-            "printedName": "weakAssign(to:of:)",
+            "name": "weakSink",
+            "printedName": "weakSink(into:of:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -21889,8 +21889,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE10weakAssign2to2ofAA14AnyCancellableCs24ReferenceWritableKeyPathCyqd__6OutputQzG_qd__tRld__ClF",
-            "mangledName": "$s7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE10weakAssign2to2ofAA14AnyCancellableCs24ReferenceWritableKeyPathCyqd__6OutputQzG_qd__tRld__ClF",
+            "usr": "s:7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE8weakSink4into2ofAA14AnyCancellableCs24ReferenceWritableKeyPathCyqd__6OutputQzG_qd__tRld__ClF",
+            "mangledName": "$s7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE8weakSink4into2ofAA14AnyCancellableCs24ReferenceWritableKeyPathCyqd__6OutputQzG_qd__tRld__ClF",
             "moduleName": "MuuvUtilitiesRenamedForAFWP",
             "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Combine.Publisher, τ_1_0 : AnyObject, τ_0_0.Failure == Swift.Never>",
             "sugared_genericSig": "<Self, T where Self : Combine.Publisher, T : AnyObject, Self.Failure == Swift.Never>",
@@ -21900,7 +21900,7 @@
           {
             "kind": "Function",
             "name": "weakSink",
-            "printedName": "weakSink(_:on:)",
+            "printedName": "weakSink(executing:of:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -21944,11 +21944,208 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE8weakSink_2onAA14AnyCancellableCy6OutputQzcqd__c_qd__tRld__ClF",
-            "mangledName": "$s7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE8weakSink_2onAA14AnyCancellableCy6OutputQzcqd__c_qd__tRld__ClF",
+            "usr": "s:7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE8weakSink9executing2ofAA14AnyCancellableCy6OutputQzcqd__c_qd__tRld__ClF",
+            "mangledName": "$s7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE8weakSink9executing2ofAA14AnyCancellableCy6OutputQzcqd__c_qd__tRld__ClF",
             "moduleName": "MuuvUtilitiesRenamedForAFWP",
             "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Combine.Publisher, τ_1_0 : AnyObject, τ_0_0.Failure == Swift.Never>",
             "sugared_genericSig": "<Self, T where Self : Combine.Publisher, T : AnyObject, Self.Failure == Swift.Never>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "weakSinkOnMainThread",
+            "printedName": "weakSinkOnMainThread(into:of:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyCancellable",
+                "printedName": "Combine.AnyCancellable",
+                "usr": "s:7Combine14AnyCancellableC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReferenceWritableKeyPath",
+                "printedName": "Swift.ReferenceWritableKeyPath<τ_1_0, τ_0_0.Output>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Output"
+                  }
+                ],
+                "usr": "s:s24ReferenceWritableKeyPathC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE20weakSinkOnMainThread4into2ofAA14AnyCancellableCs24ReferenceWritableKeyPathCyqd__6OutputQzG_qd__tRld__ClF",
+            "mangledName": "$s7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE20weakSinkOnMainThread4into2ofAA14AnyCancellableCs24ReferenceWritableKeyPathCyqd__6OutputQzG_qd__tRld__ClF",
+            "moduleName": "MuuvUtilitiesRenamedForAFWP",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Combine.Publisher, τ_1_0 : AnyObject, τ_0_0.Failure == Swift.Never>",
+            "sugared_genericSig": "<Self, T where Self : Combine.Publisher, T : AnyObject, Self.Failure == Swift.Never>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "executeOnMainThread",
+            "printedName": "executeOnMainThread(_:of:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyCancellable",
+                "printedName": "Combine.AnyCancellable",
+                "usr": "s:7Combine14AnyCancellableC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_1_0) -> (τ_0_0.Output) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(τ_0_0.Output) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DependentMember",
+                        "printedName": "τ_0_0.Output"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE19executeOnMainThread_2ofAA14AnyCancellableCy6OutputQzcqd__c_qd__tRld__ClF",
+            "mangledName": "$s7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE19executeOnMainThread_2ofAA14AnyCancellableCy6OutputQzcqd__c_qd__tRld__ClF",
+            "moduleName": "MuuvUtilitiesRenamedForAFWP",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Combine.Publisher, τ_1_0 : AnyObject, τ_0_0.Failure == Swift.Never>",
+            "sugared_genericSig": "<Self, T where Self : Combine.Publisher, T : AnyObject, Self.Failure == Swift.Never>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "executeOnMainActor",
+            "printedName": "executeOnMainActor(_:of:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyCancellable",
+                "printedName": "Combine.AnyCancellable",
+                "usr": "s:7Combine14AnyCancellableC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_1_0) -> (τ_0_0.Output) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(τ_0_0.Output) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DependentMember",
+                        "printedName": "τ_0_0.Output"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE18executeOnMainActor_2ofAA14AnyCancellableCy6OutputQzScMYccqd__c_qd__tRld__ClF",
+            "mangledName": "$s7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE18executeOnMainActor_2ofAA14AnyCancellableCy6OutputQzScMYccqd__c_qd__tRld__ClF",
+            "moduleName": "MuuvUtilitiesRenamedForAFWP",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Combine.Publisher, τ_1_0 : AnyObject, τ_0_0.Failure == Swift.Never>",
+            "sugared_genericSig": "<Self, T where Self : Combine.Publisher, T : AnyObject, Self.Failure == Swift.Never>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "noNils",
+            "printedName": "noNils()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<τ_1_0, Swift.Never>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE6noNilsAA03AnyB0Vyqd__AFGyqd__Sg6OutputRtzlF",
+            "mangledName": "$s7Combine9PublisherP27MuuvUtilitiesRenamedForAFWPs5NeverO7FailureRtzrlE6noNilsAA03AnyB0Vyqd__AFGyqd__Sg6OutputRtzlF",
+            "moduleName": "MuuvUtilitiesRenamedForAFWP",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Combine.Publisher, τ_0_0.Failure == Swift.Never, τ_0_0.Output == τ_1_0?>",
+            "sugared_genericSig": "<Self, Value where Self : Combine.Publisher, Self.Failure == Swift.Never, Self.Output == Value?>",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           }

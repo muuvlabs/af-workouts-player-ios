@@ -234,10 +234,6 @@ final public class ColorValueProvider {
     @objc get
     @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) final public var compatibleDictionaryTextProvider: LottieForAFWP.CompatibleDictionaryTextProvider? {
-    @objc get
-    @objc set
-  }
   @_Concurrency.MainActor(unsafe) @objc override final public var contentMode: UIKit.UIView.ContentMode {
     @objc get
     @objc set
@@ -298,10 +294,6 @@ final public class ColorValueProvider {
   @objc @_Concurrency.MainActor(unsafe) final public func progressTime(forMarker named: Swift.String) -> CoreFoundation.CGFloat
   @objc @_Concurrency.MainActor(unsafe) final public func frameTime(forMarker named: Swift.String) -> CoreFoundation.CGFloat
   @objc @_Concurrency.MainActor(unsafe) final public func durationFrameTime(forMarker named: Swift.String) -> CoreFoundation.CGFloat
-  @objc deinit
-}
-@objc final public class CompatibleDictionaryTextProvider : ObjectiveC.NSObject {
-  @objc public init(values: [Swift.String : Swift.String])
   @objc deinit
 }
 public class DefaultAnimationCache : LottieForAFWP.AnimationCacheProvider {
@@ -619,114 +611,114 @@ public enum LottieLoopMode {
 extension LottieForAFWP.LottieLoopMode : Swift.Equatable {
   public static func == (lhs: LottieForAFWP.LottieLoopMode, rhs: LottieForAFWP.LottieLoopMode) -> Swift.Bool
 }
-@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class LottieAnimationView : LottieForAFWP.LottieAnimationViewBase {
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) final public class LottieAnimationView : LottieForAFWP.LottieAnimationViewBase {
   @_Concurrency.MainActor(unsafe) public init(animation: LottieForAFWP.LottieAnimation?, imageProvider: LottieForAFWP.AnimationImageProvider? = nil, textProvider: LottieForAFWP.AnimationTextProvider = DefaultTextProvider(), fontProvider: LottieForAFWP.AnimationFontProvider = DefaultFontProvider(), configuration: LottieForAFWP.LottieConfiguration = .shared, logger: LottieForAFWP.LottieLogger = .shared)
   @_Concurrency.MainActor(unsafe) public init(dotLottie: LottieForAFWP.DotLottieFile?, animationId: Swift.String? = nil, textProvider: LottieForAFWP.AnimationTextProvider = DefaultTextProvider(), fontProvider: LottieForAFWP.AnimationFontProvider = DefaultFontProvider(), configuration: LottieForAFWP.LottieConfiguration = .shared, logger: LottieForAFWP.LottieLogger = .shared)
   @_Concurrency.MainActor(unsafe) public init(configuration: LottieForAFWP.LottieConfiguration = .shared, logger: LottieForAFWP.LottieLogger = .shared)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) open func play(completion: LottieForAFWP.LottieCompletionBlock? = nil)
-  @_Concurrency.MainActor(unsafe) open func play(fromProgress: LottieForAFWP.AnimationProgressTime? = nil, toProgress: LottieForAFWP.AnimationProgressTime, loopMode: LottieForAFWP.LottieLoopMode? = nil, completion: LottieForAFWP.LottieCompletionBlock? = nil)
-  @_Concurrency.MainActor(unsafe) open func play(fromFrame: LottieForAFWP.AnimationFrameTime? = nil, toFrame: LottieForAFWP.AnimationFrameTime, loopMode: LottieForAFWP.LottieLoopMode? = nil, completion: LottieForAFWP.LottieCompletionBlock? = nil)
-  @_Concurrency.MainActor(unsafe) open func play(fromMarker: Swift.String? = nil, toMarker: Swift.String, playEndMarkerFrame: Swift.Bool = true, loopMode: LottieForAFWP.LottieLoopMode? = nil, completion: LottieForAFWP.LottieCompletionBlock? = nil)
-  @_Concurrency.MainActor(unsafe) open func play(marker: Swift.String, loopMode: LottieForAFWP.LottieLoopMode? = nil, completion: LottieForAFWP.LottieCompletionBlock? = nil)
-  @_Concurrency.MainActor(unsafe) open func stop()
-  @_Concurrency.MainActor(unsafe) open func pause()
   @_Concurrency.MainActor(unsafe) final public let configuration: LottieForAFWP.LottieConfiguration
-  @_Concurrency.MainActor(unsafe) public var valueProviders: [LottieForAFWP.AnimationKeypath : LottieForAFWP.AnyValueProvider] {
+  @_Concurrency.MainActor(unsafe) final public var valueProviders: [LottieForAFWP.AnimationKeypath : LottieForAFWP.AnyValueProvider] {
     get
   }
-  @_Concurrency.MainActor(unsafe) public var backgroundBehavior: LottieForAFWP.LottieBackgroundBehavior {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var animation: LottieForAFWP.LottieAnimation? {
+  @_Concurrency.MainActor(unsafe) final public var backgroundBehavior: LottieForAFWP.LottieBackgroundBehavior {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var animationLoaded: ((_ animationView: LottieForAFWP.LottieAnimationView, _ animation: LottieForAFWP.LottieAnimation) -> Swift.Void)? {
+  @_Concurrency.MainActor(unsafe) final public var animation: LottieForAFWP.LottieAnimation? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var imageProvider: LottieForAFWP.AnimationImageProvider {
+  @_Concurrency.MainActor(unsafe) final public var animationLoaded: ((_ animationView: LottieForAFWP.LottieAnimationView, _ animation: LottieForAFWP.LottieAnimation) -> Swift.Void)? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var textProvider: LottieForAFWP.AnimationTextProvider {
+  @_Concurrency.MainActor(unsafe) final public var imageProvider: LottieForAFWP.AnimationImageProvider {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var fontProvider: LottieForAFWP.AnimationFontProvider {
+  @_Concurrency.MainActor(unsafe) final public var textProvider: LottieForAFWP.AnimationTextProvider {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var isAnimationPlaying: Swift.Bool {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) public var isAnimationQueued: Swift.Bool {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) public var loopMode: LottieForAFWP.LottieLoopMode {
+  @_Concurrency.MainActor(unsafe) final public var fontProvider: LottieForAFWP.AnimationFontProvider {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var shouldRasterizeWhenIdle: Swift.Bool {
+  @_Concurrency.MainActor(unsafe) final public var isAnimationPlaying: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public var isAnimationQueued: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public var loopMode: LottieForAFWP.LottieLoopMode {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var currentProgress: LottieForAFWP.AnimationProgressTime {
+  @_Concurrency.MainActor(unsafe) final public var shouldRasterizeWhenIdle: Swift.Bool {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var currentTime: Foundation.TimeInterval {
+  @_Concurrency.MainActor(unsafe) final public var currentProgress: LottieForAFWP.AnimationProgressTime {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var currentFrame: LottieForAFWP.AnimationFrameTime {
+  @_Concurrency.MainActor(unsafe) final public var currentTime: Foundation.TimeInterval {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var realtimeAnimationFrame: LottieForAFWP.AnimationFrameTime {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) public var realtimeAnimationProgress: LottieForAFWP.AnimationProgressTime {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) public var animationSpeed: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) final public var currentFrame: LottieForAFWP.AnimationFrameTime {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var respectAnimationFrameRate: Swift.Bool {
+  @_Concurrency.MainActor(unsafe) final public var realtimeAnimationFrame: LottieForAFWP.AnimationFrameTime {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public var realtimeAnimationProgress: LottieForAFWP.AnimationProgressTime {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public var animationSpeed: CoreFoundation.CGFloat {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var viewportFrame: CoreFoundation.CGRect? {
+  @_Concurrency.MainActor(unsafe) final public var respectAnimationFrameRate: Swift.Bool {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
+  @_Concurrency.MainActor(unsafe) final public var viewportFrame: CoreFoundation.CGRect? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public var intrinsicContentSize: CoreFoundation.CGSize {
     @objc get
   }
-  @_Concurrency.MainActor(unsafe) public var currentRenderingEngine: LottieForAFWP.RenderingEngine? {
+  @_Concurrency.MainActor(unsafe) final public var currentRenderingEngine: LottieForAFWP.RenderingEngine? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public func loadAnimation(_ animationId: Swift.String? = nil, from dotLottieFile: LottieForAFWP.DotLottieFile)
-  @_Concurrency.MainActor(unsafe) public func reloadImages()
-  @_Concurrency.MainActor(unsafe) public func forceDisplayUpdate()
-  @_Concurrency.MainActor(unsafe) public func setValueProvider(_ valueProvider: LottieForAFWP.AnyValueProvider, keypath: LottieForAFWP.AnimationKeypath)
-  @_Concurrency.MainActor(unsafe) public func getValue(for keypath: LottieForAFWP.AnimationKeypath, atFrame: LottieForAFWP.AnimationFrameTime?) -> Any?
-  @_Concurrency.MainActor(unsafe) public func getOriginalValue(for keypath: LottieForAFWP.AnimationKeypath, atFrame: LottieForAFWP.AnimationFrameTime?) -> Any?
-  @_Concurrency.MainActor(unsafe) public func logHierarchyKeypaths()
-  @_Concurrency.MainActor(unsafe) public func addSubview(_ subview: LottieForAFWP.AnimationSubview, forLayerAt keypath: LottieForAFWP.AnimationKeypath)
-  @_Concurrency.MainActor(unsafe) public func convert(_ rect: CoreFoundation.CGRect, toLayerAt keypath: LottieForAFWP.AnimationKeypath?) -> CoreFoundation.CGRect?
-  @_Concurrency.MainActor(unsafe) public func convert(_ point: CoreFoundation.CGPoint, toLayerAt keypath: LottieForAFWP.AnimationKeypath?) -> CoreFoundation.CGPoint?
-  @_Concurrency.MainActor(unsafe) public func setNodeIsEnabled(isEnabled: Swift.Bool, keypath: LottieForAFWP.AnimationKeypath)
-  @_Concurrency.MainActor(unsafe) public func progressTime(forMarker named: Swift.String) -> LottieForAFWP.AnimationProgressTime?
-  @_Concurrency.MainActor(unsafe) public func frameTime(forMarker named: Swift.String) -> LottieForAFWP.AnimationFrameTime?
-  @_Concurrency.MainActor(unsafe) public func durationFrameTime(forMarker named: Swift.String) -> LottieForAFWP.AnimationFrameTime?
+  @_Concurrency.MainActor(unsafe) final public func loadAnimation(_ animationId: Swift.String? = nil, from dotLottieFile: LottieForAFWP.DotLottieFile)
+  @_Concurrency.MainActor(unsafe) final public func play(completion: LottieForAFWP.LottieCompletionBlock? = nil)
+  @_Concurrency.MainActor(unsafe) final public func play(fromProgress: LottieForAFWP.AnimationProgressTime? = nil, toProgress: LottieForAFWP.AnimationProgressTime, loopMode: LottieForAFWP.LottieLoopMode? = nil, completion: LottieForAFWP.LottieCompletionBlock? = nil)
+  @_Concurrency.MainActor(unsafe) final public func play(fromFrame: LottieForAFWP.AnimationFrameTime? = nil, toFrame: LottieForAFWP.AnimationFrameTime, loopMode: LottieForAFWP.LottieLoopMode? = nil, completion: LottieForAFWP.LottieCompletionBlock? = nil)
+  @_Concurrency.MainActor(unsafe) final public func play(fromMarker: Swift.String? = nil, toMarker: Swift.String, playEndMarkerFrame: Swift.Bool = true, loopMode: LottieForAFWP.LottieLoopMode? = nil, completion: LottieForAFWP.LottieCompletionBlock? = nil)
+  @_Concurrency.MainActor(unsafe) final public func play(marker: Swift.String, loopMode: LottieForAFWP.LottieLoopMode? = nil, completion: LottieForAFWP.LottieCompletionBlock? = nil)
+  @_Concurrency.MainActor(unsafe) final public func stop()
+  @_Concurrency.MainActor(unsafe) final public func pause()
+  @_Concurrency.MainActor(unsafe) final public func reloadImages()
+  @_Concurrency.MainActor(unsafe) final public func forceDisplayUpdate()
+  @_Concurrency.MainActor(unsafe) final public func setValueProvider(_ valueProvider: LottieForAFWP.AnyValueProvider, keypath: LottieForAFWP.AnimationKeypath)
+  @_Concurrency.MainActor(unsafe) final public func getValue(for keypath: LottieForAFWP.AnimationKeypath, atFrame: LottieForAFWP.AnimationFrameTime?) -> Any?
+  @_Concurrency.MainActor(unsafe) final public func getOriginalValue(for keypath: LottieForAFWP.AnimationKeypath, atFrame: LottieForAFWP.AnimationFrameTime?) -> Any?
+  @_Concurrency.MainActor(unsafe) final public func logHierarchyKeypaths()
+  @_Concurrency.MainActor(unsafe) final public func addSubview(_ subview: LottieForAFWP.AnimationSubview, forLayerAt keypath: LottieForAFWP.AnimationKeypath)
+  @_Concurrency.MainActor(unsafe) final public func convert(_ rect: CoreFoundation.CGRect, toLayerAt keypath: LottieForAFWP.AnimationKeypath?) -> CoreFoundation.CGRect?
+  @_Concurrency.MainActor(unsafe) final public func convert(_ point: CoreFoundation.CGPoint, toLayerAt keypath: LottieForAFWP.AnimationKeypath?) -> CoreFoundation.CGPoint?
+  @_Concurrency.MainActor(unsafe) final public func setNodeIsEnabled(isEnabled: Swift.Bool, keypath: LottieForAFWP.AnimationKeypath)
+  @_Concurrency.MainActor(unsafe) final public func progressTime(forMarker named: Swift.String) -> LottieForAFWP.AnimationProgressTime?
+  @_Concurrency.MainActor(unsafe) final public func frameTime(forMarker named: Swift.String) -> LottieForAFWP.AnimationFrameTime?
+  @_Concurrency.MainActor(unsafe) final public func durationFrameTime(forMarker named: Swift.String) -> LottieForAFWP.AnimationFrameTime?
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class LottieAnimationViewBase : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class LottieAnimationViewBase : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var contentMode: UIKit.UIView.ContentMode {
     @objc get
     @objc set

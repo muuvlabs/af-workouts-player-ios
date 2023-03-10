@@ -1,6 +1,6 @@
 //
-//  WorkoutsPlayer.h
-//  WorkoutsPlayer
+//  WorkoutsPlayerCoreInternal.h
+//  WorkoutsPlayerCoreInternal
 //
 //  Created by Leandro Perez on 4/27/20.
 //  Copyright © 2020 Muuvlabs. All rights reserved.

@@ -2,9 +2,15 @@
 // swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name WorkoutsPlayerAnytimeFitnessInternal
 // swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFAudio
+import Combine
+import Foundation
 import LottieForAFWP
 import MuuvEndpointsRenamedForAFWP
 import MuuvUtilitiesRenamedForAFWP
+import MuuvUtilitiesRenamedForCore
+import MuuvUtilitiesSwiftUI
+import Network
 import Swift
 import SwiftUI
 import UIKit
@@ -12,12 +18,151 @@ import UIKit
 import WorkoutsPlayerCoreInternal
 import _Concurrency
 import _StringProcessing
-public struct WorkoutsPlayerView : SwiftUI.View {
-  public init()
+public class EngineController : Foundation.ObservableObject {
+  @Combine.Published @_projectedValueProperty($heartRate) public var heartRate: Swift.Int {
+    get
+    set
+    _modify
+  }
+  public var $heartRate: Combine.Published<Swift.Int>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($calories) public var calories: Swift.Int {
+    get
+    set
+    _modify
+  }
+  public var $calories: Combine.Published<Swift.Int>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($elapsedTime) public var elapsedTime: Foundation.TimeInterval? {
+    get
+    set
+    _modify
+  }
+  public var $elapsedTime: Combine.Published<Foundation.TimeInterval?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($workoutActionResult) public var workoutActionResult: WorkoutsPlayerAnytimeFitnessInternal.WorkoutActionResult? {
+    get
+    set
+    _modify
+  }
+  public var $workoutActionResult: Combine.Published<WorkoutsPlayerAnytimeFitnessInternal.WorkoutActionResult?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  public init(workout: WorkoutsPlayerCoreInternal.Workout, api: WorkoutsPlayerAnytimeFitnessInternal.MuuvAPI? = nil)
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+extension WorkoutsPlayerAnytimeFitnessInternal.EngineController : WorkoutsPlayerCoreInternal.AudioCoachingEngineDownloadingDelegate {
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didProgressDownloading workout: WorkoutsPlayerCoreInternal.Workout)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, willStartDownloading workout: WorkoutsPlayerCoreInternal.Workout)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didFinishDownloading workout: WorkoutsPlayerCoreInternal.Workout)
+}
+extension WorkoutsPlayerAnytimeFitnessInternal.EngineController : WorkoutsPlayerCoreInternal.WorkoutPlayerTimerDelegate {
+  public func timer(listPlayerTimer: WorkoutsPlayerCoreInternal.WorkoutPlayerTimer, didUpdate elapsedTime: Foundation.TimeInterval)
+}
+extension WorkoutsPlayerAnytimeFitnessInternal.EngineController : WorkoutsPlayerCoreInternal.AudioCoachingEngineDelegate {
+  public func engineShouldObtainAVGHeartRateFromExternalSource(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine) -> Swift.Bool
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, externalSourceAVGHeartRateSince since: Foundation.Date, toEndDate end: Foundation.Date, completionHandler: @escaping (Foundation.NSNumber?, Swift.Error?) -> Swift.Void)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStartPlaying eventURL: Foundation.URL)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStopPlaying eventURL: Foundation.URL)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, willStartPlayingBump bump: WorkoutsPlayerCoreInternal.Bump, timeSinceNow: Foundation.TimeInterval)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStartPlayingBump bump: WorkoutsPlayerCoreInternal.Bump)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStopPlayingReactiveAudioSnippet reactiveAudioSnippet: WorkoutsPlayerCoreInternal.ReactiveAudioSnippet)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStartPlayingReactiveAudioSnippet reactiveAudioSnippet: WorkoutsPlayerCoreInternal.ReactiveAudioSnippet)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStopPlayingBump bump: WorkoutsPlayerCoreInternal.Bump)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didReceiveInterruptionToPause interruption: WorkoutsPlayerCoreInternal.InterruptionNotification)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didReceiveInterruptionToResume interruption: WorkoutsPlayerCoreInternal.InterruptionNotification)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, elapsedTime: Foundation.TimeInterval)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, willPerform action: WorkoutsPlayerCoreInternal.UpdateWorkoutAction)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didPerform action: WorkoutsPlayerCoreInternal.UpdateWorkoutAction)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didFail action: WorkoutsPlayerCoreInternal.UpdateWorkoutAction, error: Swift.Error?)
+  public func engineDidReceiveEventWorkoutUpdate(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, requests action: WorkoutsPlayerCoreInternal.UpdateWorkoutAction, on workout: WorkoutsPlayerCoreInternal.Workout, retryCount: Swift.Int, onSuccess: @escaping (WorkoutsPlayerCoreInternal.Workout) -> Swift.Void, onError: @escaping (Swift.Error) -> Swift.Void)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStartBlock block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didFinishBlock block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didPause block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didResume block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didChange block: WorkoutsPlayerCoreInternal.WorkoutBlock)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, willStart workout: WorkoutsPlayerCoreInternal.Workout)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didStart workout: WorkoutsPlayerCoreInternal.Workout)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didDiscard workout: WorkoutsPlayerCoreInternal.Workout)
+  public func engine(_ engine: WorkoutsPlayerCoreInternal.AudioCoachingEngine, didFinish workout: WorkoutsPlayerCoreInternal.Workout, heartRate: Swift.Int, calories: Swift.Int)
+}
+public enum WorkoutActionResult {
+  case success(WorkoutsPlayerCoreInternal.WorkoutPlayerAction, WorkoutsPlayerCoreInternal.Workout)
+  case failure(WorkoutsPlayerCoreInternal.WorkoutPlayerAction, WorkoutsPlayerCoreInternal.Workout, Swift.Error)
+}
+@_Concurrency.MainActor(unsafe) public struct ListModePlayerView : SwiftUI.View {
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
     get
   }
-  public typealias Body = @_opaqueReturnTypeOf("$s36WorkoutsPlayerAnytimeFitnessInternal0aB4ViewV4bodyQrvp", 0) __
+  public typealias Body = @_opaqueReturnTypeOf("$s36WorkoutsPlayerAnytimeFitnessInternal08ListModeB4ViewV4bodyQrvp", 0) __
+}
+public struct MuuvAPI {
+}
+extension MuuvUtilitiesRenamedForAFWP.ConfigurationRawModel : MuuvEndpointsRenamedForAFWP.EndpointAccessible {
+  public typealias Element = MuuvUtilitiesRenamedForAFWP.ConfigurationRawModel
+  public static var path: Swift.String {
+    get
+  }
+}
+extension WorkoutsPlayerAnytimeFitnessInternal.MuuvAPI {
+  public struct LoginUser : Swift.Codable {
+    public init(login: Swift.String, password: Swift.String)
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
+}
+extension WorkoutsPlayerCoreInternal.User : MuuvEndpointsRenamedForAFWP.EndpointAccessible {
+  public typealias Element = WorkoutsPlayerCoreInternal.User
+  public static var path: Swift.String {
+    get
+  }
+}
+extension WorkoutsPlayerCoreInternal.Workout : MuuvEndpointsRenamedForAFWP.EndpointModifiable {
+  public typealias Element = WorkoutsPlayerCoreInternal.Workout
+  public typealias Body = WorkoutsPlayerCoreInternal.UpdateWorkoutInfo
+  public static var path: Swift.String {
+    get
+  }
+}
+public class NetworkMonitor {
+  public var isConnected: Swift.Bool {
+    get
+  }
+  public init()
+  public func stopMonitoring()
+  @objc deinit
+}
+public enum StubbingConfiguration {
+  case nowWithValues(values: [Swift.Decodable])
+  case now(Foundation.Bundle)
+  case delay(Dispatch.DispatchTimeInterval)
+  case never
+  public func stubbingBehavior<T>() -> MuuvEndpointsRenamedForAFWP.StubbingBehavior<T> where T : Swift.Decodable, T : Swift.Encodable
+}
+@_Concurrency.MainActor(unsafe) public struct TempHomeWithAllComponents : SwiftUI.View {
+  @_Concurrency.MainActor public class ViewModel : Foundation.ObservableObject {
+    @_Concurrency.MainActor public init(engineController: WorkoutsPlayerAnytimeFitnessInternal.EngineController)
+    public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+    @objc deinit
+  }
+  @_Concurrency.MainActor(unsafe) public init(viewModel: WorkoutsPlayerAnytimeFitnessInternal.TempHomeWithAllComponents.ViewModel)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s36WorkoutsPlayerAnytimeFitnessInternal25TempHomeWithAllComponentsV4bodyQrvp", 0) __
 }
 public struct WorkoutsAFWPView : SwiftUI.View {
   public init()
@@ -26,3 +171,26 @@ public struct WorkoutsAFWPView : SwiftUI.View {
   }
   public typealias Body = @_opaqueReturnTypeOf("$s36WorkoutsPlayerAnytimeFitnessInternal0A8AFWPViewV4bodyQrvp", 0) __
 }
+@_hasMissingDesignatedInitializers public class WorkoutsPlayerSDK {
+  public static var shared: WorkoutsPlayerAnytimeFitnessInternal.WorkoutsPlayerSDK
+  public var userJWT: Swift.String?
+  public var sdkVersionString: Swift.String {
+    get
+  }
+  public var preferredLanguage: Swift.String?
+  public var logVerbosity: MuuvUtilitiesRenamedForAFWP.LogVerbosity? {
+    get
+    set
+  }
+  @objc deinit
+}
+extension WorkoutsPlayerAnytimeFitnessInternal.WorkoutsPlayerSDK {
+  #if compiler(>=5.3) && $AsyncAwait
+  @_Concurrency.MainActor public func createEngineController(user: WorkoutsPlayerAnytimeFitnessInternal.MuuvAPI.LoginUser, workoutInfo: WorkoutsPlayerCoreInternal.BuildSmartWorkoutInfo) async -> WorkoutsPlayerAnytimeFitnessInternal.EngineController?
+  #endif
+  @_Concurrency.MainActor public func workoutsPlayerListModePlayerView(engineController: WorkoutsPlayerAnytimeFitnessInternal.EngineController) -> WorkoutsPlayerAnytimeFitnessInternal.ListModePlayerView
+}
+public protocol WorkoutsPlayerNetworkingDelegate : AnyObject {
+  func trackResponse(request: Foundation.URLRequest?, data: Foundation.Data?, response: Foundation.URLResponse?, error: Swift.Error?)
+}
+extension WorkoutsPlayerAnytimeFitnessInternal.TempHomeWithAllComponents.ViewModel : Swift.Sendable {}

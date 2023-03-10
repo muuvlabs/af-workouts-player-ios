@@ -1,0 +1,11 @@
+framework module MuuvUtilitiesSwiftUI {
+  umbrella header "MuuvUtilitiesSwiftUI-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MuuvUtilitiesSwiftUI.Swift {
+  header "MuuvUtilitiesSwiftUI-Swift.h"
+  requires objc
+}

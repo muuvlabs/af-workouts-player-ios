@@ -253,236 +253,6 @@ using UInt = size_t;
 
 #if defined(__OBJC__)
 
-@class WorkoutBlock;
-@class Workout;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal24EngineWorkoutInformation_")
-@protocol EngineWorkoutInformation
-@property (nonatomic) BOOL didReceiveInfoFromWatch;
-@property (nonatomic) NSInteger avgHeartRate;
-@property (nonatomic) NSInteger heartRate;
-@property (nonatomic) NSInteger calories;
-@property (nonatomic) NSInteger userWeight;
-@property (nonatomic) float coachVolume;
-@property (nonatomic, readonly, strong) WorkoutBlock * _Nullable currentBlock;
-@property (nonatomic, readonly) NSTimeInterval currentBlockElapsedTime;
-@property (nonatomic, readonly) float currentBlockProgressFloat;
-@property (nonatomic, readonly) NSTimeInterval elapsedTime;
-@property (nonatomic) BOOL isFormEnabled;
-@property (nonatomic) BOOL isMotivationEnabled;
-@property (nonatomic) BOOL isDirectionEnabled;
-@property (nonatomic) BOOL isPacingEnabled;
-@property (nonatomic) BOOL isBumpsEnabled;
-@property (nonatomic, readonly) BOOL isPaused;
-@property (nonatomic, readonly) BOOL isStarted;
-@property (nonatomic) float volume;
-@property (nonatomic, readonly, strong) Workout * _Nonnull workout;
-@end
-
-@class CancelReactiveAudioInfo;
-@class DismissReactiveAudioInfo;
-@class ReactiveAudioSnippet;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal24EngineWorkoutControlling_")
-@protocol EngineWorkoutControlling
-@property (nonatomic, readonly) BOOL canStartWorkout;
-@property (nonatomic, readonly) BOOL canPauseWorkout;
-@property (nonatomic, readonly) BOOL canResumeWorkout;
-@property (nonatomic, readonly) BOOL canFinishWorkout;
-@property (nonatomic, readonly) BOOL canDiscardWorkout;
-@property (nonatomic, readonly) BOOL canDecreaseIntensity;
-@property (nonatomic, readonly) BOOL canIncreaseIntensity;
-@property (nonatomic, readonly) BOOL canReplaceBlock;
-@property (nonatomic, readonly) BOOL canSkipBlock;
-@property (nonatomic, readonly) BOOL canMarkBlockAsDone;
-@property (nonatomic, readonly) BOOL isPlaying;
-- (void)start;
-- (void)finish;
-- (void)discard;
-- (void)pause;
-- (void)resume;
-- (void)decreaseIntensity;
-- (void)increaseIntensity;
-- (void)skipBlock;
-- (void)markBlockDone;
-- (void)replaceBlock;
-- (void)stopPlayingCurrentBlock;
-- (void)setCurrentBlock:(WorkoutBlock * _Nullable)block isAlreadySelected:(BOOL)isAlreadySelected;
-- (void)dismissBump;
-- (void)cancelReactiveAudioWithInfo:(CancelReactiveAudioInfo * _Nonnull)info;
-- (void)dismissReactiveAudioWithInfo:(DismissReactiveAudioInfo * _Nonnull)info;
-- (void)playWhenIsPossibleWithReactiveAudioSnippet:(ReactiveAudioSnippet * _Nonnull)reactiveAudioSnippet;
-@end
-
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal22EngineAudioDownloading_")
-@protocol EngineAudioDownloading
-@property (nonatomic, readonly) int64_t bytesToDownload;
-@property (nonatomic, readonly) int64_t bytesDownloaded;
-@end
-
-@protocol AudioCoachingEngineDelegate;
-@protocol AudioCoachingEngineDownloadingDelegate;
-@protocol AudioCoachingEngineControlsDelegate;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal19AudioCoachingEngine_")
-@protocol AudioCoachingEngine <EngineAudioDownloading, EngineWorkoutControlling, EngineWorkoutInformation>
-- (nonnull instancetype)initWithWorkout:(Workout * _Nonnull)workout delegate:(id <AudioCoachingEngineDelegate> _Nullable)delegate downloadingDelegate:(id <AudioCoachingEngineDownloadingDelegate> _Nullable)downloadingDelegate;
-@property (nonatomic, strong) id <AudioCoachingEngineDelegate> _Nullable delegate;
-@property (nonatomic, strong) id <AudioCoachingEngineDownloadingDelegate> _Nullable downloadingDelegate;
-@property (nonatomic, readonly, strong) id <AudioCoachingEngineControlsDelegate> _Nonnull controlsDelegate;
-@end
-
-@class Bump;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal32AudioCoachingEngineBumpsDelegate_")
-@protocol AudioCoachingEngineBumpsDelegate
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine willStartPlayingBump:(Bump * _Nonnull)bump timeSinceNow:(NSTimeInterval)timeSinceNow;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartPlayingBump:(Bump * _Nonnull)bump;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStopPlayingBump:(Bump * _Nonnull)bump;
-@end
-
-enum AudioCoachingType : NSInteger;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal35AudioCoachingEngineControlsDelegate_")
-@protocol AudioCoachingEngineControlsDelegate
-- (void)controlsDidToggleWithType:(enum AudioCoachingType)type newValue:(BOOL)newValue;
-- (void)controlsDidChangeValueWithValue:(float)value;
-- (void)controlsDidReceiveTap;
-@end
-
-@class NSURL;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal42AudioCoachingEngineWorkoutPlaybackDelegate_")
-@protocol AudioCoachingEngineWorkoutPlaybackDelegate
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartPlaying:(NSURL * _Nonnull)eventURL;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStopPlaying:(NSURL * _Nonnull)eventURL;
-@end
-
-@class UpdateWorkoutActionObjc;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal41AudioCoachingEngineWorkoutActionsDelegate_")
-@protocol AudioCoachingEngineWorkoutActionsDelegate
-/// Use this callback to show an activity indicator
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine willPerform:(UpdateWorkoutActionObjc * _Nonnull)action;
-/// Use this callback to stop any activities indicators you started in <code>willPerform</code>
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didPerform:(UpdateWorkoutActionObjc * _Nonnull)action;
-/// Use this callback to stop any activities indicators you started in <code>willPerform</code>
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didFail:(UpdateWorkoutActionObjc * _Nonnull)action error:(NSError * _Nullable)error;
-/// This is the most important delegate method the engine has. The engine calls this method when it performs an
-/// action on the workout. Alter the workout based on the action, calling your backend.
-/// \param engine the engine
-///
-/// \param action the action
-///
-/// \param workout the workout
-///
-/// \param retryCount use retry count to talk to the backend any number of times until success
-///
-/// \param onSuccess call this handler when the result is obtained
-///
-/// \param onError call this handler when an error is found
-///
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine requests:(UpdateWorkoutActionObjc * _Nonnull)action on:(Workout * _Nonnull)workout retryCount:(NSInteger)retryCount onSuccess:(void (^ _Nonnull)(Workout * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSError * _Nonnull))onError;
-@end
-
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal34AudioCoachingEngineWorkoutDelegate_")
-@protocol AudioCoachingEngineWorkoutDelegate
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine willStart:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStart:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didDiscard:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didFinish:(Workout * _Nonnull)workout heartRate:(NSInteger)heartRate calories:(NSInteger)calories;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartBlock:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didFinishBlock:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didPause:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didResume:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didChange:(WorkoutBlock * _Nonnull)block;
-@end
-
-enum InterruptionNotification : NSInteger;
-@class NSDate;
-@class NSNumber;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal27AudioCoachingEngineDelegate_")
-@protocol AudioCoachingEngineDelegate <AudioCoachingEngineBumpsDelegate, AudioCoachingEngineWorkoutActionsDelegate, AudioCoachingEngineWorkoutDelegate, AudioCoachingEngineWorkoutPlaybackDelegate>
-/// The engine will call this everytime the workout timer ticks.
-/// \param engine the engine that is ticking. You can query other properties from it, such as block elapsed time.
-///
-/// \param elapsedTime the workout elapsed time.
-///
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine elapsedTime:(NSTimeInterval)elapsedTime;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didReceiveInterruptionToPause:(enum InterruptionNotification)didReceiveInterruptionToPause;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didReceiveInterruptionToResume:(enum InterruptionNotification)didReceiveInterruptionToResume;
-- (void)engineDidReceiveEventWorkoutUpdate:(id <AudioCoachingEngine> _Nonnull)engine;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartPlayingReactiveAudioSnippet:(ReactiveAudioSnippet * _Nonnull)reactiveAudioSnippet;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStopPlayingReactiveAudioSnippet:(ReactiveAudioSnippet * _Nonnull)reactiveAudioSnippet;
-- (BOOL)engineShouldObtainAVGHeartRateFromExternalSource:(id <AudioCoachingEngine> _Nonnull)engine SWIFT_WARN_UNUSED_RESULT;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine externalSourceAVGHeartRateSince:(NSDate * _Nonnull)since toEndDate:(NSDate * _Nonnull)end completionHandler:(void (^ _Nonnull)(NSNumber * _Nullable, NSError * _Nullable))completionHandler;
-@end
-
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal38AudioCoachingEngineDownloadingDelegate_")
-@protocol AudioCoachingEngineDownloadingDelegate
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine willStartDownloading:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didFinishDownloading:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didProgressDownloading:(Workout * _Nonnull)workout;
-@end
-
-
-
-
-
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal27AudioCoachingPreferenceObjc")
-@interface AudioCoachingPreferenceObjc : NSObject
-@property (nonatomic, readonly) NSInteger id;
-@property (nonatomic, readonly, strong) NSNumber * _Nullable coachId;
-@property (nonatomic, readonly, strong) NSNumber * _Nullable isAudioDirection;
-@property (nonatomic, readonly, strong) NSNumber * _Nullable isAudioMotivation;
-@property (nonatomic, readonly, strong) NSNumber * _Nullable isAudioForm;
-@property (nonatomic, readonly, strong) NSNumber * _Nullable isAudioPacing;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-@class IntUpdateWorkoutActionType;
-@class NSString;
-@class MetricUpdateWorkoutActionType;
-@class AudioCoachingPreferenceUpdateWorkoutActionType;
-
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal23UpdateWorkoutActionObjc")
-@interface UpdateWorkoutActionObjc : NSObject
-+ (IntUpdateWorkoutActionType * _Nonnull)finish:(NSInteger)completedSeconds SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic, readonly, copy) NSString * _Nonnull name;
-+ (IntUpdateWorkoutActionType * _Nonnull)autoAdvance:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (IntUpdateWorkoutActionType * _Nonnull)done:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (IntUpdateWorkoutActionType * _Nonnull)up:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (IntUpdateWorkoutActionType * _Nonnull)down:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (IntUpdateWorkoutActionType * _Nonnull)replace:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (IntUpdateWorkoutActionType * _Nonnull)like:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (IntUpdateWorkoutActionType * _Nonnull)dislike:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (IntUpdateWorkoutActionType * _Nonnull)skip:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (MetricUpdateWorkoutActionType * _Nonnull)metricsWithHeartRate:(NSInteger)heartRate calories:(NSInteger)calories SWIFT_WARN_UNUSED_RESULT;
-+ (AudioCoachingPreferenceUpdateWorkoutActionType * _Nonnull)changeAudioCoachingPreferenceWithPreference:(AudioCoachingPreferenceObjc * _Nonnull)preference SWIFT_WARN_UNUSED_RESULT;
-+ (UpdateWorkoutActionObjc * _Nonnull)discard SWIFT_WARN_UNUSED_RESULT;
-+ (UpdateWorkoutActionObjc * _Nonnull)start SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal46AudioCoachingPreferenceUpdateWorkoutActionType")
-@interface AudioCoachingPreferenceUpdateWorkoutActionType : UpdateWorkoutActionObjc
-@end
-
-typedef SWIFT_ENUM(NSInteger, AudioCoachingType, open) {
-  AudioCoachingTypeDirection = 0,
-  AudioCoachingTypeForm = 1,
-  AudioCoachingTypeMotivation = 2,
-  AudioCoachingTypePacing = 3,
-};
-
 
 /// The audio player uses an instance of AVPlayer to play local or remotes sounds loaded from URLs.
 /// You can create as many players as you need. Or just store a single instance in your context.
@@ -503,18 +273,8 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal14AudioPlayerImp")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class StubBehavior;
 
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal11BackendObjc_")
-@protocol BackendObjc
-@property (nonatomic, readonly, strong) StubBehavior * _Nonnull stubBehavior;
-@property (nonatomic, readonly, copy) NSString * _Nonnull baseUrl;
-@property (nonatomic, readonly, copy) NSString * _Nonnull stagingUrl;
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull headers;
-@end
-
-
-SWIFT_CLASS_NAMED("Bump")
+SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal4Bump")
 @interface Bump : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -526,19 +286,13 @@ SWIFT_CLASS_NAMED("Bump")
 
 
 
-
-@interface NSBundle (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal))
-@property (nonatomic, readonly, copy) NSString * _Nullable versionAndBuildNumbersWithoutUnderscores;
-@end
-
-
-SWIFT_CLASS_NAMED("CancelReactiveAudioInfo")
+SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal23CancelReactiveAudioInfo")
 @interface CancelReactiveAudioInfo : NSObject
 @end
 
 
 
-SWIFT_CLASS_NAMED("DismissReactiveAudioInfo")
+SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal24DismissReactiveAudioInfo")
 @interface DismissReactiveAudioInfo : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -569,6 +323,7 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal10Downloader")
 @class NSURLSession;
 @class NSURLSessionTask;
 @class NSURLSessionDownloadTask;
+@class NSURL;
 
 @interface Downloader (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <NSURLSessionDownloadDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
@@ -578,83 +333,7 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal10Downloader")
 @end
 
 
-@class User;
-
-/// Default engine delegate. Talks to the default endpoint configured in the environmment to put changes in the workout.
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal16EngineController")
-@interface EngineController : NSObject
-@property (nonatomic, weak) id <AudioCoachingEngineDelegate> _Nullable delegate;
-- (nonnull instancetype)initWithEngine:(id <AudioCoachingEngine> _Nonnull)engine user:(User * _Nullable)user backend:(id <BackendObjc> _Nonnull)backend delegate:(id <AudioCoachingEngineDelegate> _Nullable)delegate OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-
-@interface EngineController (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <AudioCoachingEngineDelegate>
-- (BOOL)engineShouldObtainAVGHeartRateFromExternalSource:(id <AudioCoachingEngine> _Nonnull)engine SWIFT_WARN_UNUSED_RESULT;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine externalSourceAVGHeartRateSince:(NSDate * _Nonnull)since toEndDate:(NSDate * _Nonnull)end completionHandler:(void (^ _Nonnull)(NSNumber * _Nullable, NSError * _Nullable))completionHandler;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartPlaying:(NSURL * _Nonnull)eventURL;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStopPlaying:(NSURL * _Nonnull)eventURL;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine willStartPlayingBump:(Bump * _Nonnull)bump timeSinceNow:(NSTimeInterval)timeSinceNow;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartPlayingBump:(Bump * _Nonnull)bump;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStopPlayingReactiveAudioSnippet:(ReactiveAudioSnippet * _Nonnull)reactiveAudioSnippet;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartPlayingReactiveAudioSnippet:(ReactiveAudioSnippet * _Nonnull)reactiveAudioSnippet;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStopPlayingBump:(Bump * _Nonnull)bump;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didReceiveInterruptionToPause:(enum InterruptionNotification)interruption;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didReceiveInterruptionToResume:(enum InterruptionNotification)interruption;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine elapsedTime:(NSTimeInterval)elapsedTime;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine willPerform:(UpdateWorkoutActionObjc * _Nonnull)action;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didPerform:(UpdateWorkoutActionObjc * _Nonnull)action;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didFail:(UpdateWorkoutActionObjc * _Nonnull)action error:(NSError * _Nullable)error;
-- (void)engineDidReceiveEventWorkoutUpdate:(id <AudioCoachingEngine> _Nonnull)engine;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine requests:(UpdateWorkoutActionObjc * _Nonnull)action on:(Workout * _Nonnull)workout retryCount:(NSInteger)retryCount onSuccess:(void (^ _Nonnull)(Workout * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSError * _Nonnull))onError;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartBlock:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didFinishBlock:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didPause:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didResume:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didChange:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine willStart:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStart:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didDiscard:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didFinish:(Workout * _Nonnull)workout heartRate:(NSInteger)heartRate calories:(NSInteger)calories;
-@end
-
-
-
-
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal18GenericBackendObjc")
-@interface GenericBackendObjc : NSObject <BackendObjc>
-@property (nonatomic, strong) StubBehavior * _Nonnull stubBehavior;
-@property (nonatomic, copy) NSString * _Nonnull baseUrl;
-@property (nonatomic, copy) NSString * _Nonnull stagingUrl;
-@property (nonatomic, copy) NSDictionary<NSString *, NSString *> * _Nonnull headers;
-- (nonnull instancetype)initWithStubBehavior:(StubBehavior * _Nonnull)stubBehavior baseUrl:(NSString * _Nonnull)baseUrl stagingUrl:(NSString * _Nonnull)stagingUrl headers:(NSDictionary<NSString *, NSString *> * _Nonnull)headers OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-enum UpdateWorkoutActionKind : NSInteger;
-
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal26IntUpdateWorkoutActionType")
-@interface IntUpdateWorkoutActionType : UpdateWorkoutActionObjc
-- (nonnull instancetype)initWithKind:(enum UpdateWorkoutActionKind)kind value:(NSInteger)value OBJC_DESIGNATED_INITIALIZER;
-@end
-
-typedef SWIFT_ENUM(NSInteger, InterruptionNotification, open) {
-  InterruptionNotificationAudioSessionInterruptionDidBegin = 0,
-  InterruptionNotificationAudioSessionInterruptionDidEndAndPlaybackShouldResume = 1,
-  InterruptionNotificationAudioSessionInterruptionDidEndAndPlaybackShouldNotResume = 2,
-  InterruptionNotificationPhoneCallDidDisconnect = 3,
-  InterruptionNotificationPhoneCallDidStartDialing = 4,
-  InterruptionNotificationPhoneCallDidReceiveIncoming = 5,
-  InterruptionNotificationPhoneCallDidConnect = 6,
-  InterruptionNotificationTestPause = 7,
-  InterruptionNotificationTestResume = 8,
-};
-
-
-SWIFT_CLASS_NAMED("IsPlayedBump")
+SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12IsPlayedBump")
 @interface IsPlayedBump : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -662,90 +341,18 @@ SWIFT_CLASS_NAMED("IsPlayedBump")
 
 
 
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal29MetricUpdateWorkoutActionType")
-@interface MetricUpdateWorkoutActionType : UpdateWorkoutActionObjc
-@end
-
-
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal15MuuvBackendObjc")
-@interface MuuvBackendObjc : NSObject <BackendObjc>
-@property (nonatomic, readonly, copy) NSString * _Nonnull baseUrl;
-@property (nonatomic, readonly, copy) NSString * _Nonnull stagingUrl;
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull headers;
-@property (nonatomic, readonly, strong) StubBehavior * _Nonnull stubBehavior;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal9MuuvBlock")
 @interface MuuvBlock : NSObject
-@property (nonatomic) BOOL canBeReplaced;
-@property (nonatomic, copy) NSString * _Nullable setName;
 @end
 
-
-SWIFT_PROTOCOL_NAMED("PlayableBlock")
-@protocol PlayableBlock
-@property (nonatomic, readonly, copy) NSString * _Nonnull identifier;
-@property (nonatomic, readonly, copy) NSURL * _Nullable downloadableURL;
-@property (nonatomic, readonly) NSInteger intensity;
-@property (nonatomic, readonly) BOOL isEveryMinuteOnTheMinute;
-@property (nonatomic, readonly) BOOL canBeReplaced;
-@property (nonatomic, readonly) NSInteger numberOfSets;
-@property (nonatomic, readonly) NSInteger repetitions;
-@property (nonatomic, readonly) NSTimeInterval restTimeInSeconds;
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@property (nonatomic, readonly, copy) NSString * _Nullable durationToShow;
-@property (nonatomic, readonly, copy) NSString * _Nullable setName;
-@property (nonatomic, readonly, copy) NSURL * _Nullable videoURL;
-@end
-
-
-@interface MuuvBlock (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <PlayableBlock>
-@property (nonatomic, readonly, copy) NSString * _Nonnull identifier;
-@property (nonatomic, readonly) NSInteger intensity;
-@property (nonatomic, readonly) BOOL isEveryMinuteOnTheMinute;
-@property (nonatomic, readonly) NSInteger numberOfSets;
-@property (nonatomic, readonly) NSInteger repetitions;
-@property (nonatomic, readonly) NSTimeInterval restTimeInSeconds;
-@property (nonatomic, readonly, copy) NSString * _Nullable durationToShow;
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@property (nonatomic, readonly, copy) NSURL * _Nullable videoURL;
-@property (nonatomic, readonly, copy) NSURL * _Nullable downloadableURL;
-@end
 
 
 /// The entry point for the sdk, a facade providing all the possible actions to instantiate players.
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal7MuuvSDK")
 @interface MuuvSDK : NSObject
-/// Stops the current audio player and removes some used objects
-- (void)tearDown;
-@property (nonatomic, readonly, strong) id <AudioCoachingEngine> _Nullable currentEngine;
-/// Creates an audio coaching engine and keeps it as its current standalone engine, so the sdk is able to receive
-/// notificatios from Siri
-/// \param workout the player will use this workout object to navigate through blocks, play each block and perform all
-/// the workout actions
-///
-/// \param delegate register a delegate that will keep track of all the events in the workout and most important, will
-/// comunicate with a backend to perform the workout actions
-///
-/// \param downloadingDelegate the engine can report the downloading progress of each block to this delegate
-///
-/// \param useAppleWatch set to <code>true</code> if you want the sdk to integrate <code>WatchKit</code> and create the necessary
-/// controllers to synchronize the workout with the watch.
-///
-/// \param useHealthKit set to <code>true</code> if you want the sdk to integrate <code>HealthKit</code>and create the necessary controllers
-/// to save the workout information to <code>HealthKit</code>.
-///
-///
-/// returns:
-/// a <code>AudioCoachingEngine</code>instance ready to be used with any UI
-- (id <AudioCoachingEngine> _Nonnull)createAudioCoachingEngineWithWorkout:(Workout * _Nonnull)workout delegate:(id <AudioCoachingEngineDelegate> _Nullable)delegate downloadingDelegate:(id <AudioCoachingEngineDownloadingDelegate> _Nullable)downloadingDelegate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class MuuvSDKTools;
 
 /// Builds all the moving parts that the engine needs. it Creates the engine, the player and all their companions:
 /// an <code>EngineController</code> which is the Engine’s delegate and talks to endpoints and does custom logic that the engine
@@ -759,15 +366,6 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal7MuuvSDK")
 /// </ul>
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal31MuuvSDKEngineIntegrationBuilder")
 @interface MuuvSDKEngineIntegrationBuilder : NSObject
-@property (nonatomic, readonly, strong) MuuvSDKTools * _Nullable toolbox;
-@property (nonatomic, readonly, strong) id <AudioCoachingEngine> _Nonnull engine;
-@property (nonatomic, readonly, strong) EngineController * _Nonnull engineController;
-/// <ul>
-///   <li>
-///     backend: the backend that will be used to configure the engine controller with.
-///   </li>
-/// </ul>
-- (nonnull instancetype)initWithToolbox:(MuuvSDKTools * _Nullable)toolbox workout:(Workout * _Nonnull)workout engineDelegate:(id <AudioCoachingEngineDelegate> _Nullable)engineDelegate downloadingDelegate:(id <AudioCoachingEngineDownloadingDelegate> _Nullable)downloadingDelegate backend:(id <BackendObjc> _Nonnull)backend OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -788,7 +386,6 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal31MuuvSDKEngineIntegrationBuilder")
 /// </ul>
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12MuuvSDKTools")
 @interface MuuvSDKTools : NSObject
-@property (nonatomic, strong) id <BackendObjc> _Nonnull backend;
 /// Instantiates the
 /// \param appleWatch the apple watch implementation, used to sync workouts with the engine
 ///
@@ -798,9 +395,7 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12MuuvSDKTools")
 /// \param healthKitAuthorizer the authorized used to prompt the user for HK authorization, to show a primer for
 /// example
 ///
-- (nonnull instancetype)initWithBackend:(id <BackendObjc> _Nonnull)backend OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -811,45 +406,10 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal11MuuvWorkout")
 
 
 
-@protocol PlayableWorkoutSection;
-
-SWIFT_PROTOCOL_NAMED("PlayableWorkout")
-@protocol PlayableWorkout
-@property (nonatomic, readonly) NSInteger identifier;
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@property (nonatomic, readonly, copy) NSArray<id <PlayableWorkoutSection>> * _Nonnull workoutSections;
-@property (nonatomic, readonly) NSTimeInterval durationInSeconds;
-@property (nonatomic, readonly, copy) NSString * _Nullable type;
-@end
-
-
-@interface MuuvWorkout (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <PlayableWorkout>
-@property (nonatomic, readonly) NSInteger identifier;
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@property (nonatomic, readonly, copy) NSArray<id <PlayableWorkoutSection>> * _Nonnull workoutSections;
-@property (nonatomic, readonly, copy) NSString * _Nullable type;
-@property (nonatomic, readonly) NSTimeInterval durationInSeconds;
-@end
-
-
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal16MuuvWorkoutBlock")
 @interface MuuvWorkoutBlock : NSObject
-@property (nonatomic) NSInteger level;
 @end
 
-
-SWIFT_PROTOCOL_NAMED("PlayableWorkoutBlock")
-@protocol PlayableWorkoutBlock
-@property (nonatomic, readonly, copy) NSArray<id <PlayableBlock>> * _Nonnull intensityBlocks;
-@property (nonatomic, readonly) NSInteger level;
-- (id <PlayableBlock> _Nullable)blockWithIntensity:(NSInteger)intensity SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-@interface MuuvWorkoutBlock (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <PlayableWorkoutBlock>
-@property (nonatomic, readonly, copy) NSArray<id <PlayableBlock>> * _Nonnull intensityBlocks;
-- (id <PlayableBlock> _Nullable)blockWithIntensity:(NSInteger)intensity SWIFT_WARN_UNUSED_RESULT;
-@end
 
 
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal18MuuvWorkoutSection")
@@ -857,69 +417,13 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal18MuuvWorkoutSection")
 @end
 
 
-SWIFT_PROTOCOL_NAMED("PlayableWorkoutSection")
-@protocol PlayableWorkoutSection
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@property (nonatomic, readonly, copy) NSArray<id <PlayableWorkoutBlock>> * _Nonnull blocks;
-@property (nonatomic, readonly) NSInteger numberOfBlocks;
-- (id <PlayableBlock> _Nullable)blockAtIndex:(NSInteger)atIndex intensity:(NSInteger)intensity SWIFT_WARN_UNUSED_RESULT;
-@end
 
-
-@interface MuuvWorkoutSection (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <PlayableWorkoutSection>
-@property (nonatomic, readonly, copy) NSArray<id <PlayableWorkoutBlock>> * _Nonnull blocks;
-@property (nonatomic, readonly) NSInteger numberOfBlocks;
-- (id <PlayableBlock> _Nullable)blockAtIndex:(NSInteger)atIndex intensity:(NSInteger)intensity SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@end
-
-typedef SWIFT_ENUM(NSInteger, ObjcStubbingBehavior, open) {
-  ObjcStubbingBehaviorNever = 0,
-  ObjcStubbingBehaviorNow = 1,
-  ObjcStubbingBehaviorAfter = 2,
-  ObjcStubbingBehaviorError = 3,
-};
-
-
-
-
-
-
-SWIFT_CLASS_NAMED("ReactiveAudioSnippet")
+SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal20ReactiveAudioSnippet")
 @interface ReactiveAudioSnippet : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-
-@class NSError;
-
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12StubBehavior")
-@interface StubBehavior : NSObject
-- (nonnull instancetype)initWithKind:(enum ObjcStubbingBehavior)kind time:(NSNumber * _Nullable)time error:(NSError * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
-+ (StubBehavior * _Nonnull)never SWIFT_WARN_UNUSED_RESULT;
-+ (StubBehavior * _Nonnull)now SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-
-typedef SWIFT_ENUM(NSInteger, UpdateWorkoutActionKind, open) {
-  UpdateWorkoutActionKindMetrics = 0,
-  UpdateWorkoutActionKindFinishWorkout = 1,
-  UpdateWorkoutActionKindDiscardWorkout = 2,
-  UpdateWorkoutActionKindAutoAdvance = 3,
-  UpdateWorkoutActionKindDone = 4,
-  UpdateWorkoutActionKindUp = 5,
-  UpdateWorkoutActionKindDown = 6,
-  UpdateWorkoutActionKindReplace = 7,
-  UpdateWorkoutActionKindLike = 8,
-  UpdateWorkoutActionKindDislike = 9,
-  UpdateWorkoutActionKindSkip = 10,
-  UpdateWorkoutActionKindChangeAudioCoachingPreference = 11,
-  UpdateWorkoutActionKindStartWorkout = 12,
-};
 
 
 
@@ -928,12 +432,11 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal4User")
 @end
 
 
-SWIFT_CLASS_NAMED("WebSocketBumpMessage")
+SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal20WebSocketBumpMessage")
 @interface WebSocketBumpMessage : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal16WebSocketMessage")
@@ -941,7 +444,7 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal16WebSocketMessage")
 @end
 
 
-SWIFT_CLASS_NAMED("Workout")
+SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal7Workout")
 @interface Workout : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -952,21 +455,11 @@ SWIFT_CLASS_NAMED("Workout")
 
 
 
-
-@interface Workout (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <PlayableWorkout>
-@property (nonatomic, readonly, copy) NSString * _Nullable type;
-@property (nonatomic, readonly) NSInteger identifier;
-@property (nonatomic, readonly) NSTimeInterval durationInSeconds;
-@property (nonatomic, readonly, copy) NSArray<id <PlayableWorkoutSection>> * _Nonnull workoutSections;
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@end
-
-
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12WorkoutBlock")
 @interface WorkoutBlock : NSObject
-@property (nonatomic, copy) NSString * _Nullable setName;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -976,26 +469,6 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12WorkoutBlock")
 
 
 
-
-@interface WorkoutBlock (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <PlayableBlock>
-@property (nonatomic, readonly) BOOL canBeReplaced;
-@property (nonatomic, readonly) NSInteger intensity;
-@property (nonatomic, readonly, copy) NSString * _Nonnull identifier;
-@property (nonatomic, readonly) BOOL isEveryMinuteOnTheMinute;
-@property (nonatomic, readonly) NSInteger numberOfSets;
-@property (nonatomic, readonly) NSInteger repetitions;
-@property (nonatomic, readonly) NSTimeInterval restTimeInSeconds;
-@property (nonatomic, readonly, copy) NSString * _Nullable durationToShow;
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@property (nonatomic, readonly, copy) NSURL * _Nullable videoURL;
-@property (nonatomic, readonly, copy) NSURL * _Nullable downloadableURL;
-@end
-
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal13WorkoutPlayer_")
-@protocol WorkoutPlayer
-@property (nonatomic, readonly, strong) id <PlayableWorkout> _Nonnull workout;
-@end
 
 #endif
 #if defined(__cplusplus)
@@ -1260,236 +733,6 @@ using UInt = size_t;
 
 #if defined(__OBJC__)
 
-@class WorkoutBlock;
-@class Workout;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal24EngineWorkoutInformation_")
-@protocol EngineWorkoutInformation
-@property (nonatomic) BOOL didReceiveInfoFromWatch;
-@property (nonatomic) NSInteger avgHeartRate;
-@property (nonatomic) NSInteger heartRate;
-@property (nonatomic) NSInteger calories;
-@property (nonatomic) NSInteger userWeight;
-@property (nonatomic) float coachVolume;
-@property (nonatomic, readonly, strong) WorkoutBlock * _Nullable currentBlock;
-@property (nonatomic, readonly) NSTimeInterval currentBlockElapsedTime;
-@property (nonatomic, readonly) float currentBlockProgressFloat;
-@property (nonatomic, readonly) NSTimeInterval elapsedTime;
-@property (nonatomic) BOOL isFormEnabled;
-@property (nonatomic) BOOL isMotivationEnabled;
-@property (nonatomic) BOOL isDirectionEnabled;
-@property (nonatomic) BOOL isPacingEnabled;
-@property (nonatomic) BOOL isBumpsEnabled;
-@property (nonatomic, readonly) BOOL isPaused;
-@property (nonatomic, readonly) BOOL isStarted;
-@property (nonatomic) float volume;
-@property (nonatomic, readonly, strong) Workout * _Nonnull workout;
-@end
-
-@class CancelReactiveAudioInfo;
-@class DismissReactiveAudioInfo;
-@class ReactiveAudioSnippet;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal24EngineWorkoutControlling_")
-@protocol EngineWorkoutControlling
-@property (nonatomic, readonly) BOOL canStartWorkout;
-@property (nonatomic, readonly) BOOL canPauseWorkout;
-@property (nonatomic, readonly) BOOL canResumeWorkout;
-@property (nonatomic, readonly) BOOL canFinishWorkout;
-@property (nonatomic, readonly) BOOL canDiscardWorkout;
-@property (nonatomic, readonly) BOOL canDecreaseIntensity;
-@property (nonatomic, readonly) BOOL canIncreaseIntensity;
-@property (nonatomic, readonly) BOOL canReplaceBlock;
-@property (nonatomic, readonly) BOOL canSkipBlock;
-@property (nonatomic, readonly) BOOL canMarkBlockAsDone;
-@property (nonatomic, readonly) BOOL isPlaying;
-- (void)start;
-- (void)finish;
-- (void)discard;
-- (void)pause;
-- (void)resume;
-- (void)decreaseIntensity;
-- (void)increaseIntensity;
-- (void)skipBlock;
-- (void)markBlockDone;
-- (void)replaceBlock;
-- (void)stopPlayingCurrentBlock;
-- (void)setCurrentBlock:(WorkoutBlock * _Nullable)block isAlreadySelected:(BOOL)isAlreadySelected;
-- (void)dismissBump;
-- (void)cancelReactiveAudioWithInfo:(CancelReactiveAudioInfo * _Nonnull)info;
-- (void)dismissReactiveAudioWithInfo:(DismissReactiveAudioInfo * _Nonnull)info;
-- (void)playWhenIsPossibleWithReactiveAudioSnippet:(ReactiveAudioSnippet * _Nonnull)reactiveAudioSnippet;
-@end
-
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal22EngineAudioDownloading_")
-@protocol EngineAudioDownloading
-@property (nonatomic, readonly) int64_t bytesToDownload;
-@property (nonatomic, readonly) int64_t bytesDownloaded;
-@end
-
-@protocol AudioCoachingEngineDelegate;
-@protocol AudioCoachingEngineDownloadingDelegate;
-@protocol AudioCoachingEngineControlsDelegate;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal19AudioCoachingEngine_")
-@protocol AudioCoachingEngine <EngineAudioDownloading, EngineWorkoutControlling, EngineWorkoutInformation>
-- (nonnull instancetype)initWithWorkout:(Workout * _Nonnull)workout delegate:(id <AudioCoachingEngineDelegate> _Nullable)delegate downloadingDelegate:(id <AudioCoachingEngineDownloadingDelegate> _Nullable)downloadingDelegate;
-@property (nonatomic, strong) id <AudioCoachingEngineDelegate> _Nullable delegate;
-@property (nonatomic, strong) id <AudioCoachingEngineDownloadingDelegate> _Nullable downloadingDelegate;
-@property (nonatomic, readonly, strong) id <AudioCoachingEngineControlsDelegate> _Nonnull controlsDelegate;
-@end
-
-@class Bump;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal32AudioCoachingEngineBumpsDelegate_")
-@protocol AudioCoachingEngineBumpsDelegate
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine willStartPlayingBump:(Bump * _Nonnull)bump timeSinceNow:(NSTimeInterval)timeSinceNow;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartPlayingBump:(Bump * _Nonnull)bump;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStopPlayingBump:(Bump * _Nonnull)bump;
-@end
-
-enum AudioCoachingType : NSInteger;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal35AudioCoachingEngineControlsDelegate_")
-@protocol AudioCoachingEngineControlsDelegate
-- (void)controlsDidToggleWithType:(enum AudioCoachingType)type newValue:(BOOL)newValue;
-- (void)controlsDidChangeValueWithValue:(float)value;
-- (void)controlsDidReceiveTap;
-@end
-
-@class NSURL;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal42AudioCoachingEngineWorkoutPlaybackDelegate_")
-@protocol AudioCoachingEngineWorkoutPlaybackDelegate
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartPlaying:(NSURL * _Nonnull)eventURL;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStopPlaying:(NSURL * _Nonnull)eventURL;
-@end
-
-@class UpdateWorkoutActionObjc;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal41AudioCoachingEngineWorkoutActionsDelegate_")
-@protocol AudioCoachingEngineWorkoutActionsDelegate
-/// Use this callback to show an activity indicator
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine willPerform:(UpdateWorkoutActionObjc * _Nonnull)action;
-/// Use this callback to stop any activities indicators you started in <code>willPerform</code>
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didPerform:(UpdateWorkoutActionObjc * _Nonnull)action;
-/// Use this callback to stop any activities indicators you started in <code>willPerform</code>
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didFail:(UpdateWorkoutActionObjc * _Nonnull)action error:(NSError * _Nullable)error;
-/// This is the most important delegate method the engine has. The engine calls this method when it performs an
-/// action on the workout. Alter the workout based on the action, calling your backend.
-/// \param engine the engine
-///
-/// \param action the action
-///
-/// \param workout the workout
-///
-/// \param retryCount use retry count to talk to the backend any number of times until success
-///
-/// \param onSuccess call this handler when the result is obtained
-///
-/// \param onError call this handler when an error is found
-///
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine requests:(UpdateWorkoutActionObjc * _Nonnull)action on:(Workout * _Nonnull)workout retryCount:(NSInteger)retryCount onSuccess:(void (^ _Nonnull)(Workout * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSError * _Nonnull))onError;
-@end
-
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal34AudioCoachingEngineWorkoutDelegate_")
-@protocol AudioCoachingEngineWorkoutDelegate
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine willStart:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStart:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didDiscard:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didFinish:(Workout * _Nonnull)workout heartRate:(NSInteger)heartRate calories:(NSInteger)calories;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartBlock:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didFinishBlock:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didPause:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didResume:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didChange:(WorkoutBlock * _Nonnull)block;
-@end
-
-enum InterruptionNotification : NSInteger;
-@class NSDate;
-@class NSNumber;
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal27AudioCoachingEngineDelegate_")
-@protocol AudioCoachingEngineDelegate <AudioCoachingEngineBumpsDelegate, AudioCoachingEngineWorkoutActionsDelegate, AudioCoachingEngineWorkoutDelegate, AudioCoachingEngineWorkoutPlaybackDelegate>
-/// The engine will call this everytime the workout timer ticks.
-/// \param engine the engine that is ticking. You can query other properties from it, such as block elapsed time.
-///
-/// \param elapsedTime the workout elapsed time.
-///
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine elapsedTime:(NSTimeInterval)elapsedTime;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didReceiveInterruptionToPause:(enum InterruptionNotification)didReceiveInterruptionToPause;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didReceiveInterruptionToResume:(enum InterruptionNotification)didReceiveInterruptionToResume;
-- (void)engineDidReceiveEventWorkoutUpdate:(id <AudioCoachingEngine> _Nonnull)engine;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartPlayingReactiveAudioSnippet:(ReactiveAudioSnippet * _Nonnull)reactiveAudioSnippet;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStopPlayingReactiveAudioSnippet:(ReactiveAudioSnippet * _Nonnull)reactiveAudioSnippet;
-- (BOOL)engineShouldObtainAVGHeartRateFromExternalSource:(id <AudioCoachingEngine> _Nonnull)engine SWIFT_WARN_UNUSED_RESULT;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine externalSourceAVGHeartRateSince:(NSDate * _Nonnull)since toEndDate:(NSDate * _Nonnull)end completionHandler:(void (^ _Nonnull)(NSNumber * _Nullable, NSError * _Nullable))completionHandler;
-@end
-
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal38AudioCoachingEngineDownloadingDelegate_")
-@protocol AudioCoachingEngineDownloadingDelegate
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine willStartDownloading:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didFinishDownloading:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didProgressDownloading:(Workout * _Nonnull)workout;
-@end
-
-
-
-
-
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal27AudioCoachingPreferenceObjc")
-@interface AudioCoachingPreferenceObjc : NSObject
-@property (nonatomic, readonly) NSInteger id;
-@property (nonatomic, readonly, strong) NSNumber * _Nullable coachId;
-@property (nonatomic, readonly, strong) NSNumber * _Nullable isAudioDirection;
-@property (nonatomic, readonly, strong) NSNumber * _Nullable isAudioMotivation;
-@property (nonatomic, readonly, strong) NSNumber * _Nullable isAudioForm;
-@property (nonatomic, readonly, strong) NSNumber * _Nullable isAudioPacing;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-@class IntUpdateWorkoutActionType;
-@class NSString;
-@class MetricUpdateWorkoutActionType;
-@class AudioCoachingPreferenceUpdateWorkoutActionType;
-
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal23UpdateWorkoutActionObjc")
-@interface UpdateWorkoutActionObjc : NSObject
-+ (IntUpdateWorkoutActionType * _Nonnull)finish:(NSInteger)completedSeconds SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic, readonly, copy) NSString * _Nonnull name;
-+ (IntUpdateWorkoutActionType * _Nonnull)autoAdvance:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (IntUpdateWorkoutActionType * _Nonnull)done:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (IntUpdateWorkoutActionType * _Nonnull)up:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (IntUpdateWorkoutActionType * _Nonnull)down:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (IntUpdateWorkoutActionType * _Nonnull)replace:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (IntUpdateWorkoutActionType * _Nonnull)like:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (IntUpdateWorkoutActionType * _Nonnull)dislike:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (IntUpdateWorkoutActionType * _Nonnull)skip:(NSInteger)position SWIFT_WARN_UNUSED_RESULT;
-+ (MetricUpdateWorkoutActionType * _Nonnull)metricsWithHeartRate:(NSInteger)heartRate calories:(NSInteger)calories SWIFT_WARN_UNUSED_RESULT;
-+ (AudioCoachingPreferenceUpdateWorkoutActionType * _Nonnull)changeAudioCoachingPreferenceWithPreference:(AudioCoachingPreferenceObjc * _Nonnull)preference SWIFT_WARN_UNUSED_RESULT;
-+ (UpdateWorkoutActionObjc * _Nonnull)discard SWIFT_WARN_UNUSED_RESULT;
-+ (UpdateWorkoutActionObjc * _Nonnull)start SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal46AudioCoachingPreferenceUpdateWorkoutActionType")
-@interface AudioCoachingPreferenceUpdateWorkoutActionType : UpdateWorkoutActionObjc
-@end
-
-typedef SWIFT_ENUM(NSInteger, AudioCoachingType, open) {
-  AudioCoachingTypeDirection = 0,
-  AudioCoachingTypeForm = 1,
-  AudioCoachingTypeMotivation = 2,
-  AudioCoachingTypePacing = 3,
-};
-
 
 /// The audio player uses an instance of AVPlayer to play local or remotes sounds loaded from URLs.
 /// You can create as many players as you need. Or just store a single instance in your context.
@@ -1510,18 +753,8 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal14AudioPlayerImp")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class StubBehavior;
 
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal11BackendObjc_")
-@protocol BackendObjc
-@property (nonatomic, readonly, strong) StubBehavior * _Nonnull stubBehavior;
-@property (nonatomic, readonly, copy) NSString * _Nonnull baseUrl;
-@property (nonatomic, readonly, copy) NSString * _Nonnull stagingUrl;
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull headers;
-@end
-
-
-SWIFT_CLASS_NAMED("Bump")
+SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal4Bump")
 @interface Bump : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1533,19 +766,13 @@ SWIFT_CLASS_NAMED("Bump")
 
 
 
-
-@interface NSBundle (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal))
-@property (nonatomic, readonly, copy) NSString * _Nullable versionAndBuildNumbersWithoutUnderscores;
-@end
-
-
-SWIFT_CLASS_NAMED("CancelReactiveAudioInfo")
+SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal23CancelReactiveAudioInfo")
 @interface CancelReactiveAudioInfo : NSObject
 @end
 
 
 
-SWIFT_CLASS_NAMED("DismissReactiveAudioInfo")
+SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal24DismissReactiveAudioInfo")
 @interface DismissReactiveAudioInfo : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1576,6 +803,7 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal10Downloader")
 @class NSURLSession;
 @class NSURLSessionTask;
 @class NSURLSessionDownloadTask;
+@class NSURL;
 
 @interface Downloader (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <NSURLSessionDownloadDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
@@ -1585,83 +813,7 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal10Downloader")
 @end
 
 
-@class User;
-
-/// Default engine delegate. Talks to the default endpoint configured in the environmment to put changes in the workout.
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal16EngineController")
-@interface EngineController : NSObject
-@property (nonatomic, weak) id <AudioCoachingEngineDelegate> _Nullable delegate;
-- (nonnull instancetype)initWithEngine:(id <AudioCoachingEngine> _Nonnull)engine user:(User * _Nullable)user backend:(id <BackendObjc> _Nonnull)backend delegate:(id <AudioCoachingEngineDelegate> _Nullable)delegate OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-
-@interface EngineController (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <AudioCoachingEngineDelegate>
-- (BOOL)engineShouldObtainAVGHeartRateFromExternalSource:(id <AudioCoachingEngine> _Nonnull)engine SWIFT_WARN_UNUSED_RESULT;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine externalSourceAVGHeartRateSince:(NSDate * _Nonnull)since toEndDate:(NSDate * _Nonnull)end completionHandler:(void (^ _Nonnull)(NSNumber * _Nullable, NSError * _Nullable))completionHandler;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartPlaying:(NSURL * _Nonnull)eventURL;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStopPlaying:(NSURL * _Nonnull)eventURL;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine willStartPlayingBump:(Bump * _Nonnull)bump timeSinceNow:(NSTimeInterval)timeSinceNow;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartPlayingBump:(Bump * _Nonnull)bump;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStopPlayingReactiveAudioSnippet:(ReactiveAudioSnippet * _Nonnull)reactiveAudioSnippet;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartPlayingReactiveAudioSnippet:(ReactiveAudioSnippet * _Nonnull)reactiveAudioSnippet;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStopPlayingBump:(Bump * _Nonnull)bump;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didReceiveInterruptionToPause:(enum InterruptionNotification)interruption;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didReceiveInterruptionToResume:(enum InterruptionNotification)interruption;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine elapsedTime:(NSTimeInterval)elapsedTime;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine willPerform:(UpdateWorkoutActionObjc * _Nonnull)action;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didPerform:(UpdateWorkoutActionObjc * _Nonnull)action;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didFail:(UpdateWorkoutActionObjc * _Nonnull)action error:(NSError * _Nullable)error;
-- (void)engineDidReceiveEventWorkoutUpdate:(id <AudioCoachingEngine> _Nonnull)engine;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine requests:(UpdateWorkoutActionObjc * _Nonnull)action on:(Workout * _Nonnull)workout retryCount:(NSInteger)retryCount onSuccess:(void (^ _Nonnull)(Workout * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSError * _Nonnull))onError;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStartBlock:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didFinishBlock:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didPause:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didResume:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didChange:(WorkoutBlock * _Nonnull)block;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine willStart:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didStart:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didDiscard:(Workout * _Nonnull)workout;
-- (void)engine:(id <AudioCoachingEngine> _Nonnull)engine didFinish:(Workout * _Nonnull)workout heartRate:(NSInteger)heartRate calories:(NSInteger)calories;
-@end
-
-
-
-
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal18GenericBackendObjc")
-@interface GenericBackendObjc : NSObject <BackendObjc>
-@property (nonatomic, strong) StubBehavior * _Nonnull stubBehavior;
-@property (nonatomic, copy) NSString * _Nonnull baseUrl;
-@property (nonatomic, copy) NSString * _Nonnull stagingUrl;
-@property (nonatomic, copy) NSDictionary<NSString *, NSString *> * _Nonnull headers;
-- (nonnull instancetype)initWithStubBehavior:(StubBehavior * _Nonnull)stubBehavior baseUrl:(NSString * _Nonnull)baseUrl stagingUrl:(NSString * _Nonnull)stagingUrl headers:(NSDictionary<NSString *, NSString *> * _Nonnull)headers OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-enum UpdateWorkoutActionKind : NSInteger;
-
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal26IntUpdateWorkoutActionType")
-@interface IntUpdateWorkoutActionType : UpdateWorkoutActionObjc
-- (nonnull instancetype)initWithKind:(enum UpdateWorkoutActionKind)kind value:(NSInteger)value OBJC_DESIGNATED_INITIALIZER;
-@end
-
-typedef SWIFT_ENUM(NSInteger, InterruptionNotification, open) {
-  InterruptionNotificationAudioSessionInterruptionDidBegin = 0,
-  InterruptionNotificationAudioSessionInterruptionDidEndAndPlaybackShouldResume = 1,
-  InterruptionNotificationAudioSessionInterruptionDidEndAndPlaybackShouldNotResume = 2,
-  InterruptionNotificationPhoneCallDidDisconnect = 3,
-  InterruptionNotificationPhoneCallDidStartDialing = 4,
-  InterruptionNotificationPhoneCallDidReceiveIncoming = 5,
-  InterruptionNotificationPhoneCallDidConnect = 6,
-  InterruptionNotificationTestPause = 7,
-  InterruptionNotificationTestResume = 8,
-};
-
-
-SWIFT_CLASS_NAMED("IsPlayedBump")
+SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12IsPlayedBump")
 @interface IsPlayedBump : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1669,90 +821,18 @@ SWIFT_CLASS_NAMED("IsPlayedBump")
 
 
 
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal29MetricUpdateWorkoutActionType")
-@interface MetricUpdateWorkoutActionType : UpdateWorkoutActionObjc
-@end
-
-
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal15MuuvBackendObjc")
-@interface MuuvBackendObjc : NSObject <BackendObjc>
-@property (nonatomic, readonly, copy) NSString * _Nonnull baseUrl;
-@property (nonatomic, readonly, copy) NSString * _Nonnull stagingUrl;
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull headers;
-@property (nonatomic, readonly, strong) StubBehavior * _Nonnull stubBehavior;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal9MuuvBlock")
 @interface MuuvBlock : NSObject
-@property (nonatomic) BOOL canBeReplaced;
-@property (nonatomic, copy) NSString * _Nullable setName;
 @end
 
-
-SWIFT_PROTOCOL_NAMED("PlayableBlock")
-@protocol PlayableBlock
-@property (nonatomic, readonly, copy) NSString * _Nonnull identifier;
-@property (nonatomic, readonly, copy) NSURL * _Nullable downloadableURL;
-@property (nonatomic, readonly) NSInteger intensity;
-@property (nonatomic, readonly) BOOL isEveryMinuteOnTheMinute;
-@property (nonatomic, readonly) BOOL canBeReplaced;
-@property (nonatomic, readonly) NSInteger numberOfSets;
-@property (nonatomic, readonly) NSInteger repetitions;
-@property (nonatomic, readonly) NSTimeInterval restTimeInSeconds;
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@property (nonatomic, readonly, copy) NSString * _Nullable durationToShow;
-@property (nonatomic, readonly, copy) NSString * _Nullable setName;
-@property (nonatomic, readonly, copy) NSURL * _Nullable videoURL;
-@end
-
-
-@interface MuuvBlock (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <PlayableBlock>
-@property (nonatomic, readonly, copy) NSString * _Nonnull identifier;
-@property (nonatomic, readonly) NSInteger intensity;
-@property (nonatomic, readonly) BOOL isEveryMinuteOnTheMinute;
-@property (nonatomic, readonly) NSInteger numberOfSets;
-@property (nonatomic, readonly) NSInteger repetitions;
-@property (nonatomic, readonly) NSTimeInterval restTimeInSeconds;
-@property (nonatomic, readonly, copy) NSString * _Nullable durationToShow;
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@property (nonatomic, readonly, copy) NSURL * _Nullable videoURL;
-@property (nonatomic, readonly, copy) NSURL * _Nullable downloadableURL;
-@end
 
 
 /// The entry point for the sdk, a facade providing all the possible actions to instantiate players.
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal7MuuvSDK")
 @interface MuuvSDK : NSObject
-/// Stops the current audio player and removes some used objects
-- (void)tearDown;
-@property (nonatomic, readonly, strong) id <AudioCoachingEngine> _Nullable currentEngine;
-/// Creates an audio coaching engine and keeps it as its current standalone engine, so the sdk is able to receive
-/// notificatios from Siri
-/// \param workout the player will use this workout object to navigate through blocks, play each block and perform all
-/// the workout actions
-///
-/// \param delegate register a delegate that will keep track of all the events in the workout and most important, will
-/// comunicate with a backend to perform the workout actions
-///
-/// \param downloadingDelegate the engine can report the downloading progress of each block to this delegate
-///
-/// \param useAppleWatch set to <code>true</code> if you want the sdk to integrate <code>WatchKit</code> and create the necessary
-/// controllers to synchronize the workout with the watch.
-///
-/// \param useHealthKit set to <code>true</code> if you want the sdk to integrate <code>HealthKit</code>and create the necessary controllers
-/// to save the workout information to <code>HealthKit</code>.
-///
-///
-/// returns:
-/// a <code>AudioCoachingEngine</code>instance ready to be used with any UI
-- (id <AudioCoachingEngine> _Nonnull)createAudioCoachingEngineWithWorkout:(Workout * _Nonnull)workout delegate:(id <AudioCoachingEngineDelegate> _Nullable)delegate downloadingDelegate:(id <AudioCoachingEngineDownloadingDelegate> _Nullable)downloadingDelegate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class MuuvSDKTools;
 
 /// Builds all the moving parts that the engine needs. it Creates the engine, the player and all their companions:
 /// an <code>EngineController</code> which is the Engine’s delegate and talks to endpoints and does custom logic that the engine
@@ -1766,15 +846,6 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal7MuuvSDK")
 /// </ul>
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal31MuuvSDKEngineIntegrationBuilder")
 @interface MuuvSDKEngineIntegrationBuilder : NSObject
-@property (nonatomic, readonly, strong) MuuvSDKTools * _Nullable toolbox;
-@property (nonatomic, readonly, strong) id <AudioCoachingEngine> _Nonnull engine;
-@property (nonatomic, readonly, strong) EngineController * _Nonnull engineController;
-/// <ul>
-///   <li>
-///     backend: the backend that will be used to configure the engine controller with.
-///   </li>
-/// </ul>
-- (nonnull instancetype)initWithToolbox:(MuuvSDKTools * _Nullable)toolbox workout:(Workout * _Nonnull)workout engineDelegate:(id <AudioCoachingEngineDelegate> _Nullable)engineDelegate downloadingDelegate:(id <AudioCoachingEngineDownloadingDelegate> _Nullable)downloadingDelegate backend:(id <BackendObjc> _Nonnull)backend OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1795,7 +866,6 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal31MuuvSDKEngineIntegrationBuilder")
 /// </ul>
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12MuuvSDKTools")
 @interface MuuvSDKTools : NSObject
-@property (nonatomic, strong) id <BackendObjc> _Nonnull backend;
 /// Instantiates the
 /// \param appleWatch the apple watch implementation, used to sync workouts with the engine
 ///
@@ -1805,9 +875,7 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12MuuvSDKTools")
 /// \param healthKitAuthorizer the authorized used to prompt the user for HK authorization, to show a primer for
 /// example
 ///
-- (nonnull instancetype)initWithBackend:(id <BackendObjc> _Nonnull)backend OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1818,45 +886,10 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal11MuuvWorkout")
 
 
 
-@protocol PlayableWorkoutSection;
-
-SWIFT_PROTOCOL_NAMED("PlayableWorkout")
-@protocol PlayableWorkout
-@property (nonatomic, readonly) NSInteger identifier;
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@property (nonatomic, readonly, copy) NSArray<id <PlayableWorkoutSection>> * _Nonnull workoutSections;
-@property (nonatomic, readonly) NSTimeInterval durationInSeconds;
-@property (nonatomic, readonly, copy) NSString * _Nullable type;
-@end
-
-
-@interface MuuvWorkout (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <PlayableWorkout>
-@property (nonatomic, readonly) NSInteger identifier;
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@property (nonatomic, readonly, copy) NSArray<id <PlayableWorkoutSection>> * _Nonnull workoutSections;
-@property (nonatomic, readonly, copy) NSString * _Nullable type;
-@property (nonatomic, readonly) NSTimeInterval durationInSeconds;
-@end
-
-
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal16MuuvWorkoutBlock")
 @interface MuuvWorkoutBlock : NSObject
-@property (nonatomic) NSInteger level;
 @end
 
-
-SWIFT_PROTOCOL_NAMED("PlayableWorkoutBlock")
-@protocol PlayableWorkoutBlock
-@property (nonatomic, readonly, copy) NSArray<id <PlayableBlock>> * _Nonnull intensityBlocks;
-@property (nonatomic, readonly) NSInteger level;
-- (id <PlayableBlock> _Nullable)blockWithIntensity:(NSInteger)intensity SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-@interface MuuvWorkoutBlock (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <PlayableWorkoutBlock>
-@property (nonatomic, readonly, copy) NSArray<id <PlayableBlock>> * _Nonnull intensityBlocks;
-- (id <PlayableBlock> _Nullable)blockWithIntensity:(NSInteger)intensity SWIFT_WARN_UNUSED_RESULT;
-@end
 
 
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal18MuuvWorkoutSection")
@@ -1864,69 +897,13 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal18MuuvWorkoutSection")
 @end
 
 
-SWIFT_PROTOCOL_NAMED("PlayableWorkoutSection")
-@protocol PlayableWorkoutSection
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@property (nonatomic, readonly, copy) NSArray<id <PlayableWorkoutBlock>> * _Nonnull blocks;
-@property (nonatomic, readonly) NSInteger numberOfBlocks;
-- (id <PlayableBlock> _Nullable)blockAtIndex:(NSInteger)atIndex intensity:(NSInteger)intensity SWIFT_WARN_UNUSED_RESULT;
-@end
 
-
-@interface MuuvWorkoutSection (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <PlayableWorkoutSection>
-@property (nonatomic, readonly, copy) NSArray<id <PlayableWorkoutBlock>> * _Nonnull blocks;
-@property (nonatomic, readonly) NSInteger numberOfBlocks;
-- (id <PlayableBlock> _Nullable)blockAtIndex:(NSInteger)atIndex intensity:(NSInteger)intensity SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@end
-
-typedef SWIFT_ENUM(NSInteger, ObjcStubbingBehavior, open) {
-  ObjcStubbingBehaviorNever = 0,
-  ObjcStubbingBehaviorNow = 1,
-  ObjcStubbingBehaviorAfter = 2,
-  ObjcStubbingBehaviorError = 3,
-};
-
-
-
-
-
-
-SWIFT_CLASS_NAMED("ReactiveAudioSnippet")
+SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal20ReactiveAudioSnippet")
 @interface ReactiveAudioSnippet : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-
-@class NSError;
-
-SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12StubBehavior")
-@interface StubBehavior : NSObject
-- (nonnull instancetype)initWithKind:(enum ObjcStubbingBehavior)kind time:(NSNumber * _Nullable)time error:(NSError * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
-+ (StubBehavior * _Nonnull)never SWIFT_WARN_UNUSED_RESULT;
-+ (StubBehavior * _Nonnull)now SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-
-typedef SWIFT_ENUM(NSInteger, UpdateWorkoutActionKind, open) {
-  UpdateWorkoutActionKindMetrics = 0,
-  UpdateWorkoutActionKindFinishWorkout = 1,
-  UpdateWorkoutActionKindDiscardWorkout = 2,
-  UpdateWorkoutActionKindAutoAdvance = 3,
-  UpdateWorkoutActionKindDone = 4,
-  UpdateWorkoutActionKindUp = 5,
-  UpdateWorkoutActionKindDown = 6,
-  UpdateWorkoutActionKindReplace = 7,
-  UpdateWorkoutActionKindLike = 8,
-  UpdateWorkoutActionKindDislike = 9,
-  UpdateWorkoutActionKindSkip = 10,
-  UpdateWorkoutActionKindChangeAudioCoachingPreference = 11,
-  UpdateWorkoutActionKindStartWorkout = 12,
-};
 
 
 
@@ -1935,12 +912,11 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal4User")
 @end
 
 
-SWIFT_CLASS_NAMED("WebSocketBumpMessage")
+SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal20WebSocketBumpMessage")
 @interface WebSocketBumpMessage : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal16WebSocketMessage")
@@ -1948,7 +924,7 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal16WebSocketMessage")
 @end
 
 
-SWIFT_CLASS_NAMED("Workout")
+SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal7Workout")
 @interface Workout : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1959,21 +935,11 @@ SWIFT_CLASS_NAMED("Workout")
 
 
 
-
-@interface Workout (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <PlayableWorkout>
-@property (nonatomic, readonly, copy) NSString * _Nullable type;
-@property (nonatomic, readonly) NSInteger identifier;
-@property (nonatomic, readonly) NSTimeInterval durationInSeconds;
-@property (nonatomic, readonly, copy) NSArray<id <PlayableWorkoutSection>> * _Nonnull workoutSections;
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@end
-
-
 SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12WorkoutBlock")
 @interface WorkoutBlock : NSObject
-@property (nonatomic, copy) NSString * _Nullable setName;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -1983,26 +949,6 @@ SWIFT_CLASS("_TtC26WorkoutsPlayerCoreInternal12WorkoutBlock")
 
 
 
-
-@interface WorkoutBlock (SWIFT_EXTENSION(WorkoutsPlayerCoreInternal)) <PlayableBlock>
-@property (nonatomic, readonly) BOOL canBeReplaced;
-@property (nonatomic, readonly) NSInteger intensity;
-@property (nonatomic, readonly, copy) NSString * _Nonnull identifier;
-@property (nonatomic, readonly) BOOL isEveryMinuteOnTheMinute;
-@property (nonatomic, readonly) NSInteger numberOfSets;
-@property (nonatomic, readonly) NSInteger repetitions;
-@property (nonatomic, readonly) NSTimeInterval restTimeInSeconds;
-@property (nonatomic, readonly, copy) NSString * _Nullable durationToShow;
-@property (nonatomic, readonly, copy) NSString * _Nonnull title;
-@property (nonatomic, readonly, copy) NSURL * _Nullable videoURL;
-@property (nonatomic, readonly, copy) NSURL * _Nullable downloadableURL;
-@end
-
-
-SWIFT_PROTOCOL("_TtP26WorkoutsPlayerCoreInternal13WorkoutPlayer_")
-@protocol WorkoutPlayer
-@property (nonatomic, readonly, strong) id <PlayableWorkout> _Nonnull workout;
-@end
 
 #endif
 #if defined(__cplusplus)

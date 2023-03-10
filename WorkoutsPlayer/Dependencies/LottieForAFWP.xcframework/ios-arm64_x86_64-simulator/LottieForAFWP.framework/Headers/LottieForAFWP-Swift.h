@@ -365,7 +365,6 @@ SWIFT_CLASS("_TtC13LottieForAFWP26CompatibleAnimationKeypath")
 enum CompatibleRenderingEngineOption : NSInteger;
 @class NSURL;
 @class NSData;
-@class CompatibleDictionaryTextProvider;
 @class UIColor;
 
 /// An Objective-C compatible wrapper around Lottie’s LottieAnimationView.
@@ -393,7 +392,6 @@ SWIFT_CLASS("_TtC13LottieForAFWP23CompatibleAnimationView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
 @property (nonatomic, strong) CompatibleAnimation * _Nullable compatibleAnimation;
 @property (nonatomic) CGFloat loopAnimationCount;
-@property (nonatomic, strong) CompatibleDictionaryTextProvider * _Nullable compatibleDictionaryTextProvider;
 @property (nonatomic) UIViewContentMode contentMode;
 @property (nonatomic) BOOL shouldRasterizeWhenIdle;
 @property (nonatomic) CGFloat currentProgress;
@@ -431,17 +429,6 @@ SWIFT_CLASS("_TtC13LottieForAFWP23CompatibleAnimationView")
 - (CGFloat)progressTimeForMarker:(NSString * _Nonnull)named SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)frameTimeForMarker:(NSString * _Nonnull)named SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)durationFrameTimeForMarker:(NSString * _Nonnull)named SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-/// An Objective-C compatible wrapper around Lottie’s DictionaryTextProvider.
-/// Use in tandem with CompatibleAnimationView to supply text to LottieAnimationView
-/// when using Lottie in Objective-C.
-SWIFT_CLASS("_TtC13LottieForAFWP32CompatibleDictionaryTextProvider")
-@interface CompatibleDictionaryTextProvider : NSObject
-- (nonnull instancetype)initWithValues:(NSDictionary<NSString *, NSString *> * _Nonnull)values OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 /// An Objective-C compatible wrapper around Lottie’s RenderingEngineOption enum. Pass in an option
@@ -862,7 +849,6 @@ SWIFT_CLASS("_TtC13LottieForAFWP26CompatibleAnimationKeypath")
 enum CompatibleRenderingEngineOption : NSInteger;
 @class NSURL;
 @class NSData;
-@class CompatibleDictionaryTextProvider;
 @class UIColor;
 
 /// An Objective-C compatible wrapper around Lottie’s LottieAnimationView.
@@ -890,7 +876,6 @@ SWIFT_CLASS("_TtC13LottieForAFWP23CompatibleAnimationView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
 @property (nonatomic, strong) CompatibleAnimation * _Nullable compatibleAnimation;
 @property (nonatomic) CGFloat loopAnimationCount;
-@property (nonatomic, strong) CompatibleDictionaryTextProvider * _Nullable compatibleDictionaryTextProvider;
 @property (nonatomic) UIViewContentMode contentMode;
 @property (nonatomic) BOOL shouldRasterizeWhenIdle;
 @property (nonatomic) CGFloat currentProgress;
@@ -928,17 +913,6 @@ SWIFT_CLASS("_TtC13LottieForAFWP23CompatibleAnimationView")
 - (CGFloat)progressTimeForMarker:(NSString * _Nonnull)named SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)frameTimeForMarker:(NSString * _Nonnull)named SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)durationFrameTimeForMarker:(NSString * _Nonnull)named SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-/// An Objective-C compatible wrapper around Lottie’s DictionaryTextProvider.
-/// Use in tandem with CompatibleAnimationView to supply text to LottieAnimationView
-/// when using Lottie in Objective-C.
-SWIFT_CLASS("_TtC13LottieForAFWP32CompatibleDictionaryTextProvider")
-@interface CompatibleDictionaryTextProvider : NSObject
-- (nonnull instancetype)initWithValues:(NSDictionary<NSString *, NSString *> * _Nonnull)values OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 /// An Objective-C compatible wrapper around Lottie’s RenderingEngineOption enum. Pass in an option

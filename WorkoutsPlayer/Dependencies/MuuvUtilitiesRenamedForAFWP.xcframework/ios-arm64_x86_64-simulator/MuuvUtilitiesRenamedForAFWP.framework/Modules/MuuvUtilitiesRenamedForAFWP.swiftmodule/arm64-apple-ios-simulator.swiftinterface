@@ -625,10 +625,18 @@ extension Combine.Publisher {
   public func assign<Receiver, E>(valueTo valueKeyPath: Swift.WritableKeyPath<Receiver, Self.Output>, mappingError: @escaping (Swift.Error) -> E, on errorKeyPath: Swift.WritableKeyPath<Receiver, E>, of receiver: Receiver) -> Combine.AnyCancellable where Receiver : AnyObject
 }
 extension Combine.Publisher where Self.Failure == Swift.Never {
-  public func weakAssign<T>(to keyPath: Swift.ReferenceWritableKeyPath<T, Self.Output>, of object: T) -> Combine.AnyCancellable where T : AnyObject
+  public func weakSink<T>(into keyPath: Swift.ReferenceWritableKeyPath<T, Self.Output>, of object: T) -> Combine.AnyCancellable where T : AnyObject
 }
 extension Combine.Publisher where Self.Failure == Swift.Never {
-  public func weakSink<T>(_ handler: @escaping (T) -> (Self.Output) -> Swift.Void, on object: T) -> Combine.AnyCancellable where T : AnyObject
+  public func weakSink<T>(executing handler: @escaping (T) -> (Self.Output) -> Swift.Void, of object: T) -> Combine.AnyCancellable where T : AnyObject
+}
+extension Combine.Publisher where Self.Failure == Swift.Never {
+  public func weakSinkOnMainThread<T>(into keyPath: Swift.ReferenceWritableKeyPath<T, Self.Output>, of object: T) -> Combine.AnyCancellable where T : AnyObject
+  public func executeOnMainThread<T>(_ handler: @escaping (T) -> (Self.Output) -> Swift.Void, of object: T) -> Combine.AnyCancellable where T : AnyObject
+  public func executeOnMainActor<T>(_ handler: @escaping (T) -> @_Concurrency.MainActor (Self.Output) -> Swift.Void, of object: T) -> Combine.AnyCancellable where T : AnyObject
+}
+extension Combine.Publisher where Self.Failure == Swift.Never {
+  public func noNils<Value>() -> Combine.AnyPublisher<Value, Swift.Never> where Self.Output == Value?
 }
 #if compiler(>=5.3) && $Actors
 public actor ResourceDownloader<Resource> {

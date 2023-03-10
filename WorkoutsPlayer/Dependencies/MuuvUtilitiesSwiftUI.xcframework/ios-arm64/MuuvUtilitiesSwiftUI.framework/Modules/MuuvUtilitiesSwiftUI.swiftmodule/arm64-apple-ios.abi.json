@@ -1,0 +1,3533 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "MuuvUtilitiesSwiftUI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ErrorView",
+        "printedName": "ErrorView",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(type:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ErrorView",
+                "printedName": "MuuvUtilitiesSwiftUI.ErrorView",
+                "usr": "s:20MuuvUtilitiesSwiftUI9ErrorViewV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ErrorViewType",
+                "printedName": "MuuvUtilitiesSwiftUI.ErrorViewType",
+                "usr": "s:20MuuvUtilitiesSwiftUI13ErrorViewTypeO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20MuuvUtilitiesSwiftUI9ErrorViewV4typeAcA0eF4TypeO_tcfc",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI9ErrorViewV4typeAcA0eF4TypeO_tcfc",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(retryAction:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ErrorView",
+                "printedName": "MuuvUtilitiesSwiftUI.ErrorView",
+                "usr": "s:20MuuvUtilitiesSwiftUI9ErrorViewV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20MuuvUtilitiesSwiftUI9ErrorViewV11retryActionACyyc_tcfc",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI9ErrorViewV11retryActionACyyc_tcfc",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MuuvUtilitiesSwiftUI9ErrorViewV4bodyQrvp",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI9ErrorViewV4bodyQrvp",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MuuvUtilitiesSwiftUI9ErrorViewV4bodyQrvg",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI9ErrorViewV4bodyQrvg",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20MuuvUtilitiesSwiftUI9ErrorViewV",
+        "mangledName": "$s20MuuvUtilitiesSwiftUI9ErrorViewV",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ErrorViewType",
+        "printedName": "ErrorViewType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "emptyView",
+            "printedName": "emptyView",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MuuvUtilitiesSwiftUI.ErrorViewType.Type) -> MuuvUtilitiesSwiftUI.ErrorViewType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorViewType",
+                    "printedName": "MuuvUtilitiesSwiftUI.ErrorViewType",
+                    "usr": "s:20MuuvUtilitiesSwiftUI13ErrorViewTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.ErrorViewType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorViewType",
+                        "printedName": "MuuvUtilitiesSwiftUI.ErrorViewType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI13ErrorViewTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI13ErrorViewTypeO05emptyF0yA2CmF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI13ErrorViewTypeO05emptyF0yA2CmF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "vertical",
+            "printedName": "vertical",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MuuvUtilitiesSwiftUI.ErrorViewType.Type) -> (MuuvUtilitiesSwiftUI.ErrorViewStyle, SwiftUI.HorizontalAlignment) -> MuuvUtilitiesSwiftUI.ErrorViewType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MuuvUtilitiesSwiftUI.ErrorViewStyle, SwiftUI.HorizontalAlignment) -> MuuvUtilitiesSwiftUI.ErrorViewType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorViewType",
+                        "printedName": "MuuvUtilitiesSwiftUI.ErrorViewType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI13ErrorViewTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(style: MuuvUtilitiesSwiftUI.ErrorViewStyle, alignment: SwiftUI.HorizontalAlignment)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ErrorViewStyle",
+                            "printedName": "MuuvUtilitiesSwiftUI.ErrorViewStyle",
+                            "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "HorizontalAlignment",
+                            "printedName": "SwiftUI.HorizontalAlignment",
+                            "usr": "s:7SwiftUI19HorizontalAlignmentV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.ErrorViewType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorViewType",
+                        "printedName": "MuuvUtilitiesSwiftUI.ErrorViewType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI13ErrorViewTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI13ErrorViewTypeO8verticalyAcA0eF5StyleV_0cD019HorizontalAlignmentVtcACmF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI13ErrorViewTypeO8verticalyAcA0eF5StyleV_0cD019HorizontalAlignmentVtcACmF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "horizontal",
+            "printedName": "horizontal",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MuuvUtilitiesSwiftUI.ErrorViewType.Type) -> (MuuvUtilitiesSwiftUI.ErrorViewStyle, SwiftUI.VerticalAlignment) -> MuuvUtilitiesSwiftUI.ErrorViewType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MuuvUtilitiesSwiftUI.ErrorViewStyle, SwiftUI.VerticalAlignment) -> MuuvUtilitiesSwiftUI.ErrorViewType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorViewType",
+                        "printedName": "MuuvUtilitiesSwiftUI.ErrorViewType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI13ErrorViewTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(style: MuuvUtilitiesSwiftUI.ErrorViewStyle, alignment: SwiftUI.VerticalAlignment)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ErrorViewStyle",
+                            "printedName": "MuuvUtilitiesSwiftUI.ErrorViewStyle",
+                            "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VerticalAlignment",
+                            "printedName": "SwiftUI.VerticalAlignment",
+                            "usr": "s:7SwiftUI17VerticalAlignmentV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.ErrorViewType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorViewType",
+                        "printedName": "MuuvUtilitiesSwiftUI.ErrorViewType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI13ErrorViewTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI13ErrorViewTypeO10horizontalyAcA0eF5StyleV_0cD017VerticalAlignmentVtcACmF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI13ErrorViewTypeO10horizontalyAcA0eF5StyleV_0cD017VerticalAlignmentVtcACmF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "custom",
+            "printedName": "custom",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MuuvUtilitiesSwiftUI.ErrorViewType.Type) -> (SwiftUI.AnyView) -> MuuvUtilitiesSwiftUI.ErrorViewType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SwiftUI.AnyView) -> MuuvUtilitiesSwiftUI.ErrorViewType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorViewType",
+                        "printedName": "MuuvUtilitiesSwiftUI.ErrorViewType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI13ErrorViewTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyView",
+                        "printedName": "SwiftUI.AnyView",
+                        "usr": "s:7SwiftUI7AnyViewV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.ErrorViewType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorViewType",
+                        "printedName": "MuuvUtilitiesSwiftUI.ErrorViewType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI13ErrorViewTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI13ErrorViewTypeO6customyAC0cD003AnyF0VcACmF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI13ErrorViewTypeO6customyAC0cD003AnyF0VcACmF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20MuuvUtilitiesSwiftUI13ErrorViewTypeO",
+        "mangledName": "$s20MuuvUtilitiesSwiftUI13ErrorViewTypeO",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ErrorViewStyle",
+        "printedName": "ErrorViewStyle",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "ImageOptions",
+            "printedName": "ImageOptions",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(systemName:foregroundColor:frame:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageOptions",
+                    "printedName": "MuuvUtilitiesSwiftUI.ErrorViewStyle.ImageOptions",
+                    "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV12ImageOptionsV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "hasDefaultArg": true,
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Color",
+                    "printedName": "SwiftUI.Color",
+                    "hasDefaultArg": true,
+                    "usr": "s:7SwiftUI5ColorV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "hasDefaultArg": true,
+                    "usr": "c:@S@CGSize"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV12ImageOptionsV10systemName15foregroundColor5frameAESS_0cD00M0VSo6CGSizeVtcfc",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI14ErrorViewStyleV12ImageOptionsV10systemName15foregroundColor5frameAESS_0cD00M0VSo6CGSizeVtcfc",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV12ImageOptionsV",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI14ErrorViewStyleV12ImageOptionsV",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl"
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "TitleOptions",
+            "printedName": "TitleOptions",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(text:foregroundColor:font:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TitleOptions",
+                    "printedName": "MuuvUtilitiesSwiftUI.ErrorViewStyle.TitleOptions",
+                    "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV12TitleOptionsV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "hasDefaultArg": true,
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Color",
+                    "printedName": "SwiftUI.Color",
+                    "hasDefaultArg": true,
+                    "usr": "s:7SwiftUI5ColorV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Font",
+                    "printedName": "SwiftUI.Font",
+                    "hasDefaultArg": true,
+                    "usr": "s:7SwiftUI4FontV"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV12TitleOptionsV4text15foregroundColor4fontAESS_0cD00L0VAI4FontVtcfc",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI14ErrorViewStyleV12TitleOptionsV4text15foregroundColor4fontAESS_0cD00L0VAI4FontVtcfc",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV12TitleOptionsV",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI14ErrorViewStyleV12TitleOptionsV",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl"
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "ButtonOptions",
+            "printedName": "ButtonOptions",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(text:foregroundColor:tintColor:font:action:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ButtonOptions",
+                    "printedName": "MuuvUtilitiesSwiftUI.ErrorViewStyle.ButtonOptions",
+                    "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV13ButtonOptionsV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "hasDefaultArg": true,
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Color",
+                    "printedName": "SwiftUI.Color",
+                    "hasDefaultArg": true,
+                    "usr": "s:7SwiftUI5ColorV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Color",
+                    "printedName": "SwiftUI.Color",
+                    "hasDefaultArg": true,
+                    "usr": "s:7SwiftUI5ColorV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Font",
+                    "printedName": "SwiftUI.Font",
+                    "hasDefaultArg": true,
+                    "usr": "s:7SwiftUI4FontV"
+                  },
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV13ButtonOptionsV4text15foregroundColor04tintL04font6actionAESS_0cD00L0VAmK4FontVyyctcfc",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI14ErrorViewStyleV13ButtonOptionsV4text15foregroundColor04tintL04font6actionAESS_0cD00L0VAmK4FontVyyctcfc",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV13ButtonOptionsV",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI14ErrorViewStyleV13ButtonOptionsV",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl"
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(imageOptions:titleOptions:buttonOptions:frameAlignment:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ErrorViewStyle",
+                "printedName": "MuuvUtilitiesSwiftUI.ErrorViewStyle",
+                "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MuuvUtilitiesSwiftUI.ErrorViewStyle.ImageOptions?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageOptions",
+                    "printedName": "MuuvUtilitiesSwiftUI.ErrorViewStyle.ImageOptions",
+                    "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV12ImageOptionsV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MuuvUtilitiesSwiftUI.ErrorViewStyle.TitleOptions?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TitleOptions",
+                    "printedName": "MuuvUtilitiesSwiftUI.ErrorViewStyle.TitleOptions",
+                    "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV12TitleOptionsV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MuuvUtilitiesSwiftUI.ErrorViewStyle.ButtonOptions?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ButtonOptions",
+                    "printedName": "MuuvUtilitiesSwiftUI.ErrorViewStyle.ButtonOptions",
+                    "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV13ButtonOptionsV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Alignment",
+                "printedName": "SwiftUI.Alignment",
+                "hasDefaultArg": true,
+                "usr": "s:7SwiftUI9AlignmentV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV12imageOptions05titleI006buttonI014frameAlignmentA2C05ImageI0VSg_AC05TitleI0VSgAC06ButtonI0VSg0cD00M0Vtcfc",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI14ErrorViewStyleV12imageOptions05titleI006buttonI014frameAlignmentA2C05ImageI0VSg_AC05TitleI0VSgAC06ButtonI0VSg0cD00M0Vtcfc",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20MuuvUtilitiesSwiftUI14ErrorViewStyleV",
+        "mangledName": "$s20MuuvUtilitiesSwiftUI14ErrorViewStyleV",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LoadingViewModifier",
+        "printedName": "LoadingViewModifier",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(type:indicatorView:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LoadingViewModifier",
+                "printedName": "MuuvUtilitiesSwiftUI.LoadingViewModifier<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingViewModifierV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LoadingModifierType",
+                "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingViewModifierV4type09indicatorF0ACyxGAA0eG4TypeO_xtcfc",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingViewModifierV4type09indicatorF0ACyxGAA0eG4TypeO_xtcfc",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<IndicatorView where IndicatorView : SwiftUI.View>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "body",
+            "printedName": "body(content:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "_ViewModifier_Content",
+                "printedName": "SwiftUI._ViewModifier_Content<MuuvUtilitiesSwiftUI.LoadingViewModifier<τ_0_0>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LoadingViewModifier",
+                    "printedName": "MuuvUtilitiesSwiftUI.LoadingViewModifier<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:20MuuvUtilitiesSwiftUI19LoadingViewModifierV"
+                  }
+                ],
+                "usr": "s:7SwiftUI21_ViewModifier_ContentV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingViewModifierV4body7contentQr0cD001_fG8_ContentVyACyxGG_tF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingViewModifierV4body7contentQr0cD001_fG8_ContentVyACyxGG_tF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<IndicatorView where IndicatorView : SwiftUI.View>",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingViewModifierV",
+        "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingViewModifierV",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+        "sugared_genericSig": "<IndicatorView where IndicatorView : SwiftUI.View>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ViewModifier",
+            "printedName": "ViewModifier",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI12ViewModifierP",
+            "mangledName": "$s7SwiftUI12ViewModifierP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LoadingModifierType",
+        "printedName": "LoadingModifierType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MuuvUtilitiesSwiftUI.LoadingModifierType.Type) -> MuuvUtilitiesSwiftUI.LoadingModifierType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LoadingModifierType",
+                    "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                    "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LoadingModifierType",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO4noneyA2CmF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO4noneyA2CmF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "material",
+            "printedName": "material",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MuuvUtilitiesSwiftUI.LoadingModifierType.Type) -> (CoreGraphics.CGFloat, Swift.Bool, CoreGraphics.CGFloat, CoreGraphics.CGFloat, SwiftUI.Alignment) -> MuuvUtilitiesSwiftUI.LoadingModifierType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreGraphics.CGFloat, Swift.Bool, CoreGraphics.CGFloat, CoreGraphics.CGFloat, SwiftUI.Alignment) -> MuuvUtilitiesSwiftUI.LoadingModifierType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LoadingModifierType",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(padding: CoreGraphics.CGFloat, displayIndicator: Swift.Bool, indicatorPadding: CoreGraphics.CGFloat, cornerRadius: CoreGraphics.CGFloat, alignment: SwiftUI.Alignment)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Alignment",
+                            "printedName": "SwiftUI.Alignment",
+                            "usr": "s:7SwiftUI9AlignmentV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LoadingModifierType",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO8materialyAC14CoreFoundation7CGFloatV_SbA2G0cD09AlignmentVtcACmF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO8materialyAC12CoreGraphics7CGFloatV_SbA2G0cD09AlignmentVtcACmF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "overCurrentContent",
+            "printedName": "overCurrentContent",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MuuvUtilitiesSwiftUI.LoadingModifierType.Type) -> (CoreGraphics.CGFloat, Swift.Bool, CoreGraphics.CGFloat, CoreGraphics.CGFloat, Swift.Bool, SwiftUI.Alignment) -> MuuvUtilitiesSwiftUI.LoadingModifierType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreGraphics.CGFloat, Swift.Bool, CoreGraphics.CGFloat, CoreGraphics.CGFloat, Swift.Bool, SwiftUI.Alignment) -> MuuvUtilitiesSwiftUI.LoadingModifierType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LoadingModifierType",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(padding: CoreGraphics.CGFloat, displayIndicator: Swift.Bool, indicatorPadding: CoreGraphics.CGFloat, contentOpacity: CoreGraphics.CGFloat, disableInteraction: Swift.Bool, alignment: SwiftUI.Alignment)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Alignment",
+                            "printedName": "SwiftUI.Alignment",
+                            "usr": "s:7SwiftUI9AlignmentV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LoadingModifierType",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO18overCurrentContentyAC14CoreFoundation7CGFloatV_SbA2GSb0cD09AlignmentVtcACmF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO18overCurrentContentyAC12CoreGraphics7CGFloatV_SbA2GSb0cD09AlignmentVtcACmF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "horizontal",
+            "printedName": "horizontal",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MuuvUtilitiesSwiftUI.LoadingModifierType.Type) -> (MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption, CoreGraphics.CGFloat, Swift.Bool, SwiftUI.VerticalAlignment, CoreGraphics.CGFloat) -> MuuvUtilitiesSwiftUI.LoadingModifierType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption, CoreGraphics.CGFloat, Swift.Bool, SwiftUI.VerticalAlignment, CoreGraphics.CGFloat) -> MuuvUtilitiesSwiftUI.LoadingModifierType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LoadingModifierType",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(option: MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption, contentOpacity: CoreGraphics.CGFloat, disableInteraction: Swift.Bool, alignment: SwiftUI.VerticalAlignment, spacing: CoreGraphics.CGFloat)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "HorizontalOption",
+                            "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption",
+                            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VerticalAlignment",
+                            "printedName": "SwiftUI.VerticalAlignment",
+                            "usr": "s:7SwiftUI17VerticalAlignmentV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LoadingModifierType",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO10horizontalyA2C16HorizontalOptionO_14CoreFoundation7CGFloatVSb0cD017VerticalAlignmentVAItcACmF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO10horizontalyA2C16HorizontalOptionO_12CoreGraphics7CGFloatVSb0cD017VerticalAlignmentVAItcACmF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "vertical",
+            "printedName": "vertical",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MuuvUtilitiesSwiftUI.LoadingModifierType.Type) -> (MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption, CoreGraphics.CGFloat, Swift.Bool, SwiftUI.HorizontalAlignment, CoreGraphics.CGFloat) -> MuuvUtilitiesSwiftUI.LoadingModifierType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption, CoreGraphics.CGFloat, Swift.Bool, SwiftUI.HorizontalAlignment, CoreGraphics.CGFloat) -> MuuvUtilitiesSwiftUI.LoadingModifierType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LoadingModifierType",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(option: MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption, contentOpacity: CoreGraphics.CGFloat, disableInteraction: Swift.Bool, alignment: SwiftUI.HorizontalAlignment, spacing: CoreGraphics.CGFloat)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VerticalOption",
+                            "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption",
+                            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "HorizontalAlignment",
+                            "printedName": "SwiftUI.HorizontalAlignment",
+                            "usr": "s:7SwiftUI19HorizontalAlignmentV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LoadingModifierType",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO8verticalyA2C14VerticalOptionO_14CoreFoundation7CGFloatVSb0cD019HorizontalAlignmentVAItcACmF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO8verticalyA2C14VerticalOptionO_12CoreGraphics7CGFloatVSb0cD019HorizontalAlignmentVAItcACmF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "toolbar",
+            "printedName": "toolbar",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MuuvUtilitiesSwiftUI.LoadingModifierType.Type) -> (CoreGraphics.CGFloat, Swift.Bool) -> MuuvUtilitiesSwiftUI.LoadingModifierType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreGraphics.CGFloat, Swift.Bool) -> MuuvUtilitiesSwiftUI.LoadingModifierType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LoadingModifierType",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(contentOpacity: CoreGraphics.CGFloat, disableInteraction: Swift.Bool)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LoadingModifierType",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO7toolbaryAC14CoreFoundation7CGFloatV_SbtcACmF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO7toolbaryAC12CoreGraphics7CGFloatV_SbtcACmF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "custom",
+            "printedName": "custom",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MuuvUtilitiesSwiftUI.LoadingModifierType.Type) -> (SwiftUI.AnyView) -> MuuvUtilitiesSwiftUI.LoadingModifierType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SwiftUI.AnyView) -> MuuvUtilitiesSwiftUI.LoadingModifierType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LoadingModifierType",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyView",
+                        "printedName": "SwiftUI.AnyView",
+                        "usr": "s:7SwiftUI7AnyViewV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LoadingModifierType",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO6customyAC0cD07AnyViewVcACmF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO6customyAC0cD07AnyViewVcACmF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "HorizontalOption",
+            "printedName": "HorizontalOption",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "leading",
+                "printedName": "leading",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption.Type) -> MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HorizontalOption",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "HorizontalOption",
+                            "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption",
+                            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO7leadingyA2EmF",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO7leadingyA2EmF",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "trailing",
+                "printedName": "trailing",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption.Type) -> MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HorizontalOption",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "HorizontalOption",
+                            "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption",
+                            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO8trailingyA2EmF",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO8trailingyA2EmF",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HorizontalOption",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO8rawValueAESgSS_tcfc",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO8rawValueAESgSS_tcfc",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO8rawValueSSvp",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO8rawValueSSvp",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO8rawValueSSvg",
+                    "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO8rawValueSSvg",
+                    "moduleName": "MuuvUtilitiesSwiftUI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "allCases",
+                "printedName": "allCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HorizontalOption",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO8allCasesSayAEGvpZ",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO8allCasesSayAEGvpZ",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "static": true,
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "HorizontalOption",
+                            "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption",
+                            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO8allCasesSayAEGvgZ",
+                    "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO8allCasesSayAEGvgZ",
+                    "moduleName": "MuuvUtilitiesSwiftUI",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "enumRawTypeName": "String",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CaseIterable",
+                "printedName": "CaseIterable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "AllCases",
+                    "printedName": "AllCases",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "HorizontalOption",
+                            "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.HorizontalOption",
+                            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO16HorizontalOptionO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:s12CaseIterableP",
+                "mangledName": "$ss12CaseIterableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "VerticalOption",
+            "printedName": "VerticalOption",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "bottom",
+                "printedName": "bottom",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption.Type) -> MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerticalOption",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VerticalOption",
+                            "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption",
+                            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO6bottomyA2EmF",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO6bottomyA2EmF",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "top",
+                "printedName": "top",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption.Type) -> MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerticalOption",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VerticalOption",
+                            "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption",
+                            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO3topyA2EmF",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO3topyA2EmF",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerticalOption",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO8rawValueAESgSS_tcfc",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO8rawValueAESgSS_tcfc",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO8rawValueSSvp",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO8rawValueSSvp",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO8rawValueSSvg",
+                    "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO8rawValueSSvg",
+                    "moduleName": "MuuvUtilitiesSwiftUI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "allCases",
+                "printedName": "allCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerticalOption",
+                        "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption",
+                        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO8allCasesSayAEGvpZ",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO8allCasesSayAEGvpZ",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "static": true,
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VerticalOption",
+                            "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption",
+                            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO8allCasesSayAEGvgZ",
+                    "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO8allCasesSayAEGvgZ",
+                    "moduleName": "MuuvUtilitiesSwiftUI",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "enumRawTypeName": "String",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CaseIterable",
+                "printedName": "CaseIterable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "AllCases",
+                    "printedName": "AllCases",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VerticalOption",
+                            "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType.VerticalOption",
+                            "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO14VerticalOptionO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:s12CaseIterableP",
+                "mangledName": "$ss12CaseIterableP"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO",
+        "mangledName": "$s20MuuvUtilitiesSwiftUI19LoadingModifierTypeO",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "MuuvUtilitiesSwiftUI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ViewState",
+        "printedName": "ViewState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "initial",
+            "printedName": "initial",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "GenericFunction",
+                "printedName": "<τ_0_0> (MuuvUtilitiesSwiftUI.ViewState<τ_0_0>.Type) -> MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ViewState",
+                    "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ViewState",
+                        "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO7initialyACyxGAEmlF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI9ViewStateO7initialyACyxGAEmlF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "loading",
+            "printedName": "loading",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "GenericFunction",
+                "printedName": "<τ_0_0> (MuuvUtilitiesSwiftUI.ViewState<τ_0_0>.Type) -> MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ViewState",
+                    "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ViewState",
+                        "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO7loadingyACyxGAEmlF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI9ViewStateO7loadingyACyxGAEmlF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "GenericFunction",
+                "printedName": "<τ_0_0> (MuuvUtilitiesSwiftUI.ViewState<τ_0_0>.Type) -> (Swift.Error) -> MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Error) -> MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ViewState",
+                        "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ViewState",
+                        "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO5erroryACyxGs5Error_pcAEmlF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI9ViewStateO5erroryACyxGs5Error_pcAEmlF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "loaded",
+            "printedName": "loaded",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "GenericFunction",
+                "printedName": "<τ_0_0> (MuuvUtilitiesSwiftUI.ViewState<τ_0_0>.Type) -> (τ_0_0) -> MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(τ_0_0) -> MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ViewState",
+                        "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ViewState",
+                        "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO6loadedyACyxGxcAEmlF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI9ViewStateO6loadedyACyxGxcAEmlF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isLoading",
+            "printedName": "isLoading",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO9isLoadingSbvp",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI9ViewStateO9isLoadingSbvp",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO9isLoadingSbvg",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI9ViewStateO9isLoadingSbvg",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Info>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "info",
+            "printedName": "info",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO4infoxSgvp",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI9ViewStateO4infoxSgvp",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_0_0?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO4infoxSgvg",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI9ViewStateO4infoxSgvg",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Info>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Error?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO5errors5Error_pSgvp",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI9ViewStateO5errors5Error_pSgvp",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Error?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO5errors5Error_pSgvg",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI9ViewStateO5errors5Error_pSgvg",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Info>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ViewState",
+                "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ViewState",
+                "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO2eeoiySbACyxG_AEtFZ",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI9ViewStateO2eeoiySbACyxG_AEtFZ",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Info>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO",
+        "mangledName": "$s20MuuvUtilitiesSwiftUI9ViewStateO",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Info>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ViewStateController",
+        "printedName": "ViewStateController",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ViewStateController",
+                "printedName": "MuuvUtilitiesSwiftUI.ViewStateController<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerVACyxGycfc",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerVACyxGycfc",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Info>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "isInitialLoading",
+            "printedName": "isInitialLoading",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV16isInitialLoadingSbvp",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV16isInitialLoadingSbvp",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV16isInitialLoadingSbvg",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV16isInitialLoadingSbvg",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Info>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isLoading",
+            "printedName": "isLoading",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV9isLoadingSbvp",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV9isLoadingSbvp",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV9isLoadingSbvg",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV9isLoadingSbvg",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Info>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "latestValidInfo",
+            "printedName": "latestValidInfo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV15latestValidInfoxSgvp",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV15latestValidInfoxSgvp",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_0_0?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV15latestValidInfoxSgvg",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV15latestValidInfoxSgvg",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Info>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "latestInfo",
+            "printedName": "latestInfo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV10latestInfoxSgvp",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV10latestInfoxSgvp",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_0_0?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV10latestInfoxSgvg",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV10latestInfoxSgvg",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Info>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "latestValidError",
+            "printedName": "latestValidError",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Error?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV16latestValidErrors0J0_pSgvp",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV16latestValidErrors0J0_pSgvp",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Error?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV16latestValidErrors0J0_pSgvg",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV16latestValidErrors0J0_pSgvg",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Info>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "latestError",
+            "printedName": "latestError",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Error?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV11latestErrors0I0_pSgvp",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV11latestErrors0I0_pSgvp",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Error?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV11latestErrors0I0_pSgvg",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV11latestErrors0I0_pSgvg",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Info>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "latestNonLoading",
+            "printedName": "latestNonLoading",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Result<τ_0_0, Swift.Error>?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<τ_0_0, Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV16latestNonLoadings6ResultOyxs5Error_pGSgvp",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV16latestNonLoadings6ResultOyxs5Error_pGSgvp",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Result<τ_0_0, Swift.Error>?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<τ_0_0, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV16latestNonLoadings6ResultOyxs5Error_pGSgvg",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV16latestNonLoadings6ResultOyxs5Error_pGSgvg",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Info>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "modifyingIds",
+            "printedName": "modifyingIds",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV12modifyingIdsSaySSGSgvp",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV12modifyingIdsSaySSGSgvp",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV12modifyingIdsSaySSGSgvg",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV12modifyingIdsSaySSGSgvg",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Info>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV12modifyingIdsSaySSGSgvs",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV12modifyingIdsSaySSGSgvs",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Info>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV12modifyingIdsSaySSGSgvM",
+                "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV12modifyingIdsSaySSGSgvM",
+                "moduleName": "MuuvUtilitiesSwiftUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Info>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setState",
+            "printedName": "setState(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ViewState",
+                "printedName": "MuuvUtilitiesSwiftUI.ViewState<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:20MuuvUtilitiesSwiftUI9ViewStateO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV03setF0yyAA0eF0OyxGF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV03setF0yyAA0eF0OyxGF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Info>",
+            "declAttributes": [
+              "Mutating",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reset",
+            "printedName": "reset()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV5resetyyF",
+            "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV5resetyyF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Info>",
+            "declAttributes": [
+              "Mutating",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "Mutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV",
+        "mangledName": "$s20MuuvUtilitiesSwiftUI19ViewStateControllerV",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Info>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MuuvUtilitiesSwiftUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "MuuvUtilitiesSwiftUI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "View",
+        "printedName": "View",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "asAnyView",
+            "printedName": "asAnyView()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyView",
+                "printedName": "SwiftUI.AnyView",
+                "usr": "s:7SwiftUI7AnyViewV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftUI4ViewP013MuuvUtilitiesaB0E05asAnyC0AA0gC0VyF",
+            "mangledName": "$s7SwiftUI4ViewP013MuuvUtilitiesaB0E05asAnyC0AA0gC0VyF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<Self where Self : SwiftUI.View>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "materialOverlay",
+            "printedName": "materialOverlay(cornerRadius:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftUI4ViewP013MuuvUtilitiesaB0E15materialOverlay12cornerRadiusQr14CoreFoundation7CGFloatV_tF",
+            "mangledName": "$s7SwiftUI4ViewP013MuuvUtilitiesaB0E15materialOverlay12cornerRadiusQr12CoreGraphics7CGFloatV_tF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<Self where Self : SwiftUI.View>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "withViewStateModifier",
+            "printedName": "withViewStateModifier(controller:indicatorView:initialLoadingType:loadedView:loadingAfterInfoType:errorView:loadingAfterErrorType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ViewStateController",
+                "printedName": "MuuvUtilitiesSwiftUI.ViewStateController<τ_1_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ],
+                "usr": "s:20MuuvUtilitiesSwiftUI19ViewStateControllerV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_1",
+                "hasDefaultArg": true
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LoadingModifierType",
+                "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                "hasDefaultArg": true,
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_1_0) -> τ_1_2",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_2"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LoadingModifierType",
+                "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                "hasDefaultArg": true,
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Error) -> MuuvUtilitiesSwiftUI.ErrorView",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorView",
+                    "printedName": "MuuvUtilitiesSwiftUI.ErrorView",
+                    "usr": "s:20MuuvUtilitiesSwiftUI9ErrorViewV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LoadingModifierType",
+                "printedName": "MuuvUtilitiesSwiftUI.LoadingModifierType",
+                "hasDefaultArg": true,
+                "usr": "s:20MuuvUtilitiesSwiftUI19LoadingModifierTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftUI4ViewP013MuuvUtilitiesaB0E04withC13StateModifier10controller09indicatorC018initialLoadingType06loadedC0016loadingAfterInfoM005errorC00op5ErrorM0QrAD0cG10ControllerVyqd__G_qd_0_AD0lhM0Oqd_1_qd__cAqD0sC0Vs0S0_pcAQtAaBRd_0_AaBRd_1_r1_lF",
+            "mangledName": "$s7SwiftUI4ViewP013MuuvUtilitiesaB0E04withC13StateModifier10controller09indicatorC018initialLoadingType06loadedC0016loadingAfterInfoM005errorC00op5ErrorM0QrAD0cG10ControllerVyqd__G_qd_0_AD0lhM0Oqd_1_qd__cAqD0sC0Vs0S0_pcAQtAaBRd_0_AaBRd_1_r1_lF",
+            "moduleName": "MuuvUtilitiesSwiftUI",
+            "genericSig": "<τ_0_0, τ_1_0, τ_1_1, τ_1_2 where τ_0_0 : SwiftUI.View, τ_1_1 : SwiftUI.View, τ_1_2 : SwiftUI.View>",
+            "sugared_genericSig": "<Self, Info, IndicatorView, LoadedView where Self : SwiftUI.View, IndicatorView : SwiftUI.View, LoadedView : SwiftUI.View>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:7SwiftUI4ViewP",
+        "mangledName": "$s7SwiftUI4ViewP",
+        "moduleName": "SwiftUI",
+        "genericSig": "<τ_0_0.Body : SwiftUI.View>",
+        "sugared_genericSig": "<Self.Body : SwiftUI.View>",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "TypeEraser",
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ErrorView\/ErrorView.swift",
+      "kind": "StringLiteral",
+      "offset": 3819,
+      "length": 19,
+      "value": "\"xmark.circle.fill\""
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ErrorView\/ErrorView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3924,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ErrorView\/ErrorView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3936,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ErrorView\/ErrorView.swift",
+      "kind": "StringLiteral",
+      "offset": 4257,
+      "length": 22,
+      "value": "\"Something went wrong\""
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ErrorView\/ErrorView.swift",
+      "kind": "StringLiteral",
+      "offset": 4726,
+      "length": 7,
+      "value": "\"Retry\""
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6582,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6618,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6660,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6695,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7355,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7391,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7433,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7470,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7508,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8124,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8162,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8243,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8793,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8831,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8915,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9217,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/LoadingViewModifier.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9255,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewModifiers\/MaterialOverlayModifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 418,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/MuuvUtilitiesSwiftUI\/Sources\/MuuvUtilitiesSwiftUI\/Presentation\/Helpers\/ViewStateController\/ViewState\/ViewStateController.swift",
+      "kind": "Array",
+      "offset": 374,
+      "length": 2,
+      "value": "[]"
+    }
+  ]
+}
