@@ -59586,6 +59586,48 @@
           },
           {
             "kind": "Var",
+            "name": "completed",
+            "printedName": "completed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:26WorkoutsPlayerCoreInternal12WorkoutBlockC9completedSbvp",
+            "mangledName": "$s26WorkoutsPlayerCoreInternal12WorkoutBlockC9completedSbvp",
+            "moduleName": "WorkoutsPlayerCoreInternal",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:26WorkoutsPlayerCoreInternal12WorkoutBlockC9completedSbvg",
+                "mangledName": "$s26WorkoutsPlayerCoreInternal12WorkoutBlockC9completedSbvg",
+                "moduleName": "WorkoutsPlayerCoreInternal",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "isAudioCoaching",
             "printedName": "isAudioCoaching",
             "children": [
@@ -76374,1323 +76416,1323 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
       "kind": "Dictionary",
       "offset": 1092,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
       "kind": "Dictionary",
       "offset": 1168,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
       "kind": "Array",
       "offset": 1214,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
       "kind": "Dictionary",
       "offset": 1304,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
       "kind": "Array",
       "offset": 1381,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
       "kind": "Array",
       "offset": 1422,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
       "kind": "BooleanLiteral",
       "offset": 1564,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
       "kind": "Dictionary",
       "offset": 1802,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
       "kind": "StringLiteral",
       "offset": 639,
       "length": 23,
       "value": "\"WorkoutsPlayerCoreInternal.AudioCoachingController\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/AudioCoachingController.swift",
       "kind": "BooleanLiteral",
       "offset": 19967,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 504,
       "length": 4,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 518,
       "length": 10,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 538,
       "length": 6,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 504,
       "length": 4,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 518,
       "length": 10,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 538,
       "length": 6,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 504,
       "length": 4,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 518,
       "length": 10,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/AudioCoachingEngineControlsDelegate.swift",
       "kind": "IntegerLiteral",
       "offset": 538,
       "length": 6,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
       "kind": "FloatLiteral",
       "offset": 1420,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
       "kind": "FloatLiteral",
       "offset": 1464,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
       "kind": "FloatLiteral",
       "offset": 1504,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
       "kind": "FloatLiteral",
       "offset": 1579,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Audio Player\/AudioPlayer.swift",
       "kind": "StringLiteral",
       "offset": 1037,
       "length": 14,
       "value": "\"WorkoutsPlayerCoreInternal.AudioPlayerImp\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Audio Player\/AudioSessionManager.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Audio Player\/AudioSessionManager.swift",
       "kind": "Array",
       "offset": 1412,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
       "kind": "Array",
       "offset": 1158,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 1334,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 1386,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 1765,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 2545,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 8608,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/AudioTimelinePlayer.swift",
       "kind": "IntegerLiteral",
       "offset": 8636,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
       "kind": "Array",
       "offset": 451,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 6967,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 7019,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 7139,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/BatchDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 7185,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/BuildSmartWorkoutInfo.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/BuildSmartWorkoutInfo.swift",
       "kind": "StringLiteral",
       "offset": 370,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 646,
       "length": 13,
       "value": "\"created_int\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 684,
       "length": 11,
       "value": "\"audio_mp3\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 722,
       "length": 13,
       "value": "\"duration_ms\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 763,
       "length": 14,
       "value": "\"waveform_png\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 805,
       "length": 14,
       "value": "\"creator_name\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 646,
       "length": 13,
       "value": "\"created_int\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 684,
       "length": 11,
       "value": "\"audio_mp3\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 722,
       "length": 13,
       "value": "\"duration_ms\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 763,
       "length": 14,
       "value": "\"waveform_png\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 805,
       "length": 14,
       "value": "\"creator_name\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 199,
       "length": 4,
       "value": "\"WorkoutsPlayerCoreInternal.Bump\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 1572,
       "length": 20,
       "value": "\"WorkoutsPlayerCoreInternal.WebSocketBumpMessage\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Bump.swift",
       "kind": "StringLiteral",
       "offset": 1949,
       "length": 12,
       "value": "\"WorkoutsPlayerCoreInternal.IsPlayedBump\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/BumpsAudioDowloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/BumpsAudioDowloader.swift",
       "kind": "Dictionary",
       "offset": 1052,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/BumpsAudioDowloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/BumpsAudioDowloader.swift",
       "kind": "StringLiteral",
       "offset": 1187,
       "length": 23,
       "value": "\"download status queue\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/BumpsAudioDowloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/BumpsAudioDowloader.swift",
       "kind": "BooleanLiteral",
       "offset": 1244,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/Timer & Chronometer\/Chronometer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/Timer & Chronometer\/Chronometer.swift",
       "kind": "IntegerLiteral",
       "offset": 538,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Constants.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Constants.swift",
       "kind": "IntegerLiteral",
       "offset": 274,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Constants.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 354,
       "length": 22,
       "value": "\"No rest between sets\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Extensions\/Date+Extensions.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Extensions\/Date+Extensions.swift",
       "kind": "IntegerLiteral",
       "offset": 1917,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Extensions\/Date+Extensions.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Extensions\/Date+Extensions.swift",
       "kind": "IntegerLiteral",
       "offset": 1943,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Extensions\/Date+Extensions.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Extensions\/Date+Extensions.swift",
       "kind": "IntegerLiteral",
       "offset": 2410,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Extensions\/Date+Extensions.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Extensions\/Date+Extensions.swift",
       "kind": "IntegerLiteral",
       "offset": 2436,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Extensions\/Date+Extensions.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Extensions\/Date+Extensions.swift",
       "kind": "IntegerLiteral",
       "offset": 2462,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Futures\/Disposable.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Futures\/Disposable.swift",
       "kind": "Array",
       "offset": 447,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Futures\/Disposable.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Futures\/Disposable.swift",
       "kind": "Array",
       "offset": 492,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Futures\/Disposable.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Futures\/Disposable.swift",
       "kind": "Array",
       "offset": 1304,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "BooleanLiteral",
       "offset": 1190,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "BooleanLiteral",
       "offset": 1238,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "IntegerLiteral",
       "offset": 1287,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "Dictionary",
       "offset": 1992,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "StringLiteral",
       "offset": 2250,
       "length": 19,
       "value": "\"Downloaders queue\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "BooleanLiteral",
       "offset": 4635,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "IntegerLiteral",
       "offset": 4714,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "IntegerLiteral",
       "offset": 4766,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/Downloader.swift",
       "kind": "StringLiteral",
       "offset": 740,
       "length": 10,
       "value": "\"WorkoutsPlayerCoreInternal.Downloader\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
       "kind": "BooleanLiteral",
       "offset": 660,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 739,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 791,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/InternalSingleFileDownloader.swift",
       "kind": "StringLiteral",
       "offset": 297,
       "length": 28,
       "value": "\"WorkoutsPlayerCoreInternal.InternalSingleFileDownloader\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/InterruptionsManager.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/InterruptionsManager.swift",
       "kind": "BooleanLiteral",
       "offset": 368,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 543,
       "length": 19,
       "value": "\"Error in login %@\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 664,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 702,
       "length": 7,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 708,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 898,
       "length": 44,
       "value": "\"Error signing user and fetching workout %@\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1044,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1082,
       "length": 7,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1088,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1299,
       "length": 19,
       "value": "\"User signed in %@\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1420,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1458,
       "length": 7,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1464,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1644,
       "length": 21,
       "value": "\"Workout fetched %@)\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1767,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1805,
       "length": 7,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Localization\/Localizations.swift",
       "kind": "StringLiteral",
       "offset": 1811,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/SDK\/MuuvSDKEngineIntegrationBuilder.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/SDK\/MuuvSDKEngineIntegrationBuilder.swift",
       "kind": "StringLiteral",
       "offset": 698,
       "length": 31,
       "value": "\"WorkoutsPlayerCoreInternal.MuuvSDKEngineIntegrationBuilder\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 316,
       "length": 53,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 379,
       "length": 56,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 445,
       "length": 22,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 477,
       "length": 24,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 511,
       "length": 27,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 548,
       "length": 19,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 577,
       "length": 9,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 596,
       "length": 10,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 316,
       "length": 53,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 379,
       "length": 56,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 445,
       "length": 22,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 477,
       "length": 24,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 511,
       "length": 27,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 548,
       "length": 19,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 577,
       "length": 9,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 596,
       "length": 10,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 316,
       "length": 53,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 379,
       "length": 56,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 445,
       "length": 22,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 477,
       "length": 24,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 511,
       "length": 27,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 548,
       "length": 19,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 577,
       "length": 9,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Notifications\/PlayerNotifications.swift",
       "kind": "IntegerLiteral",
       "offset": 596,
       "length": 10,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/ReactiveAudioDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/ReactiveAudioDownloader.swift",
       "kind": "Dictionary",
       "offset": 1417,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/ReactiveAudioDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/ReactiveAudioDownloader.swift",
       "kind": "StringLiteral",
       "offset": 1552,
       "length": 44,
       "value": "\"download status queue ReactiveAudioSnippet\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/ReactiveAudioDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/ReactiveAudioDownloader.swift",
       "kind": "BooleanLiteral",
       "offset": 1630,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/ReactiveAudioSnippet.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/ReactiveAudioSnippet.swift",
       "kind": "StringLiteral",
       "offset": 458,
       "length": 13,
       "value": "\"duration_ms\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/ReactiveAudioSnippet.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/ReactiveAudioSnippet.swift",
       "kind": "StringLiteral",
       "offset": 458,
       "length": 13,
       "value": "\"duration_ms\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/ReactiveAudioSnippet.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/ReactiveAudioSnippet.swift",
       "kind": "StringLiteral",
       "offset": 215,
       "length": 20,
       "value": "\"WorkoutsPlayerCoreInternal.ReactiveAudioSnippet\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/ReactiveAudioSnippet.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/ReactiveAudioSnippet.swift",
       "kind": "StringLiteral",
       "offset": 1164,
       "length": 24,
       "value": "\"WorkoutsPlayerCoreInternal.DismissReactiveAudioInfo\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/SerialWorkoutAudioDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/SerialWorkoutAudioDownloader.swift",
       "kind": "Dictionary",
       "offset": 4279,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/SerialWorkoutAudioDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/SerialWorkoutAudioDownloader.swift",
       "kind": "StringLiteral",
       "offset": 4414,
       "length": 23,
       "value": "\"download status queue\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/SerialWorkoutAudioDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/SerialWorkoutAudioDownloader.swift",
       "kind": "BooleanLiteral",
       "offset": 4471,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/SharedResource.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/SharedResource.swift",
       "kind": "StringLiteral",
       "offset": 252,
       "length": 17,
       "value": "\"button.thumb.up\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/SharedResource.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/SharedResource.swift",
       "kind": "StringLiteral",
       "offset": 742,
       "length": 34,
       "value": "\"WorkoutsPlayerCoreInternalBundle\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/SharedResource.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/SharedResource.swift",
       "kind": "StringLiteral",
       "offset": 1367,
       "length": 9,
       "value": "\".bundle\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/SharedResource.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/SharedResource.swift",
       "kind": "StringLiteral",
       "offset": 1567,
       "length": 14,
       "value": "\"Sample image\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "BooleanLiteral",
       "offset": 704,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "BooleanLiteral",
       "offset": 743,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "IntegerLiteral",
       "offset": 1206,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "IntegerLiteral",
       "offset": 1240,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "IntegerLiteral",
       "offset": 1273,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "IntegerLiteral",
       "offset": 1308,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "BooleanLiteral",
       "offset": 1357,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "IntegerLiteral",
       "offset": 1402,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine.swift",
       "kind": "BooleanLiteral",
       "offset": 1458,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine+Actions.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Standalone\/StandaloneAudioCoachingEngine+Actions.swift",
       "kind": "BooleanLiteral",
       "offset": 1812,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Stream.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Stream.swift",
       "kind": "StringLiteral",
       "offset": 7115,
       "length": 14,
       "value": "\"tag_group_id\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Stream.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Stream.swift",
       "kind": "StringLiteral",
       "offset": 7115,
       "length": 14,
       "value": "\"tag_group_id\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/Timeline.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/Timeline.swift",
       "kind": "IntegerLiteral",
       "offset": 334,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/Timeline.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/Timeline.swift",
       "kind": "IntegerLiteral",
       "offset": 424,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/Timeline.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/Timeline.swift",
       "kind": "IntegerLiteral",
       "offset": 1206,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/Timeline.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/Timeline.swift",
       "kind": "BooleanLiteral",
       "offset": 11381,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/Timeline.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/Timeline.swift",
       "kind": "BooleanLiteral",
       "offset": 11420,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/TimelineDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/TimelineDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 329,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/TimelineDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/TimelineDownloader.swift",
       "kind": "Dictionary",
       "offset": 408,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/TimelineDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Timeline\/TimelineDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 1615,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/UpdateWorkoutInfo.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/UpdateWorkoutInfo.swift",
       "kind": "StringLiteral",
       "offset": 562,
       "length": 19,
       "value": "\"completed_seconds\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/UpdateWorkoutInfo.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/UpdateWorkoutInfo.swift",
       "kind": "StringLiteral",
       "offset": 612,
       "length": 17,
       "value": "\"calories_burned\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/UpdateWorkoutInfo.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/UpdateWorkoutInfo.swift",
       "kind": "StringLiteral",
       "offset": 662,
       "length": 20,
       "value": "\"average_heart_rate\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/UpdateWorkoutInfo.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/UpdateWorkoutInfo.swift",
       "kind": "StringLiteral",
       "offset": 562,
       "length": 19,
       "value": "\"completed_seconds\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/UpdateWorkoutInfo.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/UpdateWorkoutInfo.swift",
       "kind": "StringLiteral",
       "offset": 612,
       "length": 17,
       "value": "\"calories_burned\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/UpdateWorkoutInfo.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/UpdateWorkoutInfo.swift",
       "kind": "StringLiteral",
       "offset": 662,
       "length": 20,
       "value": "\"average_heart_rate\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Workout.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/Workout.swift",
       "kind": "StringLiteral",
       "offset": 168,
       "length": 7,
       "value": "\"WorkoutsPlayerCoreInternal.Workout\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutBlock.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutBlock.swift",
       "kind": "Array",
       "offset": 613,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutBlock.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutBlock.swift",
       "kind": "IntegerLiteral",
       "offset": 851,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutBlock.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutBlock.swift",
       "kind": "StringLiteral",
       "offset": 185,
       "length": 12,
       "value": "\"WorkoutsPlayerCoreInternal.WorkoutBlock\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 454,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 506,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 656,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Utilities\/Tools\/Downloader\/WorkoutDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 702,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "BooleanLiteral",
       "offset": 575,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "BooleanLiteral",
       "offset": 622,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "BooleanLiteral",
       "offset": 667,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 746,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 822,
       "length": 11,
       "value": "\"stream_id\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 926,
       "length": 22,
       "value": "\"can_change_equipment\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 982,
       "length": 21,
       "value": "\"can_change_duration\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 1035,
       "length": 19,
       "value": "\"can_change_format\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 1086,
       "length": 18,
       "value": "\"duration_seconds\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 822,
       "length": 11,
       "value": "\"stream_id\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 926,
       "length": 22,
       "value": "\"can_change_equipment\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 982,
       "length": 21,
       "value": "\"can_change_duration\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 1035,
       "length": 19,
       "value": "\"can_change_format\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "StringLiteral",
       "offset": 1086,
       "length": 18,
       "value": "\"duration_seconds\""
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "BooleanLiteral",
       "offset": 1358,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "BooleanLiteral",
       "offset": 1396,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Entities\/WorkoutFormat.swift",
       "kind": "BooleanLiteral",
       "offset": 1436,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/Workout Protocol\/WorkoutPlayerState.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/Workout Protocol\/WorkoutPlayerState.swift",
       "kind": "BooleanLiteral",
       "offset": 357,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/Workout Protocol\/WorkoutPlayerState.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Engine Protocols\/Workout Protocol\/WorkoutPlayerState.swift",
       "kind": "BooleanLiteral",
       "offset": 903,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/Timer & Chronometer\/WorkoutPlayerTimer.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/Helpers\/Timer & Chronometer\/WorkoutPlayerTimer.swift",
       "kind": "IntegerLiteral",
       "offset": 1190,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/Example\/Pods\/WorkoutsPlayerCoreInternal\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Environment\/WorkoutsPlayerEnvironment.swift",
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/workouts-player-core-internal-ios\/WorkoutsPlayerCoreInternal\/Source\/Sources\/Code\/WorkoutsPlayer\/Environment\/WorkoutsPlayerEnvironment.swift",
       "kind": "StringLiteral",
       "offset": 536,
       "length": 20,

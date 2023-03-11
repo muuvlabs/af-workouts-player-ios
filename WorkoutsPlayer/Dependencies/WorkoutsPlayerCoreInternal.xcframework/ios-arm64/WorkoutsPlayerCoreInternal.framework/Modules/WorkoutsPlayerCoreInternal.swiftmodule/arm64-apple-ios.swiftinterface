@@ -1822,6 +1822,9 @@ extension WorkoutsPlayerCoreInternal.WorkoutBlock : WorkoutsPlayerCoreInternal.P
   public var downloadableURL: Foundation.URL? {
     get
   }
+  public var completed: Swift.Bool {
+    get
+  }
 }
 @objc public class WorkoutBlock : ObjectiveC.NSObject, Swift.Codable {
   public var audioTimeline: [WorkoutsPlayerCoreInternal.AudioTrack]?

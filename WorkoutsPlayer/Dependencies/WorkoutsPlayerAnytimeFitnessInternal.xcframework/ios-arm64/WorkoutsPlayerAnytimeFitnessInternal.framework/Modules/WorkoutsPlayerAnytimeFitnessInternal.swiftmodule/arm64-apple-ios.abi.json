@@ -5514,490 +5514,497 @@
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "StringLiteral",
-      "offset": 7483,
+      "offset": 8397,
+      "length": 3,
+      "value": "\"1\""
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "StringLiteral",
+      "offset": 8423,
       "length": 28,
       "value": "\"Alternating Forward Lunges\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "StringLiteral",
-      "offset": 7547,
+      "offset": 8487,
       "length": 7,
       "value": "\"START\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "StringLiteral",
-      "offset": 7590,
+      "offset": 8530,
       "length": 5,
       "value": "\"LOG\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "StringLiteral",
-      "offset": 7625,
+      "offset": 8565,
       "length": 4,
       "value": "\"10\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "StringLiteral",
-      "offset": 7662,
+      "offset": 8602,
       "length": 9,
       "value": "\"seconds\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "StringLiteral",
-      "offset": 7709,
+      "offset": 8649,
       "length": 14,
       "value": "\"workout.icon\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "StringLiteral",
-      "offset": 7792,
+      "offset": 8732,
       "length": 6,
       "value": "\"Rest\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "StringLiteral",
-      "offset": 7831,
+      "offset": 8771,
       "length": 11,
       "value": "\"SKIP REST\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "IntegerLiteral",
-      "offset": 7871,
+      "offset": 8811,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "FloatLiteral",
-      "offset": 7963,
+      "offset": 8903,
       "length": 4,
       "value": "0.38"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "FloatLiteral",
-      "offset": 7976,
+      "offset": 8916,
       "length": 4,
       "value": "0.27"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "FloatLiteral",
-      "offset": 7988,
+      "offset": 8928,
       "length": 4,
       "value": "0.73"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "FloatLiteral",
-      "offset": 8001,
+      "offset": 8941,
       "length": 4,
       "value": "1.00"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "FloatLiteral",
-      "offset": 8104,
+      "offset": 9047,
       "length": 4,
       "value": "14.0"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8214,
-      "length": 4,
-      "value": "27.0"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8291,
-      "length": 4,
-      "value": "11.0"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8424,
-      "length": 4,
-      "value": "13.0"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8592,
-      "length": 5,
-      "value": "0.847"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8606,
-      "length": 5,
-      "value": "0.851"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8619,
-      "length": 5,
-      "value": "0.851"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8633,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8686,
-      "length": 4,
-      "value": "24.0"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8805,
-      "length": 4,
-      "value": "18.0"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8873,
-      "length": 4,
-      "value": "0.85"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8886,
-      "length": 4,
-      "value": "0.79"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8898,
-      "length": 4,
-      "value": "0.93"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8911,
-      "length": 4,
-      "value": "1.00"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8968,
-      "length": 4,
-      "value": "0.13"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8981,
-      "length": 4,
-      "value": "0.08"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 8993,
-      "length": 4,
-      "value": "0.32"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 9006,
-      "length": 3,
-      "value": "0.7"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 9058,
-      "length": 4,
-      "value": "0.13"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 9071,
-      "length": 4,
-      "value": "0.08"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 9083,
-      "length": 4,
-      "value": "0.32"
-    },
-    {
-      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
-      "kind": "FloatLiteral",
-      "offset": 9096,
-      "length": 3,
-      "value": "0.8"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "FloatLiteral",
       "offset": 9157,
       "length": 4,
+      "value": "27.0"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9234,
+      "length": 4,
+      "value": "11.0"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9367,
+      "length": 4,
+      "value": "13.0"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9535,
+      "length": 5,
+      "value": "0.847"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9549,
+      "length": 5,
+      "value": "0.851"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9562,
+      "length": 5,
+      "value": "0.851"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9576,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9629,
+      "length": 4,
+      "value": "24.0"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9748,
+      "length": 4,
+      "value": "18.0"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9816,
+      "length": 4,
+      "value": "0.85"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9829,
+      "length": 4,
+      "value": "0.79"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9841,
+      "length": 4,
+      "value": "0.93"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9854,
+      "length": 4,
+      "value": "1.00"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9911,
+      "length": 4,
+      "value": "0.13"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9924,
+      "length": 4,
+      "value": "0.08"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9936,
+      "length": 4,
+      "value": "0.32"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9949,
+      "length": 3,
+      "value": "0.7"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 10001,
+      "length": 4,
+      "value": "0.13"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 10014,
+      "length": 4,
+      "value": "0.08"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 10026,
+      "length": 4,
+      "value": "0.32"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 10039,
+      "length": 3,
+      "value": "0.8"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
+      "kind": "FloatLiteral",
+      "offset": 10100,
+      "length": 4,
       "value": "13.0"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockExpandedView.swift",
       "kind": "BooleanLiteral",
-      "offset": 9501,
+      "offset": 10447,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 5681,
+      "offset": 5722,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 5693,
+      "offset": 5734,
       "length": 27,
       "value": "\"Alternating Forward Lunge\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 5746,
+      "offset": 5787,
       "length": 8,
       "value": "\"60 SEC\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5785,
+      "offset": 5826,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5825,
+      "offset": 5866,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5862,
+      "offset": 5903,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5896,
+      "offset": 5937,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 5938,
+      "offset": 5979,
       "length": 14,
       "value": "\"workout.icon\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 6020,
+      "offset": 6061,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 6098,
+      "offset": 6139,
       "length": 3,
       "value": "\"2\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 6110,
+      "offset": 6151,
       "length": 22,
       "value": "\"Alternating Superman\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 6158,
+      "offset": 6199,
       "length": 8,
       "value": "\"60 SEC\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6197,
+      "offset": 6238,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6236,
+      "offset": 6277,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6274,
+      "offset": 6315,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6307,
+      "offset": 6348,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 6350,
+      "offset": 6391,
       "length": 14,
       "value": "\"workout.icon\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 6432,
+      "offset": 6473,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 6510,
+      "offset": 6551,
       "length": 3,
       "value": "\"3\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 6522,
+      "offset": 6563,
       "length": 14,
       "value": "\"Jog in Place\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 6562,
+      "offset": 6603,
       "length": 8,
       "value": "\"60 SEC\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6601,
+      "offset": 6642,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6640,
+      "offset": 6681,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6678,
+      "offset": 6719,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6711,
+      "offset": 6752,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 6754,
+      "offset": 6795,
       "length": 14,
       "value": "\"workout.icon\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "StringLiteral",
-      "offset": 6836,
+      "offset": 6877,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "FloatLiteral",
-      "offset": 6986,
+      "offset": 7030,
       "length": 4,
       "value": "0.54"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "FloatLiteral",
-      "offset": 6999,
+      "offset": 7043,
       "length": 4,
       "value": "0.53"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "FloatLiteral",
-      "offset": 7011,
+      "offset": 7055,
       "length": 4,
       "value": "0.53"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "FloatLiteral",
-      "offset": 7024,
+      "offset": 7068,
       "length": 4,
       "value": "1.00"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "FloatLiteral",
-      "offset": 7076,
+      "offset": 7120,
       "length": 4,
       "value": "14.0"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/WorkoutBlockView\/BlockView.swift",
       "kind": "FloatLiteral",
-      "offset": 7149,
+      "offset": 7193,
       "length": 4,
       "value": "10.0"
     },
@@ -7974,6 +7981,13 @@
       "offset": 2969,
       "length": 1,
       "value": "8"
+    },
+    {
+      "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/ListModePlayerView\/ListModePlayerView+ViewState.swift",
+      "kind": "Array",
+      "offset": 809,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/devaccount\/Repos\/WorkoutsPlayer\/af-workouts-player-internal-ios\/WorkoutsPlayerAnytimeFitnessInternal\/Sources\/AllScreens\/Players\/MediaModePlayerView\/MediaModePlayerView+ViewModel.swift",
